@@ -1,5 +1,5 @@
 ---
-title: "Appendix A:Monitoring & Water Level Correction Framework"
+title: "Appendix A: Monitoring & Water Level Correction Framework"
 ---
 
 This document outlines the monitoring program and water level correction methodology applied across the study sites.

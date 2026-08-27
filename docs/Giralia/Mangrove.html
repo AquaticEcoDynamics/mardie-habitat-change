@@ -260,7 +260,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Appendices/Appendix_A.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix A:Monitoring &amp; Water Level Correction Framework</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix A: Monitoring &amp; Water Level Correction Framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -325,7 +325,36 @@ window.Quarto = {
 <section id="sea-level-rise-response" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="sea-level-rise-response"><span class="header-section-number">11.1</span> Sea Level Rise Response</h2>
 <p>In this section, we present the response of mangroves to different sea-level-rise (SLR) scenarios. As described in Section 2.3, the predicted mangrove extent under present-day environmental conditions was used as the initial condition, and simulations were subsequently performed under a range of SLR scenarios representing low, medium, and high sea-level-rise conditions. The SLR simulations were carried out over a 100-year projection period to assess the long-term response of the mangrove ecosystem to rising sea levels. The results were analysed to investigate changes in mangrove extent and biomass under each SLR scenario and to identify trends in mangrove migration, rates of habitat loss, and potential thresholds beyond which landward migration and ecosystem persistence are no longer possible.</p>
-<p><a href="#fig-biomass_norm" class="quarto-xref">Figure&nbsp;<span>11.1</span></a> shows the temporal evolution of the alongshore-integrated mangrove biomass, normalized relative to initial conditions (<span class="math inline">\(\frac{B}{B_0}\)</span>), evaluated across 25-year intervals over a 100-year projection period under different Sea Level Rise (SLR) scenarios. Given that the Giralia Bay system exhibits a distinct habitat zonation, initial mangrove biomass displays a unimodal spatial distribution centered within the mid-to-fringing intertidal zone.</p>
+<p><a href="#fig-mangrove-slr-response-animation" class="quarto-xref">Figure&nbsp;<span>11.1</span></a> shows the temporal evolution of mangrove canopy height (<span class="math inline">\(h\)</span>) and bed elevation (<span class="math inline">\(z\)</span>) across the Giralia Bay study site under three Sea Level Rise (SLR) scenarios: <strong>SSP119 (0.5 m SLR)</strong>, <strong>SSP370 (0.9 m SLR)</strong>, and <strong>SSP585 (1.25 m SLR)</strong> over the 100-year simulation period. The animation illustrates the dynamic interplay between rising sea levels, tidal inundation regimes, and mangrove growth, highlighting spatial and temporal patterns of mangrove expansion, dieback, and landward migration.</p>
+<p>As sea level rise progresses, increased hydroperiod and depth along lower-elevation seaward fringes exceed physiological tolerances, triggering dieback and seaward edge drowning—most prominently under high SLR rates. Concurrently, newly inundated supratidal zones create favorable hydrodynamic conditions, facilitating landward encroachment and redistribution of mangrove canopy height across the intertidal gradient.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key Findings: Mangrove SLR Response Dynamics
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Low-SLR Scenario (SSP119 – 0.5 m):</strong> Mangroves maintain dynamic equilibrium, showing localized expansion along tidal channels with minimal seaward dieback.</li>
+<li><strong>Moderate-SLR Scenario (SSP370 – 0.9 m):</strong> Progressive drown-out initiates along the lower seaward fringe, partially compensated by landward migration into newly flooded accommodation space.</li>
+<li><strong>High-SLR Scenario (SSP585 – 1.25 m):</strong> Severe seaward fringe dieback and rapid landward retreat take place, resulting in substantial spatial shifts in canopy height (<span class="math inline">\(h\)</span>) distribution across the estuary.</li>
+</ul>
+</div>
+</div>
+<div id="fig-mangrove-slr-response-animation" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mangrove-slr-response-animation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="animations/Comparison_3Panels.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mangrove-slr-response-animation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.1: Spatial and temporal evolution of mangrove canopy height (<span class="math inline">\(h\)</span>, right colorbar) overlaid on bed level elevation (<span class="math inline">\(z\)</span>, left colorbar) across the Giralia Bay study site for three Sea Level Rise scenarios: SSP119 (0.5 m), SSP370 (0.9 m), and SSP585 (1.25 m).
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-biomass_norm" class="quarto-xref">Figure&nbsp;<span>11.2</span></a> shows the temporal evolution of the alongshore-integrated mangrove biomass, normalized relative to initial conditions (<span class="math inline">\(\frac{B}{B_0}\)</span>), evaluated across 25-year intervals over a 100-year projection period under different Sea Level Rise (SLR) scenarios. Given that the Giralia Bay system exhibits a distinct habitat zonation, initial mangrove biomass displays a unimodal spatial distribution centered within the mid-to-fringing intertidal zone.</p>
 <p>Under the <strong>SSP119</strong> scenario, the system undergoes a gradual transition characterized by a modest decline in seaward fringe biomass alongside a progressive landward migration driven by increased inundation frequency.</p>
 <p>Conversely, the medium to higher-emission scenarios (<strong>SSP370</strong> and <strong>SSP585</strong>) exhibit a two-phase response:</p>
 <ul>
@@ -339,34 +368,45 @@ window.Quarto = {
 <img src="images/Giralia_biomass_alongshore_norm.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-biomass_norm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.1: Alongshore integrated biomass for different SLR scenarios. Panel a) shows the basemap for illustrative purposes. Panels b), c), and d) show the alongshore integrated biomass for SLR SSP119, SSP370, and SSP585 scenarios.
+Figure&nbsp;11.2: Alongshore integrated biomass for different SLR scenarios. Panel a) shows the basemap for illustrative purposes. Panels b), c), and d) show the alongshore integrated biomass for SLR SSP119, SSP370, and SSP585 scenarios.
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.2</span></a> shows the spatial distributions of mangroves for Year 50 and Year 100, highlighting the diverging long-term trajectory of mangrove extent across SSP119, SSP370, and SSP585 scenarios. During the initial ~40 years of simulation across all climate projections, differences in predicted mangrove coverage remain relatively subtle, as sea-level rise (SLR) rates remain within thresholds that permit localized bed level equilibration and persistence along established intertidal zones.</p>
+<p><a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> shows the spatial distributions of mangroves for Year 50 and Year 100, highlighting the diverging long-term trajectory of mangrove extent across SSP119, SSP370, and SSP585 scenarios. During the initial ~40 years of simulation across all climate projections, differences in predicted mangrove coverage remain relatively subtle, as sea-level rise (SLR) rates remain within thresholds that permit localized bed level equilibration and persistence along established intertidal zones.</p>
 <p>Spatially, baseline mangrove distribution is heavily governed by tidal inundation and bed elevation, originally dominating the seaward and central channel networks. However, progressive SLR triggers a distinct landward transgression alongside substantial dieback along the seaward boundaries:</p>
 <ul>
-<li><strong>SSP119 (Low Emission):</strong> At Year 50 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.2</span></a> a), the mangrove fringe maintains structural stability with negligible loss along the lower intertidal zone and initial establishment in the southern high-intertidal flats. By Year 100 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.2</span></a> d), a modest landward expansion occurs into high-elevation flats characterized by shorter, newly established mangrove foliage (<span class="math inline">\(h &lt; 1\text{ m}\)</span>), while the core seaward forest retains canopy heights exceeding <span class="math inline">\(2\text{ m}\)</span>.</li>
-<li><strong>SSP370 (Intermediate Emission):</strong> By Year 50 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.2</span></a> b), subtle fragmentation emerges along the seaward margin. By Year 100 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.2</span></a> e), rapid landward migration dominates the southern boundary, where extensive, tall mangrove stands (<span class="math inline">\(h &gt; 2\text{ m}\)</span>) establish across newly inundated supratidal areas. Concurrent expansion also tracks along newly widened inner tidal channels.</li>
-<li><strong>SSP585 (High Emission):</strong> At Year 50 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.2</span></a> c), shows a similar pattern to SSP370. However, by Year 100 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.2</span></a> f), the system undergoes widespread coastal squeeze and seaward dieback. While mangroves colonize the far-southern landward fringe, the total footprint is diminished compared to SSP370. Higher inundation rates lead to channel drowning and permanent submergence of the seaward mudflats, causing significant loss of historical habitat without an equivalent gain in landward area.</li>
+<li><strong>SSP119 (Low Emission):</strong> At Year 50 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> a), the mangrove fringe maintains structural stability with negligible loss along the lower intertidal zone and initial establishment in the southern high-intertidal flats. By Year 100 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> d), a modest landward expansion occurs into high-elevation flats characterized by shorter, newly established mangrove foliage (<span class="math inline">\(h &lt; 1\text{ m}\)</span>), while the core seaward forest retains canopy heights exceeding <span class="math inline">\(2\text{ m}\)</span>.</li>
+<li><strong>SSP370 (Intermediate Emission):</strong> By Year 50 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> b), subtle fragmentation emerges along the seaward margin. By Year 100 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> e), rapid landward migration dominates the southern boundary, where extensive, tall mangrove stands (<span class="math inline">\(h &gt; 2\text{ m}\)</span>) establish across newly inundated supratidal areas. Concurrent expansion also tracks along newly widened inner tidal channels.</li>
+<li><strong>SSP585 (High Emission):</strong> At Year 50 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> c), shows a similar pattern to SSP370. However, by Year 100 (<a href="#fig-Giralia_mangrove_evolution" class="quarto-xref">Figure&nbsp;<span>11.3</span></a> f), the system undergoes widespread coastal squeeze and seaward dieback. While mangroves colonize the far-southern landward fringe, the total footprint is diminished compared to SSP370. Higher inundation rates lead to channel drowning and permanent submergence of the seaward mudflats, causing significant loss of historical habitat without an equivalent gain in landward area.</li>
 </ul>
-<blockquote class="blockquote">
-<p><strong>Key Finding:</strong> Overall, spatial modelling highlights a non-linear tipping point past Year 50 under moderate-to-high SLR. Landward expansion temporarily compensates for seaward loss, whereas under extreme SLR (SSP585), the rate of sea-level rise outpaces landward colonization capacity, resulting in net habitat contraction.</p>
-</blockquote>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key Findings: Non-Linear Tipping Points
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Overall, spatial modelling highlights a <strong>non-linear tipping point past Year 50</strong> under moderate-to-high Sea Level Rise (SLR).</p>
+<p>Landward expansion temporarily compensates for seaward loss; however, under extreme SLR (<strong>SSP585</strong>), the rate of sea-level rise outpaces landward colonization capacity, resulting in net habitat contraction.</p>
+</div>
+</div>
 <div id="fig-Giralia_mangrove_evolution" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Giralia_mangrove_evolution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/Giralia_mangrove_evolution.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Giralia_mangrove_evolution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.2: Modelled spatial evolution of bed elevation (<span class="math inline">\(z\)</span>) and mangrove canopy height (<span class="math inline">\(h\)</span>) across the study site at Year 50 (top row) and Year 100 (bottom row) under three climate projections: (a, d) SSP119, (b, e) SSP370, and (c, f) SSP585.
+Figure&nbsp;11.3: Modelled spatial evolution of bed elevation (<span class="math inline">\(z\)</span>) and mangrove canopy height (<span class="math inline">\(h\)</span>) across the study site at Year 50 (top row) and Year 100 (bottom row) under three climate projections: (a, d) SSP119, (b, e) SSP370, and (c, f) SSP585.
 </figcaption>
 </figure>
 </div>
 <hr>
 <section id="morphological-response" class="level3" data-number="11.1.1">
 <h3 data-number="11.1.1" class="anchored" data-anchor-id="morphological-response"><span class="header-section-number">11.1.1</span> Morphological Response</h3>
-<p>To isolate and track the morphological response of the tidal network to sea-level rise (SLR), the active creek network was extracted using the <span class="math inline">\(-0.5\text{ m}\)</span> bed elevation contour at 25-year intervals (Years 1, 25, 50, 75, and 100) in <a href="#fig-Giralia_creek_evolution" class="quarto-xref">Figure&nbsp;<span>11.3</span></a>. Across all scenarios, increased tidal prism volumes driven by rising sea levels induce pronounced bed scour, channel widening, and headward erosion. This forces the main tidal channels to extend progressively landward into previously supratidal salt flats over time.</p>
+<p>To isolate and track the morphological response of the tidal network to sea-level rise (SLR), the active creek network was extracted using the <span class="math inline">\(-0.5\text{ m}\)</span> bed elevation contour at 25-year intervals (Years 1, 25, 50, 75, and 100) in <a href="#fig-Giralia_creek_evolution" class="quarto-xref">Figure&nbsp;<span>11.4</span></a>. Across all scenarios, increased tidal prism volumes driven by rising sea levels induce pronounced bed scour, channel widening, and headward erosion. This forces the main tidal channels to extend progressively landward into previously supratidal salt flats over time.</p>
 <p>The magnitude of this landward channel extension varies significantly across climate forcings:</p>
 <ol type="1">
 <li><strong>SSP119:</strong> Primary tidal channels experience limited headward migration, extending southward by approximately <span class="math inline">\(0.5\text{ km}\)</span> beyond their baseline position, with morphological changes mostly confined to localized lateral adjustments.</li>
@@ -379,18 +419,18 @@ Figure&nbsp;11.2: Modelled spatial evolution of bed elevation (<span class="math
 <img src="images/Giralia_creek_evolution.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Giralia_creek_evolution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.3: Spatiotemporal evolution of the tidal creek network over 100 years under (a) SSP119, (b) SSP370, and (c) SSP585 scenarios. Channels are delineated by extracting the <span class="math inline">\(-0.5\text{ m}\)</span> bed level contour at 25-year intervals (Years 1, 25, 50, 75, and 100).
+Figure&nbsp;11.4: Spatiotemporal evolution of the tidal creek network over 100 years under (a) SSP119, (b) SSP370, and (c) SSP585 scenarios. Channels are delineated by extracting the <span class="math inline">\(-0.5\text{ m}\)</span> bed level contour at 25-year intervals (Years 1, 25, 50, 75, and 100).
 </figcaption>
 </figure>
 </div>
-<p>To assess the systemic morphological and ecological adjustments to sea-level rise (SLR), the normalized time series of total mangrove area and tidal creek planform footprint relative to initial conditions were evaluated (<a href="#fig-Giralia_temporal_evolution" class="quarto-xref">Figure&nbsp;<span>11.4</span></a>).</p>
+<p>To assess the systemic morphological and ecological adjustments to sea-level rise (SLR), the normalized time series of total mangrove area and tidal creek planform footprint relative to initial conditions were evaluated (<a href="#fig-Giralia_temporal_evolution" class="quarto-xref">Figure&nbsp;<span>11.5</span></a>).</p>
 <p>During the first 40–50 years, both metrics exhibit a relative lag phase characterized by subtle, near-baseline fluctuations (normalized values fluctuating near <span class="math inline">\(1.0\)</span>). This initial stability reflects a meta-stable equilibrium, where early hydrodynamic forcing and sea-level increments remain within ecological tolerance limits and thresholds for localized bed shear stress. Consequently, vertical accretion and minimal horizontal reconfiguration suffice to maintain system stability across all scenarios (SSP119, SSP370, and SSP585).</p>
-<p>Beyond Year 50–60, clear non-linear divergence occurs across the projections, particularly governing channel footprint expansion (<a href="#fig-Giralia_temporal_evolution" class="quarto-xref">Figure&nbsp;<span>11.4</span></a> b):</p>
+<p>Beyond Year 50–60, clear non-linear divergence occurs across the projections, particularly governing channel footprint expansion (<a href="#fig-Giralia_temporal_evolution" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> b):</p>
 <ul>
 <li><strong>SSP585 Channel Expansion:</strong> Under SSP585, the tidal creek expansion rate initially lags behind SSP370 up to approximately Year 60. Extreme early SLR in SSP585 increases the tidal prism volume and ebb-jet energy, causing channel responses to be dominated by vertical bed incision and cross-sectional deepening rather than rapid headward elongation.</li>
 <li><strong>Post-Year 60 Inflection:</strong> Past Year 60, an inflection point is reached as increased inundation frequency drowns intertidal margins, causing tidal shear stress to breach headward erosion thresholds. This initiates a sharp acceleration in landward channel extension and network branching through Year 100, reaching a relative footprint expansion <span class="math inline">\(&gt;2.5\)</span>, compared to more moderate trajectories under SSP119 (<span class="math inline">\(&lt;1.2\)</span>).</li>
 </ul>
-<p>Similarly, normalized mangrove surface area (<a href="#fig-Giralia_temporal_evolution" class="quarto-xref">Figure&nbsp;<span>11.4</span></a> a) shows complex non-monotonic behaviour driven by competing mechanisms of seaward edge drowning and landward opportunistic colonization:</p>
+<p>Similarly, normalized mangrove surface area (<a href="#fig-Giralia_temporal_evolution" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> a) shows complex non-monotonic behaviour driven by competing mechanisms of seaward edge drowning and landward opportunistic colonization:</p>
 <ul>
 <li><strong>SSP585 Surge &amp; Collapse:</strong> Under SSP585, mangrove footprint surges past Year 45, peaking at nearly <span class="math inline">\(1.4\times\)</span> initial coverage around Year 60 due to rapid inland expansion across previously dry supratidal flats. However, between Years 70 and 80, catastrophic seaward fringe dieback and channel drowning cause a rapid decline back toward baseline values (<span class="math inline">\(1.0\)</span>).</li>
 <li><strong>Spatial Displacement by Year 100:</strong> By Year 100, while net normalized mangrove area under SSP585 rebounds close to <span class="math inline">\(1.1\)</span>, a critical spatial displacement occurs: the historical low-intertidal forest is entirely lost to estuarine drowning, and survival is maintained solely because mangroves progressively climb the steeper, elevated terrain along the western margins of the basin.</li>
@@ -401,7 +441,7 @@ Figure&nbsp;11.3: Spatiotemporal evolution of the tidal creek network over 100 y
 <img src="images/Giralia_temporal_evolution.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Giralia_temporal_evolution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.4: Temporal evolution of normalized (a) total mangrove area and (b) tidal creek planform footprint relative to initial conditions over a 100-year simulation under SSP119 (black), SSP370 (red), and SSP585 (blue) scenarios.
+Figure&nbsp;11.5: Temporal evolution of normalized (a) total mangrove area and (b) tidal creek planform footprint relative to initial conditions over a 100-year simulation under SSP119 (black), SSP370 (red), and SSP585 (blue) scenarios.
 </figcaption>
 </figure>
 </div>
@@ -409,10 +449,10 @@ Figure&nbsp;11.4: Temporal evolution of normalized (a) total mangrove area and (
 </section>
 <section id="implications-of-sea-level-rise-on-the-present-mangrove-footprint" class="level3" data-number="11.1.2">
 <h3 data-number="11.1.2" class="anchored" data-anchor-id="implications-of-sea-level-rise-on-the-present-mangrove-footprint"><span class="header-section-number">11.1.2</span> Implications of Sea-Level Rise on the Present Mangrove Footprint</h3>
-<p>To evaluate the long-term viability of existing mangroves under different SLR scenarios, we restricted our analysis to the initial spatial footprint of mangroves and deliberately excluded landward migration. <a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> shows the temporal trajectory of total normalized biomass retained strictly within the initial mangrove extent over a 100-year simulation period (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> a) and the cumulative percentage of the initial mangrove footprint subjected to permanent inundation (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> b).</p>
+<p>To evaluate the long-term viability of existing mangroves under different SLR scenarios, we restricted our analysis to the initial spatial footprint of mangroves and deliberately excluded landward migration. <a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> shows the temporal trajectory of total normalized biomass retained strictly within the initial mangrove extent over a 100-year simulation period (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> a) and the cumulative percentage of the initial mangrove footprint subjected to permanent inundation (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> b).</p>
 <p>Permanent submergence is defined as continuous 14-day water depth exceeding site-specific tolerance thresholds:</p>
 <p><span class="math display">\[z_{\text{submergence}} = \mu_{\text{threshold}} \pm 1\sigma\]</span></p>
-<p>Across all three SLR scenarios, normalized biomass in original locations initially increases during the first two decades, reaching a peak near year 20 to 25 at approximately <span class="math inline">\(1.1\text{–}1.2\)</span> times the initial baseline (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> a). This initial phase reflects early-stage canopy maturation and biomass accumulation in intertidal cells where water depth remains within tolerable physiological limits. During this same interval, permanent submergence remains low (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> b), staying below <span class="math inline">\(5\%\)</span> across all scenarios.</p>
+<p>Across all three SLR scenarios, normalized biomass in original locations initially increases during the first two decades, reaching a peak near year 20 to 25 at approximately <span class="math inline">\(1.1\text{–}1.2\)</span> times the initial baseline (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> a). This initial phase reflects early-stage canopy maturation and biomass accumulation in intertidal cells where water depth remains within tolerable physiological limits. During this same interval, permanent submergence remains low (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> b), staying below <span class="math inline">\(5\%\)</span> across all scenarios.</p>
 <p>Beyond year 25, a critical inflection point occurs as accelerating sea-level rise overwhelms intertidal elevations:</p>
 <table class="caption-top table">
 <colgroup>
@@ -423,8 +463,8 @@ Figure&nbsp;11.4: Temporal evolution of normalized (a) total mangrove area and (
 <thead>
 <tr class="header">
 <th style="text-align: left;">Scenario</th>
-<th style="text-align: left;">Submergence Trajectory (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> b)</th>
-<th style="text-align: left;">Biomass Retention Trajectory (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> a)</th>
+<th style="text-align: left;">Submergence Trajectory (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> b)</th>
+<th style="text-align: left;">Biomass Retention Trajectory (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> a)</th>
 </tr>
 </thead>
 <tbody>
@@ -445,7 +485,7 @@ Figure&nbsp;11.4: Temporal evolution of normalized (a) total mangrove area and (
 </tr>
 </tbody>
 </table>
-<p>We found a strong inverse relationship exists between the rate of permanent submergence (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.5</span></a>) and the retention of localized biomass (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.5</span></a> a). The onset of rapid biomass decline across all scenarios directly mirrors the temporal acceleration of continuous drowning. While biomass loss exceeds the absolute percentage of drowned surface area, this could be due to environmental stress which reduces stem density and productivity prior to complete drowning. The relative divergence among climate scenarios follows an identical sequence in both metrics, with SSP585 showing severe degradation followed by moderate and partial degradation of SSP370 and SSP119.</p>
+<p>We found a strong inverse relationship exists between the rate of permanent submergence (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.6</span></a>) and the retention of localized biomass (<a href="#fig-Giralia_temporal_evolution_existing_location" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> a). The onset of rapid biomass decline across all scenarios directly mirrors the temporal acceleration of continuous drowning. While biomass loss exceeds the absolute percentage of drowned surface area, this could be due to environmental stress which reduces stem density and productivity prior to complete drowning. The relative divergence among climate scenarios follows an identical sequence in both metrics, with SSP585 showing severe degradation followed by moderate and partial degradation of SSP370 and SSP119.</p>
 <blockquote class="blockquote">
 <p><strong>Summary:</strong> Without physical space for landward retreat, existing mangrove stands will experience widespread dieback and substantial standing biomass loss under moderate-to-high sea-level rise scenarios.</p>
 </blockquote>
@@ -455,7 +495,7 @@ Figure&nbsp;11.4: Temporal evolution of normalized (a) total mangrove area and (
 <img src="images/Giralia_temporal_evolution_existing_location.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Giralia_temporal_evolution_existing_location-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.5: The temporal trajectory of total normalized biomass retained within the initial mangrove extent over a 100-year simulation period in panel a) and the cumulative percentage of the initial mangrove footprint subjected to permanent inundation exceeding specific thresholds ranging from <span class="math inline">\(0.2\text{--}0.8\text{ m}\)</span> represented as <span class="math inline">\(\text{mean} \pm 1\text{ standard deviation}\)</span>
+Figure&nbsp;11.6: The temporal trajectory of total normalized biomass retained within the initial mangrove extent over a 100-year simulation period in panel a) and the cumulative percentage of the initial mangrove footprint subjected to permanent inundation exceeding specific thresholds ranging from <span class="math inline">\(0.2\text{--}0.8\text{ m}\)</span> represented as <span class="math inline">\(\text{mean} \pm 1\text{ standard deviation}\)</span>
 </figcaption>
 </figure>
 </div>
@@ -477,22 +517,22 @@ Figure&nbsp;11.5: The temporal trajectory of total normalized biomass retained w
 <li><strong>Static Vegetation:</strong> Spatially fixed, passive vegetation drag without temporal adaptation.</li>
 <li><strong>Dynamic Mangroves (SSP370):</strong> Explicit eco-morphodynamic feedback involving establishment, growth, and dieback.</li>
 </ol>
-<p><a href="#fig-Giralia_creek_evolution_veg_vs_no_veg" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> highlights the long-term creek evolution across these three scenarios, where tidal creek channels were delineated by extracting contours corresponding to a bed elevation threshold of <span class="math inline">\(-0.5\text{ m}\)</span> relative to datum across a 100-year simulation timeline (Year 1 to Year 100).</p>
+<p><a href="#fig-Giralia_creek_evolution_veg_vs_no_veg" class="quarto-xref">Figure&nbsp;<span>11.7</span></a> highlights the long-term creek evolution across these three scenarios, where tidal creek channels were delineated by extracting contours corresponding to a bed elevation threshold of <span class="math inline">\(-0.5\text{ m}\)</span> relative to datum across a 100-year simulation timeline (Year 1 to Year 100).</p>
 <div id="fig-Giralia_creek_evolution_veg_vs_no_veg" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Giralia_creek_evolution_veg_vs_no_veg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/Giralia_creek_evolution_veg_vs_noveg.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Giralia_creek_evolution_veg_vs_no_veg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11.6: Long-term creek evolution across no vegetation (panel a), static vegetation (panel b) and dynamic vegetation (panel c) for a similar sea level rise forcing with identical initial conditions.
+Figure&nbsp;11.7: Long-term creek evolution across no vegetation (panel a), static vegetation (panel b) and dynamic vegetation (panel c) for a similar sea level rise forcing with identical initial conditions.
 </figcaption>
 </figure>
 </div>
 <p>The morphological progression of tidal creek networks exhibits fundamental differences across the three scenarios:</p>
 <ul>
-<li><strong>No Vegetation (<a href="#fig-Giralia_creek_evolution_veg_vs_no_veg" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> a):</strong> In the absence of vegetation, unconstrained flow drives widespread channel widening, severe headward incision, and erratic, unanchored creek migration over time. Lacking root-induced soil cohesion and vegetative flow resistance, channels bifurcate and avulse unpredictably, creating an over-extended, highly unstable drainage network that rapidly erodes under rising water levels.</li>
-<li><strong>Static Vegetation (<a href="#fig-Giralia_creek_evolution_veg_vs_no_veg" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> b):</strong> Incorporating non-adaptive, static drag element vegetation reduces local flow velocity, confining channel migration compared to the unvegetated case. However, because the vegetation cannot adaptively grow, die back, or recolonize in response to changing inundation regimes, channels become locked into fixed corridors. Sediment continuously accumulates within static drag fields without eco-morphodynamic relief, eventually forcing abrupt channel avulsions or localized drowning as the system fails to accommodate accelerating SLR.</li>
-<li><strong>Dynamic Mangroves (<a href="#fig-Giralia_creek_evolution_veg_vs_no_veg" class="quarto-xref">Figure&nbsp;<span>11.6</span></a> c):</strong> The fully coupled dynamic mangrove model reveals a significantly more cohesive, resilient, and focused channel network. Dynamic feedbacks allow mangroves to continuously adjust their density and spatial distribution based on inundation frequency and bed shear stress. As mangroves colonize newly suitable elevated mudflats, flow is selectively funnelled into major drainage corridors, stabilizing channel banks while promoting landward network elongation. By Year 100, the dynamic framework predicts organized, highly continuous creek systems extending farther inland to maintain hydrological equilibrium—a trajectory completely uncaptured by static or uncoupled assumptions.</li>
+<li><strong>No Vegetation (<a href="#fig-Giralia_creek_evolution_veg_vs_no_veg" class="quarto-xref">Figure&nbsp;<span>11.7</span></a> a):</strong> In the absence of vegetation, unconstrained flow drives widespread channel widening, severe headward incision, and erratic, unanchored creek migration over time. Lacking root-induced soil cohesion and vegetative flow resistance, channels bifurcate and avulse unpredictably, creating an over-extended, highly unstable drainage network that rapidly erodes under rising water levels.</li>
+<li><strong>Static Vegetation (<a href="#fig-Giralia_creek_evolution_veg_vs_no_veg" class="quarto-xref">Figure&nbsp;<span>11.7</span></a> b):</strong> Incorporating non-adaptive, static drag element vegetation reduces local flow velocity, confining channel migration compared to the unvegetated case. However, because the vegetation cannot adaptively grow, die back, or recolonize in response to changing inundation regimes, channels become locked into fixed corridors. Sediment continuously accumulates within static drag fields without eco-morphodynamic relief, eventually forcing abrupt channel avulsions or localized drowning as the system fails to accommodate accelerating SLR.</li>
+<li><strong>Dynamic Mangroves (<a href="#fig-Giralia_creek_evolution_veg_vs_no_veg" class="quarto-xref">Figure&nbsp;<span>11.7</span></a> c):</strong> The fully coupled dynamic mangrove model reveals a significantly more cohesive, resilient, and focused channel network. Dynamic feedbacks allow mangroves to continuously adjust their density and spatial distribution based on inundation frequency and bed shear stress. As mangroves colonize newly suitable elevated mudflats, flow is selectively funnelled into major drainage corridors, stabilizing channel banks while promoting landward network elongation. By Year 100, the dynamic framework predicts organized, highly continuous creek systems extending farther inland to maintain hydrological equilibrium—a trajectory completely uncaptured by static or uncoupled assumptions.</li>
 </ul>
 <section id="comparison-with-alternative-modelling-paradigms" class="level4" data-number="11.2.1.1">
 <h4 data-number="11.2.1.1" class="anchored" data-anchor-id="comparison-with-alternative-modelling-paradigms"><span class="header-section-number">11.2.1.1</span> Comparison with Alternative Modelling Paradigms</h4>
@@ -967,8 +1007,8 @@ Vizcaya-Martínez, D. A., Flores-de-Santiago, F., Valderrama-Landeros, L., Serra
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Appendices/Appendix_A.html" class="pagination-link" aria-label="Appendix A:Monitoring &amp; Water Level Correction Framework">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix A:Monitoring &amp; Water Level Correction Framework</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Appendices/Appendix_A.html" class="pagination-link" aria-label="Appendix A: Monitoring &amp; Water Level Correction Framework">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Appendix A: Monitoring &amp; Water Level Correction Framework</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

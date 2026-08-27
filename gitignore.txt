@@ -1,1 +1,16 @@
+# Quarto internal cache & working directories
+/.quarto/
 
+# Quarto output directory 
+# (Remove '/docs/' below ONLY if you are using GitHub Pages with the /docs folder)
+/docs/
+
+# System / OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment / IDE files
+.vscode/
+.Rproj.user/
+.Rhistory
+.RData

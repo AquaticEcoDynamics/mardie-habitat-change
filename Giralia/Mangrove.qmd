@@ -6,6 +6,23 @@ title: "Mangrove Response to Sea Level Rise"
 
 In this section, we present the response of mangroves to different sea-level-rise (SLR) scenarios. As described in Section 2.3, the predicted mangrove extent under present-day environmental conditions was used as the initial condition, and simulations were subsequently performed under a range of SLR scenarios representing low, medium, and high sea-level-rise conditions. The SLR simulations were carried out over a 100-year projection period to assess the long-term response of the mangrove ecosystem to rising sea levels. The results were analysed to investigate changes in mangrove extent and biomass under each SLR scenario and to identify trends in mangrove migration, rates of habitat loss, and potential thresholds beyond which landward migration and ecosystem persistence are no longer possible.
 
+@fig-mangrove-slr-response-animation shows the temporal evolution of mangrove canopy height ($h$) and bed elevation ($z$) across the Giralia Bay study site under three Sea Level Rise (SLR) scenarios: **SSP119 (0.5 m SLR)**, **SSP370 (0.9 m SLR)**, and **SSP585 (1.25 m SLR)** over the 100-year simulation period. The animation illustrates the dynamic interplay between rising sea levels, tidal inundation regimes, and mangrove growth, highlighting spatial and temporal patterns of mangrove expansion, dieback, and landward migration.
+
+As sea level rise progresses, increased hydroperiod and depth along lower-elevation seaward fringes exceed physiological tolerances, triggering dieback and seaward edge drowning—most prominently under high SLR rates. Concurrently, newly inundated supratidal zones create favorable hydrodynamic conditions, facilitating landward encroachment and redistribution of mangrove canopy height across the intertidal gradient.
+
+::: {.callout-note}
+## Key Findings: Mangrove SLR Response Dynamics
+* **Low-SLR Scenario (SSP119 – 0.5 m):** Mangroves maintain dynamic equilibrium, showing localized expansion along tidal channels with minimal seaward dieback.
+* **Moderate-SLR Scenario (SSP370 – 0.9 m):** Progressive drown-out initiates along the lower seaward fringe, partially compensated by landward migration into newly flooded accommodation space.
+* **High-SLR Scenario (SSP585 – 1.25 m):** Severe seaward fringe dieback and rapid landward retreat take place, resulting in substantial spatial shifts in canopy height ($h$) distribution across the estuary.
+:::
+
+::: {#fig-mangrove-slr-response-animation}
+![](animations/Comparison_3Panels.gif){fig-align="center" width="95%"}
+
+Spatial and temporal evolution of mangrove canopy height ($h$, right colorbar) overlaid on bed level elevation ($z$, left colorbar) across the Giralia Bay study site for three Sea Level Rise scenarios: SSP119 (0.5 m), SSP370 (0.9 m), and SSP585 (1.25 m).
+:::
+
 @fig-biomass_norm shows the temporal evolution of the alongshore-integrated mangrove biomass, normalized relative to initial conditions ($\frac{B}{B_0}$), evaluated across 25-year intervals over a 100-year projection period under different Sea Level Rise (SLR) scenarios. Given that the Giralia Bay system exhibits a distinct habitat zonation, initial mangrove biomass displays a unimodal spatial distribution centered within the mid-to-fringing intertidal zone. 
 
 Under the **SSP119** scenario, the system undergoes a gradual transition characterized by a modest decline in seaward fringe biomass alongside a progressive landward migration driven by increased inundation frequency. 
@@ -31,7 +48,12 @@ Spatially, baseline mangrove distribution is heavily governed by tidal inundatio
 * **SSP370 (Intermediate Emission):** By Year 50 (@fig-Giralia_mangrove_evolution b), subtle fragmentation emerges along the seaward margin. By Year 100 (@fig-Giralia_mangrove_evolution e), rapid landward migration dominates the southern boundary, where extensive, tall mangrove stands ($h > 2\text{ m}$) establish across newly inundated supratidal areas. Concurrent expansion also tracks along newly widened inner tidal channels.
 * **SSP585 (High Emission):** At Year 50 (@fig-Giralia_mangrove_evolution c), shows a similar pattern to SSP370. However, by Year 100 (@fig-Giralia_mangrove_evolution f), the system undergoes widespread coastal squeeze and seaward dieback. While mangroves colonize the far-southern landward fringe, the total footprint is diminished compared to SSP370. Higher inundation rates lead to channel drowning and permanent submergence of the seaward mudflats, causing significant loss of historical habitat without an equivalent gain in landward area.
 
-> **Key Finding:** Overall, spatial modelling highlights a non-linear tipping point past Year 50 under moderate-to-high SLR. Landward expansion temporarily compensates for seaward loss, whereas under extreme SLR (SSP585), the rate of sea-level rise outpaces landward colonization capacity, resulting in net habitat contraction.
+::: {.callout-note}
+## Key Findings: Non-Linear Tipping Points
+Overall, spatial modelling highlights a **non-linear tipping point past Year 50** under moderate-to-high Sea Level Rise (SLR). 
+
+Landward expansion temporarily compensates for seaward loss; however, under extreme SLR (**SSP585**), the rate of sea-level rise outpaces landward colonization capacity, resulting in net habitat contraction.
+:::
 
 ::: {#fig-Giralia_mangrove_evolution}
 ![](images/Giralia_mangrove_evolution.png){fig-align="center" width="95%"}
