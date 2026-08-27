@@ -1,0 +1,13 @@
+---
+#title: "Region"
+---
+
+# Region
+
+<br>
+
+The Pilbara region in Western Australia is home to unique intertidal ecosystems, where extensive tidal creeks, salt flats, and low-lying coastal landforms create a complex eco-geomorphic setting. These arid-zone coastal wetlands are rare globally, as they are shaped by intricate interactions between salinity, sediment transport, and habitat zonation, which are in turn influenced by tidal cycles. Episodic flooding events and sea level variability further contribute to a dynamic inundation regime, redistributing salt, nutrients, and sediments across the intertidal landscape. However, despite the ecological significance of these environments, there is a notable lack of data and understanding regarding their behaviour, making it challenging for regulators to assess the impacts of environmental changes and coastal infrastructure.
+
+<br>
+
+The intertidal areas of the West Pilbara Coast exhibit a distinct zonation of mangrove, samphire, and algal (cyanobacterial) mat communities, transitioning from subtidal embayments to terrestrial margins. These habitats are governed by complex ecohydrological interactions, including tidal inundation, evaporation, rainfall-driven freshwater inputs, and exchange between surface and groundwater. The extent to which these ecosystems support surrounding marine and terrestrial environments remains unclear. Additionally, given their sensitivity to changes in salinity and inundation, any abrupt environmental shift—whether caused by climate change or human development—may trigger habitat loss or redistribution. For instance, minor sea level anomalies observed during the 2015/16 El Niño event led to significant mangrove dieback across northern Australia [@Lovelock2017], demonstrating the vulnerability of these ecosystems to even small environmental perturbations.

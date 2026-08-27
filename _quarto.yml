@@ -1,0 +1,77 @@
+project:
+  type: book
+  output-dir: docs
+
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
+citeproc: true
+
+book:
+  title: "Future of Intertidal Habitats in the Pilbara"
+
+  chapters:
+
+    - index.qmd
+
+    - Introduction.qmd
+
+    #- Region.qmd
+
+    - Controls on Coastal Ecosystems in Pilbara.qmd
+    - part: "Model"
+      chapters:
+        - Model-Overview.qmd
+        - Hydrodynamic-Model.qmd
+        #- Morphodynamic-Model.qmd
+        - Coupled_Framework.qmd
+        - Idealized_HydroMorpho_Model.qmd
+
+
+    # -----------------------------
+    # GIRALIA
+    # -----------------------------
+    - part: "Giralia"
+      chapters:
+        - Giralia/Overview.qmd
+    #     - Giralia/Data.qmd
+        - Giralia/Calibration-Validation.qmd
+        - Giralia/Sea-Level-Rise.qmd
+        - Giralia/Mangrove.qmd
+    #     - Giralia/Algal-Mat.qmd
+    #     - Giralia/Discussion-Conclusions.qmd
+
+    # # -----------------------------
+    # # URALA
+    # # -----------------------------
+    # - part: "Urala"
+    #   chapters:
+    #     - Urala/Overview.qmd
+    #     - Urala/Data.qmd
+    #     - Urala/Calibration-Validation.qmd
+    #     - Urala/SLR-Scenarios.qmd
+    #     - Urala/Mangrove.qmd
+    #     - Urala/Algal-Mat.qmd
+    #     - Urala/Discussion-Conclusions.qmd
+
+
+    # - Cape-Preston.qmd
+    - part: "Appendices"
+      chapters:
+        - Appendices/Appendix_A.qmd
+        - Appendix_B.qmd
+
+    # - part: "Synthesis / Assessment"
+    #   chapters:
+    #     - Synthesis.qmd
+
+    - References.qmd
+
+number-sections: true
+
+format:
+  html:
+    theme: solar
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: true
