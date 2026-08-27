@@ -2,7 +2,7 @@ name: Render and Deploy Quarto Site
 
 on:
   push:
-    branches: [ main ] # Change to 'master' if your main branch is called master
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -23,13 +23,15 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      # Renders the site locally on the runner
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
 
+      # ONLY ONE upload step here!
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs # Use '_site' if your _quarto.yml outputs to _site instead of docs
+          path: docs # change to '_site' if _quarto.yml specifies output-dir: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
