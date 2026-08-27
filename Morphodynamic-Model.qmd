@@ -1,7 +1,0 @@
----
-#title: "Morphodynamic Model"
----
-
-# Morphodynamic Model
-
-Content goes here.
