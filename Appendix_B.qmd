@@ -1,0 +1,11 @@
+---
+title: "Appendix B: Technical Report"
+format: html
+---
+
+<iframe 
+  src="files/Appendix_B.pdf" 
+  width="100%" 
+  height="950px" 
+  style="border: none;">
+</iframe>
