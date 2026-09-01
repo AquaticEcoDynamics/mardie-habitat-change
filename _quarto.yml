@@ -43,13 +43,13 @@ book:
     # # -----------------------------
     # # URALA
     # # -----------------------------
-    # - part: "Urala"
-    #   chapters:
-    #     - Urala/Overview.qmd
+    - part: "Urala"
+      chapters:
+         - Urala/Overview.qmd
     #     - Urala/Data.qmd
-    #     - Urala/Calibration-Validation.qmd
+         - Urala/Calibration-Validation.qmd
     #     - Urala/SLR-Scenarios.qmd
-    #     - Urala/Mangrove.qmd
+         - Urala/Mangrove.qmd
     #     - Urala/Algal-Mat.qmd
     #     - Urala/Discussion-Conclusions.qmd
 
