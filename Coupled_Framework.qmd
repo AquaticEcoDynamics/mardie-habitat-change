@@ -1,20 +1,59 @@
 ---
-#title: "Coupled Framework"
+title: "Approach: Dynamic Modelling Framework"
 ---
 
-## Dynamically coupled bio-hydro-morphodynamic modelling framework
+## Overview
 
-To predict mangrove responses under different sea-level rise (SLR) scenarios, we developed a dynamically coupled bio-hydro-morphodynamic model that integrates the open-source hydro-morphodynamic model Delft3D Flexible Mesh (DFM) [@Kernkamp2011] with the Nature Based Solutions Dynamics (NBSDynamics) model [@Deltares2022]. This coupled framework enables the simulation of feedbacks between hydrodynamic processes, sediment dynamics, and mangrove vegetation development, allowing assessment of whether mangrove ecosystems can adapt to future changes in relative sea level.
+To predict the distribution and long-term resilience of key intertidal habitats—specifically mangrove forests and cyanobacterial (algal) mats, it is essential to understand the primary physical and ecological drivers governing their dynamics. As established in Chapter 3, coastal ecosystem controls across the Pilbara region include hydrodynamics (water levels, flow velocities, and bed shear stress), salinity, surface temperature, light availability, microtopography, and sedimentation rates. All of these factors interact to determine habitat suitability, colonisation boundaries, and ecological persistence.
 
-As illustrated in @fig-coupling-framework, DFM resolves the physical processes governing coastal evolution, including hydrodynamics, sediment transport, and morphodynamic change. At each hydrodynamic time step, DFM calculates spatially distributed variables including water levels, flow velocities, inundation characteristics, and bed shear stress. These physical conditions are transferred to NBSDynamics, where they determine the suitability of local conditions for mangrove establishment, growth, and persistence. In particular, hydroperiod and bed shear stress represent key environmental controls on mangrove dynamics by influencing seedling establishment, vegetation stress, and the ability of mangroves to occupy and expand within the intertidal zone.
+When evaluating long-term ecosystem responses to sea-level rise (SLR), accounting for morphodynamic adjustments becomes critical. Long-term changes in inundation duration and depth are not solely dictated by the rate of SLR, but also depend on intertidal topography and eco-morphological feedbacks, which are in turn governed by hydro-sedimentary boundary forcings including tidal range, wave action, and sediment supply [@FitzGerald2008; @Passeri2015; @Xie2022]. Mangrove forests and algal mats can only tolerate specific durations and frequencies of tidal submersion [@Woodroffe2016]. Because hydrodynamic shifts under SLR continuously reshape intertidal morphodynamics, these physical and biological processes must be modelled in a dynamically coupled, two-way manner.
+
+While state-of-the-art numerical engines (e.g., Delft3D Flexible Mesh, SCHISM, MIKE) robustly resolve process-based hydro-sedimentary interactions, top-down parameterisations of vegetation and benthic ecological dynamics within these standard frameworks remain overly simplified.
+
+## Advances and Limitations in Eco-Geomorphic Modelling
+
+To bridge the gap between physical and ecological processes, hybrid and coupled eco-geomorphic (bio-hydro-morphodynamic) frameworks have been developed to simulate vegetation expansion, retreat, and decadal eco-geomorphic evolution [@Fagherazzi2012; @Lesser2004]. Notable examples include:
+
+* Delft3D Flexible Mesh (DFM) coupled with the MesoFON individual-based mangrove model (DFMFON) [@Kernkamp2011; @Beselly2023].
+* DFM integrated with custom MATLAB or Python vegetation modules [@Willemsen2022; @Xie2022].
+* The BASEMENT hydro-eco-morphodynamic model coupled with the Python-based BASEveg vegetation module [@Caponi2023].
+
+Despite their ability to capture multi-way feedbacks between biological dynamics and hydro-morphology, existing coupled frameworks suffer from severe computational bottlenecks. Because they must resolve non-linear interactions across vast spatial and temporal scales, previous applications have been restricted either to idealised domains [@Willemsen2022; @Xie2022] or relatively small localized estuaries [@Beselly2023]. A scalable, process-based approach capable of modelling complex coastal systems and regional-scale domains has been unavailable.
+
+## Predictive Approaches for Target Habitats
+
+### Mangrove Eco-Geomorphology
+
+Mangrove forests occupy the mid-to-upper intertidal zone and rely on a precise balance between inundation frequency, bed shear stress, sediment supply, and salinity. Within the coupled framework, mangrove dynamics are represented via process-based two-way feedbacks: DFM simulates the local hydrodynamic stress and bed level changes, while updated canopy density and root structures alter hydraulic roughness and attenuate wave and current energy. Due to numerical stability constraints, we did not include salinity in our coupled mangrove model.
+
+### Cyanobacterial (Algal) Mat Dynamics
+
+Algal mats develop on supratidal and upper intertidal land surfaces subject to periodic inundation and local ponding, particularly salt flats, mudflats, and overbank basins adjoining tidal creeks [@SeashoreEngineering2022; @SeashoreEngineering2021; @Taukulis2018]. The ecological drivers regulating algal mat establishment, growth, and survival include **hydroperiod (inundation duration and frequency), salinity, surface elevation, ambient temperature, light, sedimentation, and hydrodynamic bed stress**.
+
+In the semi-arid Pilbara region, the upper intertidal zone is exceptionally flat and only occasionally inundated. Microtopography (such as swash lines, low-relief sediment ridges, and sparse vegetation) causes localised ponding, where high evaporation rates generate hypersaline conditions favoured by opportunistic, nitrogen-fixing cyanobacteria [@Taukulis2018; @SeashoreEngineering2021]. Thick mats bind surface sediments, reduce bed permeability, and alter local drainage pathways.
+
+Currently, **no dedicated process-based numerical tools exist to simulate dynamic algal mat growth, colonisation, or two-way morphodynamic feedbacks**. Existing predictions regarding the response of upper intertidal flats to sea-level rise do not explicitly account for biological algal mat interactions, but instead evaluate predicted changes to tidal flow distributions and disturbance regimes [@Townend2011; @SeashoreEngineering2021]. 
+
+Prior habitat prediction efforts relied primarily on static hydroperiod approaches—relating mapped mat distributions directly to tidal elevation contours and projecting linear upward shifts under SLR [@SeashoreEngineering2021]. Under standard Pilbara conditions, both the upper limit (constrained by desiccation) and the lower limit (constrained by bioturbation and excessive inundation) shift landward with rising sea levels. However, local features such as low-relief sediment ridges alter hydroperiod dynamics, creating local non-linear responses that simple elevation-based projections cannot capture.
+
+To address this limitation, our approach utilises the calibrated DFM hydro-morphodynamic model (which incorporates two-way mangrove-morphodynamic updates) to explicitly model future hydrodynamic and hydroperiod conditions suitable for algal mat survival. The hydrodynamic parameters governing inundation patterns and shear stresses are calibrated against present-day baseline conditions, using satellite-derived spatial mapping of observed algal mat locations [@Hickey2025]. The hydrodynamic model outputs are then evaluated against critical hydroperiod thresholds to predict potential areas of future algal mat colonisation, migration, or loss under SLR scenarios.
+
+## The Dynamically Coupled Bio-Hydro-Morphodynamic Framework
+
+To overcome spatial and computational constraints, we developed an HPC-parallelised, dynamically coupled bio-hydro-morphodynamic modelling framework. This approach integrates **Delft3D Flexible Mesh (DFM)** [@Kernkamp2011] with **NBSDynamics** (Nature-Based Solutions Dynamics) [@Deltares2022], incorporating ecological parameterisation strategies adapted from @Xie2022. Built using a custom Python coupling interface, the framework enables parallel execution on high-performance computing (HPC) clusters, facilitating broad regional-scale assessment without sacrificing process-based fidelity.
 
 ![Schematic representation of the dynamically coupled bio-hydro-morphodynamic modelling framework linking Delft3D Flexible Mesh (DFM) and NBSDynamics. The hydro-morphodynamic model provides environmental conditions that regulate vegetation dynamics, while updated vegetation properties modify flow resistance and bed roughness within the hydrodynamic model.](images/Coupling_framework.png){#fig-coupling-framework}
 
-The vegetation model subsequently updates the spatial distribution and characteristics of mangrove vegetation based on the simulated environmental conditions. These updated vegetation properties are then transferred back to DFM, where vegetation-induced effects on hydrodynamics are incorporated through modifications of flow resistance and bed roughness. This two-way coupling allows vegetation feedbacks to influence the physical system, enabling the model to represent the reciprocal interactions between mangrove development and coastal morphodynamics. The coupled framework therefore captures both the ecological response of mangroves to changing environmental conditions and the role of vegetation in modifying hydrodynamic energy and sediment dynamics.
+### Model Integration and Information Exchange
 
-The coupling between DFM and NBSDynamics operates at a defined coupling interval, during which hydrodynamic and morphodynamic variables are exchanged between the two models. At each coupling step, DFM-derived variables are aggregated and provided to the vegetation model, which updates vegetation states based on the prevailing environmental conditions. The resulting vegetation characteristics, including spatial distribution and vegetation-related hydraulic parameters, are subsequently translated into DFM-compatible input fields for the following hydro-morphodynamic simulation period. This iterative exchange enables continuous feedback between vegetation development and coastal evolution throughout the simulation period.
+As illustrated in @fig-coupling-framework, the coupling operates through an iterative two-way exchange managed at defined coupling intervals:
 
-Although mangrove ecosystems have the capacity to increase bed elevation through belowground biomass production and organic matter accumulation, which can enhance their ability to maintain elevation relative to rising sea levels, this adaptive mechanism depends on the balance between sediment dynamics, biomass production, and the rate of SLR. By explicitly coupling vegetation growth with hydrodynamic and morphodynamic processes, the modelling framework allows the potential for mangrove soil elevation gain and ecosystem persistence under different SLR scenarios to be evaluated.
+1. **Hydrodynamic Forcing to Ecological Response:** At each coupling step, DFM calculates spatially distributed physical variables across the intertidal zone, including water levels, flow velocities, inundation frequency/duration (hydroperiod) and bed shear stress.
+2. **State Updates in NBSDynamics:** These hydrodynamic outputs are aggregated and passed to vegetation module via the Python coupling interface to evaluate suitability for mangrove establishment, growth, stress, and mortality.
+3. **Algal Mat Suitability Evaluation:** As an offline approach, the DFM hydroperiod and bed shear stress outputs at different intervals of the SLR simulations are evaluated against eco-hydrodynamic thresholds calibrated from present-day satellite-derived mat distributions [@Hickey2025] to delineate potential algal mat habitat zones.
+4. **Ecological Feedback to Hydrodynamics:** Updated mangrove vegetation properties (stem density, canopy height, spatial coverage) are translated into DFM-compatible input fields (spatially varying bed roughness and flow resistance).
+5. **Morphodynamic Adjustment:** DFM integrates these modified roughness fields into subsequent hydro-morphodynamic iterations, capturing how vegetation-induced drag alters flow patterns, attenuates wave energy, and regulates sediment deposition across the intertidal flat.
 
-The coupling interface was developed using Python and facilitates communication between DFM and NBSDynamics by exchanging model variables during runtime. Through this approach, the model represents the full feedback pathway between physical forcing and ecological response, including the influence of changing inundation conditions, hydrodynamic stress, vegetation development, and vegetation-induced modifications to coastal processes.
+### Long-Term Application to Sea-Level Rise
 
+By explicitly linking biological growth mechanisms with process-based sediment transport and hydroperiod shifts, the framework models the capacity of intertidal habitats to adjust elevation relative to rising sea levels. The parallelised Python interface enables long-term decadal simulations across broad regional geometries, providing a robust quantitative tool to assess mangrove and algal mat resilience, landward migration, or localised collapse under future SLR scenarios.

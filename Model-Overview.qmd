@@ -11,7 +11,7 @@ format:
 
 In this study, a state-of-the-art, process-based, open-source Delft3D Flexible Mesh (DFM) model was applied in a depth-averaged (2DH) configuration to simulate the coupled hydrodynamic and morphodynamic processes governing coastal, estuarine, and riverine environments (Deltares, 2021). The model resolves the spatial and temporal evolution of flow, sediment transport, and morphological change using an unstructured grid composed of triangular and quadrilateral elements.
 
-DFM employs a finite volume method to solve the shallow water equations under the hydrostatic pressure assumption and Boussinesq approximation, whereby density variations are only considered in the pressure term. The hydrodynamic core (D-Flow FM) computes water levels, velocities, and salinity, and is dynamically coupled with additional modules including wave dynamics (D-Waves) and sediment transport and morphology (D-Morphology). Interactions with vegetation are implemented via the Basic Model Interface (BMI), allowing feedbacks between hydrodynamics, sediment processes, and ecosystem development.
+DFM employs a finite volume method to solve the shallow water equations under the hydrostatic pressure assumption and Boussinesq approximation, whereby density variations are only considered in the pressure term. The hydrodynamic core (D-Flow FM) computes water levels, velocities, and salinity, and is dynamically coupled with additional modules including wave dynamics (D-Waves) and sediment transport and morphology (D-Morphology). Interactions with vegetation are implemented similar to the Basic Model Interface (BMI) approach, allowing feedbacks between hydrodynamics, sediment processes, and ecosystem development.
 
 ## Flow Module
 

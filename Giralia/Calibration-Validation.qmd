@@ -8,9 +8,9 @@ To establish a baseline for assessing future changes in mangrove ecosystems in t
 
 ### Historical Mangrove Observations (2000–2023)
 
-We utilized monthly mangrove maps derived from Landsat imagery by @Hickey2025 to examine the temporal variability in mangrove distribution. Although the Landsat-derived dataset provides monthly observations over the available satellite record, the mangrove extents in 2000 and 2023 are compared in @fig-giralia-obs to illustrate longer-term shifts in mangrove distribution alongside the corresponding water-level variability recorded at the Exmouth tide station over the same period.
+We utilised monthly mangrove maps derived from Landsat imagery by @Hickey2025 to examine the temporal variability in mangrove distribution. Although the Landsat-derived dataset provides monthly observations over the available satellite record, the mangrove extents in 2000 and 2023 are compared in @fig-giralia-obs to illustrate longer-term shifts in mangrove distribution alongside the corresponding water-level variability recorded at the Exmouth tide station over the same period.
 
-Overall, the Landsat observations indicate that mangrove extent in the Giralia region has remained relatively stable over the past two decades, with only minor changes in the spatial distribution. Seasonal variations in water level did not result in substantial changes in the mapped mangrove extent. However, a closer examination reveals that prolonged interannual environmental variations can produce more pronounced localized changes. For instance, mangrove dieback is evident in parts of the upper intertidal region during extended El Niño–Southern Oscillation (ENSO) periods [@Lovelock2017], suggesting that prolonged periods of lower inundation relative to typical hydrodynamic conditions can adversely influence mangrove survival. 
+Overall, the Landsat observations indicate that mangrove extent in the Giralia region has remained relatively stable over the past two decades, with only minor changes in the spatial distribution. Seasonal variations in water level did not result in substantial changes in the mapped mangrove extent. However, a closer examination reveals that prolonged interannual environmental variations can produce more pronounced localised changes. For instance, mangrove dieback is evident in parts of the upper intertidal region during extended El Niño–Southern Oscillation (ENSO) periods [@Lovelock2017], suggesting that prolonged periods of lower inundation relative to typical hydrodynamic conditions can adversely influence mangrove survival. 
 
 Despite these episodic changes, the overall mangrove extent has remained broadly consistent over the approximately 20-year observation period. This relative stability provides a suitable present-day baseline against which future changes under altered environmental conditions can be assessed.
 
@@ -26,7 +26,7 @@ Water level observations and historical mangrove extent in the Giralia region. *
 
 @fig-giralia-val shows the modeled mangrove distribution under present environmental conditions. Because the objective was to reproduce the stable mangrove extent representative of the current environmental regime, the model simulations were forced using the MSKO tidal constituents (optimised via harmonic analysis). 
 
-The spatial agreement between the modeled and observed mangrove extents was evaluated by categorizing grid cells:
+The spatial agreement between the modeled and observed mangrove extents was evaluated by categorising grid cells:
 * **True Positives (Green):** Correctly predicted mangrove areas.
 * **False Negatives (Black):** Observed mangrove areas missed by the model.
 * **False Positives (Red):** Areas predicted as mangrove where none were observed.
@@ -47,7 +47,7 @@ The resulting statistics indicate moderate-to-good agreement between the modeled
 
 In addition to spatial extent, the model predicts key structural attributes of the mangrove canopy:
 
-* **Stem Diameter ($d$):** Predicted spatial distributions (@fig-giralia-val-b) indicate relatively mature mangroves within the stable core of the mangrove distribution, characterized by larger stem diameters.
+* **Stem Diameter ($d$):** Predicted spatial distributions (@fig-giralia-val-b) indicate relatively mature mangroves within the stable core of the mangrove distribution, characterised by larger stem diameters.
 * **Stem Height ($h$):** Corresponding spatial distributions (@fig-giralia-val-c) reflect taller individuals within core zones and smaller, shorter individuals transitioning toward the margins of the habitat.
 
 This spatial gradient aligns with expected ecological development—progressing from established, dense mangrove stands to less stable transition zones—and confirms that the model captures both spatial extent and internal structural dynamics of the present-day mangrove ecosystem.

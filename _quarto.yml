@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 bibliography: references.bib
-csl: https://www.zotero.org/styles/apa
+csl: "https://www.zotero.org/styles/apa"
 citeproc: true
 
 book:
@@ -15,16 +15,17 @@ book:
 
     - Introduction.qmd
 
-    #- Region.qmd
-
     - Controls on Coastal Ecosystems in Pilbara.qmd
+
+    - Coupled_Framework.qmd
+
     - part: "Model"
       chapters:
         - Model-Overview.qmd
+        - Idealised_HydroMorpho_Model.qmd
         - Hydrodynamic-Model.qmd
         #- Morphodynamic-Model.qmd
-        - Coupled_Framework.qmd
-        - Idealized_HydroMorpho_Model.qmd
+        
 
 
     # -----------------------------
@@ -37,7 +38,7 @@ book:
         - Giralia/Calibration-Validation.qmd
         - Giralia/Sea-Level-Rise.qmd
         - Giralia/Mangrove.qmd
-    #     - Giralia/Algal-Mat.qmd
+        - Giralia/Algal_Mat.qmd
     #     - Giralia/Discussion-Conclusions.qmd
 
     # # -----------------------------

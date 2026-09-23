@@ -4,7 +4,7 @@ title: "Hydrodynamic Model"
 
 ## Hydrodynamic Modelling Overview
 
-To assess coastal and intertidal hydrodynamic processes and support habitat migration predictions, a multi-scale numerical modeling framework was developed using **Delft3D Flexible Mesh (Delft3D FM)**. 
+To assess coastal and intertidal hydrodynamic processes and support habitat migration predictions, a multi-scale numerical modelling framework was developed using **Delft3D Flexible Mesh (Delft3D FM)**. 
 
 To account for broader regional dynamics, severe weather phenomena, and open-ocean boundary influences, a **Regional Scale Model** was established for the Exmouth Gulf, covering both the Giralia and Urala domains. Operating alongside this regional domain are three high-resolution **Site-Specific Models**:
 
@@ -107,7 +107,7 @@ The resulting integrated bathymetric map (@fig-cp-bathy a) and its detailed view
 ## Simulation Periods and Boundary Conditions
 
 ### Simulation Period
-The modeling period across all domains was established based on the availability of hydrodynamic validation data and satellite-derived habitat mapping. Field-collected data from a comprehensive monitoring campaign conducted between November 2023 and mid-April 2024 (Phase 1) were used for calibration and validation.
+The modelling period across all domains was established based on the availability of hydrodynamic validation data and satellite-derived habitat mapping. Field-collected data from a comprehensive monitoring campaign conducted between November 2023 and mid-April 2024 (Phase 1) were used for calibration and validation.
 
 To establish a representative period for habitat predictive simulations, the complete calendar year of 2023 was selected. This period encompasses part of the calibration window and aligns with satellite-derived baseline habitat maps from Project A.
 
@@ -115,7 +115,7 @@ To establish a representative period for habitat predictive simulations, the com
 |:---|:---|:---|
 | **Calibration & Validation** | November 2023 – April 2024 | Model parameter tuning & verification against field gauge data |
 
-: Modeling Periods Summary {#tbl-sim-periods}
+: Modelling Periods Summary {#tbl-sim-periods}
 
 ### Model Boundary Conditions & Environmental Forcings
 
@@ -124,14 +124,14 @@ An overview of the spatial domains and numerical model forcing datasets is illus
 * **Water Level & Tidal Forcing:** Tidal boundaries were forced using measured water level data from the Onslow tide gauge station (Western Australia). Initial sensitivity evaluations demonstrated that local measured water levels outperformed regional/global tide models (TPXO global tide model and HYCOM sea surface height anomalies) by inherently capturing episodic, non-tidal extremes such as storm surges.
 * **Atmospheric Forcing & Heat Flux:** Surface meteorological forcing parameters—including air temperature, relative humidity, cloud cover, surface wind speed, and atmospheric pressure—were extracted from the **ERA5 reanalysis dataset**. 
 * **Evaporation** Delft3D FM calculates surface heat dynamics and evaporation dynamically using a composite heat flux model. Latent heat exchange and evaporation rates are derived via bulk aerodynamic formulations based on atmospheric pressure, wind speed, and surface-to-air humidity gradients. Solar radiation fluxes are calculated internally as a function of geographical position, time of day, and cloud cover.
-* **Rainfall Dynamics:** Local measured rainfall data were included during the model calibration phase (November 2023 – April 2024) to account for flash-runoff events and localized salinity fluctuations. For predictive 2023 habitat simulations, only tidal and wind/atmospheric forces were applied.
+* **Rainfall Dynamics:** Local measured rainfall data were included during the model calibration phase (November 2023 – April 2024) to account for flash-runoff events and localised salinity fluctuations. For predictive 2023 habitat simulations, only tidal and wind/atmospheric forces were applied.
 * **Waves:** Wave conditions across the target domains (**Exmouth Gulf**, **Giralia**, **Cape Preston**, and **Urala**) were incorporated using **WHACS wave model outputs**, complemented by local measured dataset observations in Exmouth Gulf for boundary validation.
 
 ![Overview of the model boundary conditions, forcing datasets, and spatial model domains (Exmouth Gulf, Giralia, Cape Preston, and Urala).](images/forcings.jpg){#fig-bc-2023}
 
 
 ### Bed Roughness (Manning's n)
-Flow resistance across diverse intertidal and benthic habitats was parameterized using 2023 mapped habitat distributions. Specific Manning’s roughness coefficients ($n$) were assigned per habitat type, as summarized in @tbl-roughness.
+Flow resistance across diverse intertidal and benthic habitats was parameterised using 2023 mapped habitat distributions. Specific Manning’s roughness coefficients ($n$) were assigned per habitat type, as summarised in @tbl-roughness.
 
 | Habitat / Topographic Type | Manning's Roughness Coefficient ($n$) |
 |:---|:---:|
@@ -228,16 +228,17 @@ Dynamic hydrodynamic simulation and water level time series comparison across mo
 
 Unlike the Urala and Giralia domains, a separate site-specific hydrodynamic calibration and validation was not carried out for Cape Preston. Instead, Cape Preston serves as a **demonstrative site** where the key hydrodynamic parameterizations, bed roughness settings, and vegetation flow resistance formulations calibrated and validated in the Urala and Giralia domains were directly applied.
 
-By transferring these field-validated parameters to the Cape Preston domain, the model effectively simulates the baseline hydrodynamic processes—including tidal propagation, inundation depth, and flow velocities—providing a strong foundation for assessing habitat dynamics and predicting future coastal impacts under Sea Level Rise (SLR) scenarios.
+By transferring these field-validated parameters to the Cape Preston domain, the model effectively simulates the baseline hydrodynamic processes including tidal propagation, inundation depth, and flow velocities providing a strong foundation for assessing habitat dynamics and predicting future coastal impacts under Sea Level Rise (SLR) scenarios.
 
 The video below demonstrates the spatial hydrodynamic processes, tidal inundation cycles, and flow conditions across the Cape Preston domain:
 
+::: {.content-visible when-format="html"}
 ::: {#fig-capepreston-video}
 ![](animations/Cape_Preston_hydro.mp4){fig-align="center" width="100%"}
 
 Hydrodynamic simulation demonstrating tidal propagation and inundation dynamics across the Cape Preston demonstrative site.
 :::
-Hydrodynamic simulation demonstrating tidal propagation and inundation dynamics across the Cape Preston demonstrative site.
+:::
 
 ## Summary of Model Reliability
 
