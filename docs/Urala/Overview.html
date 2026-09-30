@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>13&nbsp; Overview – Future of Intertidal Habitats in the Pilbara</title>
+<title>13&nbsp; Overview of the Urala Study Site – Future of Intertidal Habitats in the Pilbara</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,7 +23,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,6 +93,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -86,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Urala/Overview.html">Urala</a></li><li class="breadcrumb-item"><a href="../Urala/Overview.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Urala/Overview.html">Urala</a></li><li class="breadcrumb-item"><a href="../Urala/Overview.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview of the Urala Study Site</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -217,7 +266,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Urala/Overview.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview of the Urala Study Site</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -230,6 +279,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../Urala/Mangrove.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Urala/Algal_Mat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Algal mat response to future sea level rise</span></span></a>
   </div>
 </li>
       </ul>
@@ -246,13 +301,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Appendices/Appendix_A.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Appendix A: Monitoring &amp; Water Level Correction Framework</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix A: Monitoring &amp; Water Level Correction Framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Appendix_B.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Appendix_B.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
   </div>
 </li>
       </ul>
@@ -273,24 +334,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#existing-conditions-and-baseline-modeling" id="toc-existing-conditions-and-baseline-modeling" class="nav-link active" data-scroll-target="#existing-conditions-and-baseline-modeling"><span class="header-section-number">13.1</span> Existing Conditions and Baseline Modeling</a>
+  <li><a href="#sediment-characteristics-and-particle-size-distributions" id="toc-sediment-characteristics-and-particle-size-distributions" class="nav-link active" data-scroll-target="#sediment-characteristics-and-particle-size-distributions"><span class="header-section-number">13.1</span> Sediment Characteristics and Particle Size Distributions</a></li>
+  <li><a href="#site-characteristics-and-environmental-drivers" id="toc-site-characteristics-and-environmental-drivers" class="nav-link" data-scroll-target="#site-characteristics-and-environmental-drivers"><span class="header-section-number">13.2</span> Site Characteristics and Environmental Drivers</a></li>
+  <li><a href="#existing-conditions-and-baseline-modelling" id="toc-existing-conditions-and-baseline-modelling" class="nav-link" data-scroll-target="#existing-conditions-and-baseline-modelling"><span class="header-section-number">13.3</span> Existing Conditions and Baseline Modelling</a>
   <ul class="collapse">
-  <li><a href="#topography-and-elevation-profile" id="toc-topography-and-elevation-profile" class="nav-link" data-scroll-target="#topography-and-elevation-profile"><span class="header-section-number">13.1.1</span> Topography and Elevation Profile</a></li>
-  <li><a href="#spatial-habitat-distribution" id="toc-spatial-habitat-distribution" class="nav-link" data-scroll-target="#spatial-habitat-distribution"><span class="header-section-number">13.1.2</span> Spatial Habitat Distribution</a></li>
+  <li><a href="#hydrodynamic-regime-summary" id="toc-hydrodynamic-regime-summary" class="nav-link" data-scroll-target="#hydrodynamic-regime-summary"><span class="header-section-number">13.3.1</span> Hydrodynamic Regime Summary</a></li>
   </ul></li>
-  <li><a href="#hydrodynamic-and-environmental-exposure-metrics" id="toc-hydrodynamic-and-environmental-exposure-metrics" class="nav-link" data-scroll-target="#hydrodynamic-and-environmental-exposure-metrics"><span class="header-section-number">13.2</span> Hydrodynamic and Environmental Exposure Metrics</a>
-  <ul class="collapse">
-  <li><a href="#hydrodynamic-regime-summary" id="toc-hydrodynamic-regime-summary" class="nav-link" data-scroll-target="#hydrodynamic-regime-summary"><span class="header-section-number">13.2.1</span> Hydrodynamic Regime Summary</a></li>
-  </ul></li>
+  <li><a href="#prediction-approach" id="toc-prediction-approach" class="nav-link" data-scroll-target="#prediction-approach"><span class="header-section-number">13.4</span> Prediction approach</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Urala/Overview.html">Urala</a></li><li class="breadcrumb-item"><a href="../Urala/Overview.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Urala/Overview.html">Urala</a></li><li class="breadcrumb-item"><a href="../Urala/Overview.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview of the Urala Study Site</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview of the Urala Study Site</span></h1>
 </div>
 
 
@@ -307,7 +366,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Unlike Giralia Bay, the Urala study region does not exhibit a uniform intertidal zonation. While a distinct shore-normal zonation occurs across the southern area, the northern domain displays a complex morphology where the North Creek and South Creek systems converge and interconnect via a network of micro-creeks (<a href="#fig-urala-site" class="quarto-xref">Figure&nbsp;<span>13.1</span></a>).</p>
+<p>The Urala study site is located approximately <span class="math inline">\(40\text{ km}\)</span> south-east of Onslow, positioned along the eastern shoreline near the mouth of Exmouth Gulf. Unlike Giralia Bay, the Urala study region does not exhibit a uniform intertidal zonation. While a distinct shore-normal zonation occurs across the southern area, the northern domain displays a complex morphology where the North Creek and South Creek systems converge and interconnect via a network of micro-creeks (<a href="#fig-urala-site" class="quarto-xref">Figure&nbsp;<span>13.1</span></a>).</p>
 <div id="fig-urala-site" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-urala-site-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -318,44 +377,52 @@ Figure&nbsp;13.1: Study site at Urala within the West Pilbara coast, Northwester
 </figcaption>
 </figure>
 </div>
-<section id="existing-conditions-and-baseline-modeling" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="existing-conditions-and-baseline-modeling"><span class="header-section-number">13.1</span> Existing Conditions and Baseline Modeling</h2>
-<p>To understand the existing conditions, we carried out a 1-year hydrodynamic run for an ENSO-neutral year (2018) and used that to represent mean habitats from the satellite-derived map (Hickey et al., 2025).</p>
-<section id="topography-and-elevation-profile" class="level3" data-number="13.1.1">
-<h3 data-number="13.1.1" class="anchored" data-anchor-id="topography-and-elevation-profile"><span class="header-section-number">13.1.1</span> Topography and Elevation Profile</h3>
 <p>The site exhibits a subtle, extremely low-relief topographic gradient characteristic of arid, hypersaline coastal environments. Elevation increases gently landward from the open water and tidal creek boundaries across distinct ecological zones:</p>
 <ul>
 <li><strong>Intertidal Zone:</strong> Represents the lowest-lying vegetated and tidal areas, dissecting the landscape along creek channels and open water boundaries.</li>
 <li><strong>High Intertidal to Supratidal Zone:</strong> Features a flat, broad, low-gradient platform immediately landward of the mangrove fringe.</li>
 <li><strong>Upper Salt Flats &amp; Dunes:</strong> Extends further inland, transitioning into relict salt pans (bright salt) and terrestrial coastal vegetation/dune systems at higher relative land elevations.</li>
 </ul>
-</section>
-<section id="spatial-habitat-distribution" class="level3" data-number="13.1.2">
-<h3 data-number="13.1.2" class="anchored" data-anchor-id="spatial-habitat-distribution"><span class="header-section-number">13.1.2</span> Spatial Habitat Distribution</h3>
-<p>Based on the habitat classification map, the coastal landscape is organized in clear zonation parallel to the shoreline and tidal networks:</p>
-<div id="fig-habitat" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="sediment-characteristics-and-particle-size-distributions" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="sediment-characteristics-and-particle-size-distributions"><span class="header-section-number">13.1</span> Sediment Characteristics and Particle Size Distributions</h2>
+<p>Sediment sampling across the Urala intertidal landscape reveals two distinct sedimentary regimes: open sandy habitats (representing general shoreface and channel substrate) and sheltered mudflats (<a href="#fig-psd-urala" class="quarto-xref">Figure&nbsp;<span>13.2</span></a> and <a href="#fig-psd-urala-mud" class="quarto-xref">Figure&nbsp;<span>13.3</span></a>).</p>
+<div id="fig-psd-urala" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-habitat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/habitat_distribution_ENSO_neutral_sr_2018.png" class="img-fluid figure-img" style="width:85.0%">
+<div aria-describedby="fig-psd-urala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/PSD_urala.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-habitat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;13.2: Habitat Classification Map for the 2018 ENSO Neutral Year Baseline
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-psd-urala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.2: Particle size distribution (PSD) representative of general sandy substrate across Urala, showing a narrow, unimodal distribution dominated by medium-to-fine sand fractions (<span class="math inline">\(100\text{-}500\,\mu\text{m}\)</span>; <span class="math inline">\(\Phi = 1.0\text{-}2.5\)</span>).
 </figcaption>
 </figure>
 </div>
+<div id="fig-psd-urala-mud" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-psd-urala-mud-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/PSD_urala_mud_flat.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-psd-urala-mud-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.3: Particle size distribution (PSD) representative of mudflat environments across Urala, displaying a broad, polymodal distribution spanning fine silts and clays (<span class="math inline">\(&lt; 10\,\mu\text{m}\)</span>) through fine sand (<span class="math inline">\(100\,\mu\text{m}\)</span>) to coarse biogenic fragments (<span class="math inline">\(800\text{-}1000\,\mu\text{m}\)</span>).
+</figcaption>
+</figure>
+</div>
+<p>The sedimentary signatures reflect contrasting hydro-geomorphic energy regimes:</p>
+<ol type="1">
+<li><strong>General Sandy Substrate (<a href="#fig-psd-urala" class="quarto-xref">Figure&nbsp;<span>13.2</span></a>):</strong> Exhibits a highly sorted, well-defined unimodal distribution centered predominantly around fine-to-medium sand (<span class="math inline">\(150\text{-}300\,\mu\text{m}\)</span>, corresponding to Phi values <span class="math inline">\(\Phi = 1.0\text{-}2.5\)</span>, where <span class="math inline">\(\Phi = 1.5\text{-}2.0\)</span> comprises over <span class="math inline">\(70\%\)</span> of the sample volume). This narrow grain-size spectrum indicates an energetic, tide- and wave-dominated environment where fine silts and clays are continuously winnowed away, leaving a clean, well-sorted sandy substrate along channels and exposed flats.</li>
+<li><strong>Mudflat Substrate (<a href="#fig-psd-urala-mud" class="quarto-xref">Figure&nbsp;<span>13.3</span></a>):</strong> Displays a broad, complex polymodal distribution characteristic of low-energy depositional settings. The primary peak resides within the fine-sand and coarse-silt boundary (<span class="math inline">\(\sim 80\text{-}100\,\mu\text{m}\)</span>), accompanied by a significant fine-grained tail extending into fine silts and clays (<span class="math inline">\(&lt; 10\,\mu\text{m}\)</span>; <span class="math inline">\(\Phi = 4.0\text{-}11.0\)</span>, contributing over <span class="math inline">\(45\%\)</span> of total volume). Secondary coarse peaks (<span class="math inline">\(\sim 800\text{-}1000\,\mu\text{m}\)</span>; <span class="math inline">\(\Phi = -0.5\text{-}0.5\)</span>) reflect the accumulation of coarse shell hash and biogenic material. This wide grain spectrum highlights calm, baffled hydraulic conditions within sheltered tidal creeks and mangrove interiors that facilitate fine-sediment settling.</li>
+</ol>
+</section>
+<section id="site-characteristics-and-environmental-drivers" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="site-characteristics-and-environmental-drivers"><span class="header-section-number">13.2</span> Site Characteristics and Environmental Drivers</h2>
 <ul>
-<li><strong>Mangroves (Green):</strong> Strictly fringing the primary tidal channels, creek mouths, and lower intertidal areas where direct marine influence is strongest, occupying the intertidal zone characterized by frequent flushing.</li>
-<li><strong>Cyanobacterial Mats (Black):</strong> Form an extensive, continuous band situated directly landward of the mangroves. The high intertidal flat also displays widespread cyanobacterial mats under suitable hydrodynamic and environmental conditions.</li>
-<li><strong>High Intertidal Flats (Orange):</strong> Border and intersperse with the cyanobacterial mats, forming the broader evaporative flat zone.</li>
-<li><strong>Salt Marsh (Grey) &amp; Bright Salt (White):</strong> Positioned further inland along the landward margin, representing hypersaline, highly evaporative basins.</li>
-<li><strong>Coastal Vegetation &amp; Dunes (Red):</strong> Define the landward boundary, occupying higher ground beyond typical tidal reach.</li>
+<li><strong>Geomorphology &amp; Dynamic Creeks:</strong> The site is defined by extensive barrier spit networks, dynamic creek mouths, and broad landward salt flats (sabkhas). The North and South Creek systems form interconnected drainage pathways that experience spatial adjustments during extreme discharge events.</li>
+<li><strong>Hydrodynamics &amp; Tides:</strong> Hydrodynamics are governed by a macro-to-mesotidal regime with semi-diurnal tides. Strong tidal currents dominate the primary creek channels, driving bed shear stresses that maintain open, sandy channels while steering fine sediment into adjacent sheltered bays and mangrove fringes.</li>
+<li><strong>Metocean Stressors:</strong> Similar to Giralia Bay, Urala is subject to a hyper-arid climate with high evaporation rates and extremely variable annual rainfall. Periodic tropical cyclones deliver intense wave energy and catchment flooding, which temporarily override tidal forcing, reorganising barrier spits and driving episodic fine-sediment flux across the mudflats.</li>
 </ul>
-<hr>
 </section>
-</section>
-<section id="hydrodynamic-and-environmental-exposure-metrics" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="hydrodynamic-and-environmental-exposure-metrics"><span class="header-section-number">13.2</span> Hydrodynamic and Environmental Exposure Metrics</h2>
-<p>To characterize the physical environment governing these zones, the hydrodynamic parameters were evaluated using the 25th to 75th quantile of their distribution. The selected predictors included key inundation-related parameters such as:</p>
+<section id="existing-conditions-and-baseline-modelling" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="existing-conditions-and-baseline-modelling"><span class="header-section-number">13.3</span> Existing Conditions and Baseline Modelling</h2>
+<p>To further understand the existing hydrodynamicconditions, we carried out a 1-year hydrodynamic run for an ENSO-neutral year (2018) and used that to represent mean habitats from the satellite-derived map <span class="citation" data-cites="Hickey2025">Hickey et al. (<a href="../References.html#ref-Hickey2025" role="doc-biblioref">2025</a>)</span>. To characterise the physical environment governing these zones, the hydrodynamic parameters were evaluated using the 25th to 75th quantile of their distribution. The selected predictors included key inundation-related parameters such as:</p>
 <ul>
 <li>inundation frequency,</li>
 <li>percentage of submergence,</li>
@@ -366,17 +433,38 @@ Figure&nbsp;13.2: Habitat Classification Map for the 2018 ENSO Neutral Year Base
 <li>depth-averaged mean and maximum currents, and</li>
 <li>mean and maximum water depths.</li>
 </ul>
-<p>These hydrodynamic parameters were chosen to provide a comprehensive representation of habitat exposure to tidal and submersion dynamics, which are known to be critical determinants for predicting habitat migration patterns under changing environmental conditions.</p>
-<section id="hydrodynamic-regime-summary" class="level3" data-number="13.2.1">
-<h3 data-number="13.2.1" class="anchored" data-anchor-id="hydrodynamic-regime-summary"><span class="header-section-number">13.2.1</span> Hydrodynamic Regime Summary</h3>
+<p>These hydrodynamic parameters were chosen to provide a comprehensive representation of habitat exposure to tidal and submersion dynamics, which are known to be critical determinants for predicting habitat migration patterns under changing environmental conditions. <a href="#fig-habitat" class="quarto-xref">Figure&nbsp;<span>13.4</span></a> shows the hydrodynamic parameters for different habitats across the Urala study site, highlighting the distinct environmental conditions experienced by each habitat type.</p>
+<div id="fig-habitat" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-habitat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/habitat_distribution_ENSO_neutral_sr_2018.png" class="img-fluid figure-img" style="width:85.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-habitat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.4: Habitat Classification Map for the 2018 ENSO Neutral Year Baseline
+</figcaption>
+</figure>
+</div>
+<section id="hydrodynamic-regime-summary" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="hydrodynamic-regime-summary"><span class="header-section-number">13.3.1</span> Hydrodynamic Regime Summary</h3>
 <ul>
 <li><strong>Mangrove Zones:</strong> Experience frequent wetting cycles with near-100% inundation frequency and high submergence percentages (median ~40–50%). They occupy areas with the highest mean water depths (~0.1–0.2 m) and maximum water depths (reaching up to ~0.7–1.5 m), alongside higher maximum currents (~0.3–0.4 m/s) required to prevent extreme salinity build-up.</li>
 <li><strong>Cyanobacterial Mats &amp; High Intertidal Flats:</strong> Share moderate submergence percentages (~30%) and shallow mean water depths (&lt; 0.1 m). They endure frequent wetting-drying cycles with maximum dry event durations typically staying under 20–25 days, creating optimal moist, hypersaline windows.</li>
-<li><strong>Bright Salt Flats:</strong> Characterized by minimal submergence percentages (median &lt; 10%), near-zero mean water depths, and prolonged dry periods exceeding 120–175 days, leading to intense evaporation and crust formation.</li>
+<li><strong>Bright Salt Flats:</strong> Characterised by minimal submergence percentages (median &lt; 10%), near-zero mean water depths, and prolonged dry periods exceeding 120–175 days, leading to intense evaporation and crust formation.</li>
 </ul>
-
-
 </section>
+</section>
+<section id="prediction-approach" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="prediction-approach"><span class="header-section-number">13.4</span> Prediction approach</h2>
+<p>Following the methodology established for Giralia Bay (<a href="../Giralia/Overview.html#sec-giralia-approach" class="quarto-xref"><span>Section 8.2</span></a>), an integrated numerical model was developed for the Urala region. The hydrodynamic model was calibrated first to establish accurate flow and tidal dynamics. Subsequently, the mangrove vegetation module was coupled to simulate and calibrate baseline present-day mangrove distributions across the domain.</p>
+<p>Once present-day mangrove boundaries were initialised, cyanobacterial (algal) mat distributions were calibrated using an offline (decoupled) predictive approach based on hydrodynamic and mangrove spatial outputs. The calibrated, coupled modelling framework was then applied to simulate future sea-level rise scenarios for both mangrove ecosystems and algal mats.</p>
+<p>Detailed calibration and validation procedures for the hydrodynamic model, as well as the mangrove and algal mat modules, are provided in <a href="../Hydrodynamic-Model.html#sec-hydro-calibration" class="quarto-xref"><span>Section 7.5</span></a> and <span class="quarto-unresolved-ref">?sec-urala-calibration</span>, respectively.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Hickey2025" class="csl-entry" role="listitem">
+Hickey, S. M., Stone, A., Radford, B., &amp; Lovelock, C. E. (2025). Multidecadal mapping of arid intertidal ecosystems reveals a dynamic mosaic of habitats north-western australia. <em>Estuarine, Coastal and Shelf Science</em>, <em>323</em>, 109401. <a href="https://doi.org/10.1016/J.ECSS.2025.109401">https://doi.org/10.1016/J.ECSS.2025.109401</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

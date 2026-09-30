@@ -5,7 +5,7 @@ format:
     math: mathjax
 ---
 
-# Model Overview
+# Model Overview {#sec-model-overview}
 
 <br>
 
@@ -334,55 +334,94 @@ The coupled hydrodynamic, wave, and morphodynamic processes provide the physical
 
 Overall, the Delft3D-FM framework enables an integrated simulation of hydrodynamics, waves, sediment transport, and vegetation feedbacks, providing a robust tool for assessing coastal ecosystem dynamics under varying environmental conditions.
 
-## Mangrove Model
+## Mangrove Model {#sec-vegetation-effects}
 
-Mangrove establishment, growth, and mortality were explicitly coupled to local hydrodynamics through an inundation suitability framework. Similar to existing studies [@Berger2000; @VanMaanen2015; @Xie2022], mangrove growth and survival were governed by an inundation suitability function, $I(P)$, defined as a quadratic response to inundation frequency $P$:
+### Colonisation
+
+Mangrove establishment, growth, and mortality were explicitly coupled to local hydrodynamics through an inundation suitability framework. Colonisation is controlled jointly by inundation frequency ($P$) and hydrodynamic bed shear stress ($\tau_{90}$). These are optimised for each site specifically, however, for illustrative purposes, thresholds optimised for Giralia site is shown below.
+
+Establishment can only occur within a bounded inundation window ($P_{\min} \le P \le P_{\max}$, where $P_{\min} = 0.05$ and $P_{\max} = 0.60$). Outside this range, establishment is not permitted, reflecting physiological limits on mangrove tolerance to submergence and desiccation. Within this window, colonisation is further constrained by bed shear stress:
+
+$$
+\tau_{90} \le \tau_{\text{thres}} \quad \text{where} \quad \tau_{\text{thres}} = 0.265 \text{ N m}^{-2}
+$$
+
+This adopted shear stress threshold falls within typical ranges reported in literature [@Beselly2023; @Willemsen2022; @Xie2022]. Within this feasible hydrodynamic domain, the probability of establishment is directly proportional to an inundation suitability function, $I(P)$. When shear stress exceeds the threshold ($\tau_{90} > \tau_{\text{thres}}$), colonisation is completely inhibited regardless of inundation suitability.
+
+### Inundation Suitability Framework
+
+Similar to existing formulations [@Berger2000; @VanMaanen2015; @Xie2022], the inundation suitability function $I(P)$ is defined as a quadratic response to inundation frequency $P$:
 
 $$
 I(P) = \max \left( a_s P^2 + b_s P + c_s,\, 0 \right)
 $${#eq-inundation-suitability}
 
-where $a_s = -13.22$, $b_s = 8.59$, and $c_s = -0.40$. 
+where $a_s = -13.22$, $b_s = 8.59$, and $c_s = -0.40$. The parameters $a_s$, $b_s$, $c_s$, as well as $\tau_{\text{thres}}$ and the inundation range, were optimised by conducting sensitivity simulations against LiDAR-derived vegetation boundaries and hydrodynamics simulated for the calibration period (January–December 2024). 
 
-This formulation produces a unimodal response with a maximum suitability ($S \approx 1.0$) within the ecologically viable inundation range. Suitability is further constrained by a colonization window such that $I(P) = 0$ for $P < P_{\min}$ and $P > P_{\max}$, where $P_{\min} = 0.05$ and $P_{\max} = 0.60$. Outside this range, establishment is not permitted, reflecting functional limits on mangrove tolerance to inundation.
-
-### Colonization
-
-Colonization is controlled jointly by inundation frequency and hydrodynamic bed shear stress. The bed shear stress threshold for colonization is fixed as:
-
-$$
-\tau_{90} < \tau_{\text{thres}} \quad \text{where} \quad \tau_{\text{thres}} = 0.265 \text{ N m}^{-2}
-$$
-
-The adopted bed shear stress threshold falls within the range of existing literature [@Beselly2023; @Willemsen2022; @Xie2022]. Within this feasible domain, the probability of establishment is proportional to $I(P)$. When shear stress exceeds the threshold ($\tau_{90} \ge \tau_{\text{thres}}$), colonization is completely inhibited regardless of inundation suitability. Similarly, outside the inundation window ($P < P_{\min}$ or $P > P_{\max}$), establishment is impossible even under low hydrodynamic stress.
+This formulation yields a unimodal response with a maximum suitability ($I(P) \approx 1.0$) at intermediate inundation frequencies.
 
 ### Vegetation Growth
 
-Vegetation growth is modelled as a diameter increment rate $\frac{dD}{dt}$, scaled by inundation suitability:
+Vegetation growth is modelled as a stem diameter increment rate $\frac{dD}{dt}$, scaled jointly by inundation suitability $I(P)$ and a space availability factor $C_f$ [adapted from @Xie2022]:
 
 $$
-\frac{dD}{dt} = \frac{G \cdot D \left( 1 - \frac{D \cdot H}{D_{\max} \cdot H_{\max}} \right)}{274 + 3 b_2 D - 4 b_3 D^2} \cdot I(P)
+\frac{dD}{dt} = \frac{G \cdot D \left( 1 - \frac{D \cdot H}{D_{\max} \cdot H_{\max}} \right)}{274 + 3 b_2 D - 4 b_3 D^2} \cdot I(P) \cdot C_f
 $${#eq-growth-rate}
 
-where $G = 4.39$ is a growth coefficient, $D$ is stem diameter ($\text{cm}$), and tree height $H$ ($\text{cm}$) is given by:
+where $G = 4.39$ is a growth coefficient, $D$ is stem diameter ($\text{cm}$), and tree height $H$ ($\text{cm}$) is expressed as:
 
 $$
 H = 137 + b_2 D - b_3 D^2
 $$
 
-with coefficients $b_2 = 21.3$, $b_3 = 0.2$, $D_{\max} = 10 \text{ cm}$, and $H_{\max} = 330 \text{ cm}$. These coefficients were optimized using idealized simulations against LiDAR measurements at Giralia but modified for Urala and Cape Preston.
+with growth coefficients $b_2 = 21.3$ and $b_3 = 0.2$. The maximum structural dimensions ($D_{\max} = 10 \text{ cm}$ and $H_{\max} = 330 \text{ cm}$) were established based on field observations and radiocarbon-dated chronology of arid Western Australian mangroves [@Santini2013], while $H_{\max}$ was further cross-referenced with regional $98^{\text{th}}$ percentile LiDAR canopy height measurements. Growth parameters ($G, b_2, b_3$) were adjusted following @Xie2022 to reflect growth responses under arid environmental conditions.
 
-Growth is maximized at intermediate inundation frequencies where $I(P)$ peaks, defining an optimal growth zone within the colonization window. As trees approach their maximum size ($D \to D_{\max}$), the growth rate asymptotically approaches zero due to structural limitation constraints, resulting in negligible growth for mature individuals.
+Growth is optimised within intermediate inundation frequencies where $I(P)$ peaks. As trees approach maximum structural limits ($D \to D_{\max}$), the growth rate asymptotically approaches zero, representing the reduced growth increment characteristic of mature individuals.
+
+### Biomass and Spatial Footprint
+
+To model cohort growth and evaluate total stand biomass within each grid cell, allometric relations based on stem diameter $D$ ($\text{m}$) were implemented following @Xie2022. Total standing biomass $B_{\text{total}}$ ($\text{kg}$) per grid cell is calculated by summing aboveground and belowground biomass across all $N$ cohorts present:
+
+$$
+B_{\text{total}} = \sum_{i=1}^{N} n_i \left( \alpha_1 D_i^{\beta_1} + \alpha_2 D_i^{\beta_2} \right)
+$${#eq-total-biomass}
+
+where $n_i$ and $D_i$ are the stem density and stem diameter of the $i^{\text{th}}$ cohort, respectively. Parameters $\alpha_1, \beta_1$ represent aboveground biomass scaling, and $\alpha_2, \beta_2$ represent belowground biomass scaling [@Xie2022].
+
+To quantify resource competition thresholds, a critical uncompeted stand capacity $B_{\text{cap}}$ ($\text{kg}$) was derived using a "zone of influence" approach. This describes a fully stocked grid cell occupied by uninhibited mature mangroves ($D = D_{\max}$). The territorial footprint radius $R_{\text{zoi}}$ ($\text{m}$) for a mature tree is defined as:
+
+$$
+R_{\text{zoi}} = 100 \cdot \left(\frac{D_{\max}}{2}\right)
+$${#eq-zoi-radius}
+
+where $100$ scales the stem radius to its zone of influence footprint. Assuming each mature tree occupies a square spatial footprint of side length $2 R_{\text{zoi}}$, the maximum uncompeted biomass capacity for a cell area $A_{\text{cell}}$ ($\text{m}^2$) is:
+
+$$
+B_{\text{cap}} = \left( \frac{A_{\text{cell}}}{(2 R_{\text{zoi}})^2} \right) \cdot B_{\text{single}}
+$${#eq-biomass-capacity}
+
+where $B_{\text{single}}$ is the total individual biomass of a single mature tree ($D = D_{\max}$). $B_{\text{cap}}$ serves as the baseline threshold for evaluating growth suppression and density-dependent mortality.
 
 ### Intraspecific Competition
 
-To account for resource limitations and spatial constraints as vegetation matures, intraspecific competition was modelled using a sigmoidal density-dependent competition stress factor ($C_f$) that confines vegetation density both between and within grid cells. It is calculated as a function of total standing biomass per cell ($B_{\text{total}}$):
+To account for spatial limits and resource constraints (e.g. light, space, and porewater nutrients) as vegetation matures, intraspecific competition is governed by a sigmoidal space/resource availability factor ($C_f \in [0, 1]$). It is computed as a function of total standing biomass $B_{\text{total}}$:
 
 $$
-C_f = \frac{1}{1 + e^{d \cdot (B_{0.5} - B_{\text{total}})}}
+C_f = \frac{1}{1 + e^{d \cdot (B_{\text{total}} - B_{0.5})}}
 $${#eq-competition-factor}
 
-where $0 \le C_f \le 1$ represents external stressors, $B_{0.5}$ represents the half-saturation biomass threshold at which competition stress reaches $50\%$ ($C_f = 0.5$), and $d$ is a scaling parameter governing the steepness of the stress response. 
+where $B_{0.5}$ is the half-saturation biomass threshold at which resource stress reduces space availability to $50\%$ ($C_f = 0.5$), and $d$ is a scaling parameter controlling response steepness. Under low biomass conditions ($B_{\text{total}} \ll B_{0.5}$), $C_f \to 1$, imposing negligible competitive inhibition. As biomass increases towards canopy closure ($B_{\text{total}} \gg B_{0.5}$), $C_f \to 0$, representing maximal suppression.
+
+Combined multi-factor environmental stress is evaluated as the product of inundation suitability and space availability ($I(P) \cdot C_f$). Intense competitive stress ($C_f \to 0$) depresses overall viability, slowing growth rates and initiating density-dependent self-thinning.
+
+### Mortality and Density Regulation
+
+Vegetation mortality and density regulation follow a multi-factor, two-stage process driven by hydrodynamic stress, density-dependent competition, and desiccation. Total environmental stress is tracked via the combined viability product $I(P) \cdot C_f$.
+
+Sub-optimal conditions occur when total viability falls below a critical threshold ($I(P) \cdot C_f < S_{\text{crit}}$). For cells experiencing sub-optimal viability, a persistent stress counter $T_{\text{stress}}$ is incremented sequentially at each time step; otherwise, $T_{\text{stress}}$ resets to zero.
+
+1. **Complete Mortality:** Triggered when a cell experiences sustained stress for five consecutive time steps ($T_{\text{stress}} \ge 5$) while simultaneously falling below a critical inundation threshold ($I(P) < I_{\text{crit}}$). Upon complete mortality, all structural vegetation attributes—stem density, stem diameter, canopy height, and root density—are reset to zero. Mature individuals are assumed to possess a maximum of $1,000$ roots, with root counts updated following @VanMaanen2015.
+2. **Self-Thinning:** In cells subjected to stress ($I(P) \cdot C_f < S_{\text{crit}}$) that do not meet the full mortality criteria, self-thinning is applied by incrementally reducing stem density $n_i$ by a fixed mortality rate factor $m_{\text{rate}}$. Following self-thinning, $B_{\text{total}}$ and $C_f$ are dynamically re-evaluated to reflect the updated stand density.
 
 Under low biomass conditions ($B_{\text{total}} \ll B_{0.5}$), $C_f$ approaches zero, imposing negligible competitive limitations. As canopy closure and root crowding progress ($B_{\text{total}} \gg B_{0.5}$), $C_f$ asymptotically approaches unity, reflecting maximum competition (acting as a proxy for light, space, and porewater nutrients). This competition factor directly modulates individual tree growth rates and exacerbates baseline environmental stress in densely populated grid cells.
 

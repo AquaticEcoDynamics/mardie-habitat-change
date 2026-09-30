@@ -54,7 +54,7 @@ div.csl-indent {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../Giralia/Calibration-Validation.html" rel="next">
-<link href="../Idealized_HydroMorpho_Model.html" rel="prev">
+<link href="../Hydrodynamic-Model.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -93,6 +93,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -149,6 +178,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Controls on Coastal Ecosystems in Pilbara</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Coupled_Framework.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Approach: Dynamic Modelling Framework</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -161,25 +196,19 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Model-Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Model Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Model Overview</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Idealised_HydroMorpho_Model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Idealised Hydromorphological modelling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Hydrodynamic-Model.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Hydrodynamic Model</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Coupled_Framework.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Dynamically coupled bio-hydro-morphodynamic modelling framework</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Idealized_HydroMorpho_Model.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Idealised Hydromorphological modelling</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hydrodynamic Model</span></span></a>
   </div>
 </li>
       </ul>
@@ -237,7 +266,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Urala/Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview of the Urala Study Site</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -250,6 +279,12 @@ div.csl-indent {
   <div class="sidebar-item-container"> 
   <a href="../Urala/Mangrove.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Urala/Algal_Mat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Algal mat response to future sea level rise</span></span></a>
   </div>
 </li>
       </ul>
@@ -266,13 +301,19 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Appendices/Appendix_A.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Appendix A: Monitoring &amp; Water Level Correction Framework</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix A: Monitoring &amp; Water Level Correction Framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Appendix_B.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Appendix_B.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
   </div>
 </li>
       </ul>
@@ -293,7 +334,11 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#eco-geomorphic-modelling-approach" id="toc-eco-geomorphic-modelling-approach" class="nav-link active" data-scroll-target="#eco-geomorphic-modelling-approach"><span class="header-section-number">8.1</span> Eco-Geomorphic Modelling Approach</a></li>
+  <li><a href="#study-site-giralia-bay" id="toc-study-site-giralia-bay" class="nav-link active" data-scroll-target="#study-site-giralia-bay"><span class="header-section-number">8.1</span> Study Site: Giralia Bay</a>
+  <ul class="collapse">
+  <li><a href="#intertidal-habitat-zonation" id="toc-intertidal-habitat-zonation" class="nav-link" data-scroll-target="#intertidal-habitat-zonation"><span class="header-section-number">8.1.1</span> Intertidal Habitat Zonation</a></li>
+  </ul></li>
+  <li><a href="#sec-giralia-approach" id="toc-sec-giralia-approach" class="nav-link" data-scroll-target="#sec-giralia-approach"><span class="header-section-number">8.2</span> Eco-Geomorphic Modelling Approach</a></li>
   </ul>
 </nav>
     </div>
@@ -319,8 +364,9 @@ div.csl-indent {
 </header>
 
 
-<p>Mangroves are salt-tolerant intertidal trees and shrubs widely distributed across tropical, subtropical, and arid coastlines <span class="citation" data-cites="Spalding2010 Beselly2021">(<a href="../References.html#ref-Beselly2021" role="doc-biblioref">Beselly et al., 2021</a>; <a href="../References.html#ref-Spalding2010" role="doc-biblioref">Spalding et al., 2010</a>)</span>. They act as critical nursery and foraging grounds for diverse fauna <span class="citation" data-cites="FAO2023">(<a href="../References.html#ref-FAO2023" role="doc-biblioref">FAO, 2023</a>)</span> while providing essential coastal protection by attenuating wave energy and stabilising shorelines <span class="citation" data-cites="vanHespen2023">(<a href="../References.html#ref-vanHespen2023" role="doc-biblioref">Hespen et al., 2023</a>)</span>. Over the past decade, scientific output on mangrove ecosystems has accelerated—growing by 183% between 2015 and 2025—underscoring their recognised importance in climate adaptation, blue carbon, and coastal resilience.</p>
-<p>Accelerating sea-level rise (SLR) and changing storm regimes pose significant threats to coastal environments <span class="citation" data-cites="Emanuel2005 Knutson2010">(<a href="../References.html#ref-Emanuel2005" role="doc-biblioref">Emanuel, 2005</a>; <a href="../References.html#ref-Knutson2010" role="doc-biblioref">Knutson et al., 2010</a>)</span>. While mangroves exhibit inherent resilience <span class="citation" data-cites="Gilman2008">(<a href="../References.html#ref-Gilman2008" role="doc-biblioref">Gilman et al., 2008</a>)</span>, landward restrictions (e.g., coastal infrastructure or rocky cliffs) combined with extreme conditions can induce “coastal squeeze,” leading to net habitat loss <span class="citation" data-cites="Almeida2025">(<a href="../References.html#ref-Almeida2025" role="doc-biblioref">Almeida et al., 2025</a>)</span>.</p>
+<section id="study-site-giralia-bay" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="study-site-giralia-bay"><span class="header-section-number">8.1</span> Study Site: Giralia Bay</h2>
+<p>The study site is located in Giralia Bay, within the eastern portion of Exmouth Gulf, Western Australia (<span class="math inline">\(22.4^{\circ}\text{S}\)</span>, <span class="math inline">\(114.3^{\circ}\text{E}\)</span>). Exmouth Gulf is a shallow, semi-enclosed embayment approximately <span class="math inline">\(75\text{ km}\)</span> long and less than <span class="math inline">\(20\text{ m}\)</span> deep, bordered by low-relief peninsulas to the west and south. The bay lies within the onshore portion of the Carnarvon Basin and is underlain by calcarenitic rock units covered by late Holocene deposits of shales and sandstones, which are overlain by unconsolidated Quaternary deposits. The coastal plain surrounding the bay is mantled by sequences of Holocene and late Pleistocene sediments, including relict beach ridges, coral reefs, aeolian sands, and supratidal sabkha flats with extensive evaporite crusts <span class="citation" data-cites="Riera2023">(<a href="../References.html#ref-Riera2023" role="doc-biblioref">Riera et al., 2023</a>)</span>.</p>
 <div id="fig-giralia-site" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-giralia-site-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -331,80 +377,54 @@ Figure&nbsp;8.1: Study site at Giralia Bay within the Exmouth Gulf, Northwestern
 </figcaption>
 </figure>
 </div>
-<p>In the hyper-arid Pilbara region of Western Australia, specifically <strong>Giralia Bay (Exmouth Gulf)</strong>, intertidal habitats feature a distinct zonation dictated by continuous tidal forces and substrate elevation (<a href="#fig-giralia-site" class="quarto-xref">Figure&nbsp;<span>8.1</span></a>). The cross-shore transition moves landward from a seaward mangrove fringe to mudflats, expansive cyanobacterial (algal) mats, and high-elevation salt flats. Hydrodynamics across this region are predominantly tidally driven, with wave forcing becoming significant primarily during storm and cyclonic events.</p>
+<p>The region experiences a warm, hyper-arid climate, with a mean annual air temperature of <span class="math inline">\(25\,^{\circ}\text{C}\)</span> (mean minimum <span class="math inline">\(17\,^{\circ}\text{C}\)</span>; mean maximum <span class="math inline">\(32\,^{\circ}\text{C}\)</span>), and summer peaks reaching up to <span class="math inline">\(47\,^{\circ}\text{C}\)</span>. Mean annual rainfall is exceptionally low at <span class="math inline">\(250\text{ mm yr}^{-1}\)</span>. However, the region is periodically impacted by severe tropical cyclones every two to three years, bringing wind gusts exceeding <span class="math inline">\(300\text{ km h}^{-1}\)</span> and extreme rainfall events exceeding <span class="math inline">\(600\text{ mm yr}^{-1}\)</span> <span class="citation" data-cites="Santini2013">(<a href="../References.html#ref-Santini2013" role="doc-biblioref">Santini et al., 2013</a>)</span>.</p>
+<p>Recognising the high ecological significance and fragile environmental values of this arid coastal landscape, the Western Australian State Government established an Indigenous Land Use Agreement (ILUA) with the Nganhurra Thanardi Garrbu Aboriginal Corporation to create <a href="https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Key-milestone-reached-for-protection-of-Exmouth-Gulf-20240524">Giralia National Park</a> and the adjoining Boologooro Nature Reserve under the <em>Plan for Our Parks</em> initiative.</p>
+<section id="intertidal-habitat-zonation" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="intertidal-habitat-zonation"><span class="header-section-number">8.1.1</span> Intertidal Habitat Zonation</h3>
+<p>Within Giralia Bay, intertidal habitats display a distinct, continuous cross-shore zonation dictated primarily by tidal inundation frequency and substrate elevation (<a href="#fig-giralia-site" class="quarto-xref">Figure&nbsp;<span>8.1</span></a>). Moving landward from the open water, the ecosystem transitions through four primary zones:</p>
+<ol type="1">
+<li><strong>Seaward Mangrove Fringe:</strong> Predominantly composed of <em>Avicennia marina</em>, occupying the lower-to-mid intertidal zone where regular tidal flushing occurs.</li>
+<li><strong>Mudflats:</strong> Low-gradient unvegetated zones exposed during low tides.</li>
+<li><strong>Cyanobacterial (Algal) Mats:</strong> Expansive microbial communities covering the mid-to-high intertidal flat, thriving under episodic inundation.</li>
+<li><strong>High-Elevation Salt Flats:</strong> Supratidal sabkha environments characterized by hypersaline conditions and sparse or absent vegetation.</li>
+</ol>
+<p>Hydrodynamics across this region are predominantly tidally driven, with wave forcing becoming significant primarily during cyclonic and severe storm events.</p>
 <hr>
-<section id="eco-geomorphic-modelling-approach" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="eco-geomorphic-modelling-approach"><span class="header-section-number">8.1</span> Eco-Geomorphic Modelling Approach</h2>
-<p>Predicting mangrove response to SLR requires accounting for eco-geomorphic feedbacks and tidal inundation limits <span class="citation" data-cites="Woodroffe2016">(<a href="../References.html#ref-Woodroffe2016" role="doc-biblioref">Woodroffe et al., 2016</a>)</span>. While inundation dynamics depend on coastal slope, sediment supply, and hydrodynamics <span class="citation" data-cites="FitzGerald2008 Passeri2015 Xie2022">(<a href="../References.html#ref-FitzGerald2008" role="doc-biblioref">FitzGerald et al., 2008</a>; <a href="../References.html#ref-Passeri2015" role="doc-biblioref">Passeri et al., 2015</a>; <a href="../References.html#ref-Xie2022" role="doc-biblioref">Xie et al., 2022</a>)</span>, modelling approaches vary in scale and capability:</p>
+</section>
+</section>
+<section id="sec-giralia-approach" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="sec-giralia-approach"><span class="header-section-number">8.2</span> Eco-Geomorphic Modelling Approach</h2>
+<p>Predicting coastal habitat responses to accelerating sea-level rise (SLR) requires accounting for coupled bio-geomorphic feedbacks and physiological tidal inundation limits <span class="citation" data-cites="Woodroffe2016">(<a href="../References.html#ref-Woodroffe2016" role="doc-biblioref">Woodroffe et al., 2016</a>)</span>. While mangroves exhibit inherent resilience <span class="citation" data-cites="Gilman2008">(<a href="../References.html#ref-Gilman2008" role="doc-biblioref">Gilman et al., 2008</a>)</span>, landward restrictions combined with extreme hydrodynamic stress can induce “coastal squeeze,” leading to net habitat loss <span class="citation" data-cites="Almeida2025">(<a href="../References.html#ref-Almeida2025" role="doc-biblioref">Almeida et al., 2025</a>)</span>.</p>
+<p>To simulate these dynamics at a regional scale, we integrated a process-based hydrodynamic and morphodynamic engine with dynamic biological modules, see <a href="../Model-Overview.html" class="quarto-xref"><span>Chapter 5</span></a> for more details. Refer to <a href="../Hydrodynamic-Model.html#sec-hydro-overview" class="quarto-xref"><span>Section 7.1</span></a> for model detailed model description.</p>
 <ul>
-<li><strong>Tree-Scale &amp; Lifecycle Models:</strong> Individual-Based Models (e.g., <em>MesoFON</em>, <em>MANGA</em>) and lifecycle frameworks <span class="citation" data-cites="Grueters2014 Henderson2024 Wimmler2024">(<a href="../References.html#ref-Grueters2014" role="doc-biblioref">Grueters et al., 2014</a>; <a href="../References.html#ref-Henderson2024" role="doc-biblioref">Henderson &amp; Glamore, 2024</a>; <a href="../References.html#ref-Wimmler2024" role="doc-biblioref">Wimmler et al., 2024</a>)</span> resolve fine-scale competition and biomass, but often lack dynamic hydro-morphological coupling.</li>
-<li><strong>Process-Based Hydrodynamic Models:</strong> Engines like <em>Delft3D-Flexible Mesh (DFM)</em> simulate regional flow and sediment transport, but traditionally simplify vegetation interactions.</li>
-<li><strong>Coupled Bio-Morphodynamic Models:</strong> Hybrid frameworks (e.g., <em>DFMFON</em>, <em>BASEveg</em>) integrate biological dynamics with physical drivers <span class="citation" data-cites="Willemsen2022 Beselly2023 Caponi2023">(<a href="../References.html#ref-Beselly2023" role="doc-biblioref">Beselly et al., 2023</a>; <a href="../References.html#ref-Caponi2023" role="doc-biblioref">Caponi et al., 2023</a>; <a href="../References.html#ref-Willemsen2022" role="doc-biblioref">Willemsen et al., 2022</a>)</span>. However, computational constraints have largely restricted their application to idealised or small-scale domains.</li>
+<li><strong>Hydrodynamic &amp; Morphodynamic Framework:</strong> We utilised <strong>Delft3D-Flexible Mesh (DFM)</strong> <span class="citation" data-cites="Kernkamp2011">(<a href="../References.html#ref-Kernkamp2011" role="doc-biblioref">Kernkamp et al., 2011</a>)</span> to model regional water levels, flow velocities, and bed shear stress across the complex grid geometry of Giralia Bay.</li>
+<li><strong>Mangrove Model:</strong> Coupled directly to DFM via <strong>NBSDynamics</strong> <span class="citation" data-cites="Deltares2022">(<a href="../References.html#ref-Deltares2022" role="doc-biblioref">Deltares, 2022</a>)</span>, mangrove establishment, growth, and mortality (<em>Avicennia marina</em>) were dynamically evaluated based on inundation suitability and bed shear stress thresholds, as detailed in <a href="../Model-Overview.html#sec-vegetation-effects" class="quarto-xref"><span>Section 5.4</span></a>.</li>
+<li><strong>Cyanobacterial (Algal) Mat Prediction:</strong> Using the hydro-morphodynamic outputs generated by DFM combined with the dynamically predicted spatial boundaries of the mangrove forest, cyanobacterial (algal) mat distribution was subsequently mapped and predicted across the domain.</li>
 </ul>
-<p>To overcome these limitations, we coupled <strong>DFM</strong> <span class="citation" data-cites="Kernkamp2011">(<a href="../References.html#ref-Kernkamp2011" role="doc-biblioref">Kernkamp et al., 2011</a>)</span> with <strong>NBSDynamics</strong> <span class="citation" data-cites="Deltares2022">(<a href="../References.html#ref-Deltares2022" role="doc-biblioref">Deltares, 2022</a>)</span>, a Python-based vegetation module. Optimised for parallel execution on High-Performance Computing (HPC) platforms, this framework enables regional-scale eco-geomorphic simulations while preserving process-based vegetation–hydrodynamic–morphological feedbacks.</p>
-<p>The primary objective of this study is to quantify how projected SLR scenarios alter the spatial extent and resilience of mangrove forests (<em>Avicennia marina</em>) within Giralia Bay.</p>
+<p>The calibration and validation of the hydrodynamic model, mangrove and algal mats are detailed in <a href="../Hydrodynamic-Model.html#sec-hydro-calibration" class="quarto-xref"><span>Section 7.5</span></a> and <a href="Calibration-Validation.html#sec-mangrove-giralia-calibration" class="quarto-xref"><span>Section 9.1.2</span></a>, respectively.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-Almeida2025" class="csl-entry" role="listitem">
 Almeida, L. P., Cruz, L., Pinto, M. W., Lugli-Bernardes, D., Silva, A., &amp; Fontoura Klein, A. H. da. (2025). Mangrove squeeze potential due to combined effect of sea level rise and decadal human land use and changes in a sub-tropical estuarine environment. <em>Regional Studies in Marine Science</em>, <em>89</em>, 104366. <a href="https://doi.org/10.1016/J.RSMA.2025.104366">https://doi.org/10.1016/J.RSMA.2025.104366</a>
 </div>
-<div id="ref-Beselly2023" class="csl-entry" role="listitem">
-Beselly, S. M., Grueters, U., Der Wegen, M. van, Reyns, J., Dijkstra, J., &amp; Roelvink, D. (2023). Modelling mangrove-mudflat dynamics with a coupled individual-based-hydro-morphodynamic model. <em>Environmental Modelling and Software</em>, <em>169</em>, 105814. <a href="https://doi.org/10.1016/j.envsoft.2023.105814">https://doi.org/10.1016/j.envsoft.2023.105814</a>
-</div>
-<div id="ref-Beselly2021" class="csl-entry" role="listitem">
-Beselly, S. M., Wegen, M. van der, Grueters, U., Reyns, J., Dijkstra, J., &amp; Roelvink, D. (2021). Eleven years of mangrove–mudflat dynamics on the mud volcano-induced prograding delta in east java, indonesia: Integrating UAV and satellite imagery. <em>Remote Sensing 2021, Vol. 13, Page 1084</em>, <em>13</em>, 1084. <a href="https://doi.org/10.3390/rs13061084">https://doi.org/10.3390/rs13061084</a>
-</div>
-<div id="ref-Caponi2023" class="csl-entry" role="listitem">
-Caponi, F., Vetsch, D. F., &amp; Vanzo, D. (2023). BASEveg: A python package to model riparian vegetation dynamics coupled with river morphodynamics. <em>SoftwareX</em>, <em>22</em>, 101361. <a href="https://doi.org/10.1016/J.SOFTX.2023.101361">https://doi.org/10.1016/J.SOFTX.2023.101361</a>
-</div>
 <div id="ref-Deltares2022" class="csl-entry" role="listitem">
 Deltares. (2022). <em>NBSDynamics</em>. <a href="https://github.com/Deltares-research/NBSDynamics">https://github.com/Deltares-research/NBSDynamics</a>
-</div>
-<div id="ref-Emanuel2005" class="csl-entry" role="listitem">
-Emanuel, K. (2005). Increasing destructiveness of tropical cyclones over the past 30 years. <em>Nature 2005 436:7051</em>, <em>436</em>, 686–688. <a href="https://doi.org/10.1038/nature03906">https://doi.org/10.1038/nature03906</a>
-</div>
-<div id="ref-FAO2023" class="csl-entry" role="listitem">
-FAO. (2023). The world’s mangroves 2000–2020. In <em>The world’s mangroves 2000–2020</em>. Food; Agriculture Organization of the United Nations. <a href="https://doi.org/10.4060/CC7044EN">https://doi.org/10.4060/CC7044EN</a>
-</div>
-<div id="ref-FitzGerald2008" class="csl-entry" role="listitem">
-FitzGerald, D. M., Fenster, M. S., Argow, B. A., &amp; Buynevich, I. V. (2008). Coastal impacts due to sea-level rise. <em>Annual Review of Earth and Planetary Sciences</em>, <em>36</em>, 601–647. <a href="https://doi.org/10.1146/ANNUREV.EARTH.35.031306.140139/1">https://doi.org/10.1146/ANNUREV.EARTH.35.031306.140139/1</a>
 </div>
 <div id="ref-Gilman2008" class="csl-entry" role="listitem">
 Gilman, E. L., Ellison, J., Duke, N. C., &amp; Field, C. (2008). Threats to mangroves from climate change and adaptation options: A review. <em>Aquatic Botany</em>, <em>89</em>, 237–250. <a href="https://doi.org/10.1016/j.aquabot.2007.12.009">https://doi.org/10.1016/j.aquabot.2007.12.009</a>
 </div>
-<div id="ref-Grueters2014" class="csl-entry" role="listitem">
-Grueters, U., Seltmann, T., Schmidt, H., Horn, H., Pranchai, A., Vovides, A. G., Peters, R., Vogt, J., Dahdouh-Guebas, F., &amp; Berger, U. (2014). The mangrove forest dynamics model mesoFON. <em>Ecol Model</em>, <em>291</em>, 28–41. <a href="https://doi.org/10.1016/j.ecolmodel.2014.07.014">https://doi.org/10.1016/j.ecolmodel.2014.07.014</a>
-</div>
-<div id="ref-Henderson2024" class="csl-entry" role="listitem">
-Henderson, B., &amp; Glamore, W. (2024). Mangrove extent reflects estuarine typology and lifecycle events. <em>Estuarine, Coastal and Shelf Science</em>, <em>304</em>, 108813. <a href="https://doi.org/10.1016/j.ecss.2024.108813">https://doi.org/10.1016/j.ecss.2024.108813</a>
-</div>
-<div id="ref-vanHespen2023" class="csl-entry" role="listitem">
-Hespen, R. van, Hu, Z., Borsje, B., Dominicis, M. D., Friess, D. A., Jevrejeva, S., Kleinhans, M. G., Maza, M., Bijsterveldt, C. E. J. van, Stocken, T. V. der, Wesenbeeck, B. van, Xie, D., &amp; Bouma, T. J. (2023). Mangrove forests as a nature-based solution for coastal flood protection: Biophysical and ecological considerations. <em>Water Science and Engineering</em>, <em>16</em>, 1–13. <a href="https://doi.org/10.1016/J.WSE.2022.10.004">https://doi.org/10.1016/J.WSE.2022.10.004</a>
-</div>
 <div id="ref-Kernkamp2011" class="csl-entry" role="listitem">
 Kernkamp, H. W. J., Dam, A. V., Stelling, G. S., &amp; Goede, E. D. D. (2011). Efficient scheme for the shallow water equations on unstructured grids with application to the continental shelf. <em>Ocean Dynamics</em>, <em>61</em>, 1175–1188. <a href="https://doi.org/10.1007/S10236-011-0423-6/TABLES/2">https://doi.org/10.1007/S10236-011-0423-6/TABLES/2</a>
 </div>
-<div id="ref-Knutson2010" class="csl-entry" role="listitem">
-Knutson, T. R., McBride, J. L., Chan, J., Emanuel, K., Holland, G., Landsea, C., Held, I., Kossin, J. P., Srivastava, A. K., &amp; Sugi, M. (2010). Tropical cyclones and climate change. <em>Nature Geoscience 2010 3:3</em>, <em>3</em>, 157–163. <a href="https://doi.org/10.1038/ngeo779">https://doi.org/10.1038/ngeo779</a>
+<div id="ref-Riera2023" class="csl-entry" role="listitem">
+Riera, R., Paumard, V., Bourget, J., Allan, T., &amp; Lebrec, U. (2023). Evolution of the exmouth-barrow carbonate margin through the miocene: Insights from 3D seismic data and field investigations (north west shelf, australia). <em>Sedimentary Geology</em>, <em>449</em>, 106371. <a href="https://doi.org/10.1016/J.SEDGEO.2023.106371">https://doi.org/10.1016/J.SEDGEO.2023.106371</a>
 </div>
-<div id="ref-Passeri2015" class="csl-entry" role="listitem">
-Passeri, D. L., Hagen, S. C., Medeiros, S. C., Bilskie, M. V., Alizad, K., &amp; Wang, D. (2015). The dynamic effects of sea level rise on low-gradient coastal landscapes: A review. <em>Earth’s Future</em>, <em>3</em>, 159–181. <a href="https://doi.org/10.1002/2015EF000298">https://doi.org/10.1002/2015EF000298</a>
-</div>
-<div id="ref-Spalding2010" class="csl-entry" role="listitem">
-Spalding, M., Kainumaand, M., &amp; Collins, L. (2010). World atlas of mangroves. <em>World Atlas of Mangroves</em>, 1–319. <a href="https://doi.org/10.4324/9781849776608/WORLD-ATLAS-MANGROVES-MARK-SPALDING-MAMI-KAINUMA-LORNA-COLLINS/RIGHTS-AND-PERMISSIONS">https://doi.org/10.4324/9781849776608/WORLD-ATLAS-MANGROVES-MARK-SPALDING-MAMI-KAINUMA-LORNA-COLLINS/RIGHTS-AND-PERMISSIONS</a>
-</div>
-<div id="ref-Willemsen2022" class="csl-entry" role="listitem">
-Willemsen, P. W. J. M., Smits, B. P., Borsje, B. W., Herman, P. M. J., Dijkstra, J. T., Bouma, T. J., &amp; Hulscher, S. J. M. H. (2022). Modeling decadal salt marsh development: Variability of the salt marsh edge under influence of waves and sediment availability. <em>Water Resources Research</em>, <em>58</em>, 1–23. <a href="https://doi.org/10.1029/2020WR028962">https://doi.org/10.1029/2020WR028962</a>
-</div>
-<div id="ref-Wimmler2024" class="csl-entry" role="listitem">
-Wimmler, M. C., Bathmann, J., Vollhüter, J., &amp; Berger, U. (2024). pyMANGA: A modular, open and extendable software platform for modeling of forest and vegetation dynamics. <em>Environmental Modelling &amp; Software</em>, <em>174</em>, 105973. <a href="https://doi.org/10.1016/J.ENVSOFT.2024.105973">https://doi.org/10.1016/J.ENVSOFT.2024.105973</a>
+<div id="ref-Santini2013" class="csl-entry" role="listitem">
+Santini, N. S., Hua, Q., Schmitz, N., &amp; Lovelock, C. E. (2013). Radiocarbon dating and wood density chronologies of mangrove trees in arid western australia. <em>PLOS ONE</em>, <em>8</em>, e80116. <a href="https://doi.org/10.1371/JOURNAL.PONE.0080116">https://doi.org/10.1371/JOURNAL.PONE.0080116</a>
 </div>
 <div id="ref-Woodroffe2016" class="csl-entry" role="listitem">
 Woodroffe, C. D., Rogers, K., McKee, K. L., Lovelock, C. E., Mendelssohn, I. A., &amp; Saintilan, N. (2016). Mangrove sedimentation and response to relative sea-level rise. <em>Annual Review of Marine Science</em>, <em>8</em>, 243–266. <a href="https://doi.org/10.1146/ANNUREV-MARINE-122414-034025/1">https://doi.org/10.1146/ANNUREV-MARINE-122414-034025/1</a>
-</div>
-<div id="ref-Xie2022" class="csl-entry" role="listitem">
-Xie, D., Schwarz, C., Kleinhans, M. G., Zhou, Z., &amp; Maanen, B. van. (2022). Implications of coastal conditions and sea-level rise on mangrove vulnerability: A bio-morphodynamic modeling study. <em>Journal of Geophysical Research: Earth Surface</em>, <em>127</em>, e2021JF006301. <a href="https://doi.org/10.1029/2021JF006301">https://doi.org/10.1029/2021JF006301</a>
 </div>
 </div>
 </section>
@@ -812,8 +832,8 @@ Xie, D., Schwarz, C., Kleinhans, M. G., Zhou, Z., &amp; Maanen, B. van. (2022). 
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Idealized_HydroMorpho_Model.html" class="pagination-link" aria-label="Idealised Hydromorphological modelling">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Idealised Hydromorphological modelling</span></span>
+      <a href="../Hydrodynamic-Model.html" class="pagination-link" aria-label="Hydrodynamic Model">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hydrodynamic Model</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

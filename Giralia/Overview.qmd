@@ -1,12 +1,10 @@
 ---
-#title: "Overview"
+title: "Overview"
 ---
 
-# Overview
+## Study Site: Giralia Bay
 
-Mangroves are salt-tolerant intertidal trees and shrubs widely distributed across tropical, subtropical, and arid coastlines [@Spalding2010; @Beselly2021]. They act as critical nursery and foraging grounds for diverse fauna [@FAO2023] while providing essential coastal protection by attenuating wave energy and stabilising shorelines [@vanHespen2023]. Over the past decade, scientific output on mangrove ecosystems has accelerated—growing by 183% between 2015 and 2025—underscoring their recognised importance in climate adaptation, blue carbon, and coastal resilience.
-
-Accelerating sea-level rise (SLR) and changing storm regimes pose significant threats to coastal environments [@Emanuel2005; @Knutson2010]. While mangroves exhibit inherent resilience [@Gilman2008], landward restrictions (e.g., coastal infrastructure or rocky cliffs) combined with extreme conditions can induce "coastal squeeze," leading to net habitat loss [@Almeida2025].
+The study site is located in Giralia Bay, within the eastern portion of Exmouth Gulf, Western Australia ($22.4^{\circ}\text{S}$, $114.3^{\circ}\text{E}$). Exmouth Gulf is a shallow, semi-enclosed embayment approximately $75\text{ km}$ long and less than $20\text{ m}$ deep, bordered by low-relief peninsulas to the west and south. The bay lies within the onshore portion of the Carnarvon Basin and is underlain by calcarenitic rock units covered by late Holocene deposits of shales and sandstones, which are overlain by unconsolidated Quaternary deposits. The coastal plain surrounding the bay is mantled by sequences of Holocene and late Pleistocene sediments, including relict beach ridges, coral reefs, aeolian sands, and supratidal sabkha flats with extensive evaporite crusts [@Riera2023].
 
 ::: {#fig-giralia-site}
 ![](images/Giralia_site.png){fig-align="center" width="95%"}
@@ -14,18 +12,31 @@ Accelerating sea-level rise (SLR) and changing storm regimes pose significant th
 Study site at Giralia Bay within the Exmouth Gulf, Northwestern Western Australia. **(a)** Regional setting. **(b)** Cross-shore intertidal zonation displaying mangroves, mudflats, cyanobacterial (algal) mats, and high-elevation salt flats.
 :::
 
-In the hyper-arid Pilbara region of Western Australia, specifically **Giralia Bay (Exmouth Gulf)**, intertidal habitats feature a distinct zonation dictated by continuous tidal forces and substrate elevation (@fig-giralia-site). The cross-shore transition moves landward from a seaward mangrove fringe to mudflats, expansive cyanobacterial (algal) mats, and high-elevation salt flats. Hydrodynamics across this region are predominantly tidally driven, with wave forcing becoming significant primarily during storm and cyclonic events.
+The region experiences a warm, hyper-arid climate, with a mean annual air temperature of $25\,^{\circ}\text{C}$ (mean minimum $17\,^{\circ}\text{C}$; mean maximum $32\,^{\circ}\text{C}$), and summer peaks reaching up to $47\,^{\circ}\text{C}$. Mean annual rainfall is exceptionally low at $250\text{ mm yr}^{-1}$. However, the region is periodically impacted by severe tropical cyclones every two to three years, bringing wind gusts exceeding $300\text{ km h}^{-1}$ and extreme rainfall events exceeding $600\text{ mm yr}^{-1}$ [@Santini2013].
+
+Recognising the high ecological significance and fragile environmental values of this arid coastal landscape, the Western Australian State Government established an Indigenous Land Use Agreement (ILUA) with the Nganhurra Thanardi Garrbu Aboriginal Corporation to create [Giralia National Park](https://www.wa.gov.au/government/media-statements/Cook%20Labor%20Government/Key-milestone-reached-for-protection-of-Exmouth-Gulf-20240524) and the adjoining Boologooro Nature Reserve under the *Plan for Our Parks* initiative.
+
+### Intertidal Habitat Zonation
+
+Within Giralia Bay, intertidal habitats display a distinct, continuous cross-shore zonation dictated primarily by tidal inundation frequency and substrate elevation (@fig-giralia-site). Moving landward from the open water, the ecosystem transitions through four primary zones:
+
+1. **Seaward Mangrove Fringe:** Predominantly composed of *Avicennia marina*, occupying the lower-to-mid intertidal zone where regular tidal flushing occurs.
+2. **Mudflats:** Low-gradient unvegetated zones exposed during low tides.
+3. **Cyanobacterial (Algal) Mats:** Expansive microbial communities covering the mid-to-high intertidal flat, thriving under episodic inundation.
+4. **High-Elevation Salt Flats:** Supratidal sabkha environments characterized by hypersaline conditions and sparse or absent vegetation.
+
+Hydrodynamics across this region are predominantly tidally driven, with wave forcing becoming significant primarily during cyclonic and severe storm events.
 
 ---
 
-## Eco-Geomorphic Modelling Approach
+## Eco-Geomorphic Modelling Approach {#sec-giralia-approach}
 
-Predicting mangrove response to SLR requires accounting for eco-geomorphic feedbacks and tidal inundation limits [@Woodroffe2016]. While inundation dynamics depend on coastal slope, sediment supply, and hydrodynamics [@FitzGerald2008; @Passeri2015; @Xie2022], modelling approaches vary in scale and capability:
+Predicting coastal habitat responses to accelerating sea-level rise (SLR) requires accounting for coupled bio-geomorphic feedbacks and physiological tidal inundation limits [@Woodroffe2016]. While mangroves exhibit inherent resilience [@Gilman2008], landward restrictions combined with extreme hydrodynamic stress can induce "coastal squeeze," leading to net habitat loss [@Almeida2025].
 
-* **Tree-Scale & Lifecycle Models:** Individual-Based Models (e.g., *MesoFON*, *MANGA*) and lifecycle frameworks [@Grueters2014; @Henderson2024; @Wimmler2024] resolve fine-scale competition and biomass, but often lack dynamic hydro-morphological coupling.
-* **Process-Based Hydrodynamic Models:** Engines like *Delft3D-Flexible Mesh (DFM)* simulate regional flow and sediment transport, but traditionally simplify vegetation interactions.
-* **Coupled Bio-Morphodynamic Models:** Hybrid frameworks (e.g., *DFMFON*, *BASEveg*) integrate biological dynamics with physical drivers [@Willemsen2022; @Beselly2023; @Caponi2023]. However, computational constraints have largely restricted their application to idealised or small-scale domains.
+To simulate these dynamics at a regional scale, we integrated a process-based hydrodynamic and morphodynamic engine with dynamic biological modules, see [@sec-model-overview] for more details. Refer to @sec-hydro-overview for model detailed model description.
 
-To overcome these limitations, we coupled **DFM** [@Kernkamp2011] with **NBSDynamics** [@Deltares2022], a Python-based vegetation module. Optimised for parallel execution on High-Performance Computing (HPC) platforms, this framework enables regional-scale eco-geomorphic simulations while preserving process-based vegetation–hydrodynamic–morphological feedbacks.
+* **Hydrodynamic & Morphodynamic Framework:** We utilised **Delft3D-Flexible Mesh (DFM)** [@Kernkamp2011] to model regional water levels, flow velocities, and bed shear stress across the complex grid geometry of Giralia Bay.
+* **Mangrove Model:** Coupled directly to DFM via **NBSDynamics** [@Deltares2022], mangrove establishment, growth, and mortality (*Avicennia marina*) were dynamically evaluated based on inundation suitability and bed shear stress thresholds, as detailed in [@sec-vegetation-effects].
+* **Cyanobacterial (Algal) Mat Prediction:** Using the hydro-morphodynamic outputs generated by DFM combined with the dynamically predicted spatial boundaries of the mangrove forest, cyanobacterial (algal) mat distribution was subsequently mapped and predicted across the domain.
 
-The primary objective of this study is to quantify how projected SLR scenarios alter the spatial extent and resilience of mangrove forests (*Avicennia marina*) within Giralia Bay.
+The calibration and validation of the hydrodynamic model, mangrove and algal mats are detailed in [@sec-hydro-calibration] and [@sec-mangrove-giralia-calibration], respectively.

@@ -2,7 +2,7 @@
 #title: "Controls on Coastal Ecosystems in Pilbara"
 ---
 
-# Controls on Coastal Ecosystems in Pilbara
+# Controls on Coastal Ecosystems in Pilbara {#sec-controls}
 ## Intertidal Habitats of the Pilbara Region
 
 The northwest Pilbara region, and Exmouth Gulf in particular, is characterised by extremely low-gradient topography, with much of the surrounding land occurring at less than 5 m elevation. As a consequence, the high intertidal zone is unusually extensive, extending 10 km or more landward in places — far broader than the narrow fringing zones typical of steeper coastlines. This broad, low-relief intertidal zone supports a mosaic of habitats, including mangroves, cyanobacterial (algal) mats, saltmarsh, bright salt-dominated flats, high intertidal salt flats, and open water areas, bordered landward by higher-elevation terrestrial vegetation and unvegetated sand/dune systems [@Hickey2025].

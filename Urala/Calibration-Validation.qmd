@@ -1,16 +1,17 @@
 ---
-title: "Calibration and Validation"
+#title: "Calibration and Validation" 
 ---
+# Calibration and Validation
 
-## Overview
+## Overview 
 
-Similar to the observations in the Giralia region, historical satellite observations across Urala reveal a highly stable mangrove system over recent decades, displaying only minor spatial fluctuations along fringe boundaries. To establish a baseline for present-day environmental conditions and assess future mangrove redistribution, we evaluated the performance of the mangrove dynamic model across the Urala region.
+In this section, we discuss the calibration and validation of the mangrove and algal model for the Urala site. The model setup, calibration, and validation are all detailed in @sec-hydro-calibration. 
 
----
+Similar to the observations in the Giralia region, historical satellite observations across Urala reveal a highly stable mangrove system over recent decades, displaying only minor spatial fluctuations along fringe boundaries. Following the approach used for the Giralia calibration and validation, because our primary focus is on long-term changes, we considered only the dominant tidal constituents (MSKO) for predicting both present-day conditions and future sea-level rise (SLR) scenarios. We evaluated the performance of the mangrove dynamic model across the Urala region to establish a baseline for present environmental conditions and to assess future mangrove redistribution.
 
-### Initial Model Transferability & Overprediction Issues
+## Initial Model Transferability & Overprediction Issues
 
-As a first attempt, we evaluated model transferability by applying the calibrated mangrove model coefficients directly from Giralia to Urala. However, this preliminary setup resulted in a **significant spatial overprediction** of mangrove extent, with the model predicting mangrove establishment across vast stretches of the high intertidal and supratidal salt flats where no mangroves exist.
+As a first attempt, we evaluated model transferability by applying the calibrated mangrove model coefficients directly from Giralia to Urala. However, this preliminary setup resulted in a **spatial overprediction** of mangrove extent, with the model predicting mangrove establishment across vast stretches of the high intertidal and supratidal salt flats where no mangroves exist.
 
 This overprediction highlighted a key limitation: the initial model framework did not resolve substrate-level abiotic stressors—specifically, **groundwater and surface salinity dynamics**. In hyper-arid systems like Urala, extreme evaporation across shallow, infrequently inundated salt flats (sabkhas) generates hypersaline conditions ($> 60–80\text{ PSU}$) that severely constrain mangrove seedling establishment and survival. Without an explicit salinity stress mechanism, the hydro-morphological suitability criteria alone proved insufficient to constrain mangrove boundaries.
 
@@ -24,51 +25,67 @@ To address this limitation and improve spatial precision, we implemented a **pro
 
 For each grid cell, the water depth $h(t)$ determines the active wetting state based on a minimum depth threshold $h_{\text{min}}$ (e.g., $0.05\text{ m}$). 
 
-When a dry cell becomes inundated ($h(t) > h_{\text{min}}$ and $h(t-\Delta t) \le h_{\text{min}}$), the initial salt mass $M(t)$ is calculated from incoming seawater at ambient concentration $S_0$ (35 PSU), plus any residual salt mass $M_{\text{res}}$ left behind from previous drying cycles:
+When a dry cell becomes inundated ($h(t) > h_{\text{min}}$ and $h(t-\Delta t) \le h_{\text{min}}$), the initial salt mass $M(t)$ is calculated from incoming seawater at ambient concentration $S_0$ ($35\text{ PSU}$), plus any residual salt mass $M_{\text{res}}$ left behind from previous drying cycles:
 
-$$M(t) = h(t) \cdot S_0 + M_{\text{res}}$$
+$$
+M(t) = h(t) \cdot S_0 + M_{\text{res}}
+$$ {#eq-inundation-salt}
 
 For continuously wet cells ($h(t) > h_{\text{min}}$ and $h(t-\Delta t) > h_{\text{min}}$), changes in water depth $\Delta h = h(t) - h(t-\Delta t)$ dictate salt flux and evaporative concentration:
 
-*   **Rising Tide ($\Delta h > 0$):** Additional marine water enters the cell, increasing salt mass:
-    $$M(t) = M(t-\Delta t) + \Delta h \cdot S_0$$
+* **Rising Tide ($\Delta h > 0$):** Additional marine water enters the cell, increasing salt mass:
+  $$
+  M(t) = M(t-\Delta t) + \Delta h \cdot S_0
+  $$ {#eq-rising-tide}
 
-*   **Falling Tide ($\Delta h \le 0$):** Total water loss equals $-\Delta h$. Water loss is partitioned into evaporative loss ($E_{\text{evap}}$) driven by the pan evaporation rate $E$, and physical drainage/outflow loss ($L_{\text{drain}}$):
-    $$E_{\text{evap}} = \min(E \cdot \Delta t, -\Delta h)$$
-    $$L_{\text{drain}} = -\Delta h - E_{\text{evap}}$$
+* **Falling Tide ($\Delta h \le 0$):** Total water loss equals $-\Delta h$. Water loss is partitioned into evaporative loss ($E_{\text{evap}}$) driven by the pan evaporation rate $E$, and physical drainage/outflow loss ($L_{\text{drain}}$):
+  $$
+  E_{\text{evap}} = \min(E \cdot \Delta t, -\Delta h)
+  $$ {#eq-evap-loss}
 
-    Drainage removes salt proportional to the instantaneous ambient concentration $S_{\text{now}} = \frac{M(t-\Delta t)}{\max(h(t-\Delta t), h_{\text{min}})}$, while evaporation concentrates the remaining salt mass:
-    $$M(t) = M(t-\Delta t) - L_{\text{drain}} \cdot S_{\text{now}}$$
+  $$
+  L_{\text{drain}} = -\Delta h - E_{\text{evap}}
+  $$ {#eq-drain-loss}
+
+  Drainage removes salt proportional to the instantaneous ambient concentration $S_{\text{now}} = \frac{M(t-\Delta t)}{\max(h(t-\Delta t), h_{\text{min}})}$, while evaporation concentrates the remaining salt mass:
+  $$
+  M(t) = M(t-\Delta t) - L_{\text{drain}} \cdot S_{\text{now}}
+  $$ {#eq-falling-tide-mass}
 
 #### Concentration Limits and Desiccation Accumulation
 
-The instantaneous surface water salinity $S(t)$ is computed from the remaining salt mass and bounded by a physical capping limit $S_{\text{cap}}$ (250 PSU):
+The instantaneous surface water salinity $S(t)$ is computed from the remaining salt mass and bounded by a physical capping limit $S_{\text{cap}}$ ($250\text{ PSU}$):
 
-$$S(t) = \min\left( \frac{M(t)}{\max(h(t), h_{\text{min}})}, S_{\text{cap}} \right)$$
+$$
+S(t) = \min\left( \frac{M(t)}{\max(h(t), h_{\text{min}})}, S_{\text{cap}} \right)
+$$ {#eq-salinity-cap}
 
 When a cell completely dries out ($h(t) \le h_{\text{min}}$), all remaining salt mass accumulates as residual deposit $M_{\text{res}}$ to be dissolved upon the next wetting cycle:
 
-$$M_{\text{res}} = M_{\text{res}} + M(t)$$
-
+$$
+M_{\text{res}} \leftarrow M_{\text{res}} + M(t)
+$$ {#eq-residual-salt}
 
 #### Salinity Stress Function
 
 The resulting 90th percentile salinity ($S_{p90}$) drives the non-dimensional vegetation stress coefficient $S_{\text{sal}} \in [0, 1]$:
 
-$$S_{\text{sal}} = \text{clip}\left( \frac{S_{p90} - S_{\text{thres}}}{S_{\text{lethal}} - S_{\text{thres}}}, 0.0, 1.0 \right)$$
+$$
+S_{\text{sal}} = \operatorname{clip}\left( \frac{S_{p90} - S_{\text{thres}}}{S_{\text{lethal}} - S_{\text{thres}}}, 0, 1 \right)
+$$ {#eq-salinity-stress}
 
 where $S_{\text{thres}}$ is the salinity threshold above which stress begins to impact growth, and $S_{\text{lethal}}$ is the upper lethal limit causing complete vegetation mortality.
 
 ### Historical Mangrove Observations (2000–2023)
 
-To examine the temporal variability in mangrove distribution across the Urala region, monthly mangrove maps derived from Landsat imagery by @Hickey2025 were analyzed. The mangrove extents between 2000 and 2023 are compared in @fig-urala-obs to illustrate multi-decadal dynamics alongside long-term water-level variability recorded at the Onslow tide station—the closest operational tide gauge to the Urala domain.
+To examine the temporal variability in mangrove distribution across the Urala region, monthly mangrove maps derived from Landsat imagery by @Hickey2025 were analysed. The mangrove extents between 2000 and 2023 are compared in @fig-urala-obs to illustrate multi-decadal dynamics alongside long-term water-level variability recorded at the Onslow tide station—the closest operational tide gauge to the Urala domain.
 
-While the broader mangrove footprint in Urala exhibits overall stability similar to the Giralia region over the 2000–2023 period, key localized structural differences emerge upon spatial inspection (@fig-urala-obs b). Unlike the core interior stability seen in Giralia, Urala displays more active dynamic shifts along its complex creek network and seaward fringes:
+While the broader mangrove footprint in Urala exhibits overall stability similar to the Giralia region over the 2000–2023 period, key localised structural differences emerge upon spatial inspection (@fig-urala-obs b). Unlike the core interior stability seen in Giralia, Urala displays more active dynamic shifts along its complex creek network and seaward fringes:
 
-* **Fringing Loss and Retreat:** Notable localized mangrove dieback and retreat (indicated in red) are concentrated along the narrow, highly exposed tidal channels and seaward creek boundaries. This localized dieback aligns with regional observations of upper intertidal stress triggered during extended El Niño–Southern Oversight (ENSO) low water-level anomalies [@Lovelock2017].
-* **Seaward Expansion and Colonization:** Concurrently, minor localized seaward expansion and gain (indicated in black) occur in sheltered intertidal zones, indicating ongoing localized geomorphic adjustments and dynamic colonization.
+* **Fringing Loss and Retreat:** Notable localised mangrove dieback and retreat (indicated in red) are concentrated along the narrow, highly exposed tidal channels and seaward creek boundaries. This localised dieback aligns with regional observations of upper intertidal stress triggered during extended El Niño–Southern Oversight (ENSO) low water-level anomalies [@Lovelock2017].
+* **Seaward Expansion and Colonization:** Concurrently, minor localised seaward expansion and gain (indicated in black) occur in sheltered intertidal zones, indicating ongoing localised geomorphic adjustments and dynamic colonisation.
 
-Despite these localized shifts along the tidal fringes, the core mangrove extent in Urala has remained largely resilient over the ~23-year observation window. This consistent baseline provides a reliable present-day benchmark against which future hydrodynamic modifications and climate-driven sea-level shifts can be evaluated.
+Despite these localised shifts along the tidal fringes, the core mangrove extent in Urala has remained largely resilient over the ~23-year observation window. This consistent baseline provides a reliable present-day benchmark against which future hydrodynamic modifications and climate-driven sea-level shifts can be evaluated.
 
 ::: {#fig-urala-obs}
 ![](images/urala_mangrove_observation.png){fig-align="center" width="95%"}
@@ -76,11 +93,11 @@ Despite these localized shifts along the tidal fringes, the core mangrove extent
 Water level observations and historical mangrove extent in the Urala region. **(a)** Water level recorded at the Onslow tide station ([WA Data Catalogue](https://catalogue.data.wa.gov.au/dataset/tide-stations)) displaying monthly range and monthly mean. **(b)** Comparison of Landsat-derived mangrove extents between 2000 and 2023 [@Hickey2025], highlighting areas of stability (no change), loss, and gain.
 :::
 
-### Model Initialization & Performance Evaluation
+### Model Initialisation & Performance Evaluation
 
-@fig-urala-val shows the modeled mangrove distribution across the Urala region under present environmental conditions. Because the objective was to reproduce the representative baseline mangrove extent, the model simulations were forced using optimized local tidal constituents.
+@fig-urala-val shows the modelled mangrove distribution across the Urala region under present environmental conditions. Because the objective was to reproduce the representative baseline mangrove extent, the model simulations were forced with dominant tidal constituents (MSKO) for the prediction of present-day conditions. 
 
-The spatial agreement between the modeled and observed mangrove extents was evaluated by categorizing grid cells:
+The spatial agreement between the modelled and observed mangrove extents was evaluated by categorising grid cells:
 * **True Positives (Green):** Correctly predicted mangrove areas.
 * **False Negatives (Black):** Observed mangrove areas missed by the model.
 * **False Positives (Red):** Areas predicted as mangrove where none were observed.
@@ -93,11 +110,11 @@ To quantitatively evaluate spatial performance within the core analysis domain, 
 | **Recall** | Proportion of observed mangrove cells correctly reproduced by the model | $\text{Recall} = \frac{TP}{TP + FN}$ | $0.534$ |
 | **$F_1$ Score** | Harmonic mean of precision and recall | $F_1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$ | $0.598$ |
 
-The resulting statistics demonstrate good performance across the primary mangrove zones ($F_1 = 0.598$). High precision ($0.680$) indicates that where the model predicts mangroves, observed stands are consistently present. The lower recall ($0.534$) is primarily attributed to unmodeled, narrow fringing mangrove strips along smaller tidal channels (visible as black false negative areas in @fig-urala-val a), where extreme localized hydrodynamic gradients or micro-topographic variations are near the limit of model resolution.
+The resulting statistics demonstrate good performance across the primary mangrove zones ($F_1 = 0.598$). High precision ($0.680$) indicates that where the model predicts mangroves, observed stands are consistently present. The lower recall ($0.534$) is primarily attributed to unmodeled, narrow fringing mangrove strips along smaller tidal channels (visible as black false negative areas in @fig-urala-val a), where extreme localised hydrodynamic gradients or micro-topographic variations are near the limit of model resolution.
 
 ---
 
-### Modeled Vegetation Structural Parameters
+### Modelled Vegetation Structural Parameters
 
 In addition to spatial extent, the model captures key structural attributes of the mangrove canopy across the Urala domain:
 
@@ -109,5 +126,34 @@ This spatial coherence between mature stem dimensions and true positive observed
 ::: {#fig-urala-val}
 ![](images/Urala_mangrove_validation.png){fig-align="center" width="100%"}
 
-Mangrove validation and vegetation structural parameter distributions across the Urala study area. **(a)** Spatial confusion map highlighting true positives, false negatives, and false positives alongside bounded performance metrics ($F_1$ score, precision, recall). **(b)** Spatial distribution of modeled stem diameter ($d$). **(c)** Spatial distribution of modeled stem height ($h$).
+Mangrove validation and vegetation structural parameter distributions across the Urala study area. **(a)** Spatial confusion map highlighting true positives, false negatives, and false positives alongside bounded performance metrics ($F_1$ score, precision, recall). **(b)** Spatial distribution of modelled stem diameter ($d$). **(c)** Spatial distribution of modelled stem height ($h$).
+:::
+
+
+## Algal Mat Calibration and Validation {#sec-algal-calibration}
+
+Using the calibrated hydrodynamic and mangrove model outputs, the algal mat module was subsequently calibrated to predict present-day distributions across the Urala domain. 
+
+Algal mats are highly dynamic ecosystems that undergo rapid temporal fluctuations, even within single spring–neap tidal cycles. Algal spores are widely distributed throughout the intertidal zone; under favorable environmental conditions, they actively photosynthesize and expand, whereas under stress, they remain dormant. When suitable conditions persist for extended periods, they develop into thick, contiguous mats, as observed across several intertidal zones in Urala.
+
+Due to this highly dynamic behavior, implementing a fully mechanistic growth approach—similar to that used in the mangrove model—presents significant challenges. However, because this study focuses primarily on long-term spatial trajectories, we utilized satellite-derived probability maps from @Hickey2025 to isolate persistent algal mat distributions. A threshold of annual probability $> 25\%$ was applied across 2019 to define the baseline stable algal mat coverage (@fig-urala-alagl-presistence). 
+
+::: {#fig-urala-alagl-presistence}
+![](images/urala_algal_mat_persistence.png){fig-align="center" width="100%"}
+
+Algal mat persistence map based on @Hickey2025 for 2019.
+:::
+
+Hydrodynamic simulations were conducted for the 2019 calibration period to evaluate the governing environmental drivers. By integrating key hydrodynamic indicators—namely maximum bed shear stress ($\tau_{\text{max}}$), inundation frequency, and the 98th percentile water depth ($d_{98}$)—we established the following environmental suitability thresholds for algal mat persistence at Urala:
+
+* **Maximum Bed Shear Stress:** $0.2 \le \tau_{\text{max}} \le 0.7\text{ N m}^{-2}$
+* **Inundation Frequency:** $0.0001 \le \text{Inundation Frequency} \le 0.95$
+* **98th Percentile Water Depth:** $0.01 \le d_{98} \le 0.55\text{ m}$
+
+The calibrated model predictions demonstrate good agreement with the observed baseline persistent algal mat spatial extent (@fig-urala-algal-validation).
+
+::: {#fig-urala-algal-validation}
+![](images/urala_algal_mat_validation.png){fig-align="center" width="100%"}
+
+Algal mat validation map using the calibrated model.
 :::

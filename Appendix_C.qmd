@@ -1,0 +1,12 @@
+---
+title: "Appendix C: Idealised Morphodynamic Model"
+format: html
+---
+# Idealised Morphodynamic Model {#sec-appendix-c}
+
+<iframe 
+  src="files/Appendix_C.pdf" 
+  width="100%" 
+  height="950px" 
+  style="border: none;">
+</iframe>

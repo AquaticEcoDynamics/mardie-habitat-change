@@ -22,7 +22,7 @@ Water level observations and historical mangrove extent in the Giralia region. *
 
 ---
 
-### Model Initialization & Performance Evaluation
+### Model Initialisation & Performance Evaluation {#sec-mangrove-giralia-calibration}
 
 @fig-giralia-val shows the modeled mangrove distribution under present environmental conditions. Because the objective was to reproduce the stable mangrove extent representative of the current environmental regime, the model simulations were forced using the MSKO tidal constituents (optimised via harmonic analysis). 
 

@@ -23,7 +23,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -246,7 +266,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Urala/Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview of the Urala Study Site</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -259,6 +279,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./Urala/Mangrove.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Urala/Algal_Mat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Algal mat response to future sea level rise</span></span></a>
   </div>
 </li>
       </ul>
@@ -275,13 +301,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Appendices/Appendix_A.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Appendix A: Monitoring &amp; Water Level Correction Framework</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix A: Monitoring &amp; Water Level Correction Framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Appendix_B.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Appendix_C.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Appendix C: Idealised Morphodynamic Model</span></span></a>
   </div>
 </li>
       </ul>
@@ -302,7 +334,7 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#hydrodynamic-modelling-overview" id="toc-hydrodynamic-modelling-overview" class="nav-link active" data-scroll-target="#hydrodynamic-modelling-overview"><span class="header-section-number">7.1</span> Hydrodynamic Modelling Overview</a></li>
+  <li><a href="#sec-hydro-overview" id="toc-sec-hydro-overview" class="nav-link active" data-scroll-target="#sec-hydro-overview"><span class="header-section-number">7.1</span> Hydrodynamic Modelling Overview</a></li>
   <li><a href="#regional-model-exmouth-gulf" id="toc-regional-model-exmouth-gulf" class="nav-link" data-scroll-target="#regional-model-exmouth-gulf"><span class="header-section-number">7.2</span> Regional Model: Exmouth Gulf</a>
   <ul class="collapse">
   <li><a href="#model-setup-domain" id="toc-model-setup-domain" class="nav-link" data-scroll-target="#model-setup-domain"><span class="header-section-number">7.2.1</span> Model Setup &amp; Domain</a></li>
@@ -318,9 +350,9 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#simulation-period" id="toc-simulation-period" class="nav-link" data-scroll-target="#simulation-period"><span class="header-section-number">7.4.1</span> Simulation Period</a></li>
   <li><a href="#model-boundary-conditions-environmental-forcings" id="toc-model-boundary-conditions-environmental-forcings" class="nav-link" data-scroll-target="#model-boundary-conditions-environmental-forcings"><span class="header-section-number">7.4.2</span> Model Boundary Conditions &amp; Environmental Forcings</a></li>
-  <li><a href="#bed-roughness-mannings-n" id="toc-bed-roughness-mannings-n" class="nav-link" data-scroll-target="#bed-roughness-mannings-n"><span class="header-section-number">7.4.3</span> Bed Roughness (Manning’s n)</a></li>
+  <li><a href="#bed-roughness-mannings-n" id="toc-bed-roughness-mannings-n" class="nav-link" data-scroll-target="#bed-roughness-mannings-n"><span class="header-section-number">7.4.3</span> Bed Roughness (Manning’s <span class="math inline">\(n\)</span>)</a></li>
   </ul></li>
-  <li><a href="#hydrodynamic-model-calibration-validation" id="toc-hydrodynamic-model-calibration-validation" class="nav-link" data-scroll-target="#hydrodynamic-model-calibration-validation"><span class="header-section-number">7.5</span> Hydrodynamic Model Calibration &amp; Validation</a>
+  <li><a href="#sec-hydro-calibration" id="toc-sec-hydro-calibration" class="nav-link" data-scroll-target="#sec-hydro-calibration"><span class="header-section-number">7.5</span> Hydrodynamic Model Calibration &amp; Validation</a>
   <ul class="collapse">
   <li><a href="#urala-domain-calibration" id="toc-urala-domain-calibration" class="nav-link" data-scroll-target="#urala-domain-calibration"><span class="header-section-number">7.5.1</span> Urala Domain Calibration</a></li>
   <li><a href="#giralia-domain-calibration" id="toc-giralia-domain-calibration" class="nav-link" data-scroll-target="#giralia-domain-calibration"><span class="header-section-number">7.5.2</span> Giralia Domain Calibration</a></li>
@@ -352,8 +384,8 @@ window.Quarto = {
 </header>
 
 
-<section id="hydrodynamic-modelling-overview" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="hydrodynamic-modelling-overview"><span class="header-section-number">7.1</span> Hydrodynamic Modelling Overview</h2>
+<section id="sec-hydro-overview" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="sec-hydro-overview"><span class="header-section-number">7.1</span> Hydrodynamic Modelling Overview</h2>
 <p>To assess coastal and intertidal hydrodynamic processes and support habitat migration predictions, a multi-scale numerical modelling framework was developed using <strong>Delft3D Flexible Mesh (Delft3D FM)</strong>.</p>
 <p>To account for broader regional dynamics, severe weather phenomena, and open-ocean boundary influences, a <strong>Regional Scale Model</strong> was established for the Exmouth Gulf, covering both the Giralia and Urala domains. Operating alongside this regional domain are three high-resolution <strong>Site-Specific Models</strong>:</p>
 <ol type="1">
@@ -579,8 +611,8 @@ Figure&nbsp;7.9: Overview of the model boundary conditions, forcing datasets, an
 </div>
 </section>
 <section id="bed-roughness-mannings-n" class="level3" data-number="7.4.3">
-<h3 data-number="7.4.3" class="anchored" data-anchor-id="bed-roughness-mannings-n"><span class="header-section-number">7.4.3</span> Bed Roughness (Manning’s n)</h3>
-<p>Flow resistance across diverse intertidal and benthic habitats was parameterised using 2023 mapped habitat distributions. Specific Manning’s roughness coefficients (<span class="math inline">\(n\)</span>) were assigned per habitat type, as summarised in <a href="#tbl-roughness" class="quarto-xref">Table&nbsp;<span>7.2</span></a>.</p>
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="bed-roughness-mannings-n"><span class="header-section-number">7.4.3</span> Bed Roughness (Manning’s <span class="math inline">\(n\)</span>)</h3>
+<p>Flow resistance across diverse intertidal and benthic habitats was parameterised using mapped habitat distributions. For model calibration and validation purposes, spatially varying Manning’s roughness coefficients (<span class="math inline">\(n\)</span>) were assigned according to habitat type, as summarised in <a href="#tbl-roughness" class="quarto-xref">Table&nbsp;<span>7.2</span></a>.</p>
 <div id="tbl-roughness" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-roughness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -624,11 +656,11 @@ Table&nbsp;7.2: Adopted Manning’s Roughness Coefficients across Habitat Types
 </div>
 </figure>
 </div>
-<hr>
+<p>However, for predictive future simulations, spatial habitat distributions change dynamically over time. Consequently, a uniform baseline bed roughness of <span class="math inline">\(n = 0.023 \text{ s m}^{-1/3}\)</span> was applied across the entire domain. Vegetation-induced hydrodynamic effects are instead introduced dynamically using the approach detailed in <a href="Model-Overview.html#sec-vegetation-effects" class="quarto-xref"><span>Section 5.4</span></a>. Under this formulation <span class="citation" data-cites="Baptist2007">(<a href="References.html#ref-Baptist2007" role="doc-biblioref">Baptist et al., 2007</a>)</span>, flow resistance from evolving vegetation canopy is directly coupled to hydrodynamics by converting vegetation-induced drag into an equivalent increase in effective bed roughness.</p>
 </section>
 </section>
-<section id="hydrodynamic-model-calibration-validation" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="hydrodynamic-model-calibration-validation"><span class="header-section-number">7.5</span> Hydrodynamic Model Calibration &amp; Validation</h2>
+<section id="sec-hydro-calibration" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="sec-hydro-calibration"><span class="header-section-number">7.5</span> Hydrodynamic Model Calibration &amp; Validation</h2>
 <p>Hydrodynamics serve as the primary physical driver shaping intertidal habitats. Consequently, achieving accurate hydrodynamic predictions is crucial for assessing both baseline conditions and potential future environmental changes.</p>
 <p>Hydrodynamic calibration was conducted by comparing simulated water surface elevations against field-measured water level time series across key monitoring stations representing diverse habitat zones.</p>
 <p>The model was calibrated primarily by iteratively adjusting <strong>bottom roughness parameters</strong> (Manning’s <span class="math inline">\(n\)</span> coefficients tailored to specific habitat types) and refining lateral boundary configurations: * <strong>Manning’s Roughness (<span class="math inline">\(n\)</span>):</strong> Spatially varied to reflect vegetation cover and bed substrate resistance across different intertidal zones. * <strong>Lateral Boundary Conditions:</strong> Tested and refined using Neumann (flux/flow gradient) lateral boundaries, prescribed water level boundaries, and closed boundaries (implicit no-slip wall condition).</p>
@@ -718,6 +750,11 @@ Figure&nbsp;7.12: Hydrodynamic simulation demonstrating tidal propagation and in
 <p>The calibration and validation results across the regional model and individual site-specific domains demonstrate strong predictive accuracy for tidal elevations, phase, and intertidal inundation patterns. The hydrodynamics extracted from these validated models establish a robust baseline for assessing habitat migration dynamics under future Sea Level Rise (SLR) scenarios.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Baptist2007" class="csl-entry" role="listitem">
+Baptist, M. J., Babovic, V., Uthurburu, J. R., Keijzer, M., Uittenbogaard, R. E., Mynett, A., &amp; Verwey, A. (2007). On inducing equations for vegetation resistance. <em>Journal of Hydraulic Research</em>, <em>45</em>, 435–450. <a href="https://doi.org/10.1080/00221686.2007.9521778">https://doi.org/10.1080/00221686.2007.9521778</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
