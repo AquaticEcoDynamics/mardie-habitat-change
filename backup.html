@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.28">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>backup</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="backup_files/libs/clipboard/clipboard.min.js"></script>
+<script src="backup_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="backup_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="backup_files/libs/quarto-html/popper.min.js"></script>
+<script src="backup_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="backup_files/libs/quarto-html/anchor.min.js"></script>
+<link href="backup_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="backup_files/libs/quarto-html/quarto-syntax-highlighting-49e51e44f424ea8c7044b429bdbbbfe2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="backup_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="backup_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="backup_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<p>In recent years, there has been a growing interest in establishing salt farms along the northwest coast of Western Australia. The region’s unique coastal characteristics—including its significant tidal range and extensive natural salt flats—make it an ideal location for solar-based salt production. Since 1967, numerous salt projects have been proposed, with many receiving environmental approval and several currently in operation.</p>
+<p>Given the increasing number of proposals for new large-scale salt ponds, a collaborative research project was initiated through the Western Australian Marine Science Institution (WAMSI) to better understand potential regional environmental impacts. Supported by key stakeholders including the Department of Water and Environmental Regulation (DWER), the Department of Biodiversity, Conservation and Attractions (DBCA), the Department of Primary Industries and Regional Development (DPIRD), the Department of Climate Change, Energy, the Environment and Water (DCCEEW), and BCI Minerals. This initiative brings together regulatory, management, and industry perspectives. As part of this effort, the University of Western Australia was contracted to conduct a modelling assessment, focusing on the potential influence of sea level rise and coastal development on coastal habitat extent and evolution.</p>
+<section id="controls" class="level2">
+<h2 class="anchored" data-anchor-id="controls">#COntrols</h2>
+</section>
+<section id="title-controls-on-coastal-ecosystems-in-pilbara" class="level2">
+<h2 class="anchored" data-anchor-id="title-controls-on-coastal-ecosystems-in-pilbara">#title: “Controls on Coastal Ecosystems in Pilbara”</h2>
+</section>
+<section id="sec-controls" class="level1">
+<h1>Controls on Coastal Ecosystems in Pilbara</h1>
+<section id="intertidal-habitats-of-the-pilbara-region" class="level2">
+<h2 class="anchored" data-anchor-id="intertidal-habitats-of-the-pilbara-region">Intertidal Habitats of the Pilbara Region</h2>
+<p>The intertidal habitats of the Pilbara region are outlined in <strong>?@sec-intro</strong>. In parts of the north-western Pilbara, particularly around Exmouth Gulf, the intertidal zone extends several kilometres landward, supporting a heterogeneous mosaic of mangroves, samphire and saltmarsh vegetation, cyanobacterial mats, salt flats, tidal creeks, and unvegetated sandy surfaces. The relative extent and spatial arrangement of these habitats vary with surface elevation, coastal morphology, and hydrological connectivity <span class="citation" data-cites="Hickey2025">[@Hickey2025]</span>.</p>
+<p>Understanding the environmental controls on these habitats is important for interpreting their distribution and assessing how they may respond to future SLR. Water levels and salinity are two key controls on mangroves along with temperature for cyanobacterial mats, although their effects interact with substrate characteristics, sediment dynamics, and local geomorphology. For mangroves, elevation and hydroperiod (inundation frequency), duration, and depth of inundation strongly influence habitat distribution and persistence, while sediment accumulation and changes in surface elevation affect the capacity of mangrove environments to adjust to rising sea levels <span class="citation" data-cites="Krauss2014 Woodroffe2016">[@Krauss2014; @Woodroffe2016]</span>. Cyanobacterial mats in arid intertidal environments are also influenced by the balance between inundation and exposure, desiccation, and the exchange of water and dissolved materials with surrounding environments <span class="citation" data-cites="Lovelock2010 Adame2012 Hickey2025">[@Lovelock2010; @Adame2012; @Hickey2025]</span>.</p>
+<p>Water levels in the Pilbara vary over several timescales. Astronomical tides produce regular inundation cycles, while seasonal and interannual variations in sea level alter the background water level on which these tides occur. These longer-term variations can be influenced by large-scale climate variability, including the El Niño–Southern Oscillation (ENSO), which affects regional atmospheric and oceanographic conditions. Atmospheric pressure and wind forcing, particularly during extreme weather events, can generate additional water-level anomalies through storm surges and coastally trapped waves. Wind also influences coastal hydrodynamics by contributing to water-level setup and generating waves, with the magnitude of these effects depending on wind strength and direction, coastal exposure, and local bathymetry. Together, these processes influence the frequency, depth, and spatial extent of inundation across the region’s low-gradient intertidal flats.</p>
+<p>Salinity is closely linked to the balance between evaporation, rainfall, tidal inundation, and drainage. Under the Pilbara’s arid climate, high temperatures and strong solar radiation promote evaporation, which can concentrate salts in surface water and sediment porewater during prolonged exposure. Rainfall can temporarily dilute these salts and provide freshwater inputs, while tidal exchange can introduce seawater and flush accumulated salts from inundated surfaces. Consequently, the salinity experienced by mangroves and cyanobacterial mats depends not only on climatic conditions but also on the frequency of marine inundation, local hydrological connectivity, and the duration of exposure between inundation events.</p>
+<p>The following sections examine these controls in the context of the Pilbara region, beginning with observed water-level variability and its tidal, seasonal, interannual, and event-scale components. Regional weather and climate conditions are then considered alongside storm-driven water-level anomalies and wave processes. This provides the environmental context needed to understand the physical conditions that shape intertidal habitat distribution and may influence habitat responses to future environmental change.</p>
+</section>
+<section id="sea-level-variability-and-water-level-decomposition" class="level2">
+<h2 class="anchored" data-anchor-id="sea-level-variability-and-water-level-decomposition">Sea-Level Variability and Water-Level Decomposition</h2>
+<p>To characterise sea-level variability along the Pilbara coast, water-level observations from the Exmouth and Onslow tide-gauge stations were analysed. The analysis follows the decomposition framework described by Lowe et al.&nbsp;(2021), which separates observed water levels into contributions operating over different temporal scales. Applying this framework to the two stations provides a regional basis for examining the relative importance of astronomical tides, seasonal and interannual fluctuations, and higher-frequency water-level anomalies.</p>
+<p>Observed coastal water levels reflect the combined influence of several processes, including astronomical tides, changes in the background sea level associated with oceanographic and climatic variability, and shorter-term anomalies associated with atmospheric forcing and coastal waves. These contributions operate simultaneously but differ in their characteristic timescales. Separating them allows the variability observed at Exmouth and Onslow to be examined in a consistent framework and provides context for understanding water-level fluctuations across the region’s extensive intertidal environments.</p>
+<section id="water-level-decomposition-method" class="level3">
+<h3 class="anchored" data-anchor-id="water-level-decomposition-method">Water-Level Decomposition Method</h3>
+<p>Following Lowe et al.&nbsp;(2021), the observed water-level time series, <span class="math inline">\(\eta(t)\)</span>, can be represented as the sum of a mean sea-level component, an astronomical tide, a seasonal contribution, an interannual contribution, and a higher-frequency residual:</p>
+<p><span id="eq-water-level"><span class="math display">\[
+\eta(t) =
+\eta_{\mathrm{MSL}}(t) +
+\eta_{\mathrm{T}}(t) +
+\eta_{\mathrm{A}}(t) +
+\eta_{\mathrm{I}}(t) +
+\eta_{\mathrm{SS}}(t)
+\tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(\eta_{\mathrm{MSL}}(t)\)</span> represents the long-term mean sea-level trend, <span class="math inline">\(\eta_{\mathrm{T}}(t)\)</span> is the astronomical tide, <span class="math inline">\(\eta_{\mathrm{A}}(t)\)</span> is the seasonal contribution, <span class="math inline">\(\eta_{\mathrm{I}}(t)\)</span> represents interannual variability, and <span class="math inline">\(\eta_{\mathrm{SS}}(t)\)</span> represents the remaining higher-frequency variability, which may include storm surges and other short-term processes. These components are estimated sequentially from the observed records.</p>
+<p>First, the astronomical tide is estimated using harmonic tidal analysis, which represents the predictable tidal signal as a combination of constituents with known frequencies and estimated amplitudes and phases. The mean sea-level trend and predicted astronomical tide are then removed from the observed water levels to obtain the non-tidal residual (NTR), <span class="math inline">\(\eta_{\mathrm{NTR}}(t)\)</span>. The NTR represents water-level variability not explained by the fitted astronomical tide and mean sea-level trend.</p>
+<p>The NTR is subsequently separated into seasonal and longer-term contributions. The seasonal signal is estimated by fitting annual and semiannual harmonic functions to the NTR time series. This approach captures the dominant annual cycle while allowing for an additional six-month component to represent departures from a purely sinusoidal annual pattern. The seasonal contribution is expressed as</p>
+<p><span id="eq-seasonal"><span class="math display">\[
+\begin{aligned}
+\eta_{\mathrm{A}}(t) ={}&amp;
+A_1 \cos\left(\frac{2\pi t}{365.25}+\phi_1\right)\\
+&amp;+ A_2 \cos\left(\frac{4\pi t}{365.25}+\phi_2\right)+C
+\end{aligned}
+\tag{2}\]</span></span></p>
+<p>where <span class="math inline">\(t\)</span> is elapsed time in days, <span class="math inline">\(A_1\)</span> and <span class="math inline">\(A_2\)</span> are the annual and semiannual amplitudes, <span class="math inline">\(\phi_1\)</span> and <span class="math inline">\(\phi_2\)</span> are their respective phase offsets, and <span class="math inline">\(C\)</span> is a constant offset. The parameters are estimated by fitting the harmonic function to the NTR observations using nonlinear least-squares optimisation. The resulting fitted series represents the seasonal contribution to non-tidal water-level variability.</p>
+<p>After estimating the seasonal component, the remaining NTR is calculated by subtracting the fitted seasonal signal from the original NTR. To distinguish longer-term interannual fluctuations from shorter-term variability, the remaining series is then averaged monthly. This suppresses much of the daily-to-weekly variability and provides an estimate of the interannual component. The higher-frequency contribution is obtained from the remaining variability after accounting for the seasonal and interannual components. It is interpreted as a high-frequency residual rather than a direct measurement of storm surge alone, because it may also contain other short-period processes and errors associated with the decomposition.</p>
+<p>The same decomposition framework is applied to the Exmouth and Onslow tide-gauge records to compare water-level variability across different temporal scales. The resulting components are examined to characterise seasonal fluctuations, interannual variability, long-term sea-level change, and higher-frequency water-level anomalies along the Pilbara coast. This provides a basis for understanding how variations in regional water levels may influence the frequency, depth, and duration of inundation across low-gradient intertidal habitats.</p>
+<p>The decomposition for Onslow is illustrated in <a href="#fig-onslow-decomposition" class="quarto-xref">Figure&nbsp;1</a>. The figure brings together the observed water-level record, the estimated components of variability, tropical cyclone records, and the Southern Oscillation Index (SOI). This enables the different temporal contributions to be examined alongside potential climatic and meteorological influences.</p>
+<div id="fig-onslow-decomposition" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Decomposition of water-level variability at Onslow, Western Australia. Panel (a) shows monthly maximum water levels, tidal range, and tropical cyclone events. Panel (b) shows the estimated interannual contribution and long-term sea-level trend. Panel (c) shows the seasonal contribution estimated using annual and semiannual harmonics. Panel (d) shows the remaining high-frequency residual. Panel (e) shows the predicted astronomical tide. Panel (f) shows the Southern Oscillation Index (SOI), an indicator of the atmospheric component of the El Niño–Southern Oscillation (ENSO). Tropical cyclone records and SOI data are from the [Australian Bureau of Meteorology](https://www.bom.gov.au/cyclone/tropical-cyclone-knowledge-centre/history/past-tropical-cyclones/) and [SOI monitoring page](https://www.bom.gov.au/climate/enso/soi/), respectively.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-onslow-decomposition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Onslow_detrended_components.png" class="img-fluid figure-img" data-fig-cap="Decomposition of water-level variability at Onslow, Western Australia. Panel (a) shows monthly maximum water levels, tidal range, and tropical cyclone events. Panel (b) shows the estimated interannual contribution and long-term sea-level trend. Panel (c) shows the seasonal contribution estimated using annual and semiannual harmonics. Panel (d) shows the remaining high-frequency residual. Panel (e) shows the predicted astronomical tide. Panel (f) shows the Southern Oscillation Index (SOI), an indicator of the atmospheric component of the El Niño–Southern Oscillation (ENSO). Tropical cyclone records and SOI data are from the [Australian Bureau of Meteorology](https://www.bom.gov.au/cyclone/tropical-cyclone-knowledge-centre/history/past-tropical-cyclones/) and [SOI monitoring page](https://www.bom.gov.au/climate/enso/soi/), respectively.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-onslow-decomposition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Water-level decomposition for Onslow, Western Australia: (a) monthly maximum water levels (black), observed tidal range (blue), and tropical cyclone events (green); (b) estimated interannual water-level contribution (green) and long-term sea-level trend (red); (c) fitted seasonal contribution; (d) high-frequency residual; (e) predicted astronomical tide; and (f) Southern Oscillation Index (SOI). Tropical cyclone records and SOI data are sourced from the Australian Bureau of Meteorology.
+</figcaption>
+</figure>
+</div>
+<p>The decomposition distinguishes the recurring seasonal cycle from interannual fluctuations and longer-term sea-level change. The seasonal component captures the recurring annual and semiannual variations remaining after the fitted astronomical tide and long-term trend have been removed. The interannual component, in contrast, represents fluctuations over longer periods and may reflect large-scale oceanographic and climatic variability. Comparing this component with the SOI allows potential associations with ENSO to be investigated, although the strength and timing of any relationship need to be established quantitatively.</p>
+<p>The high-frequency residual represents variability that is not captured by the fitted trend, seasonal, interannual, and astronomical components. It may include short-term water-level anomalies associated with atmospheric pressure changes, wind forcing, storm surges, and other processes. Comparing these anomalies with the timing of documented tropical cyclones can help identify potential event-related signals. However, cyclone occurrence alone does not establish that a particular event caused an observed anomaly, and the residual should not be interpreted as storm surge exclusively without further analysis.</p>
+<p>The observed water level reflects the additive combination of the estimated components. When positive contributions coincide, they can reinforce one another and produce elevated total water levels; when contributions have opposing signs, they can partially offset one another. Consequently, the same astronomical tide can occur under different background water-level conditions, resulting in different maximum water levels and inundation extents. This is particularly relevant to the Pilbara’s extensive, low-gradient intertidal flats, where relatively small changes in water level may alter the areas reached by high tides and the duration of inundation near habitat elevation thresholds.</p>
+<p>The same decomposition applied to Exmouth and Onslow provides a consistent basis for comparing regional water-level variability. The resulting comparison can help establish which components are coherent between the two locations and which differ, providing the observational context for the following sections on tides, seasonal and interannual variability, and weather-related water-level anomalies.</p>
+</section>
+</section>
+<section id="tides" class="level2">
+<h2 class="anchored" data-anchor-id="tides">Tides</h2>
+<p>Water levels in the Pilbara region are predominantly controlled by mixed, mainly semi-diurnal tides with meso- to macro-tidal ranges that increase from west to east. These tidal processes generate cyclical variations across multiple temporal scales, including fortnightly spring–neap cycles, biannual cycles driven by the Earth’s latitudinal tilt, 4.4-year cycles associated with lunar orbital variations, and the 18.6-year lunar nodal cycle. While the 18.6-year modulation is pronounced in south-west Western Australia—altering tidal ranges by up to approximately 10 cm (20–30% of the mean tidal range)—its relative impact is less significant in the north-west <span class="citation" data-cites="Eliot2012 Lowe2021">[@Eliot2012; @Lowe2021]</span>. Nevertheless, even minor variations in tidal range strongly influence coastal processes and intertidal ecosystem dynamics.</p>
+<p>Non-tidal influences such as wind, atmospheric pressure, and wave setup are generally minor relative to background tidal variability. However, these forces can generate substantial water level setup during tropical cyclone events, particularly within partially enclosed coastal bodies.</p>
+<p><a href="#tbl-water-levels" class="quarto-xref">Table&nbsp;1</a> outlines the key tidal datums relative to Mean Sea Level (MSL) across Exmouth, Onslow, and Cape Preston, establishing the reference framework for intertidal habitat exposure and vertical inundation dynamics across the region.</p>
+<div id="tbl-water-levels" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-water-levels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary of tidal datums relative to mean sea level (MSL) at Exmouth, Onslow and Cape Preston. HAT = Highest Astronomical Tide; MHWS = Mean High Water Springs; MHWN = Mean High Water Neaps; MLWN = Mean Low Water Neaps; MLWS = Mean Low Water Springs; LAT = Lowest Astronomical Tide.
+</figcaption>
+<div aria-describedby="tbl-water-levels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Water Level Tidal Datum</th>
+<th style="text-align: center;">Exmouth [m]</th>
+<th style="text-align: center;">Onslow [m]</th>
+<th style="text-align: center;">Cape Preston [m]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>HAT</strong></td>
+<td style="text-align: center;">1.43</td>
+<td style="text-align: center;">1.30</td>
+<td style="text-align: center;">2.25</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>MHWS</strong></td>
+<td style="text-align: center;">0.91</td>
+<td style="text-align: center;">0.85</td>
+<td style="text-align: center;">1.71</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>MHWN</strong></td>
+<td style="text-align: center;">0.32</td>
+<td style="text-align: center;">0.26</td>
+<td style="text-align: center;">0.38</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>MSL</strong></td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.00</td>
+<td style="text-align: center;">0.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>MLWN</strong></td>
+<td style="text-align: center;">-0.04</td>
+<td style="text-align: center;">-0.25</td>
+<td style="text-align: center;">-0.38</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>MLWS</strong></td>
+<td style="text-align: center;">-0.28</td>
+<td style="text-align: center;">-0.84</td>
+<td style="text-align: center;">-0.94</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>LAT</strong></td>
+<td style="text-align: center;">-0.89</td>
+<td style="text-align: center;">-1.29</td>
+<td style="text-align: center;">-1.33</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Although astronomical tides provide the regular background pattern of inundation, the water level at any given time can differ from the predicted tide because of non-tidal processes. Wind stress and atmospheric pressure can modify coastal water levels, while storm surges and coastally trapped waves can produce larger anomalies during some weather events. These processes are considered separately below.</p>
+</section>
+<section id="seasonal-and-interannual-variability" class="level2">
+<h2 class="anchored" data-anchor-id="seasonal-and-interannual-variability">Seasonal and Interannual Variability</h2>
+<p>In addition to astronomical tides, water levels along the Western Australian coast vary seasonally and between years. These fluctuations reflect changes in regional ocean circulation and atmospheric forcing, including steric effects associated with changes in seawater temperature and density and wind-driven changes in coastal sea level. Off the coast of Western Australia in the southeast Indian Ocean, regional surface circulation is dominated by the unique poleward-flowing, downwelling-favourable Leeuwin Current <span class="citation" data-cites="Lowe2012">[@Lowe2012]</span>. Large seasonal and interannual mean sea level variations are driven by steric effects (thermal expansion and contraction) and Ekman setup associated with alongshelf Leeuwin Current transport <span class="citation" data-cites="Eliot2010">[@Eliot2010]</span>. Non-tidal water level fluctuations contribute up to ~0.2 m in seasonal amplitude and ~0.3 m in interannual variance, superimposed onto astronomical tides. The seasonal component estimated from the water-level decomposition provides an overview of the recurring non-tidal cycle at Exmouth and Onslow. To examine how this variability is expressed in the observed records throughout the year, <a href="#fig-tide-variance" class="quarto-xref">Figure&nbsp;2</a> compares monthly mean water levels from 2006 to 2022 across individual years.</p>
+<div id="fig-tide-variance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tide-variance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Tide_variance_mean_exmouth_onlsow.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tide-variance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Monthly mean water level variations (m AHD) from 2006 to 2022 at (a) Exmouth and (b) Onslow tide stations. Solid red lines represent the multi-year mean value, while individual colored lines denote individual years.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-tide-variance" class="quarto-xref">Figure&nbsp;2</a> shows the measured monthly mean water level variations from 2006 to 2022 at the Exmouth (panel a) and Onslow (panel b) tide stations, plotted year-wise. Both locations exhibit a clear, synchronised seasonal signal: mean water levels peak during autumn (April–May) at values reaching up to ~0.25 to 0.30 m AHD on average (solid red line), driven by seasonal shifts in Leeuwin Current intensity, before falling to a seasonal minimum in late winter and early spring (August–September) at approximately 0.0 to 0.05 m AHD <span class="citation" data-cites="SeashoreEngineering2022">[@SeashoreEngineering2022]</span>.</p>
+<p>In addition to this annual cycle, <a href="#fig-tide-variance" class="quarto-xref">Figure&nbsp;2</a> highlights substantial interannual variability across individual years (indicated by the spread of colored lines). The vertical variance band (up to ~0.4 m during early months like January and February) demonstrates how climate oscillations such as El Niño–Southern Oscillation (ENSO) phases drive multi-year sea level variability above and below the baseline mean. Notably, Exmouth and Onslow track each other closely in terms of seasonal timing, multi-year means, and overall variance envelope, reflecting strong regional coherence across the West Pilbara Coast.</p>
+</section>
+<section id="storm-surge-and-coastally-trapped-waves" class="level2">
+<h2 class="anchored" data-anchor-id="storm-surge-and-coastally-trapped-waves">Storm surge and coastally-trapped waves</h2>
+<p>Storm surge refers to deviations in mean sea level driven by atmospheric forcing, primarily associated with changes in barometric pressure and wind stress. These weather-induced fluctuations occur over time scales ranging from minutes to several days and can significantly elevate coastal water levels. The most substantial surges are typically generated by intense weather systems characterised by low atmospheric pressure and strong winds, and are therefore commonly referred to as storm surges.</p>
+<p>In addition to locally generated surge, free surge responses can propagate beyond the region of direct atmospheric forcing. These include surface gravity waves, Kelvin waves, and coastally-trapped waves, which are generated by synoptic-scale systems and travel along the coastline <span class="citation" data-cites="Trenberth1991">[@Trenberth1991]</span>. As these waves approach the coast, boundary constraints and decreasing water depth modify their behaviour. Shallowing conditions reduce propagation speeds and enhance water level responses, leading to the amplification of surge through shoaling processes. In semi-enclosed coastal environments, these boundary effects may also give rise to oscillatory motions such as seiches <span class="citation" data-cites="SeashoreEngineering2016">[@SeashoreEngineering2016]</span>.</p>
+<p>Tropical cyclones are a major driver of extreme storm surge events in the Pilbara region. These systems are characterised by intense low-pressure centres and high wind speeds, with cyclone classification beginning at sustained winds of 63 km/h and reaching up to 276 km/h in extreme cases along the Western Australian coastline <span class="citation" data-cites="SeashoreEngineering2016">[@SeashoreEngineering2016]</span>. Tropical cyclones generate both large waves and significant storm surges, particularly as they approach and cross the coastline.</p>
+<p>An important characteristic of cyclone-driven surge in this region is the role of coastally-trapped waves, which enable water level anomalies to propagate alongshore over large distances. As a result, cyclone-induced water level fluctuations can affect coastal areas far removed from the point of landfall. The magnitude and spatial distribution of surge are strongly influenced by cyclone track orientation. In the Pilbara, the highest surge events are typically associated with coast-crossing cyclones that generate strong onshore winds. Further west along the coast, however, extreme surge events are more commonly linked to cyclones travelling parallel to the coastline, which enhance the generation of coastally-trapped waves.</p>
+<p>These processes are illustrated in <a href="#fig-cyclone-paths" class="quarto-xref">Figure&nbsp;3</a>, which shows the tracks of tropical cyclones responsible for the highest observed surges along the Western Australian coast. Understanding the combined influence of atmospheric forcing, coastal geometry, and wave dynamics is critical for accurately assessing extreme water levels and their impacts on coastal ecosystems.</p>
+<div id="fig-cyclone-paths" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-cap="Tropical cyclone tracks associated with the highest observed storm surge events along the Western Australian coastline, highlighting the influence of storm trajectory on surge generation (Seashore Engineering, 2016).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cyclone-paths-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Tropical_cyclone_paths.png" class="img-fluid figure-img" data-fig-cap="Tropical cyclone tracks associated with the highest observed storm surge events along the Western Australian coastline, highlighting the influence of storm trajectory on surge generation (Seashore Engineering, 2016).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cyclone-paths-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Tropical cyclone paths causing highest observed surges along the Western Australian coast (Seashore Engineering, 2016).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="wave-climate" class="level2">
+<h2 class="anchored" data-anchor-id="wave-climate">Wave Climate</h2>
+<section id="ambient-wave-conditions" class="level3">
+<h3 class="anchored" data-anchor-id="ambient-wave-conditions">Ambient Wave Conditions</h3>
+<p>The hydrodynamic energy across the West Pilbara coast and Exmouth Gulf is overwhelmingly dominated by tidal and wind-driven processes, with ambient wave energy playing a minor, secondary role under normal conditions. Open ocean swell waves originating from the Southern Ocean and Indian Ocean are effectively blocked and sheltered by the landmass of the Exmouth.</p>
+<div id="fig-wave-climate" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-wave-climate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/pilbara_wave_climate.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wave-climate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Mean significant wave height (<span class="math inline">\(H_s\)</span>) across the West Pilbara region derived from the Australian Climate Service Wave Hindcast (WHACS) dataset (1980–2023) <span class="citation" data-cites="Smith2025">[@Smith2025]</span>. White contours denote mean <span class="math inline">\(H_s\)</span> intervals (m), highlighting severe wave energy attenuation moving from deep offshore waters into sheltered embayments.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-wave-climate" class="quarto-xref">Figure&nbsp;4</a> illustrates the long-term regional mean significant wave height (<span class="math inline">\(H_s\)</span>) derived from the Wave Hindcast for Australian Coastal Seas (WHACS) dataset (1980–2023) <span class="citation" data-cites="Smith2025">[@Smith2025]</span>. The spatial distribution clearly highlights the extreme wave energy gradients across the region:</p>
+<ul>
+<li><strong>Offshore and Western Margins:</strong> Moderate mean wave heights of 1.5 to &gt;2.0 m persist in exposed deepwater areas west of the Exmouth Peninsula.</li>
+<li><strong>Sheltered Embayments and Nearshore Lands:</strong> As waves propagate past the peninsula into Exmouth Gulf and along the low-gradient inner shelf near Giralia, Urala, and Cape Preston, depth-induced breaking and fetch constraints reduce mean significant wave heights to <span class="math inline">\(&lt;0.5\)</span> m (dark purple zone in <a href="#fig-wave-climate" class="quarto-xref">Figure&nbsp;4</a>).</li>
+</ul>
+<p>Ambient wave conditions within Exmouth Gulf and adjacent coastal flats are primarily locally generated wind-sea waves. Driven by seasonal wind regimes across the available fetches of the Gulf, these short-period ambient waves typically reach significant wave heights of less than 1.5 m. Consequently, regular, day-to-day ambient waves are not a dominant physical driver shaping the intertidal coastal landforms of this region.</p>
+</section>
+<section id="extreme-wave-conditions" class="level3">
+<h3 class="anchored" data-anchor-id="extreme-wave-conditions">Extreme Wave Conditions</h3>
+<p>While ambient wave energy is low, wave processes become highly significant during rare, extreme meteorological events. Long-term offshore waverider buoy deployments (2006–2012) recorded extreme wave events directly linked to severe tropical cyclones, such as TC Nicholas (February 2008), which generated offshore significant wave heights of 5.7 m with peak periods of 12 seconds <span class="citation" data-cites="SeashoreEngineering2022">[@SeashoreEngineering2022]</span>.</p>
+<p>During severe tropical storms, extreme gale-force winds aligned with the north-facing mouth of Exmouth Gulf can drive substantial wave energy directly into the inner Gulf. Numerical modelling suggests cyclone-generated waves within the Gulf can reach 2.0–4.0 m significant height. However, the actual impact of extreme wave energy at inner-shelf locations (such as Giralia and Urala) is heavily modulated and attenuated by broad, shallow intertidal bathymetry and complex fringing reef/flat systems.</p>
+</section>
+</section>
+<section id="weather-and-climate-variability" class="level2">
+<h2 class="anchored" data-anchor-id="weather-and-climate-variability">Weather and climate variability</h2>
+<p>The Pilbara has an arid to semi-arid climate characterised by high temperatures, low and variable rainfall, and strong seasonal variation in wind conditions. Rainfall is episodic, with important contributions from tropical cyclones, convective storms and, in some coastal areas, winter weather systems. Temperature and rainfall influence the terrestrial water balance and evaporative demand, while winds influence coastal hydrodynamics through surface stress, local wave generation and, under suitable conditions, changes in coastal water levels <span class="citation" data-cites="Charles2015 SeashoreEngineering2022">[@Charles2015; @SeashoreEngineering2022]</span>.</p>
+<section id="rainfall" class="level3">
+<h3 class="anchored" data-anchor-id="rainfall">Rainfall</h3>
+<p>Mean annual rainfall across the Pilbara varies spatially, generally decreasing from the north towards the south. Regional climate assessments report annual totals of approximately 300–350 mm in parts of the north, declining to below 250 mm in some southern areas, while elevated inland areas such as the Hamersley Ranges can receive more than 500 mm annually <a href="@fig-pilbara-annual-rainfall"><span class="citation" data-cites="Charles2015">@Charles2015</span></a>. Topography and the occurrence of convective and cyclonic systems contribute to this spatial variability.</p>
+<div id="fig-pilbara-annual-rainfall" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pilbara-annual-rainfall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/pilbara_mean_annual_rainfall.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pilbara-annual-rainfall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Mean annual rainfall (mm/year) across the Assessment area for the period 1911–2012, highlighting the spatial gradient and elevated inland precipitation <span class="citation" data-cites="Charles2015">[@Charles2015]</span>.
+</figcaption>
+</figure>
+</div>
+<p>Rainfall near the coast is also strongly seasonal and variable between years. At Onslow, the monthly rainfall distribution shows contributions from early-summer rainfall events and, in some years, early-winter systems, separated by a comparatively dry period. The long-term monthly distribution and the 20th–80th percentile range are presented in <a href="#fig-onslow-monthly-rainfall" class="quarto-xref">Figure&nbsp;6</a>.</p>
+<div id="fig-onslow-monthly-rainfall" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-onslow-monthly-rainfall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/onslow_monthly_rainfall.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-onslow-monthly-rainfall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Monthly rainfall distribution at Onslow Airport (Station 5017) spanning 1911 to 2012, illustrating the mean monthly values and the 20th–80th percentile range <span class="citation" data-cites="Charles2015">[@Charles2015]</span>.
+</figcaption>
+</figure>
+</div>
+<p>The distribution illustrates (<a href="#fig-onslow-monthly-rainfall" class="quarto-xref">Figure&nbsp;6</a>) that rainfall is episodic rather than evenly distributed throughout the year. Consequently, monthly or annual averages do not fully represent the timing or duration of individual rainfall events. The timing of rainfall relative to tidal inundation and periods of surface exposure is particularly relevant when considering freshwater inputs and the salinity of intertidal surface water and sediment porewater.</p>
+</section>
+<section id="temperature" class="level3">
+<h3 class="anchored" data-anchor-id="temperature">Temperature</h3>
+<p>High temperatures and strong solar radiation characterise much of the Pilbara, particularly during the summer months. Regional climate data indicate that January is generally among the hottest months, although the timing of peak temperatures can vary between coastal and inland locations. Coastal sea breezes can moderate daytime temperatures relative to inland areas, while heat extremes remain an important feature of the regional climate <span class="citation" data-cites="Charles2015">[@Charles2015]</span> (<a href="#fig-pilbara-temp-cycle" class="quarto-xref">Figure&nbsp;7</a>).</p>
+<div id="fig-pilbara-temp-cycle" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pilbara-temp-cycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/pilbara_monthly_temperatures.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pilbara-temp-cycle-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Monthly means of daily minimum (<span class="math inline">\(T_{min}\)</span>), mean (<span class="math inline">\(T_{mean}\)</span>), and maximum (<span class="math inline">\(T_{max}\)</span>) temperatures across the Assessment area for the period 1911–2012 <span class="citation" data-cites="Charles2015">[@Charles2015]</span>.
+</figcaption>
+</figure>
+</div>
+<p>The regional temperature profile highlighted in <a href="#fig-pilbara-temp-cycle" class="quarto-xref">Figure&nbsp;7</a> is defined by the following characteristics:</p>
+<ul>
+<li><strong>Summer Maximums:</strong> Monthly mean daily maximums in January exceed 39°C across southwestern and eastern sectors, peaking at an average of 41°C at Marble Bar. Near-coastal sites near Onslow experience lower maximums due to sea-breeze moderation, though temperatures consistently exceed 35°C.</li>
+<li><strong>Extreme Records:</strong> Maximums above 45°C occur regularly between November and February. The state maximum temperature record of 50.5°C was recorded locally along the coast at Mardie on 19 February 1998.</li>
+<li><strong>Winter Minimums:</strong> July is the coldest month, with mean daily minimums ranging from 5–6°C in the south to 13–15°C along the northern coast. Sub-zero temperatures remain confined to inland southern areas (e.g., Nullagine recording -2.2°C).</li>
+</ul>
+</section>
+<section id="wind-regime" class="level3">
+<h3 class="anchored" data-anchor-id="wind-regime">Wind Regime</h3>
+<p>The baseline wind climate in the vicinity of Learmonth and the Onslow region transitions between seasonal trade wind systems and localised coastal circulations throughout the year.</p>
+<ul>
+<li><strong>Prevailing Direction:</strong> The region is anchored by a persistent southerly-to-southwesterly wind vector year-round. Across all 12 months, the dominant wind directions fall between <strong>202.5° (SSW)</strong> and <strong>225° (SW)</strong>, which consistently record the highest directional frequencies in the dataset.</li>
+<li><strong>Spring to Late Summer Peak (October–March):</strong> As the inland heat low develops during warmer months, this southerly-to-southwesterly flow intensifies, reinforced by strong afternoon sea breezes. The dominance of 202.5° winds peaks sharply in <strong>October (37.2%)</strong> and <strong>November (36.3%)</strong>, remaining exceptionally high through December (35.7%) and January (30.5%).</li>
+<li><strong>Winter Shift (May–August):</strong> During cooler months, the trade wind regime exerts a stronger influence, introducing a secondary peak from the easterly to southeasterly sector (<strong>135°–180°</strong>). From May through August, frequencies across 135°, 157.5°, and 180° increase significantly (e.g., 180° reaches 12.5%–13.1% in July–August), reflecting morning trade wind surges before shifting around to the south-southwest later in the day.</li>
+<li><strong>Transition Months (April &amp; September):</strong> April and September represent transitional periods. April exhibits a broader spread across east, south, and south-southwest directions as summer sea breezes decline, while September marks the rapid re-establishment of the dominant south-southwesterly flow (31.7% at 202.5°).</li>
+</ul>
+<div id="fig-learmonth-wind-dir" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-learmonth-wind-dir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/wind.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-learmonth-wind-dir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Monthly directional distribution (%) of wind at Learmonth Station, displaying the seasonal evolution of prevailing south-southeasterly to south-southwesterly vectors.
+</figcaption>
+</figure>
+</div>
+<p>As illustrated in <a href="#fig-learmonth-wind-dir" class="quarto-xref">Figure&nbsp;8</a>, while the overall wind regime is dominated by a year-round southerly-to-southwesterly corridor, the 12-month evolution is characterised by strong late-spring/summer amplification from coastal sea breezes and a secondary easterly trade component during winter.</p>
+</section>
+</section>
+<section id="implications-for-intertidal-habitats" class="level2">
+<h2 class="anchored" data-anchor-id="implications-for-intertidal-habitats">Implications for Intertidal Habitats</h2>
+<p>The distribution and condition of intertidal habitats along the Pilbara coast reflect the combined influence of water-level variability, inundation and exposure, sediment dynamics, temperature, rainfall and wind. These drivers interact across different timescales: tides govern regular inundation cycles, seasonal and interannual fluctuations alter the background water level, and extreme weather events can produce short-lived departures from typical conditions. The resulting ecological effects depend on habitat elevation, local geomorphology, hydrological connectivity, substrate properties and the tolerance of individual organisms.</p>
+<section id="mangroves" class="level3">
+<h3 class="anchored" data-anchor-id="mangroves">Mangroves</h3>
+<p>For mangroves, particularly Avicennia marina, tidal inundation determines the frequency, depth and duration of flooding, collectively described as the hydroperiod. Hydroperiod interacts with elevation, sediment conditions and drainage to influence mangrove establishment, growth and persistence <span class="citation" data-cites="Krauss2014 Woodroffe2016">[@Krauss2014; @Woodroffe2016]</span>. Changes in background sea level can alter the inundation experienced at a given elevation, while changes in sediment elevation and sediment supply affect the capacity of mangrove surfaces to keep pace with relative sea-level rise.</p>
+<p>Seasonal and interannual water-level fluctuations can modify inundation even without a change in the elevation of the land surface. Periods of lower background water level may lengthen the exposure of upper-intertidal mangroves, while higher water levels can increase inundation frequency or extend flooding into areas that are only intermittently reached under typical conditions. The ecological outcome depends on the magnitude and duration of the change and on the availability of suitable landward accommodation space.</p>
+<p>Temperature and rainfall influence the water and salt balance of mangrove environments. High temperatures and solar radiation increase evaporative demand, potentially increasing salinity in sediment porewater where freshwater inputs and tidal flushing are limited. Rainfall can temporarily dilute surface water and porewater salinity, although the effect depends on the amount and duration of rainfall, subsequent evaporation, drainage and the degree of connection with the sea. High temperature and hypersalinity can impose physiological stress, but mangrove responses should not be inferred from temperature or water level alone without considering local hydrological and substrate conditions.</p>
+<p>Wind influences mangroves through several pathways. Sustained winds can modify coastal water levels, while wind-generated waves can increase sediment mobility and hydrodynamic stress along exposed shorelines. During extreme events, the combination of elevated water levels and wave action can contribute to erosion, sediment redistribution or damage to seedlings and vegetation. The magnitude of these effects depends on storm conditions, local exposure and the protection provided by shallow flats and coastal morphology.</p>
+</section>
+<section id="cyanobacterial-mats-and-upper-intertidal-flats" class="level3">
+<h3 class="anchored" data-anchor-id="cyanobacterial-mats-and-upper-intertidal-flats">Cyanobacterial Mats and Upper-Intertidal Flats</h3>
+<p>Cyanobacterial mats occupy intertidal and upper-intertidal surfaces where the balance between inundation and exposure differs from that of lower-elevation mangrove habitats. Their distribution and persistence are influenced by surface elevation, sediment characteristics, hydrological connectivity, salinity and the duration of wetting and drying. In arid settings, prolonged exposure and high evaporation can concentrate salts, while marine inundation and rainfall can temporarily alter surface-water and porewater conditions <span class="citation" data-cites="Lovelock2010 Adame2012">[@Lovelock2010; @Adame2012]</span>.</p>
+<p>The timing and depth of tidal inundation determine how frequently mats are wetted and how often they exchange water and dissolved materials with adjacent environments. Seasonal and interannual water-level fluctuations can modify these wetting and drying intervals. Higher background water levels may increase the frequency or extent of inundation across some upper-intertidal surfaces, whereas lower water levels may prolong exposure. These changes do not necessarily produce the same response across all mat communities because local elevation, substrate permeability, drainage and salinity differ spatially.</p>
+<p>Rainfall can provide a short-lived freshwater input, dilute accumulated salts and wet exposed mat surfaces. Under hot, dry conditions, however, evaporation can rapidly remove surface moisture and concentrate salts again. The ecological response therefore depends not only on total rainfall but also on event timing, rainfall intensity, the duration of subsequent exposure and the frequency of marine inundation. Temperature affects evaporation and the thermal conditions experienced by mat organisms; its effects on microbial activity and mat integrity depend on moisture availability and the temperature tolerance of the organisms present.</p>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

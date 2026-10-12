@@ -1,4 +1,4 @@
-# Idealised Hydromorphological modelling
+# Idealised Hydromorphological modelling {#sec-idealised-model}
 
 ## Introduction
 

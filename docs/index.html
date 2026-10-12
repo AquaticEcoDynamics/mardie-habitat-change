@@ -34,6 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./Introduction.html" rel="next">
+<link href="./about.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -72,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -85,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -112,26 +142,32 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">About</span></span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Controls on Coastal Ecosystems in Pilbara.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Controls on Coastal Ecosystems in Pilbara</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Controls on Coastal Ecosystems in Pilbara</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Coupled_Framework.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Approach: Dynamic Modelling Framework</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Approach: Dynamic Modelling Framework</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -146,19 +182,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Model-Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Model Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Model Overview</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Idealised_HydroMorpho_Model.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Idealised Hydromorphological modelling</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Idealised Hydromorphological modelling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Hydrodynamic-Model.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Hydrodynamic Model</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Hydrodynamic Model</span></span></a>
   </div>
 </li>
       </ul>
@@ -175,31 +211,31 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Giralia/Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Giralia/Calibration-Validation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Giralia/Sea-Level-Rise.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Sea Level Rise Scenarios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Sea Level Rise Scenarios</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Giralia/Mangrove.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Giralia/Algal_Mat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Algal (cyanobacteria) mats prediction under future sea level rise</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Algal (cyanobacteria) mats prediction under future sea level rise</span></span></a>
   </div>
 </li>
       </ul>
@@ -216,25 +252,25 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Urala/Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview of the Urala Study Site</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Overview of the Urala Study Site</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Urala/Calibration-Validation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Urala/Mangrove.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Urala/Algal_Mat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Algal mat response to future sea level rise</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Algal mat response to future sea level rise</span></span></a>
   </div>
 </li>
       </ul>
@@ -242,7 +278,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Appendices</span></a>
+ <span class="menu-text">Cape Preston</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -250,20 +286,49 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Cape-Preston/Overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Study Site: Cape Preston</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cape-Preston/Mangrove.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Cape-Preston/Algal_Mat.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Algal mat response to future sea level rise</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./Appendices/Appendix_A.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix A: Monitoring &amp; Water Level Correction Framework</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Appendix A: Monitoring &amp; Water Level Correction Framework</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Appendix_B.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Appendix_C.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Appendix C: Idealised Morphodynamic Model</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Idealised Morphodynamic Model</span></span></a>
   </div>
 </li>
       </ul>
@@ -284,8 +349,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#scope-of-the-project" id="toc-scope-of-the-project" class="nav-link active" data-scroll-target="#scope-of-the-project">Scope of the Project</a></li>
-  <li><a href="#major-findings" id="toc-major-findings" class="nav-link" data-scroll-target="#major-findings">Major Findings</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#scope-of-the-project" id="toc-scope-of-the-project" class="nav-link" data-scroll-target="#scope-of-the-project">Scope of the Project</a></li>
+  <li><a href="#project-motivation-and-context" id="toc-project-motivation-and-context" class="nav-link" data-scroll-target="#project-motivation-and-context">Project Motivation and Context</a></li>
+  <li><a href="#major-findings" id="toc-major-findings" class="nav-link" data-scroll-target="#major-findings">Major Findings</a>
+  <ul class="collapse">
+  <li><a href="#modelling-capability-framework-advancement" id="toc-modelling-capability-framework-advancement" class="nav-link" data-scroll-target="#modelling-capability-framework-advancement">Modelling Capability &amp; Framework Advancement</a></li>
+  <li><a href="#modelling-outcomes" id="toc-modelling-outcomes" class="nav-link" data-scroll-target="#modelling-outcomes">Modelling Outcomes</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -311,46 +384,61 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><br></p>
+<section id="overview" class="level1 unnumbered">
+<h1 class="unnumbered">Overview</h1>
 <section id="scope-of-the-project" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="scope-of-the-project">Scope of the Project</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<section id="project-aim" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="project-aim">Project Aim</h3>
-<p>As part of Project B of the WAMSI Mardie Intertidal Research Offset Program, this project aims to improve understanding of how intertidal habitats along the West Pilbara coast may respond to future environmental change. The project develops an integrated modelling framework to investigate the potential effects of sea-level rise, hydrodynamic variability, and coastal development pressures on key intertidal benthic communities and habitats, including mangroves, cyanobacterial mats, and salt-flat environments.</p>
+<p>As part of Project B (<em>Quantifying the effects of climate change on intertidal habitats of the west Pilbara coast</em>) of the <a href="https://wamsi.org.au/projects/mardie-project/">WAMSI Mardie Offset Marine and Intertidal Research Program</a>, this project aims to improve understanding of how intertidal habitats along the West Pilbara coast may respond to future environmental change and/or development pressures. The project develops an integrated modelling framework to investigate the potential effects of sea-level rise, hydrodynamic variability, and coastal development pressures on key intertidal benthic communities and habitats, including mangroves, cyanobacterial mats, and salt-flat environments.</p>
 <p>The project focuses on understanding how changes in inundation patterns, water depth and coastal processes may influence the future distribution and persistence of intertidal habitats. The modelling framework provides a tool to explore potential future scenarios and assess the capacity of these ecosystems to adapt under changing environmental conditions as well as development impacts.</p>
-</section>
 </div><div class="column" style="width:50%;">
-<div style="margin-top: 60px; margin-left: 25px;">
-<p><img src="images/background_image_2_wlabels.png" class="img-fluid" style="width:100.0%"></p>
+<div style="margin-top: 10px; margin-left: 25px;">
+<div id="fig-background" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-background-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/background_image_2_wlabels.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-background-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Photo of the Urala site – representative photo showing the zonation of intertidal habitats: mangroves, algal mats (Photo courtesy: Toby Brown).
+</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
 <p><br></p>
 </section>
+<section id="project-motivation-and-context" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="project-motivation-and-context">Project Motivation and Context</h2>
+<p>The northwest coast of Western Australia has attracted growing interest in the development of large-scale solar salt farms. The region’s extensive natural salt flats and substantial tidal range provide favourable conditions for solar salt production. Since 1967, numerous salt projects have been proposed along this coastline, with several receiving environmental approval and some progressing to operation.</p>
+<p>The increasing number of proposals for large-scale salt ponds has highlighted the need to better understand their potential cumulative and regional environmental impacts, particularly in the context of ongoing sea-level rise. Coastal development may alter the availability and connectivity of intertidal habitats, while rising sea levels can change inundation patterns, sediment dynamics, and the capacity of habitats to migrate landward. Understanding how these interacting pressures influence habitat distribution and long-term persistence is therefore important for environmental assessment and coastal management.</p>
+<p>In response to these challenges, the Western Australian Marine Science Institution (WAMSI) initiated a collaborative research program to investigate the potential environmental implications of salt-farm development along the West Pilbara coast. The initiative brings together government regulators, environmental management agencies, research institutions, and industry stakeholders, including the Department of Water and Environmental Regulation (DWER), the Department of Biodiversity, Conservation and Attractions (DBCA), the Department of Primary Industries and Regional Development (DPIRD), the Department of Climate Change, Energy, the Environment and Water (DCCEEW), and BCI Minerals.</p>
+<p>As part of this initiative, the University of Western Australia was commissioned to undertake a modelling assessment of how sea-level rise and coastal development pressures may influence the extent, distribution, and evolution of intertidal habitats. This project addresses that need by developing an integrated modelling framework to investigate the responses of mangroves, cyanobacterial mats, and salt-flat environments to changing inundation regimes and coastal conditions. The assessment aims to improve understanding of potential future habitat trajectories and provide a scientific basis for environmental impact assessment and regional coastal planning.</p>
+</section>
 <section id="major-findings" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="major-findings">Major Findings</h2>
-<div style="text-align: center; margin-bottom: 2rem;">
-<p><img src="animations/Urala_drone_converted.gif" alt="Urala drone animation" style="width: 100%; max-width: 900px; display: block; margin: 0 auto; border-radius: 6px; height: auto;"></p>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Key Question: Do Intertidal Habitats Survive Future Sea-Level Rise?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The modelling assessment indicates that rising sea levels will drive significant shifts in the distribution and extent of intertidal habitats through altered inundation regimes. Response trajectories vary sharply by habitat type based on their specific elevation thresholds and adaptive limits:</p>
+<section id="modelling-capability-framework-advancement" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="modelling-capability-framework-advancement">Modelling Capability &amp; Framework Advancement</h3>
+<p>One of the key outcomes of this project is the development of a coupled eco-geomorphic modelling framework capable of simulating across coastal scales <span class="math inline">\(O(\text{km})\)</span>.</p>
 <ul>
-<li><strong>Mangrove Resilience &amp; Thresholds:</strong> Mangroves do not experience immediate retreat under high sea-level rise. Instead, they exhibit a non-monotonic pattern—initially expanding landward into higher elevations before eventually drowning once the rate of SLR outpaces their sediment accretion capacity.</li>
-<li><strong>Algal Mat Vulnerability:</strong> Cyanobacterial mats show high sensitivity to changing water levels. Rather than staying in place, they survive by migrating landward to maintain their optimal elevation window, but face severe spatial compression as mangroves encroach into their former footprint.</li>
+<li><strong>Advancement Over Existing Approaches:</strong> While existing approaches have demonstrated three-way coupling between bio-hydromorphodynamics, they remain limited to idealised domains or relatively small, localised areas. In this work, we have advanced these capabilities to implement a three-way coupling framework at regional coastal scales. The new framework integrates fine-scale hydrodynamic, sediment transport, and habitat response dynamics, allowing explicit simulation of non-linear responses such as non-monotonic mangrove expansion and physical habitat compression. For more details, readers are referred to <a href="@sec-approach">Chapter 3</a>.</li>
+<li><strong>Transferability:</strong> The framework is modular and scalable. It can be directly applied to other coastal sites globally, provided it is calibrated and adapted for site-specific sea-level rise and climate scenarios, as well as environmental impact assessments (EIAs) for coastal infrastructure and resource development projects.</li>
 </ul>
+<p>The modelling results highlight the critical importance of evaluating coupled physical-ecological interactions when assessing future coastal change. While coastal infrastructure and development footprints may restrict local habitat migration pathways, these insights provide a broader understanding of long-term habitat trajectories to support improved spatial planning and management strategies across Pilbara coastal ecosystems.</p>
+<div id="fig-urala-drone" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-drone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="animations/Urala_drone_converted.gif" class="img-fluid figure-img" style="width:100.0%">
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-drone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Drone video of the Urala intertidal site captured during baseline surveys of WAMSI fieldwork April 2024 (Urala Study site, Pilbara, WA; Source: Toby Brown).
+</figcaption>
+</figure>
 </div>
+</section>
+<section id="modelling-outcomes" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="modelling-outcomes">Modelling Outcomes</h3>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -373,13 +461,28 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Landward Encroachment:</strong> As sea levels rise, expanding mangrove communities colonise former algal mat territory.</li>
 <li><strong>Habitat Squeezing:</strong> To stay within their ideal inundation window, algal mats are forced into higher elevations (above 2.5 m elevation).</li>
-<li><strong>Spatial Compression:</strong> This landward migration drastically squeezes their overall area, restricting remaining algal mats to narrow fringe bands at the landward edge of the coastal profile</li>
+<li><strong>Spatial Compression:</strong> This landward migration drastically squeezes their overall area, restricting remaining algal mats to narrow fringe bands at the landward edge of the coastal profile.</li>
 </ul>
 </div>
 </div>
-<p>The modelling results highlight the critical importance of evaluating coupled physical-ecological interactions when assessing future coastal change. While coastal infrastructure and development footprints may restrict local habitat migration pathways, these insights provide a broader understanding of long-term habitat trajectories to support improved spatial planning and management strategies across Pilbara coastal ecosystems.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Key Question: Do Intertidal Habitats Survive Future Sea-Level Rise?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Overview of Trajectories and Coastal Squeezing</strong></p>
+<p>The modelling assessment indicates that rising sea levels will drive significant shifts in the distribution and extent of intertidal habitats through altered inundation regimes. While response trajectories vary sharply by habitat type based on their specific elevation thresholds and adaptive limits, the overarching result across the profile is a shift from species die-off at seaward boundaries to migration and spatial squeeze at landward margins.</p>
+</div>
+</div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -785,10 +888,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./about.html" class="pagination-link" aria-label="About">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./Introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

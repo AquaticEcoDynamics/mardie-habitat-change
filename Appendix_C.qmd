@@ -1,5 +1,5 @@
 ---
-title: "Appendix C: Idealised Morphodynamic Model"
+#title: "Appendix C: Idealised Morphodynamic Model"
 format: html
 ---
 # Idealised Morphodynamic Model {#sec-appendix-c}

@@ -10,6 +10,7 @@ book:
   title: "Future of Intertidal Habitats in the Pilbara"
 
   chapters:
+    - about.qmd
 
     - index.qmd
 
@@ -54,6 +55,14 @@ book:
          - Urala/Algal_Mat.qmd
     #     - Urala/Discussion-Conclusions.qmd
 
+    # # -----------------------------
+    # # Cape Preston
+    # # -----------------------------
+    - part: "Cape Preston"
+      chapters:
+         - Cape-Preston/Overview.qmd
+         - Cape-Preston/Mangrove.qmd
+         - Cape-Preston/Algal_Mat.qmd
 
     # - Cape-Preston.qmd
     - part: "Appendices"
@@ -68,7 +77,7 @@ book:
 
     - References.qmd
 
-number-sections: true
+#number-sections: true
 
 format:
   html:
@@ -77,3 +86,4 @@ format:
     toc: true
     toc-depth: 3
     number-sections: true
+    toc-unlisted: false

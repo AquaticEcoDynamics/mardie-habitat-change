@@ -1,0 +1,24 @@
+---
+#title: "Overview"
+---
+
+## Study Site: Cape Preston
+
+Cape Preston is located approximately 55 km west-southwest of Karratha in the Pilbara region of Western Australia (@fig-cape-preston). A beach coastline stretches east from Cape Preston through to an intertidal sandbar connecting Great Sandy Island. Behind this sand bar, the shoreline consists of tidal creeks, mangrove habitat, and extensive algal mats. Tropical cyclones, along with their associated extreme high-water levels, heavy wave action, and substantial freshwater discharge, serve as key drivers of coastal geomorphic change across the region [@Stevens2025].
+
+![Map of the study region showing (a) regional context along the Western Australian coastline and (b) detailed aerial overview of Cape Preston.](images/cape_preston_utm50s_map.png){#fig-cape-preston width=100%}
+
+## Hydrodynamic and Geomorphic Setting
+
+Water levels along the Pilbara coast are dominated by semidiurnal lunisolar tides, with the eastern Pilbara classified as macro-tidal and the western Pilbara as meso-tidal. Cape Preston exhibits a macro-tidal regime with a Highest Astronomical Tide (HAT) of 2.25 m MSL and a mean spring tidal range exceeding 3 m, reaching a maximum astronomical range of approximately 4.5 m (@tbl-water-levels). By contrast, sites further south and west along the western Pilbara coast, such as Onslow, exhibit a meso-tidal regime with a significantly smaller tidal amplification (HAT of 1.29 m MSL; @tbl-water-levels). The regional tidal dynamics are strongly influenced by local bathymetry; the presence of Barrow Island and the shallow waters to its south attenuate and distort the westward propagation of semidiurnal and diurnal tidal energy, generating complex non-linear tidal flows.
+
+The geomorphic extent of the intertidal zone at Cape Preston is notably distinct from other study sites in the region. Unlike Giralia and Urala, Cape Preston features a considerably narrower intertidal zone. The intertidal flats at Cape Preston extend roughly 2.5 km on average from the high-water line. In comparison, Giralia features expansive intertidal flats stretching approximately 8 km, while Urala contains extensive flats ranging between 7 km and 10 km depending on the location relative to its northern and southern domains.
+
+
+## Prediction approach
+
+Following the methodology established for Giralia Bay (@sec-giralia-approach), an integrated numerical model was developed for the Cape Preston region. However, unlike Giralia and Urala, we did not carry out the same level of detailed calibration for the hydrodynamic model. The hydrodynamic model was initialised using the Giralia and Urala calibtrated settings and subsequently, the mangrove vegetation module was coupled. This is due to the limited availability of field data for Cape Preston, which constrained our ability to perform a comprehensive calibration. However, as the mangrove and algal mat mapping was carried out using the same methodology as Giralia and Urala, we were able to initialise the model with present-day mangrove boundaries derived from satellite imagery.
+
+Once present-day mangrove boundaries were initialised, cyanobacterial (algal) mat distributions were calibrated using an offline (decoupled) predictive approach based on hydrodynamic and mangrove spatial outputs. The calibrated, coupled modelling framework was then applied to simulate future sea-level rise scenarios for both mangrove ecosystems and algal mats. 
+
+Detailed calibration and validation procedures for the mangrove and algal mat modules, are provided in [@sec-hydro-calibration] and [@sec-urala-calibration], respectively.
