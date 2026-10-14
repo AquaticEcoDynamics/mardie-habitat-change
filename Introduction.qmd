@@ -66,7 +66,7 @@ Numerous numerical modelling efforts have extended these observations towards fu
 
 Predicting mangrove responses requires particular attention to climatic and geographical context. Mangroves in humid tropical environments may experience different freshwater availability, salinity regimes, and sediment conditions from those in hyper-arid coastlines. Consequently, model relationships and ecological parameters developed for one setting may not transfer directly to another. This is particularly important when projecting future changes in the West Pilbara, where episodic freshwater inputs, hypersalinity, and spatially variable sediment supply can constrain mangrove establishment and persistence.
 
-A major challenge is representing the feedbacks between mangrove development and coastal morphology over long timescales. Sediment transport, erosion and accretion, tidal inundation, and vegetation establishment and mortality can interact to determine whether mangroves persist, migrate landward, or retreat. Explicitly representing these processes alongside the different stages of the mangrove life cycle can be computationally demanding and data-intensive. Some bio-morphodynamic studies have therefore used idealised domains to isolate key mechanisms [@Xie2020; @Xie2022], while other developments, including LEAF, have focused on detailed modelling over shorter projection periods [@Dunlop2025] and some focussed on relatively small sites [@Beselly2023]. These approaches provide important advances, but they do not yet establish a general capability for predicting mangrove redistribution across an entire, geomorphically heterogeneous coastline over centennial timescales.
+A major challenge is representing the feedbacks between mangrove development and coastal morphology over long timescales. Sediment transport, erosion and accretion, tidal inundation, and vegetation establishment and mortality can interact to determine whether mangroves persist, migrate landward, or retreat. Explicitly representing these processes alongside the different stages of the mangrove life cycle can be computationally demanding and data-intensive. Some bio-morphodynamic studies have therefore used idealised domains to isolate key mechanisms [@Xie2020; @Xie2022], while other developments, including LEAF, have focused on detailed modelling over shorter projection periods [@Dunlop2025] and some focussed on relatively small sites [@Beselly2023]. For additional details, readers are referred to @sec-approach-review. These approaches provide important advances, but they do not yet establish a general capability for predicting mangrove redistribution across an entire, geomorphically heterogeneous coastline over centennial timescales.
 
 Furthermore, the response predicted for one location cannot necessarily be transferred to another, even where the hydrodynamic conditions appear similar. Differences in coastal slope, sediment availability, substrate characteristics, freshwater supply, and the initial distribution of vegetation can produce different trajectories of habitat change. Coastal-scale predictions therefore require spatially explicit environmental conditions and sufficient representation of the processes governing mangrove establishment, persistence, and migration. **Developing a modelling capability that can predict mangrove responses to future SLR across coastal-scale domains and centennial timescales, while representing the processes most relevant to habitat redistribution, is a key gap addressed by this project.**
 
@@ -80,7 +80,7 @@ Research directly addressing cyanobacterial mats in arid intertidal environments
 
 **Based on the literature identified for this review, a predictive framework for long-term migration of arid intertidal cyanobacterial mats under future SLR and coastal development has not been established.** In particular, there is no identified approach that can be directly applied to project their future spatial redistribution across the West Pilbara coastline. Unlike mangroves, for which several ecological and bio-morphodynamic modelling approaches already exist, cyanobacterial mats require the development of a habitat-specific predictive approach. Such an approach must establish how changes in inundation, surface elevation, salinity, and substrate conditions influence the persistence and spatial distribution of mat-covered surfaces, while accounting for the removal or modification of habitat by coastal development.
 
-### Modelling Gap and Project Objectives
+### Modelling Gap and Project Objectives {#sec-modelling-gap}
 
 The literature highlights different but related challenges for the two habitats considered in this study. For mangroves, the key challenge is extending existing modelling capabilities towards spatially explicit, coastal-scale projections over centennial timescales in hyper-arid environments. For cyanobacterial mats, the more fundamental challenge is developing a suitable predictive approach, because existing research is concentrated on microbial processes, aquatic blooms, and historical habitat mapping rather than long-term intertidal habitat migration.
 
@@ -88,7 +88,7 @@ This project addresses these gaps by developing and applying a modelling framewo
 
 ---
 
-## Research Aims and Study-Site Strategy
+## Research Aims and Study-Site Strategy {#sec-aims_and_study_sites}
 
 The overall aim of this research is to improve understanding of intertidal habitats in hyper-arid coastal environments and to develop predictive tools for assessing how these habitats may change under future environmental conditions and coastal development. Achieving this aim requires an understanding of the environmental processes that regulate habitat distribution, as well as a modelling framework capable of translating these processes into projections of potential future change. However, predicting the long-term responses of arid intertidal ecosystems is challenging because habitat persistence and redistribution depend on interactions between sea-level variability, tidal inundation, climatic conditions, salinity, sediment dynamics, geomorphology, and biological processes. The environmental controls considered in this study, including sea-level variability and climatic drivers, are described in [@sec-controls].
 
@@ -233,3 +233,13 @@ The three sites form a staged research strategy that links environmental underst
 5. **Provide accessible modelling tools** that can support future research and contribute to environmental assessment, coastal planning, and the evaluation of development scenarios in hyper-arid coastal environments.
 
 Through this approach, the research seeks to establish a practical basis for assessing how environmental change and coastal development may jointly influence the future distribution of arid intertidal habitats. Rather than assuming that a single model configuration will represent every coastal setting equally well, the study uses the three sites to develop, apply, and demonstrate a framework whose assumptions, data requirements, and limitations can be made explicit.
+
+### Organisation of the Report
+
+The report is structured to provide a comprehensive overview of the research context, methods, results, and implications. Following this introduction, the report is organised into the key sections illustrated in @fig-report-organisation and detailed below:
+
+::: {#fig-report-organisation}
+![](images/report_organisation.jpg)
+
+Structural overview and chapter breakdown of the report.
+:::

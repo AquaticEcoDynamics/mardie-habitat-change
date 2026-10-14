@@ -439,3 +439,5 @@ For all grid cells outside suitable conditions, a persistent stress counter ($\t
 2. **Self-Thinning:** In grid cells subjected to stress ($I(P) \times C_f \le 0.45$) that did not fulfill the complete mortality duration criteria, self-thinning was applied by incrementally reducing plant stem density by a fixed mortality rate factor ($\text{Mort}_{\text{plant}}$), after which $C_f$ was dynamically re-evaluated to reflect the updated biomass density.
 
 Similar to existing work [@Xie2022], we assume a mature mangrove can have at most 1,000 roots. The number of roots is calculated following the approach of @VanMaanen2015.
+
+## Cyanobacterial Mat Model {#sec-algal-mat-model}

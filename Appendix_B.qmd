@@ -1,8 +1,8 @@
 ---
-title: "Appendix B: Technical Report"
+# title: "Appendix B: Technical Report"
 format: html
 ---
-
+# Appendix B: Technical Report {#sec-appendix-b}
 <iframe 
   src="files/Appendix_B.pdf" 
   width="100%" 
