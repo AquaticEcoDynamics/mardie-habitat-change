@@ -382,7 +382,13 @@ window.Quarto = {
   <li><a href="#mortality-and-density-regulation" id="toc-mortality-and-density-regulation" class="nav-link" data-scroll-target="#mortality-and-density-regulation"><span class="header-section-number">4.4.6</span> Mortality and Density Regulation</a></li>
   <li><a href="#mortality-and-self-thinning" id="toc-mortality-and-self-thinning" class="nav-link" data-scroll-target="#mortality-and-self-thinning"><span class="header-section-number">4.4.7</span> Mortality and Self-Thinning</a></li>
   </ul></li>
-  <li><a href="#sec-algal-mat-model" id="toc-sec-algal-mat-model" class="nav-link" data-scroll-target="#sec-algal-mat-model"><span class="header-section-number">4.5</span> Cyanobacterial Mat Model</a></li>
+  <li><a href="#sec-algal-mat-model" id="toc-sec-algal-mat-model" class="nav-link" data-scroll-target="#sec-algal-mat-model"><span class="header-section-number">4.5</span> Cyanobacterial Mat Habitat-Suitability Modelling</a>
+  <ul class="collapse">
+  <li><a href="#modelling-approach" id="toc-modelling-approach" class="nav-link" data-scroll-target="#modelling-approach"><span class="header-section-number">4.5.1</span> Modelling approach</a></li>
+  <li><a href="#observation-data-and-definition-of-persistent-mat" id="toc-observation-data-and-definition-of-persistent-mat" class="nav-link" data-scroll-target="#observation-data-and-definition-of-persistent-mat"><span class="header-section-number">4.5.2</span> Observation data and definition of persistent mat</a></li>
+  <li><a href="#hydrodynamic-predictors-and-model-development" id="toc-hydrodynamic-predictors-and-model-development" class="nav-link" data-scroll-target="#hydrodynamic-predictors-and-model-development"><span class="header-section-number">4.5.3</span> Hydrodynamic predictors and model development</a></li>
+  </ul></li>
+  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation"><span class="header-section-number">4.6</span> Evaluation</a></li>
   </ul>
 </nav>
     </div>
@@ -410,7 +416,7 @@ window.Quarto = {
 
 <p><br></p>
 <p>In this study, a state-of-the-art, process-based, open-source Delft3D Flexible Mesh (DFM) model was applied in a depth-averaged (2DH) configuration to simulate the coupled hydrodynamic and morphodynamic processes governing coastal, estuarine, and riverine environments (Deltares, 2021). The model resolves the spatial and temporal evolution of flow, sediment transport, and morphological change using an unstructured grid composed of triangular and quadrilateral elements.</p>
-<p>DFM employs a finite volume method to solve the shallow water equations under the hydrostatic pressure assumption and Boussinesq approximation, whereby density variations are only considered in the pressure term. The hydrodynamic core (D-Flow FM) computes water levels, velocities, and salinity, and is dynamically coupled with additional modules including wave dynamics (D-Waves) and sediment transport and morphology (D-Morphology). Interactions with vegetation are implemented similar to the Basic Model Interface (BMI) approach, allowing feedbacks between hydrodynamics, sediment processes, and ecosystem development.</p>
+<p>DFM employs a finite volume method to solve the shallow water equations under the hydrostatic pressure assumption and Boussinesq approximation, whereby density variations are only considered in the pressure term. The hydrodynamic core (D-Flow FM) computes water levels, velocities, and salinity, and is dynamically coupled with additional modules including wave dynamics (D-Waves) and sediment transport and morphology (D-Morphology). Interactions with vegetation are implemented similar to the Basic Model Interface (BMI) approach, allowing feedbacks between hydrodynamics, sediment processes, and ecosystem development. While the algal mats are not explicitly represented in the model, their distribution is predicted using a Random Forest (RF) classifier trained on hydrodynamic metrics derived from the DFM simulation.</p>
 <section id="flow-module" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="flow-module"><span class="header-section-number">4.1</span> Flow Module</h2>
 <p>Hydrodynamic processes are simulated using the Delft3D-FM flow module, which solves the incompressible Navier–Stokes equations under shallow water assumptions (hydrostatic pressure) and the Boussinesq approximation (Deltares, 2019a).</p>
@@ -743,9 +749,9 @@ C_f = \frac{1}{1 + e^{d \cdot (B_{\text{total}} - B_{0.5})}}
 <section id="mortality-and-self-thinning" class="level3" data-number="4.4.7">
 <h3 data-number="4.4.7" class="anchored" data-anchor-id="mortality-and-self-thinning"><span class="header-section-number">4.4.7</span> Mortality and Self-Thinning</h3>
 <p>Vegetation mortality and density regulation were executed as a multi-factor, two-stage process influenced by hydrodynamic stress, density-dependent competition, and desiccation. Total environmental stress was computed as the joint product of inundation suitability (<span class="math inline">\(I(P)\)</span>) and competition stress (<span class="math inline">\(C_f\)</span>). Sub-optimal conditions were identified wherever total stress fell below a critical threshold:</p>
-<p><span class="math display">\[
+<p><span id="eq-self-thinning-threshold"><span class="math display">\[
 I(P) \times C_f \le 0.45
-\]</span></p>
+\tag{4.24}\]</span></span></p>
 <p>For all grid cells outside suitable conditions, a persistent stress counter (<span class="math inline">\(\text{Mort}\)</span>) was incremented sequentially; otherwise, the counter was reset to zero.</p>
 <ol type="1">
 <li><strong>Complete Mortality:</strong> Triggered when a cell experiences sustained stress for five consecutive time steps (<span class="math inline">\(\text{Mort} \ge 5\)</span>, equivalent to 5 morphodynamic years) while simultaneously remaining below the critical threshold (<span class="math inline">\(I(P) \times C_f \le 0.45\)</span>). Upon complete mortality, all structural vegetation attributes—including stem density, stem diameter, canopy height, and root density—were reset to zero.</li>
@@ -755,7 +761,105 @@ I(P) \times C_f \le 0.45
 </section>
 </section>
 <section id="sec-algal-mat-model" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="sec-algal-mat-model"><span class="header-section-number">4.5</span> Cyanobacterial Mat Model</h2>
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-algal-mat-model"><span class="header-section-number">4.5</span> Cyanobacterial Mat Habitat-Suitability Modelling</h2>
+<section id="modelling-approach" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="modelling-approach"><span class="header-section-number">4.5.1</span> Modelling approach</h3>
+<p>To predict cyanobacterial mat distribution, we used a data-driven machine-learning approach based on a Random Forest (RF) classifier. This approach was selected to identify relationships between observed mat occurrence and multiple hydrodynamic characteristics without requiring the relationships to be specified in advance as mathematical functions. RF methods are widely used for classification problems because they can represent nonlinear relationships, accommodate interactions among predictors and combine the predictions of multiple decision trees to produce a single classification <span class="citation" data-cites="Breiman2001 Cutler2007">(<a href="References.html#ref-Breiman2001" role="doc-biblioref">Breiman, 2001</a>; <a href="References.html#ref-Cutler2007" role="doc-biblioref">Cutler et al., 2007</a>)</span>.</p>
+<p>A Random Forest is constructed by generating multiple decision trees from resampled training data. In a classification problem, each tree separates observations into groups according to their predictor values, seeking splits that distinguish the response classes. Random subsets of predictors are considered at each split, reducing the dependence between individual trees. The predictions from the resulting trees are then combined to produce the forest’s overall prediction.</p>
+<p>In the present application, the response classes represent mesh locations classified as either persistent cyanobacterial mat or non-persistent mat. The model therefore learns combinations of hydrodynamic conditions associated with the observed persistent-mat distribution. For example, it can identify nonlinear combinations of inundation frequency, exposure duration and water depth that distinguish locations with persistent mapped occurrence from those that do not meet the persistence criterion.</p>
+<p>The splitting process can be described using the Gini impurity, a measure of how mixed the two habitat classes are within a group of observations. For a tree node <span class="math inline">\(m\)</span>, Gini impurity is</p>
+<p><span id="eq-gini-impurity"><span class="math display">\[
+G_m = 1 - \sum_{k=0}^{1} p_{mk}^{2},
+\tag{4.25}\]</span></span></p>
+<p>where <span class="math inline">\(p_{mk}\)</span> is the proportion of observations belonging to class <span class="math inline">\(k\)</span> at node <span class="math inline">\(m\)</span>. A node containing only one habitat class has zero impurity, whereas a node containing a mixture of persistent and non-persistent locations has a higher value.</p>
+<p>For a candidate split into two child nodes, the weighted impurity is</p>
+<p><span id="eq-weighted-impurity"><span class="math display">\[
+G_{\mathrm{split}} =
+\frac{n_L}{n_m}G_L +
+\frac{n_R}{n_m}G_R,
+\tag{4.26}\]</span></span></p>
+<p>where <span class="math inline">\(n_m\)</span> is the number of observations in the parent node, <span class="math inline">\(n_L\)</span> and <span class="math inline">\(n_R\)</span> are the numbers of observations in the left and right child nodes, and <span class="math inline">\(G_L\)</span> and <span class="math inline">\(G_R\)</span> are their respective Gini impurity values. The tree selects splits that reduce the weighted impurity of the resulting groups. In habitat terms, this process seeks predictor thresholds that progressively separate locations associated with persistent mat occurrence from locations that do not satisfy the observed persistence criterion.</p>
+<p>Each tree produces an estimate of the probability that a location belongs to the persistent-mat class. The Random Forest combines these estimates across its <span class="math inline">\(B\)</span> trees:</p>
+<p><span id="eq-forest-probability"><span class="math display">\[
+\hat{p}_i =
+\frac{1}{B}
+\sum_{b=1}^{B}
+\hat{p}_{ib},
+\tag{4.27}\]</span></span></p>
+<p>where <span class="math inline">\(\hat{p}_i\)</span> is the mean estimated probability of persistent mat occurrence at location <span class="math inline">\(i\)</span>, and <span class="math inline">\(\hat{p}_{ib}\)</span> is the probability estimated by tree <span class="math inline">\(b\)</span>. The final classification is the class with the highest mean estimated probability:</p>
+<p><span id="eq-final-classification"><span class="math display">\[
+\hat{y}_i =
+\underset{k \in \{0,1\}}{\operatorname{argmax}}
+\ \hat{p}_{ik},
+\tag{4.28}\]</span></span></p>
+<p>where <span class="math inline">\(\hat{p}_{ik}\)</span> is the forest’s estimated probability for class <span class="math inline">\(k\)</span> at location <span class="math inline">\(i\)</span>. This formulation describes the classification principle used by the model; the implementation obtains the predicted classes directly using the scikit-learn <code>RandomForestClassifier.predict()</code> method.</p>
+</section>
+<section id="observation-data-and-definition-of-persistent-mat" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="observation-data-and-definition-of-persistent-mat"><span class="header-section-number">4.5.2</span> Observation data and definition of persistent mat</h3>
+<p>The observed cyanobacterial mat distribution was derived from the monthly mean probability maps presented by <span class="citation" data-cites="Hickey2023">(<a href="References.html#ref-Hickey2023" role="doc-biblioref">Hickey et al., 2023</a>)</span>. These maps provide spatially explicit estimates of mat presence, rather than a simple binary classification of every pixel as present or absent.</p>
+<p>Cyanobacterial mats can be dynamic, with their visible distribution and activity responding to changes in inundation, exposure and other environmental conditions. Consequently, a mat occurrence observed in an individual month may not represent a persistent habitat location. To focus the modelling on locations with recurrent mapped occurrence (a stable region), we considered a persistent-mat mask derived from atleast 12 months of monthly probability rasters in order to account of the water level variations.</p>
+<p>For each pixel <span class="math inline">\(i\)</span>, persistent occurrence was defined as</p>
+<p><span id="eq-persistent-occurrence"><span class="math display">\[
+M_i =
+\begin{cases}
+1, &amp; q_{i,t} \geq 0.25 \quad \text{for all } t=1,\ldots,T, \\
+0, &amp; \text{otherwise},
+\end{cases}
+\tag{4.29}\]</span></span></p>
+<p>where <span class="math inline">\(q_{i,t}\)</span> is the mapped probability of mat presence at pixel <span class="math inline">\(i\)</span> in month <span class="math inline">\(t\)</span>, and <span class="math inline">\(T\)</span> is the number of monthly rasters included in the analysis. It is important to highlight that we carried out the same for three years and found a similar metrics and locations of presistent mat. A pixel was therefore classified as persistent mat only when its mapped probability was at least 0.25 in every available monthly raster. Pixels that did not meet this criterion were classified as non-persistent for model development.</p>
+<p>While this threshold-based definition provides a consistent way to identify locations with recurrent mapped occurrence, it does not imply that 0.25 is a universal ecological threshold for cyanobacterial mat establishment, nor that locations classified as non-persistent are necessarily devoid of mats. Instead, the response represents persistent occurrence as defined by the available observations and the selected threshold.</p>
+<p>The monthly rasters were reprojected to the model coordinates using bilinear resampling before the persistence criterion was applied. The resulting mask was then spatially linked to the Delft3D-FM unstructured mesh. Persistent raster pixels were assigned to their nearest mesh-face centres, providing a binary observed response for the mesh locations used in the classification.</p>
+</section>
+<section id="hydrodynamic-predictors-and-model-development" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="hydrodynamic-predictors-and-model-development"><span class="header-section-number">4.5.3</span> Hydrodynamic predictors and model development</h3>
+<p>To relate the observed persistent-mat distribution to its physical environment, we conducted a hydrodynamic simulation for the corresponding period. Hydrodynamic metrics were extracted from this simulation to characterise the inundation, exposure and water-movement conditions experienced across the model domain. Matching the observational and hydrodynamic data by year allowed the classifier to be trained on physical conditions corresponding to the period represented by the observed mat distribution.</p>
+<p>Eight hydrodynamic metrics were used as model predictors:</p>
+<ul>
+<li>maximum continuous exposure duration (hours);</li>
+<li>maximum bed shear stress;</li>
+<li>inundation frequency;</li>
+<li>98th-percentile water depth;</li>
+<li>percentage submergence;</li>
+<li>maximum water depth;</li>
+<li>maximum current velocity; and</li>
+<li>mean water depth.</li>
+</ul>
+<p>For each mesh face <span class="math inline">\(i\)</span>, these variables formed the predictor vector</p>
+<p><span id="eq-predictor-vector"><span class="math display">\[
+\mathbf{x}_i =
+\left[
+x_{i1}, x_{i2}, \ldots, x_{i8}
+\right],
+\tag{4.30}\]</span></span></p>
+<p>where <span class="math inline">\(x_{ij}\)</span> denotes the value of hydrodynamic predictor <span class="math inline">\(j\)</span> at mesh face <span class="math inline">\(i\)</span>. The observed persistent-mat mask supplied the binary response <span class="math inline">\(y_i\)</span>, with <span class="math inline">\(y_i=1\)</span> for mesh faces associated with persistent mapped occurrence and <span class="math inline">\(y_i=0\)</span> otherwise.</p>
+<p>Mesh faces with missing inundation-frequency values were excluded from the model dataset. The dataset was divided into training and test subsets using an 80:20 split, with stratification to preserve the relative proportions of the two response classes. The classifier was trained using the training subset and evaluated against the held-out test subset. The principal model settings were 100 decision trees, a maximum tree depth of 12, a minimum of 10 observations required to split an internal node, and balanced class weights. A fixed random seed of 42 was used for reproducibility, and parallel processing was enabled.</p>
+<p>Balanced class weights were included to reduce the tendency of the classifier to favour the more numerous response class during model fitting. The remaining settings constrained tree complexity and specified the size of the ensemble. Together, these choices provided a consistent classification framework for relating the mapped persistent-mat distribution to the eight hydrodynamic predictors.</p>
+<p>After evaluation, the classifier was refitted using all valid mesh-face observations. This final model was then applied to the predictor data to generate a spatial classification of potential persistent-mat habitat across the model domain. The relative importance of the predictors was also examined using the feature-importance scores returned by the fitted Random Forest. These scores indicate how much each predictor contributes to reductions in tree-splitting impurity; they do not establish causal relationships between hydrodynamic processes and mat occurrence.</p>
+</section>
+</section>
+<section id="evaluation" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="evaluation"><span class="header-section-number">4.6</span> Evaluation</h2>
+<p>For both mangrove and algal-mat models, evaluation followed the same general framework, allowing classification performance to be assessed consistently across the two habitat-modelling approaches. The RF classifier was evaluated against the held-out test subset using the confusion matrix, precision, recall and F1-score.</p>
+<p>Precision measures the proportion of locations predicted as persistent mat (or mangrove presence) that were also classified as persistent (or mangrove presence) in the observed mask:</p>
+<p><span id="eq-precision"><span class="math display">\[
+\mathrm{Precision} =
+\frac{TP}{TP+FP},
+\tag{4.31}\]</span></span></p>
+<p>where <span class="math inline">\(TP\)</span> and <span class="math inline">\(FP\)</span> denote true positives and false positives, respectively.</p>
+<p>Recall measures the proportion of observed mangroves (or algal-mat locations) correctly identified by the model:</p>
+<p><span id="eq-recall"><span class="math display">\[
+\mathrm{Recall} =
+\frac{TP}{TP+FN},
+\tag{4.32}\]</span></span></p>
+<p>where <span class="math inline">\(FN\)</span> denotes false negatives.</p>
+<p>The F1-score provides a single measure that balances precision and recall:</p>
+<p><span id="eq-f1-score"><span class="math display">\[
+F_1 =
+2 \frac{\mathrm{Precision}\times\mathrm{Recall}}
+{\mathrm{Precision}+\mathrm{Recall}}.
+\tag{4.33}\]</span></span></p>
+<p>A true positive is a location classified as presence in both the observed mask and model prediction. A false positive is predicted as presence but does not meet the observed criterion, while a false negative meets the observed criterion but is predicted as absence. Precision, recall and F1-score were considered together because they capture different aspects of classification performance.</p>
+<p>The evaluation metrics reported for model validation should be calculated from the predictions for the held-out test subset. For the algal mat validation, although the classifier was subsequently refitted using all valid observations to produce the final spatial prediction, performance calculated from these same observations would represent in-sample performance rather than independent validation. In addition, because the training and test observations were divided randomly among mesh faces, spatial autocorrelation may cause the test metrics to overestimate performance when predicting spatially separate areas. Spatially blocked validation would provide a stronger test of spatial transferability. The resulting model should be interpreted as a data-driven classification of hydrodynamic conditions associated with persistent mapped cyanobacterial mat occurrence. It does not explicitly simulate mat growth, mortality, dispersal, physiological responses to salinity or temperature, or feedbacks between mats and sediment dynamics.</p>
 
 
 
@@ -765,6 +869,15 @@ Berger, U., &amp; Hildenbrandt, H. (2000). A new approach to spatially explicit 
 </div>
 <div id="ref-Beselly2023" class="csl-entry" role="listitem">
 Beselly, S. M., Grueters, U., Der Wegen, M. van, Reyns, J., Dijkstra, J., &amp; Roelvink, D. (2023). Modelling mangrove-mudflat dynamics with a coupled individual-based-hydro-morphodynamic model. <em>Environmental Modelling and Software</em>, <em>169</em>, 105814. <a href="https://doi.org/10.1016/j.envsoft.2023.105814">https://doi.org/10.1016/j.envsoft.2023.105814</a>
+</div>
+<div id="ref-Breiman2001" class="csl-entry" role="listitem">
+Breiman, L. (2001). Random forests. <em>Machine Learning</em>, <em>45</em>, 5–32. <a href="https://doi.org/10.1023/A:1010933404324/METRICS">https://doi.org/10.1023/A:1010933404324/METRICS</a>
+</div>
+<div id="ref-Cutler2007" class="csl-entry" role="listitem">
+Cutler, D. R., Edwards, T. C., Beard, K. H., Cutler, A., Hess, K. T., Gibson, J., &amp; Lawler, J. J. (2007). Random forests for classification in ecology. <em>Ecology</em>, <em>88</em>(11), 2783–2792. <a href="https://doi.org/10.1890/07-0539.1">https://doi.org/10.1890/07-0539.1</a>
+</div>
+<div id="ref-Hickey2023" class="csl-entry" role="listitem">
+Hickey, S., Stone, A., &amp; Lovelock, C. (2023). <em>The cyanobacterial mats of the exmouth gulf, western australia: Mapping report</em>. <a href="https://doi.org/10.26182/JJJV-4R98">https://doi.org/10.26182/JJJV-4R98</a>
 </div>
 <div id="ref-Santini2013" class="csl-entry" role="listitem">
 Santini, N. S., Hua, Q., Schmitz, N., &amp; Lovelock, C. E. (2013). Radiocarbon dating and wood density chronologies of mangrove trees in arid western australia. <em>PLOS ONE</em>, <em>8</em>, e80116. <a href="https://doi.org/10.1371/JOURNAL.PONE.0080116">https://doi.org/10.1371/JOURNAL.PONE.0080116</a>
