@@ -2,7 +2,7 @@
 #title: "Overview"
 ---
 
-## Study Site: Cape Preston
+## Overview
 
 Cape Preston is located approximately 55 km west-southwest of Karratha in the Pilbara region of Western Australia (@fig-cape-preston). A beach coastline stretches east from Cape Preston through to an intertidal sandbar connecting Great Sandy Island. Behind this sand bar, the shoreline consists of tidal creeks, mangrove habitat, and extensive algal mats. Tropical cyclones, along with their associated extreme high-water levels, heavy wave action, and substantial freshwater discharge, serve as key drivers of coastal geomorphic change across the region [@Stevens2025].
 

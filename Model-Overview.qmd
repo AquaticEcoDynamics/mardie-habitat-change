@@ -5,7 +5,7 @@ format:
     math: mathjax
 ---
 
-# Model Overview {#sec-model-overview}
+# Model Overview and Evaluation {#sec-model-overview}
 
 <br>
 
@@ -344,7 +344,7 @@ Establishment can only occur within a bounded inundation window ($P_{\min} \le P
 
 $$
 \tau_{90} \le \tau_{\text{thres}} \quad \text{where} \quad \tau_{\text{thres}} = 0.265 \text{ N m}^{-2}
-$$
+$${#eq-shear-threshold}
 
 This adopted shear stress threshold falls within typical ranges reported in literature [@Beselly2023; @Willemsen2022; @Xie2022]. Within this feasible hydrodynamic domain, the probability of establishment is directly proportional to an inundation suitability function, $I(P)$. When shear stress exceeds the threshold ($\tau_{90} > \tau_{\text{thres}}$), colonisation is completely inhibited regardless of inundation suitability.
 
@@ -372,7 +372,7 @@ where $G = 4.39$ is a growth coefficient, $D$ is stem diameter ($\text{cm}$), an
 
 $$
 H = 137 + b_2 D - b_3 D^2
-$$
+$${#eq-height-diameter}
 
 with growth coefficients $b_2 = 21.3$ and $b_3 = 0.2$. The maximum structural dimensions ($D_{\max} = 10 \text{ cm}$ and $H_{\max} = 330 \text{ cm}$) were established based on field observations and radiocarbon-dated chronology of arid Western Australian mangroves [@Santini2013], while $H_{\max}$ was further cross-referenced with regional $98^{\text{th}}$ percentile LiDAR canopy height measurements. Growth parameters ($G, b_2, b_3$) were adjusted following @Xie2022 to reflect growth responses under arid environmental conditions.
 
@@ -441,16 +441,17 @@ For all grid cells outside suitable conditions, a persistent stress counter ($\t
 Similar to existing work [@Xie2022], we assume a mature mangrove can have at most 1,000 roots. The number of roots is calculated following the approach of @VanMaanen2015.
 
 
-
 ## Cyanobacterial Mat Habitat-Suitability Modelling {#sec-algal-mat-model}
 
-### Modelling approach
+To predict cyanobacterial mat distribution and account for methodological uncertainty in environmental management, we applied two complementary habitat-suitability modelling approaches: a data-driven **Random Forest (RF) classifier** and a **Threshold-Based Optimisation approach**. Using both methods allows managers to evaluate model sensitivity, contrast flexible nonlinear relationships against explicit physical envelopes, and make more robust conservation decisions.
 
-To predict cyanobacterial mat distribution, we used a data-driven machine-learning approach based on a Random Forest (RF) classifier. This approach was selected to identify relationships between observed mat occurrence and multiple hydrodynamic characteristics without requiring the relationships to be specified in advance as mathematical functions. RF methods are widely used for classification problems because they can represent nonlinear relationships, accommodate interactions among predictors and combine the predictions of multiple decision trees to produce a single classification [@Breiman2001; @Cutler2007].
+### Method 1: Random Forest Machine-Learning Approach
+
+To predict cyanobacterial mat distribution without assuming predetermined parametric relationships, we used a data-driven machine-learning approach based on a Random Forest (RF) classifier. This approach was selected to identify complex, nonlinear relationships between observed mat occurrence and multiple hydrodynamic characteristics. RF methods are widely used for classification problems because they can represent high-order interactions among predictors and combine the predictions of multiple decision trees to produce a single robust classification [@Breiman2001; @Cutler2007].
 
 A Random Forest is constructed by generating multiple decision trees from resampled training data. In a classification problem, each tree separates observations into groups according to their predictor values, seeking splits that distinguish the response classes. Random subsets of predictors are considered at each split, reducing the dependence between individual trees. The predictions from the resulting trees are then combined to produce the forest's overall prediction.
 
-In the present application, the response classes represent mesh locations classified as either persistent cyanobacterial mat or non-persistent mat. The model therefore learns combinations of hydrodynamic conditions associated with the observed persistent-mat distribution. For example, it can identify nonlinear combinations of inundation frequency, exposure duration and water depth that distinguish locations with persistent mapped occurrence from those that do not meet the persistence criterion.
+In the present application, the response classes represent mesh locations classified either as persistent cyanobacterial mat or non-persistent mat. The model learns combinations of hydrodynamic conditions associated with the observed persistent-mat distribution, identifying nonlinear interactions among variables such as inundation frequency, exposure duration, and water depth that distinguish persistent locations.
 
 The splitting process can be described using the Gini impurity, a measure of how mixed the two habitat classes are within a group of observations. For a tree node $m$, Gini impurity is
 
@@ -468,7 +469,7 @@ G_{\mathrm{split}} =
 \frac{n_R}{n_m}G_R,
 $${#eq-weighted-impurity}
 
-where $n_m$ is the number of observations in the parent node, $n_L$ and $n_R$ are the numbers of observations in the left and right child nodes, and $G_L$ and $G_R$ are their respective Gini impurity values. The tree selects splits that reduce the weighted impurity of the resulting groups. In habitat terms, this process seeks predictor thresholds that progressively separate locations associated with persistent mat occurrence from locations that do not satisfy the observed persistence criterion.
+where $n_m$ is the number of observations in the parent node, $n_L$ and $n_R$ are the numbers of observations in the left and right child nodes, and $G_L$ and $G_R$ are their respective Gini impurity values. The tree selects splits that reduce the weighted impurity of the resulting groups.
 
 Each tree produces an estimate of the probability that a location belongs to the persistent-mat class. The Random Forest combines these estimates across its $B$ trees:
 
@@ -487,13 +488,45 @@ $$
 \ \hat{p}_{ik},
 $${#eq-final-classification}
 
-where $\hat{p}_{ik}$ is the forest's estimated probability for class $k$ at location $i$. This formulation describes the classification principle used by the model; the implementation obtains the predicted classes directly using the scikit-learn `RandomForestClassifier.predict()` method.
+where $\hat{p}_{ik}$ is the forest's estimated probability for class $k$ at location $i$. 
 
-### Observation data and definition of persistent mat
+---
 
-The observed cyanobacterial mat distribution was derived from the monthly mean probability maps presented by [@Hickey2023]. These maps provide spatially explicit estimates of mat presence, rather than a simple binary classification of every pixel as present or absent.
+### Method 2: Threshold-Based Optimisation Approach
 
-Cyanobacterial mats can be dynamic, with their visible distribution and activity responding to changes in inundation, exposure and other environmental conditions. Consequently, a mat occurrence observed in an individual month may not represent a persistent habitat location. To focus the modelling on locations with recurrent mapped occurrence (a stable region), we considered a persistent-mat mask derived from atleast 12 months of monthly probability rasters in order to account of the water level variations.
+While machine-learning models capture complex nonlinear interactions, their black-box nature can introduce uncertainty when extrapolated across dynamic tidal environments. To complement the RF classifier and establish explicit physical parameter bounds, we implemented a threshold-based optimisation approach using **Differential Evolution** (DE) [@Storn1997]. 
+
+This approach searches for optimal lower and upper bounds ($L_j$ and $U_j$) for each hydrodynamic predictor $x_{ij}$ (such as inundation frequency, 98th-percentile water depth, and mean water depth) to define a multi-dimensional physical habitat envelope. A mesh face $i$ is classified as suitable habitat if its hydrodynamic metrics simultaneously fall within the acceptable bounds of all active predictors:
+
+$$
+S_i =
+\begin{cases}
+1, & L_j \leq x_{ij} \leq U_j \quad \text{for all active predictors } j, \\
+0, & \text{otherwise},
+\end{cases}
+$${#eq-threshold-condition}
+
+where $S_i$ is the binary suitability prediction for mesh face $i$. 
+
+To determine optimal parameter thresholds without manual calibration, the optimisation algorithm iteratively refines boundary values by maximising the F1-score against the observed persistent-mat binary mask ($y_i$), following the evaluation framework detailed in @sec-eval-method. The optimisation objective minimises the negative F1-score:
+
+$$
+\min_{L_j, U_j} (-F_1)
+$${#eq-optimization-objective}
+
+Because hydrodynamic regimes, microtopography, and hydrodynamic forcing vary spatially across coastal settings, the optimised threshold ranges are site-dependent and adapt to local environmental constraints. Consequently, derived bounds reflect local calibration rather than universal physiological thresholds, capturing site-specific physical envelopes favourable for cyanobacterial mat persistence.
+
+For the **Threshold-Based Optimisation model**, global optimisation via differential evolution determined precise bounding intervals for active physical drivers (such as inundation frequency, 98th-percentile depth, and mean depth). 
+
+By comparing the probabilistic flexibility of the Random Forest against explicit physical boundaries of the threshold optimisation model, environmental managers can cross-validate habitat predictions, quantify structural uncertainty, and make more resilient, evidence-based conservation decisions.
+
+---
+
+### Observation Data and Definition of Persistent Mat
+
+The observed cyanobacterial mat distribution was derived from monthly mean probability maps presented by [@Hickey2023]. These maps provide spatially explicit estimates of mat presence, rather than a simple binary classification of every pixel as present or absent.
+
+Cyanobacterial mats can be dynamic, with visible distribution and activity responding to changes in inundation, exposure, and other environmental conditions. Consequently, a mat occurrence observed in an individual month may not represent a persistent habitat location. To focus modelling on locations with recurrent mapped occurrence (a stable region), we considered a persistent-mat mask derived from at least 12 months of monthly probability rasters to account for water level variations.
 
 For each pixel $i$, persistent occurrence was defined as
 
@@ -505,45 +538,34 @@ M_i =
 \end{cases}
 $${#eq-persistent-occurrence}
 
-where $q_{i,t}$ is the mapped probability of mat presence at pixel $i$ in month $t$, and $T$ is the number of monthly rasters included in the analysis. It is important to highlight that we carried out the same for three years and found a similar metrics and locations of presistent mat. A pixel was therefore classified as persistent mat only when its mapped probability was at least 0.25 in every available monthly raster. Pixels that did not meet this criterion were classified as non-persistent for model development.
+where $q_{i,t}$ is the mapped probability of mat presence at pixel $i$ in month $t$, and $T$ is the number of monthly rasters included in the analysis. A pixel was classified as persistent mat only when its mapped probability was at least 0.25 in every available monthly raster. Pixels failing this criterion were classified as non-persistent for model development.
 
-While this threshold-based definition provides a consistent way to identify locations with recurrent mapped occurrence, it does not imply that 0.25 is a universal ecological threshold for cyanobacterial mat establishment, nor that locations classified as non-persistent are necessarily devoid of mats. Instead, the response represents persistent occurrence as defined by the available observations and the selected threshold.
+Monthly rasters were reprojected to model coordinates using bilinear resampling before applying the persistence criterion. The resulting mask was spatially linked to the Delft3D-FM unstructured mesh. Persistent raster pixels were assigned to nearest mesh-face centres, providing a binary observed response for model training and evaluation.
 
-The monthly rasters were reprojected to the model coordinates using bilinear resampling before the persistence criterion was applied. The resulting mask was then spatially linked to the Delft3D-FM unstructured mesh. Persistent raster pixels were assigned to their nearest mesh-face centres, providing a binary observed response for the mesh locations used in the classification.
+---
 
-### Hydrodynamic predictors and model development
+### Hydrodynamic Predictors and Model Integration
 
-To relate the observed persistent-mat distribution to its physical environment, we conducted a hydrodynamic simulation for the corresponding period. Hydrodynamic metrics were extracted from this simulation to characterise the inundation, exposure and water-movement conditions experienced across the model domain. Matching the observational and hydrodynamic data by year allowed the classifier to be trained on physical conditions corresponding to the period represented by the observed mat distribution.
+To relate the observed persistent-mat distribution to its physical environment, we conducted a hydrodynamic simulation for the corresponding period. Hydrodynamic metrics were extracted from this simulation to characterise inundation, exposure, and water-movement conditions.
 
-Eight hydrodynamic metrics were used as model predictors:
+Eight hydrodynamic metrics were considered as candidate predictors:
 
-- maximum continuous exposure duration (hours);
-- maximum bed shear stress;
-- inundation frequency;
+- Maximum continuous exposure duration (hours);
+- Maximum bed shear stress;
+- Inundation frequency;
 - 98th-percentile water depth;
-- percentage submergence;
-- maximum water depth;
-- maximum current velocity; and
-- mean water depth.
+- Percentage submergence;
+- Maximum water depth;
+- Maximum current velocity; and
+- Mean water depth.
 
-For each mesh face $i$, these variables formed the predictor vector
+For each mesh face $i$, these variables formed the predictor vector $\mathbf{x}_i = [x_{i1}, x_{i2}, \ldots, x_{i8}].$ 
 
-$$
-\mathbf{x}_i =
-\left[
-x_{i1}, x_{i2}, \ldots, x_{i8}
-\right],
-$${#eq-predictor-vector}
+For the **Random Forest model**, the dataset was split into 80:20 training and test subsets with stratification. Model settings included 100 decision trees, maximum tree depth of 12, a minimum of 10 observations per internal split, and balanced class weights to prevent majority-class bias. 
 
-where $x_{ij}$ denotes the value of hydrodynamic predictor $j$ at mesh face $i$. The observed persistent-mat mask supplied the binary response $y_i$, with $y_i=1$ for mesh faces associated with persistent mapped occurrence and $y_i=0$ otherwise.
+For the **Threshold-Based Optimisation model**, global optimisation via differential evolution determined precise bounding intervals for active physical drivers. By comparing probabilistic flexibility against explicit physical boundaries, environmental managers can cross-validate habitat predictions and quantify structural uncertainty.
 
-Mesh faces with missing inundation-frequency values were excluded from the model dataset. The dataset was divided into training and test subsets using an 80:20 split, with stratification to preserve the relative proportions of the two response classes. The classifier was trained using the training subset and evaluated against the held-out test subset. The principal model settings were 100 decision trees, a maximum tree depth of 12, a minimum of 10 observations required to split an internal node, and balanced class weights. A fixed random seed of 42 was used for reproducibility, and parallel processing was enabled.
-
-Balanced class weights were included to reduce the tendency of the classifier to favour the more numerous response class during model fitting. The remaining settings constrained tree complexity and specified the size of the ensemble. Together, these choices provided a consistent classification framework for relating the mapped persistent-mat distribution to the eight hydrodynamic predictors.
-
-After evaluation, the classifier was refitted using all valid mesh-face observations. This final model was then applied to the predictor data to generate a spatial classification of potential persistent-mat habitat across the model domain. The relative importance of the predictors was also examined using the feature-importance scores returned by the fitted Random Forest. These scores indicate how much each predictor contributes to reductions in tree-splitting impurity; they do not establish causal relationships between hydrodynamic processes and mat occurrence.
-
-## Evaluation
+## Evaluation {#sec-eval-method}
 
 For both mangrove and algal-mat models, evaluation followed the same general framework, allowing classification performance to be assessed consistently across the two habitat-modelling approaches. The RF classifier was evaluated against the held-out test subset using the confusion matrix, precision, recall and F1-score.
 
@@ -576,3 +598,11 @@ $${#eq-f1-score}
 A true positive is a location classified as presence in both the observed mask and model prediction. A false positive is predicted as presence but does not meet the observed criterion, while a false negative meets the observed criterion but is predicted as absence. Precision, recall and F1-score were considered together because they capture different aspects of classification performance.
 
 The evaluation metrics reported for model validation should be calculated from the predictions for the held-out test subset. For the algal mat validation, although the classifier was subsequently refitted using all valid observations to produce the final spatial prediction, performance calculated from these same observations would represent in-sample performance rather than independent validation. In addition, because the training and test observations were divided randomly among mesh faces, spatial autocorrelation may cause the test metrics to overestimate performance when predicting spatially separate areas. Spatially blocked validation would provide a stronger test of spatial transferability. The resulting model should be interpreted as a data-driven classification of hydrodynamic conditions associated with persistent mapped cyanobacterial mat occurrence. It does not explicitly simulate mat growth, mortality, dispersal, physiological responses to salinity or temperature, or feedbacks between mats and sediment dynamics. 
+
+## Optimising through Idealised Modelling {#sec-transition-idealised}
+
+While the hydrodynamic, wave, morphodynamic, and ecological modules provide a comprehensive framework for simulating real-world coastal and estuarine dynamics, the sheer volume of empirical parameters across these interconnected systems introduces significant calibration challenges. Directly tuning these parameters in a complex, site-specific domain makes it difficult to isolate whether changes in model performance stem from underlying physical settings or confounding site-specific characteristics like irregular bathymetry.
+
+To address this and ensure rigorous model development, we carry out a series of exploratory simulations using an **idealised model configuration**. This controlled approach allows us to systematically evaluate and optimise sediment transport formulations, boundary conditions, and vegetation settings without the noise of complex domain geometries. 
+
+For a detailed breakdown of this framework, experimental design, and initial parameter optimisations, see @sec-idealised-model.

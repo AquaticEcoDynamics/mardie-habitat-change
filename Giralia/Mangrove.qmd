@@ -1,20 +1,18 @@
----
-title: "Mangrove Response to Sea Level Rise"
----
+# Mangrove Response to Sea Level Rise {#sec-gir-mangrove}
 
 ## Sea Level Rise Response
 
-In this section, we present the response of mangroves to different sea-level-rise (SLR) scenarios. As described in Section 2.3, the predicted mangrove extent under present-day environmental conditions was used as the initial condition, and simulations were subsequently performed under a range of SLR scenarios representing low, medium, and high sea-level-rise conditions. The SLR simulations were carried out over a 100-year projection period to assess the long-term response of the mangrove ecosystem to rising sea levels. The results were analysed to investigate changes in mangrove extent and biomass under each SLR scenario and to identify trends in mangrove migration, rates of habitat loss, and potential thresholds beyond which landward migration and ecosystem persistence are no longer possible.
+In this chapter, we present the response of mangroves to different sea-level-rise (SLR) scenarios. As described in @sec-giralia-mangrove-val, the predicted mangrove extent under present-day environmental conditions was used as the initial condition, and simulations were subsequently performed under a range of SLR scenarios representing low, medium, and high sea-level-rise conditions as discussed in @sec-approach. The SLR simulations were carried out over a 100-year projection period to assess the long-term response of the mangrove ecosystem to rising sea levels. The results were analysed to investigate changes in mangrove extent and biomass under each SLR scenario and to identify trends in mangrove migration, rates of habitat loss, and potential thresholds beyond which landward migration and ecosystem persistence are no longer possible.
 
-@fig-mangrove-slr-response-animation shows the temporal evolution of mangrove canopy height ($h$) and bed elevation ($z$) across the Giralia Bay study site under three Sea Level Rise (SLR) scenarios: **SSP119 (0.5 m SLR)**, **SSP370 (0.9 m SLR)**, and **SSP585 (1.25 m SLR)** over the 100-year simulation period. The animation illustrates the dynamic interplay between rising sea levels, tidal inundation regimes, and mangrove growth, highlighting spatial and temporal patterns of mangrove expansion, dieback, and landward migration.
+@fig-mangrove-slr-response-animation shows the temporal evolution of mangrove canopy height ($h$) and bed elevation ($z$) across the Giralia Bay study site under three SLR scenarios: **SSP119 (0.5 m SLR)**, **SSP370 (0.9 m SLR)**, and **SSP585 (1.25 m SLR)** over the 100-year simulation period. The animation illustrates the dynamic interplay between rising sea levels, tidal inundation regimes, and mangrove growth, highlighting spatial and temporal patterns of mangrove expansion, dieback, and landward migration.
 
-As sea level rise progresses, increased hydroperiod and depth along lower-elevation seaward fringes exceed physiological tolerances, triggering dieback and seaward edge drowning—most prominently under high SLR rates. Concurrently, newly inundated supratidal zones create favorable hydrodynamic conditions, facilitating landward encroachment and redistribution of mangrove canopy height across the intertidal gradient.
+As SLR progresses, increased hydroperiod and depth along lower-elevation seaward fringes exceed physiological tolerances, triggering dieback and seaward edge drowning—most prominently under high SLR rates. Concurrently, newly inundated supratidal zones create favorable hydrodynamic conditions, facilitating landward encroachment and redistribution of mangrove canopy height across the intertidal gradient.
 
 ::: {.callout-note}
 ## Key Findings: Mangrove SLR Response Dynamics
-* **Low-SLR Scenario (SSP119 – 0.5 m):** Mangroves maintain dynamic equilibrium, showing localised expansion along tidal channels with minimal seaward dieback.
+* **Low-SLR Scenario (SSP119 – 0.5 m):** Mangroves relatively maintains dynamic equilibrium, showing localised expansion along tidal channels with minimal seaward dieback.
 * **Moderate-SLR Scenario (SSP370 – 0.9 m):** Progressive drown-out initiates along the lower seaward fringe, partially compensated by landward migration into newly flooded accommodation space.
-* **High-SLR Scenario (SSP585 – 1.25 m):** Severe seaward fringe dieback and rapid landward retreat take place, resulting in substantial spatial shifts in canopy height ($h$) distribution across the estuary.
+* **High-SLR Scenario (SSP585 – 1.25 m):** Severe seaward fringe dieback and rapid landward retreat take place, resulting in substantial spatial shifts in canopy height ($h$) distribution across the Giralia bay domain.
 :::
 
 ::: {.content-visible when-format="html"}
@@ -25,7 +23,7 @@ Spatial and temporal evolution of mangrove canopy height ($h$, right colorbar) o
 :::
 :::
 
-@fig-biomass_norm shows the temporal evolution of the alongshore-integrated mangrove biomass, normalised relative to initial conditions ($\frac{B}{B_0}$), evaluated across 25-year intervals over a 100-year projection period under different Sea Level Rise (SLR) scenarios. Given that the Giralia Bay system exhibits a distinct habitat zonation, initial mangrove biomass displays a unimodal spatial distribution centered within the mid-to-fringing intertidal zone. 
+To illustrate how the biomass changes for different SLR conditions, we computed the biomass as shown in @sec-model-overview. Furthermore, to illustrate how the biomass changes along the Giralia bay, we alongshore integrated the biomass. @fig-biomass_norm shows the temporal evolution of the alongshore-integrated mangrove biomass, normalised relative to initial conditions ($\frac{B}{B_0}$), evaluated across 25-year intervals over a 100-year projection period under different SLR scenarios. Given that the Giralia Bay system exhibits a distinct habitat zonation, initial mangrove biomass displays a unimodal spatial distribution centered within the mid-to-fringing intertidal zone. 
 
 Under the **SSP119** scenario, the system undergoes a gradual transition characterised by a modest decline in seaward fringe biomass alongside a progressive landward migration driven by increased inundation frequency. 
 
@@ -42,7 +40,32 @@ Beyond Year 50, extensive dieback occurs along the seaward fringe, accompanied b
 Alongshore integrated biomass for different SLR scenarios. Panel a) shows the basemap for illustrative purposes. Panels b), c), and d) show the alongshore integrated biomass for SLR SSP119, SSP370, and SSP585 scenarios.
 :::
 
-@fig-Giralia_mangrove_evolution shows the spatial distributions of mangroves for Year 50 and Year 100, highlighting the diverging long-term trajectory of mangrove extent across SSP119, SSP370, and SSP585 scenarios. During the initial ~40 years of simulation across all climate projections, differences in predicted mangrove coverage remain relatively subtle, as sea-level rise (SLR) rates remain within thresholds that permit localised bed level equilibration and persistence along established intertidal zones.
+To further illustrate cross shore changes in biomass, cross shore integrated biomass was calculated and plotted in @fig-scenarios. The results indicate that variability in cross shore integrated biomass is relatively small but increases with increasing SLR. Under both ssp119 and ssp585, biomass increases relative to the initial biomass in the central part of the domain. In contrast, under ssp370, the increase occurs slightly further alongshore.
+
+The alongshore biomass distributions also indicate a landward shift in the location of peak biomass over time across all three scenarios. However, the magnitude of this shift differs between scenarios. Under ssp119 and ssp370, the landward displacement of the biomass peak is more pronounced. Under ssp585, the peak remains identifiable but is substantially lower, suggesting that biomass redistribution may not keep pace with the greater rate of SLR under this scenario.
+
+::: {#fig-scenarios layout-ncol="1"}
+
+::: {.panel-tabset}
+
+### SSP119
+
+![Cross-shore and alongshore integrated biomass profiles for the SSP119 scenario.](./images/ssp_119_cross_along_int_bimass.png){#fig-ssp119 width=85% fig-crop="10% 5% 10% 5%"}
+
+### SSP370
+
+![Cross-shore and alongshore integrated biomass profiles for the SSP370 scenario.](./images/ssp_370_cross_along_int_bimass.png){#fig-ssp370 width=85% fig-crop="10% 5% 10% 5%"}
+
+### SSP585
+
+![Cross-shore and alongshore integrated biomass profiles for the SSP585 scenario.](./images/ssp_585_cross_along_int_bimass.png){#fig-ssp585 width=85% fig-crop="10% 5% 10% 5%"}
+
+:::
+
+Biomass projections across different shared socioeconomic pathways (SSP119, SSP370, and SSP585) evaluated over the Giralia domain.
+:::
+
+@fig-Giralia_mangrove_evolution shows the spatial distributions of mangroves for Year 50 and Year 100, highlighting the diverging long-term trajectory of mangrove extent across SSP119, SSP370, and SSP585 scenarios. During the initial ~40 years of simulation across all climate projections, differences in predicted mangrove coverage remain relatively subtle, as SLR rates remain within thresholds that permit localised bed level equilibration and persistence along established intertidal zones.
 
 Spatially, baseline mangrove distribution is heavily governed by tidal inundation and bed elevation, originally dominating the seaward and central channel networks. However, progressive SLR triggers a distinct landward transgression alongside substantial dieback along the seaward boundaries:
 
@@ -52,7 +75,7 @@ Spatially, baseline mangrove distribution is heavily governed by tidal inundatio
 
 ::: {.callout-note}
 ## Key Findings: Non-Linear Tipping Points
-Overall, spatial modelling highlights a **non-linear tipping point past Year 50** under moderate-to-high Sea Level Rise (SLR). 
+Overall, spatial modelling highlights a **non-linear tipping point past Year 50** under moderate-to-high SLR. 
 
 Landward expansion temporarily compensates for seaward loss; however, under extreme SLR (**SSP585**), the rate of sea-level rise outpaces landward colonisation capacity, resulting in net habitat contraction.
 :::
@@ -67,7 +90,7 @@ Modelled spatial evolution of bed elevation ($z$) and mangrove canopy height ($h
 
 ### Morphological Response
 
-To isolate and track the morphological response of the tidal network to sea-level rise (SLR), the active creek network was extracted using the $-0.5\text{ m}$ bed elevation contour at 25-year intervals (Years 1, 25, 50, 75, and 100) in @fig-Giralia_creek_evolution. Across all scenarios, increased tidal prism volumes driven by rising sea levels induce pronounced bed scour, channel widening, and headward erosion. This forces the main tidal channels to extend progressively landward into previously supratidal salt flats over time.
+To isolate and track the morphological response of the tidal network to SLR, the active creek network was extracted using the $0.2\text{ m}$ bed elevation contour at 25-year intervals (Years 1, 25, 50, 75, and 100) in @fig-Giralia_creek_evolution. Across all scenarios, increased tidal prism volumes driven by rising sea levels induce pronounced bed scour, channel widening, and headward erosion. This forces the main tidal channels to extend progressively landward into previously supratidal salt flats over time.
 
 The magnitude of this landward channel extension varies significantly across climate forcings:
 
@@ -78,9 +101,9 @@ The magnitude of this landward channel extension varies significantly across cli
 ::: {#fig-Giralia_creek_evolution}
 ![](images/Giralia_creek_evolution.png){fig-align="center" width="95%"}
 
-Spatiotemporal evolution of the tidal creek network over 100 years under (a) SSP119, (b) SSP370, and (c) SSP585 scenarios. Channels are delineated by extracting the $-0.5\text{ m}$ bed level contour at 25-year intervals (Years 1, 25, 50, 75, and 100).
+Spatiotemporal evolution of the tidal creek network over 100 years under (a) SSP119, (b) SSP370, and (c) SSP585 scenarios. Channels are delineated by extracting the $0.2\text{ m}$ bed level contour at 25-year intervals (Years 1, 25, 50, 75, and 100).
 :::
-To assess the systemic morphological and ecological adjustments to sea-level rise (SLR), the normalised time series of total mangrove area and tidal creek planform footprint relative to initial conditions were evaluated (@fig-Giralia_temporal_evolution). 
+To assess the systemic morphological and ecological adjustments to SLR, the normalised time series of total mangrove area and tidal creek planform footprint relative to initial conditions were evaluated (@fig-Giralia_temporal_evolution). 
 
 During the first 40–50 years, both metrics exhibit a relative lag phase characterised by subtle, near-baseline fluctuations (normalised values fluctuating near $1.0$). This initial stability reflects a meta-stable equilibrium, where early hydrodynamic forcing and sea-level increments remain within ecological tolerance limits and thresholds for localised bed shear stress. Consequently, vertical accretion and minimal horizontal reconfiguration suffice to maintain system stability across all scenarios (SSP119, SSP370, and SSP585).
 
@@ -121,7 +144,7 @@ Beyond year 25, a critical inflection point occurs as accelerating sea-level ris
 
 We found a strong inverse relationship exists between the rate of permanent submergence (@fig-Giralia_temporal_evolution_existing_location) and the retention of localised biomass (@fig-Giralia_temporal_evolution_existing_location a). The onset of rapid biomass decline across all scenarios directly mirrors the temporal acceleration of continuous drowning. While biomass loss exceeds the absolute percentage of drowned surface area, this could be due to environmental stress which reduces stem density and productivity prior to complete drowning. The relative divergence among climate scenarios follows an identical sequence in both metrics, with SSP585 showing severe degradation followed by moderate and partial degradation of SSP370 and SSP119. 
 
-> **Summary:** Without physical space for landward retreat, existing mangrove stands will experience widespread dieback and substantial standing biomass loss under moderate-to-high sea-level rise scenarios.
+> **Summary:** Existing mangrove stands will experience widespread dieback and substantial standing biomass loss under moderate-to-high sea-level rise scenarios.
 
 ::: {#fig-Giralia_temporal_evolution_existing_location}
 ![](images/Giralia_temporal_evolution_existing_location.png){fig-align="center" width="95%"}
@@ -150,7 +173,7 @@ To demonstrate the critical necessity of this integrated framework, numerical si
 2. **Static Vegetation:** Spatially fixed, passive vegetation drag without temporal adaptation.
 3. **Dynamic Mangroves (SSP370):** Explicit eco-morphodynamic feedback involving establishment, growth, and dieback.
 
-@fig-Giralia_creek_evolution_veg_vs_no_veg highlights the long-term creek evolution across these three scenarios, where tidal creek channels were delineated by extracting contours corresponding to a bed elevation threshold of $-0.5\text{ m}$ relative to datum across a 100-year simulation timeline (Year 1 to Year 100).
+@fig-Giralia_creek_evolution_veg_vs_no_veg highlights the long-term creek evolution across these three scenarios, where tidal creek channels were delineated by extracting contours corresponding to a bed elevation threshold of $0.2\text{ m}$ relative to datum across a 100-year simulation timeline (Year 1 to Year 100).
 
 
 ::: {#fig-Giralia_creek_evolution_veg_vs_no_veg}
@@ -165,36 +188,28 @@ The morphological progression of tidal creek networks exhibits fundamental diffe
 * **Static Vegetation (@fig-Giralia_creek_evolution_veg_vs_no_veg b):** Incorporating non-adaptive, static drag element vegetation reduces local flow velocity, confining channel migration compared to the unvegetated case. However, because the vegetation cannot adaptively grow, die back, or recolonise in response to changing inundation regimes, channels become locked into fixed corridors. Sediment continuously accumulates within static drag fields without eco-morphodynamic relief, eventually forcing abrupt channel avulsions or localised drowning as the system fails to accommodate accelerating SLR.
 * **Dynamic Mangroves (@fig-Giralia_creek_evolution_veg_vs_no_veg c):** The fully coupled dynamic mangrove model reveals a significantly more cohesive, resilient, and focused channel network. Dynamic feedbacks allow mangroves to continuously adjust their density and spatial distribution based on inundation frequency and bed shear stress. As mangroves colonise newly suitable elevated mudflats, flow is selectively funnelled into major drainage corridors, stabilising channel banks while promoting landward network elongation. By Year 100, the dynamic framework predicts organised, highly continuous creek systems extending farther inland to maintain hydrological equilibrium—a trajectory completely uncaptured by static or uncoupled assumptions.
 
-#### Comparison with Alternative Modelling Paradigms
+::: {.callout-note icon=false}
+## Summary: Century-Scale Ecological Trajectories in Giralia Bay
 
-* **Bathtub Models:** Bathtub models rely purely on passive topographic inundation based on water surface elevations, assuming fixed land contours and ignoring both sediment transport and biophysical adaptation. Consequently, bathtub approaches drastically miscalculate future mangrove migration pathways: they overestimate landward migration where steep topography or sediment deficits impede movement, while simultaneously underestimating the ability of dynamically growing mangrove systems to accrete sediment, build bed elevation, and actively carve stable tidal corridors that facilitate landward establishment.
-* **Pseudo-Dynamic (Offline) Models:** Offline or multi-stage coupled approaches update hydrodynamics, morphological updates, and vegetation cover sequentially at discrete, coarse time steps, missing crucial transient feedbacks. Offline coupling fails to capture high-frequency interactions during extreme events or seasonal recruitment windows, leading to artificial stepped channel evolution, inaccurate sediment depositional footprints, and miscalculated thresholds for mangrove drowning versus survival.
+Synthesising multi-decadal predictions from our coupled eco-morphodynamic model reveals critical distinctions in how Giralia Bay's mangrove systems adapt to sea-level rise across emission pathways:
 
 ---
 
-### Transferability, Assumptions and Limitations, and Future Directions
+## Scenario Profiles & Ecosystem Trajectories
 
-#### System Transferability
-The framework developed in this study is designed to be transferable and adaptable to a wide range of coastal ecosystems globally. The vegetation model employed is open-source and was specifically modified and calibrated here to represent an arid mangrove system. However, the parameterisation can easily be tweaked to simulate other mangrove species, salt marsh plants, or alternative coastal vegetation types by adjusting bio-geomorphic thresholds such as:
+*   **SSP119 (Low SLR – 0.5 m): Dynamic Eco-morphodynamic Equilibrium**
+    *   *Ecosystem Regime:* Stable and resilient.
+    *   *Trajectory:* Minimal seaward edge drown-out, paired with steady, localised landward expansion. Intertidal zonation and core canopy architecture remain largely intact throughout the 100-year window.
 
-* Inundation tolerance
-* Drag coefficients
-* Vegetative growth rates
+*   **SSP370 (Intermediate SLR – 0.9 m): Non-linear Ecological Reorganisation**
+    *   *Ecosystem Regime:* Spatial restructuring and regime shift past Year 50.
+    *   *Trajectory:* Seaward fringe drown-out is substantial, but active creek elongation allows rapid landward colonisation into newly flooded accommodation space, preserving high net biomass.
 
-Furthermore, the two-way dynamic coupling between the hydro-morphodynamic solver (Delft3D Flexible Mesh / DFM) and the vegetation module was executed using a custom Python-based module. Because Python is widely used across computational fields, this integrated coupling workflow can be seamlessly transferred to other coastal domains, alternative hydrodynamic engines, or expanded ecological systems with minimal modification.
+*   **SSP585 (High SLR – 1.25 m): Threshold Exceedance & Habitat Collapse**
+    *   *Ecosystem Regime:* Marine inundation outpaces ecological adaptation.
+    *   *Trajectory:* An initial inland expansion surge (Years 40–60) is quickly truncated by severe estuarine drowning. Over **85% of the original mangrove footprint** is permanently submerged by Year 100, leaving survival restricted to a diminished landward fringe along elevated basin margins.
 
-#### Key Assumptions and Limitations
+---
 
-1. **Salinity Dynamics:** Spatial and temporal variations in surface salinity and sub-surface porewater dynamics are not explicitly accounted for in the present vegetation framework. In hyper-arid or seasonally dry estuarine environments, porewater salinity within the root zone represents a primary physiological control governing mangrove survival, zonation, and competitive dominance. Although DFM can compute salinity transport, preliminary analyses revealed difficulty replicating extreme hyper-saline conditions ($\mathcal{O}(100\text{ ppt})$) on upper supratidal flats due to the numerical wetting-and-drying scheme: when shallow cells evaporate and dry out, localised salt mass history is lost upon re-wetting.
-2. **Hydrodynamic Forcing Exclusions:** Simulations were conducted strictly under tidal hydrodynamics without incorporating wind-wave action or storm surges. Omission of wave modules means wave-driven erosion, edge retreat, and extreme wave disturbance events are not captured in long-term landward progression predictions.
-3. **Dimensionality (2DH Mode):** Numerical simulations were carried out in 2D depth-averaged (2DH) mode. While computationally efficient for regional scales spanning hundreds of kilometers, 2DH neglects vertical flow structures, stratification, and secondary circulation in deep channels.
-4. **Propagule Transport and Hydrochory:** Mangrove establishment is evaluated dynamically based on localised physical suitability thresholds rather than explicit hydrochory. Candidate cells are determined using a window-of-opportunity (WoO) concept (relative inundation frequency and bed shear stress below critical erosion thresholds). The model assumes ever-present seed availability, omitting explicit dispersal pathways, travel times, and hydrochory dynamics [@VanderStocken2019]. Additionally, recruitment relies purely on seedling-based colonisation and omits vegetative re-sprouting mechanisms [@Krauss2020; @Vizcaya-Martnez2022].
-5. **Soil and Sub-Surface Processes:** Simulations account solely for inorganic surface sediment accretion with uniform substrate across 20 vertical layers. Organic accretion (refractory root production and leaf litter decay) contributes directly to vertical elevation gain [@Middleton2001; @McKee2021], particularly in sediment-starved environments. Unmodeled sub-surface processes (deep/shallow subsidence, sediment compaction, and organic decomposition) could alter net surface elevation capital [@Breda2021].
-
-#### Future Directions
-
-To build upon the foundation established in this work, future efforts should prioritise:
-
-* Integrating salinity transport and its explicit physiological feedback into vegetation and hydrodynamics modules.
-* Incorporating sub-surface soil modules accounting for organic root production, peat formation, compaction, and auto-subsidence alongside inorganic sediment transport.
-* Enhancing the biological module to incorporate multi-species interactions, vegetative re-sprouting mechanics, and variable propagule viability windows following extreme climate events.
+> **Insight:** Giralia Bay mangroves demonstrate high capacity for landward adaptation under low-to-moderate SLR rates. However, under high-emission forcing (SSP585), the pace of sea-level rise exceeds maximum ecological migration rates, triggering severe net habitat contraction and coastal squeeze.
+:::

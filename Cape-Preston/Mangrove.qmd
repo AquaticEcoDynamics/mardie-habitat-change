@@ -1,4 +1,4 @@
-# Overview {#sec-cp-mangrove}
+# Mangrove Response to SLR {#sec-cp-mangrove}
 
 Similar to the regional methodology applied at Giralia Bay and Urala, a targeted calibration and validation workflow was implemented to characterise mangrove distribution and canopy structure for the Cape Preston domain. Airborne LiDAR elevation and canopy metrics were leveraged to establish baseline mangrove extent and canopy height profiles. However, site-specific hydrodynamic regimes, complex tidal creek geomorphology, and localised evaporation dynamics at Cape Preston presented distinct numerical challenges. 
 

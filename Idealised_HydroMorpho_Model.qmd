@@ -1,10 +1,14 @@
 # Idealised modelling {#sec-idealised-model}
 
-Exploratory models provide an effective framework for isolating and understanding the physical processes that govern tidal-flat morphological evolution. In this chapter, we first systematically examine the effects of key environmental forcings on tidal-flat morphology and identify the drivers that are most relevant for representation in regional-scale models. We then develop a Giralia-based idealised model using site-derived bathymetry and tidal conditions to investigate the influence of sediment properties, with particular emphasis on sand–mud interactions and the critical shear stress for mud erosion. Finally, following the framework described in @sec-approach, we apply an idealised ecomorphodynamic model based on Giralia conditions to assess how variations in mangrove biological properties influence long-term tidal-creek morphological evolution.
+## General
+
+As the coupled flow, sediment transport, and vegetation modules involve numerous empirical parameters, direct calibration within a complex, site-specific domain introduces significant ambiguity. It is often difficult to distinguish whether variations in model performance stem from underlying physical settings or from confounding domain characteristics such as irregular bathymetry. 
+
+To address this and support rigorous developmental purposes, exploratory models provide an effective framework for isolating and understanding these physical processes without site-specific noise. In this chapter, we use an **idealised model configuration** to systematically evaluate and optimise sediment transport formulations, boundary conditions, and vegetation settings through a three-stage approach.
+
+First, we examine the effects of key environmental forcings on tidal-flat morphology using a simplified, constant-slope idealised domain to identify the hydrodynamic drivers most relevant for regional-scale representation. Next, we advance to a Giralia-based idealised model using site-derived boundary conditions to investigate the influence of sediment dynamics, with particular emphasis on sand–mud interactions, critical shear stress for mud erosion, and mud supply. Finally, following the framework described in @sec-approach and @sec-model-overview, we integrate an idealised ecomorphodynamic model based on Giralia conditions to assess how variations in mangrove biological properties influence long-term tidal-creek morphological evolution and also mangrove model properties
 
 ## Idealised hydromorphodynamic model
-
-### Introduction
 
 Intertidal flats form the transition between the ocean and the land and are periodically exposed between the lowest and highest astronomical tides. Their morphology is shaped by interactions among coastal hydrodynamics, sedimentary processes, and biological activity. The morphological evolution of tidal flats can be characterised in terms of profile shape, bed slope, and sediment properties, which vary systematically with sediment supply, wave conditions, and tidal forcing [@friedrichs2011]. When averaged over annual or longer timescales, tidal-flat morphology may approach a state of dynamic equilibrium with the prevailing external forcing. For example, tide-dominated environments generally favour convex-upward tidal-flat profiles, whereas wave-dominated environments tend to produce concave profiles [@Friedrichs2001]. @friedrichs2011 summarised the effects of different environmental drivers @fig-convex_concave_summary on tidal-flat profiles, showing that increased tidal range, decreased wave height, increased sediment supply and faster flooding tides tend to develop convex-up profiles, whereas decreased tidal range, increased wave, decreased sediment supply and faster ebbing tides are more likely to exhibit concave-up profiles, vice versa .
 
@@ -75,7 +79,7 @@ Variations in the initial mud fraction of the sediment substrate produced simila
 
 Our sensitivity tests using the schematised idealised model demonstrate that external environmental drivers play a dominant role in controlling morphological evolution and sediment redistribution. The results show that tidal range, tidal asymmetry, and the initial bed profile strongly influence morphological development and mud distribution, whereas the effects of initial substrate sediment composition and mud supply at the open boundary are comparatively limited. Therefore, when applying the morphodynamic model to tide-dominated real-world systems, accurate representation of local tidal conditions and bathymetry should be prioritised. Sediment composition and boundary mud supply can be considered secondary factors in model parameterisation.
 
-From Chapter 2 (@sec-controls), we know that the Pilbara Coast is a well-sheltered micro- to meso-tidal system, featured with ebb-dominated tides (stronger ebbing tide than flooding tide), and low sediment supply from the open boundary as well as relatively mild bathymetric slopes. These features are similar to settings in Run 7. For regional-scale morphodynamic models in Grialia, Urala and Cape Preston, we incorporated multiple tidal constituents, including M2, S2, O1, and K1, to represent an ebb-dominated tidal asymmetry and to reproduce spring–neap variability, thereby providing a more realistic representation of natural tidal conditions. Here, tidal asymmetry was induced by interaction between M2, O1 and K1 interaction [@song2011]. For further details on the selection and justification of morphodynamic model parameters, readers are referred to @sec-appendix-c.
+From @sec-controls, we know that the Pilbara Coast is a well-sheltered micro- to meso-tidal system, featured with ebb-dominated tides (stronger ebbing tide than flooding tide), and low sediment supply from the open boundary as well as relatively mild bathymetric slopes. These features are similar to settings in Run 7. For regional-scale morphodynamic models in Grialia, Urala and Cape Preston, we incorporated multiple tidal constituents, including M2, S2, O1, and K1, to represent an ebb-dominated tidal asymmetry and to reproduce spring–neap variability, thereby providing a more realistic representation of natural tidal conditions. Here, tidal asymmetry was induced by interaction between M2, O1 and K1 interaction [@song2011]. For further details on the selection and justification of morphodynamic model parameters, readers are referred to @sec-appendix-c.
 
 Biological processes, such as bioturbation and bioadhesion, can further modify these profile shapes by either enhancing or reducing their convexity or concavity. As discussed previously, the Pilbara Coast is a well-sheltered, tide-dominated environment. Extensive mangrove forests occur along the fringing coast and tidal channels, where they act as natural buffers by reducing flow energy and stabilising channel banks. Therefore, biological processes, particularly the effects of mangrove vegetation, need to be properly represented in morphodynamic modelling of the Pilbara Coast.
 
@@ -87,15 +91,13 @@ The exploratory idealised model presented in the previous section provided insig
 
 ### Model settings
 
-#### Domain and Bathymetry
-
 To capture the extent of one of the main tidal creeks in the Giralia area, a rectangular computational grid is constructed with a length of 15 km (longshore) and a width of 1.5 km (cross-shore). The grid has a resolution of dx=dy=15 meter, which ensures the main channel is represented by at least one cell (at the landward end) and more than 15 cells at the seaward end. The initial bathymetry is assumed alongshore uniform with a convex profile shape that is associated with muddy coastlines. The following function is used to describe the cross-shore bathymetry:
 
-$$z(y)=a*e^{b-c*y}+d$$ {#convex_equation}
+$$z(y)=a*e^{b-c*y}+d$${#eq-idealised-bathymetry}
 
 here $z(y)$ is the bed level at a certain distance y, and $a=-0.730, b=0.0351, c=-1.65e^{-4}, d=3.50$ derived from Giralia Bay Bathymetry. In this model,the vertical datum of the bathymetry data is 1.45 meter above Mean Sea Level.
 
-![Convex cross-shore bathymetry profile for the idealized model domain (orange line) obtained by fitting the longshore-averaged GEBCO bathymetry of the selected area (blue line).](images/paste-3.png){fig-align="center" width="487"}
+![Convex cross-shore bathymetry profile for the idealised model domain (orange line) obtained by fitting the longshore-averaged GEBCO bathymetry of the selected area (blue line).](images/paste-3.png){#fig-idealised-bathymetry}
 
 #### Boundary conditions
 
@@ -108,6 +110,7 @@ Tidal forcing is imposed on the seaward end of the domain, other boundaries are 
 | O1          | 0.13          | -170.5      |
 | K1          | 0.20          | -158.8      |
 | A0          | 1.45          | \-          |
+: Tidal constituents used for the idealised model, obtained from TPXO8 global tide database. {#tbl-idealised-tidal-constituents}
 
 ### Scenarios design
 
@@ -119,9 +122,9 @@ The model is run for three hydrodynamic years and a morphological acceleration f
 
 The morphological development without sand-mud erosion interaction is gradual in the simulated 150 morphological years. The width-averaged elevation shows erosion between +2 m (y \~ 4000 m) and 0 m (y \~ 10000m) and accretion between 0 m (y\~10000) and – 2.5 m (y\~13000). One main channel has formed in the simulated period. Mud erodes only for $\tau > \tau_e=0.5 N/m^2$, conditions that do not occur often (see later, ). Therefore,mud fraction increases in the erosion zone as mud in the bed is immobile and sand is eroded, whereas mud fraction decreases in the deposition zone as sand is deposited and mud immobile, see @fig-mud_frac_no_interaction. This leads to a stabilization of the eroding zone as the higher mud-content increases the critical bed shear stress for erosion of sand. When channels start forming, higher flow velocities occur in the deeper parts and will exceed the erosion threshold for mud (occasionally). This does not occur on the shallower parts adjacent to the channels and mud accumulates there.
 
-![Width-averaged elevation vs seaward distance for t_mor=0,10,20…..150 years without erosion interaction.](images/paste-6.png){fig-align="center" width="655"}
+![Width-averaged elevation vs seaward distance for t_mor=0,10,20…..150 years without erosion interaction.](images/paste-6.png){#fig-idealised-profiles-no-interaction fig-align="center" width="655"}
 
-![Bed level for 0,50,100,150 years without erosion interaction](images/paste-4.png){fig-align="center" width="600"}
+![Bed level for 0,50,100,150 years without erosion interaction](images/paste-4.png){#fig-idealised-bed-level-no-interaction fig-align="center" width="600"}
 
 ![The fraction mud in the active toplayer for 0,50,100,150 years without erosion interaction](images/paste-5.png){#fig-mud_frac_no_interaction fig-align="center" width="600"}
 
@@ -153,11 +156,11 @@ Compared with those in tropical humid climates, mangroves in arid regions exhibi
 
 ### Model settings
 
-The Idealized model domain was configured to represent a gently sloping tide-dominated mangrove system, applicable to Giralia Bay, Western Australia. The model was run in a two-dimensional domain with an offshore open boundary, using a gradually fining rectangular grid size, from 200\*20m to 20\*20m. An alongshore uniform convex profile $z=2.2-8.5e^{-0.165(y-8.19)}$ ,derived from the mean bed profile in Giralia Bay, was used as the initial profile with a funnel-shaped channel in the middle @fig-ideal-channel-domain. The funnel-shaped channel followed the bathymetric characteristics measured in Giralia Bay – channel width (mouth width $B_0=0.6 km$) decreased exponentially towards landward and disappeared when it became smaller than the grid width (20 m). Channle thalweg elevation increased linearly from subtidal and remained constant on the platform. The open boundary conditions were based on primary constituents (M2, S2, O1, K1) extracted from TPXO10.
+The Idealised model domain was configured to represent a gently sloping tide-dominated mangrove system, applicable to Giralia Bay, Western Australia. The model was run in a two-dimensional domain with an offshore open boundary, using a gradually fining rectangular grid size, from 200\*20m to 20\*20m. An alongshore uniform convex profile $z=2.2-8.5e^{-0.165(y-8.19)}$ ,derived from the mean bed profile in Giralia Bay, was used as the initial profile with a funnel-shaped channel in the middle @fig-ideal-channel-domain. The funnel-shaped channel followed the bathymetric characteristics measured in Giralia Bay – channel width (mouth width $B_0=0.6 km$) decreased exponentially towards landward and disappeared when it became smaller than the grid width (20 m). Channle thalweg elevation increased linearly from subtidal and remained constant on the platform. The open boundary conditions were based on primary constituents (M2, S2, O1, K1) extracted from TPXO10.
 
 Both sand (90% in volume) and mud (10% in volume) were considered in the sediment substrate, and their transport was resolved by the formulation of [@vanrijn1993] and the equations of Partheniades and Krone [@partheniades1965], respectively. Following previous studies on dynamic mangrove modelling [@Xie2022], the critical shear stress for mud erosion was set to $0.2 N/m^2$. 
 
-![(a) Real domain of tidal flats with a channel in Giralia Bay, Western Australia, representative of tide-dominated mangrove systems in arid climates. (b) Schematized model domain with idealized bathymetry. (c) cross-shore profile of tidal flat platform and channel thalweg](images/BathySetUp.jpg){#fig-ideal-channel-domain fig-align="center" width="620"}
+![(a) Real domain of tidal flats with a channel in Giralia Bay, Western Australia, representative of tide-dominated mangrove systems in arid climates. (b) Schematised model domain with idealised bathymetry. (c) cross-shore profile of tidal flat platform and channel thalweg](images/BathySetUp.jpg){#fig-ideal-channel-domain fig-align="center" width="620"}
 
 ### Scenarios design
 
@@ -188,14 +191,20 @@ This response can be attributed to the higher stem density associated with small
 
 ![Alongshore averaged (a) biomass, (b) number of channels, (c) cross-sectional area (below mean sea level) and (d) central channel depth after ecological equilibrium (120-year coupling).](images/Eco_equi_bathycharacter2.png){fig-align="center" width="400"}
 
-### Implication for regional modeling
+## Summary of idealised models and key findings
 
-The sensitivity test comparing simulations with and without mangrove vegetation demonstrates that excluding vegetation from hydro-morphodynamic modelling can lead to a more erosive tidal platform and a less developed channel network. In contrast, the presence of mangrove forests acts as a natural buffer by enhancing sediment retention and promoting sediment accumulation across the platform, while simultaneously intensifying central-channel incision and facilitating tidal-creek formation.
+The exploratory idealised models provide an efficient framework for isolating and understanding the long-term effects of key environmental drivers on tidal-flat morphological evolution. By systematically testing variables in a controlled environment without site-specific bathymetric noise, these simulations offer critical insight into evolutionary responses and establish a practical physical basis for parameterisation in site specific models.
 
-Sensitivity tests on mangrove growth rate and stem diameter indicate that variations in these biological traits exert a smaller influence on large-scale morphological evolution than the presence or absence of vegetation itself. Nevertheless, appropriate representation of stem size and growth rate remains important in dynamic mangrove modelling, particularly for realistic applications. For example, simulations with smaller stem diameters produced stronger central-channel incision and more extensive tidal-creek development, highlighting the role of vegetation structure in regulating hydro-morphodynamic feedbacks.
+### Findings
+- **Tidal Forcing:** Increased tidal range extends the upper-intertidal accretion zone landward, while macro-tidal regimes ($4\text{ m}$) trigger greater subtidal erosion and braided channel formation.
+- **Tidal Asymmetry:** Flood-dominant conditions promote broad intertidal deposition and channel formation, whereas ebb-dominant conditions drive pronounced subtidal erosion and deeper, complex channel networks.
+- **Sediment Dynamics & Sand-Mud Interactions:** Accounting for sand-mud erosion interactions creates a significantly more dynamic channel-shoal system compared to non-interactive runs. While the critical shear stress for mud erosion strongly influences mud redistribution, it has a secondary effect on overall channel-shoal morphology.
+- **Mangrove Vegetation:** Incorporating mangrove forests acts as a natural buffer, enhancing platform sediment accretion while intensifying central-channel incision and tidal-creek branching. Variations in biological traits (such as stem diameter and growth rate) exert a smaller overall influence than the presence or absence of vegetation itself, though smaller stem diameters enhance channel incision through higher cumulative drag.
 
-Based on these results, the subsequent regional-scale simulations for Giralia, Urala, and Cape Preston adopt the mangrove parameterisation used in Run 4, which is intended to represent typical mangrove characteristics in arid coastal environments, including relatively small stem diameters and slow growth rates.
+### Implications for Regional-Scale Modelling
+Our sensitivity tests demonstrate that external environmental drivers—specifically local tidal range, ebb-dominant asymmetry, and initial mild bathymetric slopes—play a dominant role in controlling morphological evolution. For regional-scale morphodynamic models along the Pilbara coast (including Giralia, Urala, and Cape Preston), these insights justify:
+1. **Multi-Constituent Tidal Forcing:** Incorporating primary constituents ($M_2, S_2, O_1, K_1$) to capture ebb-dominant asymmetry and spring-neap variability (following @song2011).
+2. **Vegetation Representation:** Adopting arid-adapted mangrove parameterisations (such as Run 4 settings, featuring relatively small stem diameters and slow growth rates) to accurately simulate mangrove properties, sediment retention and creek incision.
+3. **Parameter Prioritisation:** Prioritising accurate representation of local tidal conditions and bathymetry over secondary factors like initial substrate sediment composition or open-boundary mud supply.
 
-## Summary on the idealised models
-
-The exploratory idealised model provides an efficient framework for investigating the long-term effects of different processes on tidal-creek morphological evolution. Through different idealised models and sensitivity analyses, it offers insight into evolutionary responses to key drivers and provides a practical basis for parameterisation and process representation in regional-scale models.
+We show the site-specific model development and calibrations in @sec-hydro-overview.

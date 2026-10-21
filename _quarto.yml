@@ -25,19 +25,16 @@ book:
         - Model-Overview.qmd
         - Idealised_HydroMorpho_Model.qmd
         - Hydrodynamic-Model.qmd
-        #- Morphodynamic-Model.qmd
         
-
-
     # -----------------------------
     # GIRALIA
     # -----------------------------
     - part: "Giralia"
       chapters:
-        - Giralia/Overview.qmd
+    #    - Giralia/Overview.qmd
     #     - Giralia/Data.qmd
         - Giralia/Calibration-Validation.qmd
-        - Giralia/Sea-Level-Rise.qmd
+    #    - Giralia/Sea-Level-Rise.qmd
         - Giralia/Mangrove.qmd
         - Giralia/Algal_Mat.qmd
     #     - Giralia/Discussion-Conclusions.qmd
@@ -47,7 +44,7 @@ book:
     # # -----------------------------
     - part: "Urala"
       chapters:
-         - Urala/Overview.qmd
+    #     - Urala/Overview.qmd
     #     - Urala/Data.qmd
          - Urala/Calibration-Validation.qmd
     #     - Urala/SLR-Scenarios.qmd
@@ -69,7 +66,7 @@ book:
       chapters:
         - Appendices/Appendix_A.qmd
         - Appendix_B.qmd
-        - Appendix_C.qmd
+  #      - Appendix_C.qmd
 
     # - part: "Synthesis / Assessment"
     #   chapters:

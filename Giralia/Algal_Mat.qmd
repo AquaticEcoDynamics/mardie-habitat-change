@@ -1,61 +1,102 @@
-# Algal (cyanobacteria) mats prediction under future sea level rise
+# Cyanobacterial mat Response to Sea Level Rise {#sec-gir-algalmat}
 
-## Introduction
+## Sea-Level Rise Response
 
-Algal mats in Giralia Bay predominantly occur at elevations of 230–270 cm above lowest astronomical tide [@Lovelock2009], where they experience infrequent inundation and prolonged desiccation. They are among the most competitive communities in the high intertidal zone and are widely distributed across these upper tidal flats [@Adame2012]. These algal mats are highly opportunistic and dynamic, taking advantage of episodic inundation events. They respond rapidly and become metabolically active when submerged during spring tides [@chennu2015], but enter a dormant state during extended periods of desiccation. Because they already operate close to their physiological limits, their persistence and potential redistribution under future climate change and sea-level rise remain uncertain. It is therefore important to understand how key environmental drivers regulate their occurrence. Given their highly dynamic physiological response, the presence of algal mats considered here refers to relatively persistent zones where mats occur over extended periods, rather than their short-term active or dormant state.
+In this chapter, we present the response of cyanobacterial mats to different sea-level-rise (SLR) scenarios across the Giralia Bay intertidal domain. As described in @sec-giralia-algal-val, cyanobacterial mat distributions were predicted using two complementary data-driven approaches: the **Random Forest (RF) machine-learning classifier** and the **Threshold-Based Optimisation approach**. The complete model architectures, parameterisation, and algorithmic implementations are detailed in @sec-algal-mat-model. 
 
-Although previous studies have shown that algal mats preferentially occupy high intertidal flats, no general quantitative relationship has yet been established between hydrodynamic conditions and their spatial occurrence. Moreover, algal mats comprise complex communities of both aerobic and anaerobic microorganisms, and their taxonomic and functional composition can vary substantially among sites. Such differences are likely to result in site-specific responses in growth, survival, and colonization under different hydrodynamic conditions. This ecological variability complicates the development of a generic relationship linking algal-mat occurrence to hydrodynamic forcing.
+Predictions were evaluated over a 100-year projection period at discrete intervals representing present-day baseline, Year 50, and Year 100 conditions to assess long-term structural and spatial adjustments to rising sea levels. Unlike the continuous biomass and canopy height metrics evaluated in the mangrove analysis (@sec-gir-mangrove), cyanobacterial mat distributions are evaluated as a binary spatial classification (i.e. presence or absence), delineating critical shifts in habitat suitability across the supratidal salt flat gradient.
 
-Therefore, based on Giralia regional hydromorphological model, we first relate hydrodynamic to the persistent algal mats and then predict the survival and migration of these persistent zone under different sea level rises.
+As highlighted in @sec-giralia-algal-val, the calibrated models were used to predict algal mat responses across the projected sea-level rise scenarios. For illustrative purposes, active creek network extensions extracted using the $0.2\text{ m}$ bed elevation contour are overlaid on all projections to contextualise hydrodynamic changes relative to mat migration.
 
-![Figure 1. Map and zonation transect of Giralia Bay, Pilbara Coast](images/paste-1.png){fig-align="center"}
+::: {.panel-tabset}
 
-## Methodology
+### Random Forest (RF) Approach
 
-### Persistent algal mats zone
+![Spatiotemporal projections of cyanobacterial mats and active tidal creek networks under low (SSP119), moderate (SSP370), and high (SSP585) sea-level rise scenarios using the Random Forest machine-learning classifier.](./images/Giralia_algalmat_and_creeks_projections_P0.25.png){#fig-algal-rf width=100%}
 
-The persistent algal-mat distribution used in this report was derived from the Project A output, which provides monthly averaged probabilities of algal-mat presence. We selected the period 2016–2020, during which algal mats were initially scarce in Giralia Bay (due to cyclone in 2015) and subsequently expanded before reaching a relatively stable distribution. To determine an appropriate probability threshold for identifying persistent algal mats, we randomly selected points across the domain and examined their probability time series. Figure 3 shows that locations with persistent algal mats generally exhibited increasing probabilities during the first two years, followed by relatively stable values with seasonal fluctuations over the subsequent three years. Based on this pattern, a probability threshold of 0.5 was adopted to identify algal-mat presence. The persistence of algal mats during 2018–2020 is shown in Figure 4. Areas shown in yellow represent locations where algal mats occurred consistently throughout the period, whereas red areas indicate locations with less frequent occurrence.
+### Threshold-Based Optimisation Approach
 
-![Figure 2. The probability of algal mats presence from 2016-2018](images/GISmat2016-2018.png)
+![Spatiotemporal projections of cyanobacterial mats and active tidal creek networks under low (SSP119), moderate (SSP370), and high (SSP585) sea-level rise scenarios using the threshold-based optimisation model.](./images/Giralia_algalmat_and_creeks_all_projections_threshold_based.png){#fig-algal-threshold width=100%}
 
-![Figure 3. Monthly averaged time series of algal mats probability at selected points](images/MatpointsPseries.png){fig-align="center"}
+:::
 
-![Figure 4 Persistent zone of algal mats over 2018-2020.](images/persistentZone.png){fig-align="center"}
+Both the Random Forest (RF) approach and the threshold-based optimisation approach reveal a clear landward migration of cyanobacterial mats over the 100-year projection period, closely tracking the inland elongation of the tidal creek network. However, the two modelling paradigms capture distinct facets of spatial reorganisation. The Random Forest model predicts broader, highly continuous spatial coverage with smooth, non-linear transitions across the supratidal gradient, showing extensive Year 50 (red) and Year 100 (black) mat persistence stretching deep into the southern domain across all scenarios. In contrast, the threshold-based optimisation approach enforces strict hydrodynamic boundaries including inundation frequency, 98th percentile water depth, and bed shear stress limits producing sharply delineated spatial bands that more explicitly highlight habitat compression and drowning thresholds.
 
-### Algal mats zone hydrodynamics: Single points
+Zonation remains coherent and well-defined during the first 50 years across all projections, but divergence between the climate scenarios becomes more pronounced by Year 100. Under the low-emissions SSP119 scenario, both models project  extensive landward migration, with cyanobacterial mats establishing expansive cover across newly wetted supratidal flats in the southern sector. Under the moderate SSP370 scenario, migration remains progressive, though spatial continuity begins to fragment as tidal channels extend landward. However, under the high-emissions SSP585 scenario, the models reveal severe habitat degradation and divergence. While the RF model maintains moderate spatial persistence, the threshold-based model demonstrates a drastic contraction of the Year 100 mat footprint, where the rapid velocity of sea-level rise exceeds the landward migration capacity and inundation tolerance limits of the mats, resulting in severe coastal squeeze and permanent submergence of historical intertidal zones.
 
-To understand the persistent zone hydrodynamics, we random selected points and analyzed the exceedance probability curve of water depth, bed shear stress and continuous exposure hours. Points located in the persistent zone (solid lines) are within a limited range of water depth at high exceedance, for example range between 0.15 to 0.3 m at 2.5% exceedance. The similar trend is observed in terms of bed shear stress and continuous exposure hours that range from 500 to 1000 hours at 5% exceedance. Points in the mangrove zone or bright salt zones (dashed lines) are either featured with too depth water or too long exposure hours. Therefore, we hypotheses that persistent algal mats favor shallow water inundation and moderate exposure hours.
+To further understand the evolution of the algal mat also in conjunction with the mangrove prediction, we combined the algal mat and mangrove predictions from both approaches. For illustrative purposes, we computed the alongshore average for the Giralia bay for algal mat (coverage fraction), and also the mangrove coverage fraction. We also did the alongshore mean of the bottom profile with plus or minus 1 std shown for each approach below.
 
-![Figure 5. Exceedance curves of (a) water depth (b) bed shear stress, and (c) continuous exposure hours](images/PointDtauExp.png){fig-align="center" width="525"}
+::: {.panel-tabset}
 
-### Algal mats zone hydrodynamics: Calibration over the whole domain
+### Random Forest (RF) Approach
 
-Based on the hypothesis of shallow water inundation is the primary control on the persistence of algal mats, we combined the inundation frequency (P), water depth (D) and continuous exposure hours (Exp) to calibrate the potential distribution of persistent algal mats. After several round of calibration, the following thresholds were adopted.
+::: {.panel-tabset}
 
-- 0\<P\<25%
+#### SSP119
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Giralia domain map for the Present baseline, SSP119 (Year 50 and 100), and spatial map (Machine Learning / RF approach).](./images/Giralia_SSP119_bed_mangrove_algalmat_vertical_transects_ML.png){#fig-giralia-ssp119-ml width=100%}
 
-- 0.03 \<$97.5^{th}$D \< 0.22m
+#### SSP370
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Giralia domain map for the Present baseline, SSP370 (Year 50 and 100), and spatial map (Machine Learning / RF approach).](./images/Giralia_SSP370_bed_mangrove_algalmat_vertical_transects_ML.png){#fig-giralia-ssp370-ml width=100%}
 
-- $97^{th}$Exp\<1000 hours
+#### SSP585
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Giralia domain map for the Present baseline, SSP585 (Year 50 and 100), and spatial map (Machine Learning / RF approach).](./images/Giralia_SSP585_bed_mangrove_algalmat_vertical_transects_ML.png){#fig-giralia-ssp585-ml width=100%}
 
-Figure 6 compares the simulated potential distribution of algal mats with satellite images, and persistent algal mats distribution, and dynamic algal mats distribution. The simulated distribution captures approximately 75.5% of the observed persistent algal-mat zone, although it tends to extend more broadly across the higher intertidal flat. Given that algal-mat occurrence is controlled not only by hydrodynamic conditions but also by spatial variability in mat composition and other environmental factors, this approach provides a reasonable first-order representation of the persistent algal-mat zone.
+:::
 
-![Figure 6. (a) satellite image of Giralia Bay in 2021,(b) simulated potential algal mats presence cells, (c) comparison between simulated distributions and GIS detected persistent distributions, white cells indicate matched, blue is false positive cells and red is false negative cells. (d) Comparison between simulated distribution and GIS detected dynamic distribution,](images/paste-2.png){fig-align="center"}
+### Threshold-Based Optimisation Approach
 
-## Results
+::: {.panel-tabset}
 
-### Prediction of habitats under future scenarios
+#### SSP119
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Giralia domain map for the Present baseline, SSP119 (Year 50 and 100), and spatial map (Threshold-based approach).](./images/Giralia_SSP119_bed_mangrove_algalmat_vertical_transects.png){#fig-giralia-ssp119-thresh width=100%}
 
-Figures 7–9 show the present-day, 50-year, and 100-year distributions of mangrove forests and persistent algal mats under low, intermediate, and high sea-level-rise scenarios (SSP1-1.9, SSP3-7.0, and SSP5-8.5, respectively). As sea level rises, both mangroves and persistent algal mats migrate landward under all scenarios, although the magnitude and spatial pattern of migration differ among scenarios.
+#### SSP370
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Giralia domain map for the Present baseline, SSP370 (Year 50 and 100), and spatial map (Threshold-based approach).](./images/Giralia_SSP370_bed_mangrove_algalmat_vertical_transects.png){#fig-giralia-ssp370-thresh width=100%}
 
-Under the low sea-level-rise scenario ($50^{th}$ percentile SSP1-1.9; Figure 7), both mangroves and persistent algal mats shift landward and expand substantially after 50 years. Only limited mangrove loss occurs along the seaward fringe. After 100 years, mangroves continue to migrate landward and gain area, whereas persistent algal mats are displaced farther inland toward the margins of hills and cliffs, resulting in a reduction in their total area.
+#### SSP585
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Giralia domain map for the Present baseline, SSP585 (Year 50 and 100), and spatial map (Threshold-based approach).](./images/Giralia_SSP585_bed_mangrove_algalmat_vertical_transects.png){#fig-giralia-ssp585-thresh width=100%}
 
-Under the intermediate sea-level-rise scenario ($50^{th}$ percentile SSP3-7.0; Figure 8), both mangroves and persistent algal mats also migrate landward and expand during the first 50 years. Compared with SSP1-1.9, however, persistent algal mats migrate farther inland and reach the cliff boundary within 50 years, whereas this transition takes approximately 100 years under SSP1-1.9. After 100 years, substantial widening and landward extension of tidal channels lead to mangrove loss along the seaward fringe and compress the mangrove habitat toward the higher intertidal flat, where persistent algal mats were previously distributed. Consequently, persistent algal mats are increasingly constrained by both mangrove encroachment and sea-level rise and become largely restricted to areas near the cliff boundary.
+:::
 
-Under the high sea-level-rise scenario ($50^{th}$ percentile SSP5-8.5; Figure 9), mangroves migrate even farther landward after 50 years. Persistent algal mats also shift landward, but their expansion is more limited than under the low and intermediate sea-level-rise scenarios. After 100 years, extensive lengthening, widening, and deepening of tidal channels fragment the mangrove forest into more discrete patches and cause substantial retreat along the seaward fringe. Persistent algal mats are compressed against the cliff boundary, with only a limited area remaining.
+:::
 
-![Figure 7. The distribution of mangrove forest and algal mats (a) at present, (b) after 50-year and (c) after 100-year sea level rise under SSP119. (b) The representative transect of bed elevation, mangrove and algal mats distribution.](images/paste-4.png)
+## Comparison Between Machine Learning (RF) and Threshold-Based Approaches
+Both modelling approaches demonstrate a primary general trend: cyanobacterial mats migrate landward over the 100-year simulation window, tracking the inland extension of tidal creeks and rising intertidal wetting fronts. However, significant differences emerge in how each framework handles spatial continuity and physical boundaries.
 
-![Figure 8. The distribution of mangrove forest and algal mats (a) at present, (b) after 50-year and (c) after 100-year sea level rise under SSP370. (b) The representative transect of bed elevation, mangrove and algal mats distribution.](images/paste-5.png){fig-align="center"}
+The Random Forest (RF) approach captures broader, more persistent spatial coverage with smoother non-linear transitions. Because it is a data-driven machine learning classifier trained on hydrodynamic features, it predicts the persistence of algal mats even under moderate-to-high stress conditions. Conversely, the threshold-based optimisation approach enforces strict physical limits (such as precise inundation frequency, maximum depth thresholds, and bed shear stress boundaries). This causes the threshold-based model to produce sharper spatial zoning bands that are highly sensitive to rapid elevation changes and water-depth increases. As such, we noticed a significant decline in presistent algal mats for moderate-to-high stress scenarios (SSP370 and SSP585) compared to SSP119.
 
-![Figure 9. The distribution of mangrove forest and algal mats (a) at present, (b) after 50-year and (c) after 100-year sea level rise under SSP370. (b) The representative transect of bed elevation, mangrove and algal mats distribution.](images/paste-6.png){fig-align="center"}
+## Scenario-Wise Comparison
+
+Evaluating performance across emission scenarios reveals diverging trajectories regarding long-term survival.
+
+* SSP119 and SSP370: Under low (SSP119) and moderate (SSP370) emissions, both approaches indicate successful landward migration. Algal mats maintain high coverage fractions as they shift into newly created supratidal accommodation space.
+
+* SSP585 (High Emissions): Under the high-emissions SSP585 scenario by Year 100, the models show starkly contrasting outcomes regarding mat survival. The threshold-based model projects complete or near-complete mortality (drowning) of the algal mat communities across the domain. This total die-back occurs because the rapid rate of sea-level rise under SSP585 exceeds the maximum vertical accretion capacity and physiological inundation tolerance limits enforced by the threshold parameters. Consequently, the intertidal zone experiences severe coastal squeeze, permanently submerging historical flats below the viable depth threshold. While the RF approach also shows substantial contraction under SSP585, its probabilistic classification allows for residual patches to persist in isolated high-intertidal niches.
+
+An important methodological note is that simulations were executed independently for mangroves and algal mats without two-way biological competition feedback. As a result, overlaying the independent predictions reveals noticeable spatial overlaps instances where both mangroves and cyanobacterial mats occupy the same computational grid cell. In reality, mature mangrove expansion often induces shading, sediment modification, and root competition that can inhibit cyanobacterial mat development. Addressing these overlapping zones in future coupled iterations will help refine intertidal niche partitioning and competitive exclusion dynamics in eco-morphodynamic models.
+
+::: {.callout-note icon=false}
+## Summary: Trajectories of Algal Mats in Giralia Bay 
+
+Synthesising multi-decadal predictions from our data-driven frameworks (Random Forest vs. Threshold-Based Optimisation) reveals critical distinctions in how Giralia Bay's cyanobacterial mat communities adapt to sea-level rise across emission pathways:
+
+---
+
+## Scenario Profiles & Ecosystem Trajectories
+
+-   **SSP119 (Low SLR – 0.5 m): Expansive Supratidal Migration**
+    *   *Ecosystem Regime:* Stable and expansive.
+    *   *Trajectory:* Cyanobacterial mats steadily migrate landward onto newly wetted supratidal salt flats, closely tracking the inland elongation of active tidal creeks. High spatial continuity and overall habitat footprint are preserved across both modelling approaches throughout the 100-year period.
+
+-   **SSP370 (Intermediate SLR – 0.9 m): Progressive Relocation & Spatial Fragmentation**
+    *   *Ecosystem Regime:* High mobility accompanied by structural restructuring.
+    *   *Trajectory:* Progressive landward shift into upper accommodation space maintains significant mat coverage. However, expanding tidal channels begin to fragment continuous mat sheets into localized supratidal patches, introducing minor divergence between machine learning persistence and hydro-dynamic threshold bounds.
+
+-   **SSP585 (High SLR – 1.25 m): Threshold Exceedance & Habitat Collapse**
+    *   *Ecosystem Regime:* Severe coastal squeeze and catastrophic drowning.
+    *   *Trajectory:* An initial landward migration phase (Years 1–50) is abruptly halted as the rapid velocity of sea-level rise exceeds the physiological inundation tolerances and landward accommodation limits of the mats. Under the threshold-based model, near-total mortality occurs by Year 100 as historical flats are permanently submerged below viable water-depth limits.
+
+---
+
+> **Insight:** Cyanobacterial mats exhibit high landward migration potential under low-to-moderate SLR rates (SSP119 and SSP370) by capitalising on expanding supratidal wetting zones. However, under high-emission forcing (SSP585), rapid water-depth increases trigger widespread drowning and severe habitat contraction, highlighting critical physiological boundaries across the supratidal gradient.
+:::

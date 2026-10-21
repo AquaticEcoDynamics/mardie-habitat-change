@@ -1,4 +1,4 @@
-# Algal mat response to future sea level rise
+# Cyanobacterial mat Response to Sea Level Rise {#sec-cp-algalmat}
 
 Following the mangrove response to sea level rise predictions as described in @sec-urala-mangrove, we carried out additional only hydrodynamic simulations with various discrete time steps representing the 50 and 100-Year for different sea level rise scenarios. In these simulations, the bed level changes and mangrove distributions were fixed to the predicted values at the corresponding time steps. The hydrodynamic outputs were then used to predict the potential distribution of persistent algal mats under future sea level rise scenarios. 
 

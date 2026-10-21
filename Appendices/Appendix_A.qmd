@@ -1,6 +1,5 @@
----
-title: "Appendix A: Monitoring & Water Level Correction Framework"
----
+
+# Appendix A: Field Campaign, Data and Processing {#sec-appendixA}
 
 This document outlines the monitoring program and water level correction methodology applied across the study sites.
 

@@ -1,0 +1,33 @@
+#### Comparison with Alternative Modelling Paradigms
+
+* **Bathtub Models:** Bathtub models rely purely on passive topographic inundation based on water surface elevations, assuming fixed land contours and ignoring both sediment transport and biophysical adaptation. Consequently, bathtub approaches drastically miscalculate future mangrove migration pathways: they overestimate landward migration where steep topography or sediment deficits impede movement, while simultaneously underestimating the ability of dynamically growing mangrove systems to accrete sediment, build bed elevation, and actively carve stable tidal corridors that facilitate landward establishment.
+* **Pseudo-Dynamic (Offline) Models:** Offline or multi-stage coupled approaches update hydrodynamics, morphological updates, and vegetation cover sequentially at discrete, coarse time steps, missing crucial transient feedbacks. Offline coupling fails to capture high-frequency interactions during extreme events or seasonal recruitment windows, leading to artificial stepped channel evolution, inaccurate sediment depositional footprints, and miscalculated thresholds for mangrove drowning versus survival.
+
+---
+
+### Transferability, Assumptions and Limitations, and Future Directions
+
+#### System Transferability
+The framework developed in this study is designed to be transferable and adaptable to a wide range of coastal ecosystems globally. The vegetation model employed is open-source and was specifically modified and calibrated here to represent an arid mangrove system. However, the parameterisation can easily be tweaked to simulate other mangrove species, salt marsh plants, or alternative coastal vegetation types by adjusting bio-geomorphic thresholds such as:
+
+* Inundation tolerance
+* Drag coefficients
+* Vegetative growth rates
+
+Furthermore, the two-way dynamic coupling between the hydro-morphodynamic solver (Delft3D Flexible Mesh / DFM) and the vegetation module was executed using a custom Python-based module. Because Python is widely used across computational fields, this integrated coupling workflow can be seamlessly transferred to other coastal domains, alternative hydrodynamic engines, or expanded ecological systems with minimal modification.
+
+#### Key Assumptions and Limitations
+
+1. **Salinity Dynamics:** Spatial and temporal variations in surface salinity and sub-surface porewater dynamics are not explicitly accounted for in the present vegetation framework. In hyper-arid or seasonally dry estuarine environments, porewater salinity within the root zone represents a primary physiological control governing mangrove survival, zonation, and competitive dominance. Although DFM can compute salinity transport, preliminary analyses revealed difficulty replicating extreme hyper-saline conditions ($\mathcal{O}(100\text{ ppt})$) on upper supratidal flats due to the numerical wetting-and-drying scheme: when shallow cells evaporate and dry out, localised salt mass history is lost upon re-wetting.
+2. **Hydrodynamic Forcing Exclusions:** Simulations were conducted strictly under tidal hydrodynamics without incorporating wind-wave action or storm surges. Omission of wave modules means wave-driven erosion, edge retreat, and extreme wave disturbance events are not captured in long-term landward progression predictions.
+3. **Dimensionality (2DH Mode):** Numerical simulations were carried out in 2D depth-averaged (2DH) mode. While computationally efficient for regional scales spanning hundreds of kilometers, 2DH neglects vertical flow structures, stratification, and secondary circulation in deep channels.
+4. **Propagule Transport and Hydrochory:** Mangrove establishment is evaluated dynamically based on localised physical suitability thresholds rather than explicit hydrochory. Candidate cells are determined using a window-of-opportunity (WoO) concept (relative inundation frequency and bed shear stress below critical erosion thresholds). The model assumes ever-present seed availability, omitting explicit dispersal pathways, travel times, and hydrochory dynamics [@VanderStocken2019]. Additionally, recruitment relies purely on seedling-based colonisation and omits vegetative re-sprouting mechanisms [@Krauss2020; @Vizcaya-Martnez2022].
+5. **Soil and Sub-Surface Processes:** Simulations account solely for inorganic surface sediment accretion with uniform substrate across 20 vertical layers. Organic accretion (refractory root production and leaf litter decay) contributes directly to vertical elevation gain [@Middleton2001; @McKee2021], particularly in sediment-starved environments. Unmodeled sub-surface processes (deep/shallow subsidence, sediment compaction, and organic decomposition) could alter net surface elevation capital [@Breda2021].
+
+#### Future Directions
+
+To build upon the foundation established in this work, future efforts should prioritise:
+
+* Integrating salinity transport and its explicit physiological feedback into vegetation and hydrodynamics modules.
+* Incorporating sub-surface soil modules accounting for organic root production, peat formation, compaction, and auto-subsidence alongside inorganic sediment transport.
+* Enhancing the biological module to incorporate multi-species interactions, vegetative re-sprouting mechanics, and variable propagule viability windows following extreme climate events.
