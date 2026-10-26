@@ -8,7 +8,7 @@ This chapter presents the comprehensive calibration and validation of the high-r
 
 1. **Hydrodynamic Calibration and Validation:** Evaluating simulated water levels and inundation dynamics against continuous field gauge observations.
 2. **Mangrove Model Validation:** Comparing modelled mangrove spatial extents and canopy parameters (stem diameter and height) against long-term historical satellite observations (2000–2023).
-3. **Cyanobacterial (Algal) Mat Validation:** Using a data-driven approach to calibrate and validate the persistent zone as outlined in @sec-approach.
+3. **Cyanobacterial (Algal) Mat Validation:** Using a data-driven approaches to calibrate and validate the persistent zone as outlined in @sec-approach.
 
 ---
 
@@ -117,7 +117,7 @@ To evaluate cyanobacterial (algal) mat dynamics, dual data-driven approaches—c
 The persistent algal mat zone in the Giralia bay is shown in @fig-algal-persitent. The persitent map is then utlised for the calibration and validation.
 
 ::: {#fig-algal-persitent}
-![](images/cyanobacterial_mat_persistent_0.25_2019.png){fig-align="center" width="100%"}
+![](images/cyanobacterial_mat_persistent_0.25_2019.png){fig-align="center" width="80%"}
 
 Persistent algal mat zone based on 2019 satellite derived probability maps [@Hickey2025].
 :::

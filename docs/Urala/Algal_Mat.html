@@ -23,27 +23,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -346,11 +326,17 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-algal-projections" id="toc-sec-algal-projections" class="nav-link active" data-scroll-target="#sec-algal-projections"><span class="header-section-number">12.1</span> Projected Impact of Sea-Level Rise on Algal Mat Redistribution</a></li>
-  <li><a href="#comparative-dynamics-across-scenarios" id="toc-comparative-dynamics-across-scenarios" class="nav-link" data-scroll-target="#comparative-dynamics-across-scenarios"><span class="header-section-number">12.2</span> Comparative Dynamics Across Scenarios</a>
+  <li><a href="#overview-of-spatial-and-cross-shore-patterns" id="toc-overview-of-spatial-and-cross-shore-patterns" class="nav-link" data-scroll-target="#overview-of-spatial-and-cross-shore-patterns"><span class="header-section-number">12.2</span> Overview of Spatial and Cross-Shore Patterns</a>
   <ul class="collapse">
-  <li><a href="#ssp119-projection" id="toc-ssp119-projection" class="nav-link" data-scroll-target="#ssp119-projection"><span class="header-section-number">12.2.1</span> SSP119 Projection</a></li>
-  <li><a href="#ssp370-projection" id="toc-ssp370-projection" class="nav-link" data-scroll-target="#ssp370-projection"><span class="header-section-number">12.2.2</span> SSP370 Projection</a></li>
-  <li><a href="#ssp585-projection" id="toc-ssp585-projection" class="nav-link" data-scroll-target="#ssp585-projection"><span class="header-section-number">12.2.3</span> SSP585 Projection</a></li>
+  <li><a href="#threshold-based-versus-random-forest-approaches" id="toc-threshold-based-versus-random-forest-approaches" class="nav-link" data-scroll-target="#threshold-based-versus-random-forest-approaches"><span class="header-section-number">12.2.1</span> Threshold-Based versus Random Forest Approaches</a></li>
+  <li><a href="#scenario-specific-projections" id="toc-scenario-specific-projections" class="nav-link" data-scroll-target="#scenario-specific-projections"><span class="header-section-number">12.2.2</span> Scenario-Specific Projections</a></li>
+  <li><a href="#synthesis-across-sea-level-rise-scenarios" id="toc-synthesis-across-sea-level-rise-scenarios" class="nav-link" data-scroll-target="#synthesis-across-sea-level-rise-scenarios"><span class="header-section-number">12.2.3</span> Synthesis Across Sea-Level Rise Scenarios</a></li>
+  </ul></li>
+  <li><a href="#impact-of-development-bund-walls-on-habitat-redistribution" id="toc-impact-of-development-bund-walls-on-habitat-redistribution" class="nav-link" data-scroll-target="#impact-of-development-bund-walls-on-habitat-redistribution"><span class="header-section-number">12.3</span> Impact of Development Bund Walls on Habitat Redistribution</a>
+  <ul class="collapse">
+  <li><a href="#algal-mat-responses-under-development-scenarios" id="toc-algal-mat-responses-under-development-scenarios" class="nav-link" data-scroll-target="#algal-mat-responses-under-development-scenarios"><span class="header-section-number">12.3.1</span> Algal Mat Responses Under Development Scenarios</a></li>
+  <li><a href="#influence-of-bund-walls-on-mangrove-distributions" id="toc-influence-of-bund-walls-on-mangrove-distributions" class="nav-link" data-scroll-target="#influence-of-bund-walls-on-mangrove-distributions"><span class="header-section-number">12.3.2</span> Influence of Bund Walls on Mangrove Distributions</a></li>
+  <li><a href="#figure-inclusions" id="toc-figure-inclusions" class="nav-link" data-scroll-target="#figure-inclusions"><span class="header-section-number">12.3.3</span> Figure Inclusions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -380,136 +366,503 @@ window.Quarto = {
 <p>Following the mangrove response to sea level rise predictions as described in <a href="Mangrove.html" class="quarto-xref"><span>Chapter 11</span></a>, we carried out additional only hydrodynamic simulations with various discrete time steps representing the 50 and 100-Year for different sea level rise scenarios. In these simulations, the bed level changes and mangrove distributions were fixed to the predicted values at the corresponding time steps. The hydrodynamic outputs were then used to predict the potential distribution of persistent algal mats under future sea level rise scenarios.</p>
 <section id="sec-algal-projections" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="sec-algal-projections"><span class="header-section-number">12.1</span> Projected Impact of Sea-Level Rise on Algal Mat Redistribution</h2>
-<p>To evaluate the long-term response of algal mats under climate change, numerical simulations were carried out across three IPCC Shared Socioeconomic Pathways: <strong>SSP119</strong> (low emissions / low SLR), <strong>SSP370</strong> (medium-to-high emissions / moderate SLR), and <strong>SSP585</strong> (high emissions / extreme SLR).</p>
-<div id="fig-urala-algal-ssp119" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p>To evaluate the long-term response of algal mats under climate change, numerical simulations were carried out across three IPCC Shared Socioeconomic Pathways: <strong>SSP119</strong> (low emissions / low SLR), <strong>SSP370</strong> (medium-to-high emissions / moderate SLR), and <strong>SSP585</strong> (high emissions / extreme SLR). <a href="#fig-urala-algal-ssp119" class="quarto-xref">Figure&nbsp;<span>12.1</span></a> - <a href="#fig-urala-algal-ssp585" class="quarto-xref">Figure&nbsp;<span>12.3</span></a> shows the predicted algal mat response to different SLR scenarios using the threshold based approach. Similary, <a href="#fig-urala-algal-ssp119-ml" class="quarto-xref">Figure&nbsp;<span>12.4</span></a> - <a href="#fig-urala-algal-ssp585-ml" class="quarto-xref">Figure&nbsp;<span>12.6</span></a> shows the predicted algal mat response to different SLR scenarios using Random Forest (RF) approach.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">SSP119</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">SSP370</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">SSP585</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="fig-urala-algal-ssp119" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-urala-algal-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_mang_algal_pred_ssp119.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="images/Urala_combined_mang_algal_pred_ssp119.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.1: Modelled spatial distribution of persistent algal mats (black shading) across the Urala study site for the present baseline scenario at Year 0 (a), and future projections under SSP119 at Year 50 (b) and Year 100 (c).
+Figure&nbsp;12.1: Modelled spatial distribution of persistent algal mats across the Urala study site using the <strong>threshold based approach</strong> under the <strong>SSP119</strong> climate scenario.
 </figcaption>
 </figure>
 </div>
-<div id="fig-urala-algal-ssp370" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="fig-urala-algal-ssp370" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-urala-algal-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_mang_algal_pred_ssp370.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="images/Urala_combined_mang_algal_pred_ssp370.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.2: Modelled spatial distribution of persistent algal mats (black shading) across the Urala study site for the present baseline scenario at Year 0 (a), and future projections under SSP370 at Year 50 (b) and Year 100 (c).
+Figure&nbsp;12.2: Modelled spatial distribution of persistent algal mats across the Urala study site using the <strong>threshold based approach</strong> under the <strong>SSP370</strong> climate scenario.
 </figcaption>
 </figure>
 </div>
-<div id="fig-urala-algal-ssp585" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div id="fig-urala-algal-ssp585" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-urala-algal-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_mang_algal_pred_ssp585.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<img src="images/Urala_combined_mang_algal_pred_ssp585.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.3: Modelled spatial distribution of persistent algal mats (black shading) across the Urala study site for the present baseline scenario at Year 0 (a), and future projections under SSP585 at Year 50 (b) and Year 100 (c).
+Figure&nbsp;12.3: Modelled spatial distribution of persistent algal mats across the Urala study site using the <strong>threshold based approach</strong> under the <strong>SSP585</strong> climate scenario.
 </figcaption>
 </figure>
 </div>
-<p>Furthermore, to illustrate the distributional changes of algal mats as well as the mangroves across the three SLR scenarios, we present a comparative analysis of the predicted spatial extent at Year 0, Year 50, and Year 100 for each scenario. The following sections provide a detailed description of the predicted trends and ecological implications associated with each SLR pathway.</p>
-<div id="fig-urala-algal-ssp119" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+</div>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">SSP119</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">SSP370</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">SSP585</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div id="fig-urala-algal-ssp119-ml" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-urala-algal-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_dist_mang_algal_pred_ssp119.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<div aria-describedby="fig-urala-algal-ssp119-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Urala_combined_mang_algal_pred_ssp119_ML.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.4: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP119. (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (chartreuse). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp119-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.4: Modelled spatial distribution of persistent algal mats across the Urala study site using the <strong>Random Forest machine learning approach</strong> under the <strong>SSP119</strong> climate scenario.
 </figcaption>
 </figure>
 </div>
-<div id="fig-urala-algal-ssp370" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="fig-urala-algal-ssp370-ml" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-urala-algal-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_dist_mang_algal_pred_ssp370.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<div aria-describedby="fig-urala-algal-ssp370-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Urala_combined_mang_algal_pred_ssp370_ML.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.5: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP370. (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (chartreuse). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp370-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.5: Modelled spatial distribution of persistent algal mats across the Urala study site using the <strong>Random Forest machine learning approach</strong> under the <strong>SSP370</strong> climate scenario.
 </figcaption>
 </figure>
 </div>
-<div id="fig-urala-algal-ssp585" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div id="fig-urala-algal-ssp585-ml" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-urala-algal-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_dist_mang_algal_pred_ssp585.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+<div aria-describedby="fig-urala-algal-ssp585-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Urala_combined_mang_algal_pred_ssp585_ML.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12.6: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP585. (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (chartreuse). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp585-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.6: Modelled spatial distribution of persistent algal mats across the Urala study site using the <strong>Random Forest machine learning approach</strong> under the <strong>SSP585</strong> climate scenario.
 </figcaption>
 </figure>
 </div>
+</div>
+</div>
+</div>
+<p>The threshold based and RF approaches produced broadly similar trajectories of habitat change, including the progressive fragmentation and landward redistribution of algal mats under increasing SLR. Mangrove distributions were identical between the two approaches because mangrove suitability was determined using the same underlying hydrodynamic and elevation criteria. Differences between the approaches therefore reflect their respective representations of algal mat suitability. Both approaches predicted a significant loss of algal mat area for SSP370 and the worst SLR scenario tested (SSP585) by Year 100. SSP119 showed clear habitat migration as expected with mild SLR; the hydrodynamic suitability zones tend to shift, which is clearly reflected in this scenario. Furthermore, to illustrate the distributional changes of algal mats and mangroves across the three SLR scenarios, we present a comparative analysis of the predicted spatial extent at Year 0, Year 50, and Year 100 for each scenario. The following sections provide a detailed description of the predicted trends and ecological implications associated with each SLR pathway.</p>
 </section>
-<section id="comparative-dynamics-across-scenarios" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="comparative-dynamics-across-scenarios"><span class="header-section-number">12.2</span> Comparative Dynamics Across Scenarios</h2>
-<p>At Year 0 (present condition), spatial mapping reveals an extensive, contiguous algal mat complex occupying high-elevation salt flats landward of the coastal mangrove fringe (panel a across all spatial figures). Under baseline hydrodynamic conditions, these expansive intertidal flats maintain low hydrodynamic shear stress (<span class="math inline">\(\tau_{\text{max}} \le 0.7\text{ N m}^{-2}\)</span>), suitable inundation frequencies, and shallow water depths during high tides (<span class="math inline">\(d_{98} \le 0.55\text{ m}\)</span>), allowing stable algal mats to flourish.</p>
-<p>The cross-shore transect profile at Year 0 (b) highlights distinct zonation between the two coastal ecosystems along the elevation gradient: * <strong>Mangrove Fringe (<span class="math inline">\(3,000\text{ m} \le x \le 8,000\text{ m}\)</span>):</strong> Mangroves achieve their highest alongshore coverage fraction (<span class="math inline">\(\sim 0.40–0.50\)</span>) on intertidal mudflats where mean bed elevation ranges between <span class="math inline">\(-1.0\text{ m}\)</span> and <span class="math inline">\(0.5\text{ m}\)</span>. * <strong>Algal Mat Zone (<span class="math inline">\(6,000\text{ m} \le x \le 11,000\text{ m}\)</span>):</strong> Algal mats dominate higher supratidal flats (<span class="math inline">\(0.5\text{ m} \le z \le 1.8\text{ m}\)</span>), reaching peak alongshore coverage fractions exceeding <span class="math inline">\(0.60–0.70\)</span>.</p>
-<hr>
-<section id="ssp119-projection" class="level3" data-number="12.2.1">
-<h3 data-number="12.2.1" class="anchored" data-anchor-id="ssp119-projection"><span class="header-section-number">12.2.1</span> SSP119 Projection</h3>
-<ul>
-<li><strong>Year 50 (c):</strong> Under mild sea-level rise, the algal mat footprint experiences minor fragmentation along its lower seaward margin (<span class="math inline">\(x \sim 6,000–8,000\text{ m}\)</span>). However, the cross-shore profile shows that high coverage fractions (<span class="math inline">\(\sim 0.40–0.60\)</span>) persist across the broad central supratidal flat (<span class="math inline">\(10,000\text{ m} \le x \le 14,000\text{ m}\)</span>), while the mangrove fringe maintains stable coverage fractions (<span class="math inline">\(\sim 0.20–0.30\)</span>) around <span class="math inline">\(x = 4,000–8,000\text{ m}\)</span>.</li>
-<li><strong>Year 100 (d):</strong> Increased inundation drives localised seaward retreat along outer boundaries. Despite this, a substantial portion of the algal mat profile remains viable across higher-elevation flats (<span class="math inline">\(10,000\text{ m} \le x \le 16,000\text{ m}\)</span>) where coverage fractions remain around <span class="math inline">\(0.20–0.40\)</span>. Mangrove distribution exhibits minimal cross-shore compression, holding steady low-density presence along channel edges.</li>
-</ul>
-<hr>
+<section id="overview-of-spatial-and-cross-shore-patterns" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="overview-of-spatial-and-cross-shore-patterns"><span class="header-section-number">12.2</span> Overview of Spatial and Cross-Shore Patterns</h2>
+<p>Spatial distribution maps and cross-shore transects were used to assess projected changes in mangrove and persistent algal mat distributions under three SLR scenarios (SSP119, SSP370 and SSP585). Spatial maps <a href="#fig-urala-ssp119-ml" class="quarto-xref">Figure&nbsp;<span>12.7</span></a> - <a href="#fig-urala-ssp585-thresh" class="quarto-xref">Figure&nbsp;<span>12.12</span></a> (Panel a) show the predicted distributions at Year 100, with algal mats and mangroves overlaid on bed elevation. A representative seaward-to-landward transect is indicated by a light green line. Alongshore-averaged cross-shore profiles <a href="#fig-urala-ssp119-ml" class="quarto-xref">Figure&nbsp;<span>12.7</span></a> - <a href="#fig-urala-ssp585-thresh" class="quarto-xref">Figure&nbsp;<span>12.12</span></a> (Panels b–d) summarise habitat coverage at Present (Year 0), Year 50 and Year 100, respectively. These profiles express the fraction of locations occupied by each habitat along the cross-shore distance, thereby integrating spatial variability across the modelled coastline. Furthermore, to isolate the differences in the approaches, we extracted the persistent algal distribution from both approaches across different SLR scenarios and compared in <a href="#fig-urala-threshold-vs-rf" class="quarto-xref">Figure&nbsp;<span>12.13</span></a>.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Random Forest (RF) Approach</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Threshold-Based Optimisation Approach</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">SSP119</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">SSP370</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">SSP585</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div id="fig-urala-ssp119-ml" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp119-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp119_ML.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp119-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.7: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP119 (Random Forest approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div id="fig-urala-ssp370-ml" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp370-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp370_ML.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp370-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.8: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP370 (Random Forest approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div id="fig-urala-ssp585-ml" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp585-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp585_ML.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp585-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.9: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP585 (Random Forest approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">SSP119</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">SSP370</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">SSP585</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div id="fig-urala-ssp119-thresh" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp119-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp119.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp119-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.10: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP119 (Threshold-based approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div id="fig-urala-ssp370-thresh" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp370-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp370.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp370-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.11: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP370 (Threshold-based approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<div id="fig-urala-ssp585-thresh" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp585-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp585.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp585-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.12: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP585 (Threshold-based approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="fig-urala-threshold-vs-rf" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-threshold-vs-rf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_Threshold_vs_RF_RedBlackGreen.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-threshold-vs-rf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.13: Direct comparison of predicted persitent algal mat coverage fractions between the threshold based approach (solid lines) and the Random Forest model (dashed lines) across three sea level rise scenarios: (a) SSP119, (b) SSP370, and (c) SSP585. Profiles illustrate temporal trajectories at Present (Year 0; black), Year 50 (green), and Year 100 (red) along a seaward to landward cross shore distance of 0 to 18,000 m as shown in panel (a) of <a href="#fig-urala-ssp119-ml" class="quarto-xref">Figure&nbsp;<span>12.7</span></a> - <a href="#fig-urala-ssp585-thresh" class="quarto-xref">Figure&nbsp;<span>12.12</span></a>
+</figcaption>
+</figure>
+</div>
+<section id="threshold-based-versus-random-forest-approaches" class="level3" data-number="12.2.1">
+<h3 data-number="12.2.1" class="anchored" data-anchor-id="threshold-based-versus-random-forest-approaches"><span class="header-section-number">12.2.1</span> Threshold-Based versus Random Forest Approaches</h3>
+<section id="baseline-habitat-distribution" class="level4" data-number="12.2.1.1">
+<h4 data-number="12.2.1.1" class="anchored" data-anchor-id="baseline-habitat-distribution"><span class="header-section-number">12.2.1.1</span> Baseline Habitat Distribution</h4>
+<p>At Present (Year 0; black curves in <a href="#fig-urala-threshold-vs-rf" class="quarto-xref">Figure&nbsp;<span>12.13</span></a>), the threshold-based approach (solid line) predicted a relatively broad, continuous distribution of algal mats between approximately 6,000 and 11,000 m along the cross-shore profile, with peak coverage fractions exceeding 0.60–0.70. In comparison, the Random Forest (RF) approach (dashed line) predicted a slighly narrower distribution, concentrated between approximately 5,000 and 9,500 m, with peak coverage of approximately 0.60–0.65.</p>
+<p>These differences reflect a slighly different representations of habitat suitability in the two approaches. The threshold-based model classifies locations according to predefined environmental criteria, whereas the RF model estimates habitat occurrence from relationships among environmental predictors and observed distributions. The differences in predicted extent and peak coverage indicate that the representation of algal mat suitability influences the estimated baseline distribution, particularly near habitat boundaries.</p>
 </section>
-<section id="ssp370-projection" class="level3" data-number="12.2.2">
-<h3 data-number="12.2.2" class="anchored" data-anchor-id="ssp370-projection"><span class="header-section-number">12.2.2</span> SSP370 Projection</h3>
-<ul>
-<li><strong>Year 50 (c):</strong> Moderate sea-level rise triggers drowning across low-lying algal mat habitat. The contiguous Year 0 mat fragments into isolated clusters near expanding tidal channels where inundation frequencies exceed tolerance limits (<span class="math inline">\(&gt; 0.95\)</span>). In the transect profile, the peak algal coverage fraction drops sharply from <span class="math inline">\(&gt; 0.60\)</span> down to <span class="math inline">\(\sim 0.30\)</span>, shifting landward toward <span class="math inline">\(x = 10,000–14,000\text{ m}\)</span>. Simultaneously, mangroves expand slightly inland along creek banks, raising mangrove coverage fractions up to <span class="math inline">\(\sim 0.35\)</span> around <span class="math inline">\(x = 6,000–8,000\text{ m}\)</span>.</li>
-<li><strong>Year 100 (d):</strong> Significant loss of persistent algal mat coverage occurs across the central domain. As deeper tidal networks expand inland, water depth thresholds (<span class="math inline">\(d_{98} &gt; 0.55\text{ m}\)</span>) are exceeded, restricting viable mat habitat to narrow landward bands (<span class="math inline">\(x &gt; 12,000\text{ m}\)</span>) with low coverage fractions (<span class="math inline">\(&lt; 0.15\)</span>). While the mangrove distribution curve appears broadly distributed across the domain (<span class="math inline">\(2,000\text{ m} \le x \le 12,000\text{ m}\)</span>), its alongshore coverage fraction remains low (<span class="math inline">\(\le 0.15–0.20\)</span>). This indicates that rather than forming a dense forest, mangroves are restricted to narrow, highly dispersed bands along dissected channel networks.</li>
-</ul>
-<hr>
+<section id="responses-to-increasing-sea-level-rise" class="level4" data-number="12.2.1.2">
+<h4 data-number="12.2.1.2" class="anchored" data-anchor-id="responses-to-increasing-sea-level-rise"><span class="header-section-number">12.2.1.2</span> Responses to Increasing Sea-Level Rise</h4>
+<p>Differences between the approaches become more apparent in their projections for Year 50 (green curves) and Year 100 (red curves; <a href="#fig-urala-threshold-vs-rf" class="quarto-xref">Figure&nbsp;<span>12.13</span></a>). The threshold-based model (solid lines) generally produces sharper transitions in algal mat coverage, reflecting the discrete classification of locations according to predefined suitability criteria. As environmental conditions move beyond these criteria, locations become unsuitable, resulting in abrupt reductions in predicted coverage.</p>
+<p>In contrast, the RF model (dashed lines) produces more gradual spatial transitions and retains low predicted coverage in some landward areas beyond 12,000 m under moderate-to-high SLR (Panels b and c in <a href="#fig-urala-threshold-vs-rf" class="quarto-xref">Figure&nbsp;<span>12.13</span></a>). This broader distribution of residual habitat reflects differences in how the two approaches represent environmental suitability. However, the persistence of predicted algal mat occurrence does not necessarily indicate the presence of viable ecological refugia, which would require further validation against environmental conditions and observed habitat distributions.</p>
+<p>Despite these differences, both approaches project a progressive decline in algal mat coverage as SLR intensifies. Their agreement in the overall direction of change indicates that the predicted loss of algal mat habitat is consistent across modelling approaches, although the spatial extent and continuity of the remaining habitat differ.</p>
 </section>
-<section id="ssp585-projection" class="level3" data-number="12.2.3">
-<h3 data-number="12.2.3" class="anchored" data-anchor-id="ssp585-projection"><span class="header-section-number">12.2.3</span> SSP585 Projection</h3>
+</section>
+<section id="scenario-specific-projections" class="level3" data-number="12.2.2">
+<h3 data-number="12.2.2" class="anchored" data-anchor-id="scenario-specific-projections"><span class="header-section-number">12.2.2</span> Scenario-Specific Projections</h3>
+<section id="ssp119-4" class="level4" data-number="12.2.2.1">
+<h4 data-number="12.2.2.1" class="anchored" data-anchor-id="ssp119-4"><span class="header-section-number">12.2.2.1</span> SSP119</h4>
+<p><strong>Present (Year 0).</strong> Both approaches predict distinct habitat zonation (black curves in Panel a of <a href="#fig-urala-threshold-vs-rf" class="quarto-xref">Figure&nbsp;<span>12.13</span></a>), with mangroves occupying the lower intertidal zone (3,000–8,000 m) and algal mats distributed farther landward across supratidal flats at elevations of approximately 0.5–1.8 m.</p>
+<p><strong>Year 50.</strong> Algal mat distributions remain relatively stable, although some fragmentation occurs near the seaward margin (6,000–8,000 m). Coverage remains approximately 0.40–0.60 across the central and landward flats (10,000–14,000 m; green curves in Panel a).</p>
+<p><strong>Year 100.</strong> Both approaches predict persistent algal mat coverage of approximately 0.20–0.40 between 10,000 and 16,000 m, while mangrove distributions remain comparatively stable along tidal channels and their margins (red curves in Panel a).</p>
+</section>
+<section id="ssp370-4" class="level4" data-number="12.2.2.2">
+<h4 data-number="12.2.2.2" class="anchored" data-anchor-id="ssp370-4"><span class="header-section-number">12.2.2.2</span> SSP370</h4>
+<p><strong>Year 50.</strong> Algal mats become increasingly fragmented near tidal channels and lower-lying areas, with peak coverage declining from baseline values above 0.60 to approximately 0.30–0.50. The main coverage band shifts landward towards 10,000–14,000 m (green curves in Panel b). Mangrove coverage increases locally along creek margins.</p>
+<p><strong>Year 100.</strong> Algal mat coverage declines substantially in both models (red curves in Panel b). The threshold-based approach predicts small, fragmented patches predominantly beyond 12,000 m, with coverage below 0.10. In contrast, the RF approach retains a more continuous, low-coverage distribution between approximately 6,000 and 16,000 m, with fractions of 0.10–0.15.</p>
+<p>Mangroves extend across a broader cross-shore range (2,000–12,000 m), but coverage generally remains below 0.15–0.20, indicating a dispersed distribution rather than extensive, continuous forest cover.</p>
+</section>
+<section id="ssp585-4" class="level4" data-number="12.2.2.3">
+<h4 data-number="12.2.2.3" class="anchored" data-anchor-id="ssp585-4"><span class="header-section-number">12.2.2.3</span> SSP585</h4>
+<p><strong>Year 50.</strong> Both approaches predict substantial reductions in algal mat coverage across the intertidal and supratidal flats, with peak coverage falling below 0.50 and the main distribution shifting towards 10,000–14,000 m (green curves in Panel c). Mangrove coverage temporarily increases between approximately 5,000 and 9,000 m, reaching around 0.40. This pattern suggests a potential expansion of suitable inundation conditions, although increased modelled coverage does not establish successful mangrove colonisation.</p>
+<p><strong>Year 100.</strong> Persistent algal mat habitat approaches complete loss across the profile (red curves in Panel c). The threshold-based model predicts coverage below 0.05 across almost the entire transect, whereas the RF model retains small residual peaks of approximately 0.10–0.15 between 11,000 and 17,000 m.</p>
+<p>Mangroves extend across approximately 2,000–15,000 m but remain below 0.15 coverage across most of the profile, indicating a dispersed distribution rather than extensive forest development.</p>
+</section>
+</section>
+<section id="synthesis-across-sea-level-rise-scenarios" class="level3" data-number="12.2.3">
+<h3 data-number="12.2.3" class="anchored" data-anchor-id="synthesis-across-sea-level-rise-scenarios"><span class="header-section-number">12.2.3</span> Synthesis Across Sea-Level Rise Scenarios</h3>
+<p>The projected changes in habitat distribution become progressively more pronounced from SSP119 to SSP585. Under SSP119, substantial algal mat coverage persists across the higher flats, whereas SSP370 produces greater fragmentation and contraction. Under SSP585, both approaches predict near-complete loss of persistent algal mat habitat by Year 100. Mangroves exhibit temporary increases in coverage in some areas but remain relatively sparse under the more severe scenarios.</p>
+<p>The two modelling approaches agree on the overall direction of change but differ in the predicted extent of residual algal mat habitat. The threshold-based model generally produces more restricted distributions with sharper spatial boundaries, while the RF model retains low coverage across a broader range of locations. These differences are most evident under SSP370 and SSP585, highlighting uncertainty in the spatial distribution of remaining habitat under increasing SLR. Overall, the results indicate substantial scenario-dependent restructuring of coastal wetland habitats, with the greatest losses of persistent algal mats under high SLR scenarios.</p>
+</section>
+</section>
+<section id="impact-of-development-bund-walls-on-habitat-redistribution" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="impact-of-development-bund-walls-on-habitat-redistribution"><span class="header-section-number">12.3</span> Impact of Development Bund Walls on Habitat Redistribution</h2>
+<p>To evaluate the cumulative effects of coastal development and climate change, additional simulations incorporated the Ashburton Salt Project bund walls (modelled as thin dam walls within Delft3D FM). These structural barriers significantly modify local hydrodynamics, tidal propagation, and inundation patterns compared to the non development scenarios driven solely by sea level rise (SLR) (<a href="#fig-urala-algal-ssp119" class="quarto-xref">Figure&nbsp;<span>12.1</span></a> through <a href="#fig-urala-ssp585-thresh" class="quarto-xref">Figure&nbsp;<span>12.12</span></a> versus their development counterparts). Panel (a) in all development figures displays the predicted Year 100 spatial distributions, while panels (b) through (d) illustrate the scenario-wise cross-shore profiles for Present (Year 0), Year 50, and Year 100, respectively.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">SSP119</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">SSP370</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false" href="">SSP585</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<div id="fig-urala-algal-dev-ssp119" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-algal-dev-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Urala_all_algalmat_compare_SSP119_kaya_dev_threshold.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-dev-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.14: Modelled spatial distribution of persistent algal mats and the Ashburton Salt Project development boundary across the Urala study site under the development scenario (<strong>threshold based approach</strong>) for the <strong>SSP119</strong> climate scenario.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<div id="fig-urala-algal-dev-ssp370" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-algal-dev-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Urala_all_algalmat_compare_SSP370_kaya_threshold_dev.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-dev-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.15: Modelled spatial distribution of persistent algal mats and the Ashburton Salt Project development boundary across the Urala study site under the development scenario (<strong>threshold based approach</strong>) for the <strong>SSP370</strong> climate scenario.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<div id="fig-urala-algal-dev-ssp585" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-algal-dev-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Urala_all_algalmat_compare_SSP585_kaya_threshold.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-dev-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.16: Modelled spatial distribution of persistent algal mats and the Ashburton Salt Project development boundary across the Urala study site under the development scenario (<strong>threshold based approach</strong>) for the <strong>SSP585</strong> climate scenario.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true" href="">SSP119</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false" href="">SSP370</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false" href="">SSP585</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<div id="fig-urala-algal-dev-ml-ssp119" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-algal-dev-ml-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Urala_all_algalmat_compare_SSP119_kaya_ML_dev.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-dev-ml-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.17: Modelled spatial distribution of persistent algal mats and the Ashburton Salt Project development boundary across the Urala study site under the development scenario (<strong>Random Forest machine learning approach</strong>) for the <strong>SSP119</strong> climate scenario.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<div id="fig-urala-algal-dev-ml-ssp370" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-algal-dev-ml-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Urala_all_algalmat_compare_SSP370_kaya_ML_dev.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-dev-ml-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.18: Modelled spatial distribution of persistent algal mats and the Ashburton Salt Project development boundary across the Urala study site under the development scenario (<strong>Random Forest machine learning approach</strong>) for the <strong>SSP370</strong> climate scenario.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<div id="fig-urala-algal-dev-ml-ssp585" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-algal-dev-ml-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Urala_all_algalmat_compare_SSP585_kaya_ML_dev.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-dev-ml-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.19: Modelled spatial distribution of persistent algal mats and the Ashburton Salt Project development boundary across the Urala study site under the development scenario (<strong>Random Forest machine learning approach</strong>) for the <strong>SSP585</strong> climate scenario.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true" href="">Random Forest (RF) Approach</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false" href="">Threshold-Based Optimisation Approach</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-10-1-tab">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true" href="">SSP119</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false" href="">SSP370</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-3" role="tab" aria-controls="tabset-8-3" aria-selected="false" href="">SSP585</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<div id="fig-urala-ssp119-ml-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp119-ml-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp119_ML_dev.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp119-ml-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.20: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP119 (Random Forest development approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red), mangroves (purple), and the Ashburton Salt Project development boundary (black line) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<div id="fig-urala-ssp370-ml-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp370-ml-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp370_ML_dev.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp370-ml-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.21: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP370 (Random Forest development approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red), mangroves (purple), and the Ashburton Salt Project development boundary (black line) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-8-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-3-tab">
+<div id="fig-urala-ssp585-ml-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp585-ml-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp585_ML_dev.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp585-ml-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.22: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP585 (Random Forest development approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red), mangroves (purple), and the Ashburton Salt Project development boundary (black line) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-10-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-2-tab">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true" href="">SSP119</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false" href="">SSP370</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-3" role="tab" aria-controls="tabset-9-3" aria-selected="false" href="">SSP585</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<div id="fig-urala-ssp119-thresh-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp119-thresh-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp119_threshold_dev.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp119-thresh-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.23: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP119 (Threshold-based development approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red), mangroves (purple), and the Ashburton Salt Project development boundary (black line) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<div id="fig-urala-ssp370-thresh-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp370-thresh-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp370_threshold_dev.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp370-thresh-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.24: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP370 (Threshold-based development approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red), mangroves (purple), and the Ashburton Salt Project development boundary (black line) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-9-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-3-tab">
+<div id="fig-urala-ssp585-thresh-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-ssp585-thresh-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/Urala_combined_dist_mang_algal_pred_ssp585_threshold_dev.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-ssp585-thresh-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.25: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP585 (Threshold-based development approach). (a) Spatial map showing predicted distribution of combined persistent algal mats (red), mangroves (purple), and the Ashburton Salt Project development boundary (black line) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (light green). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="algal-mat-responses-under-development-scenarios" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="algal-mat-responses-under-development-scenarios"><span class="header-section-number">12.3.1</span> Algal Mat Responses Under Development Scenarios</h3>
+<p>The inclusion of developmental bund walls imposes a profound constraint on algal mat distribution, primarily by blocking tidal flows and altering inundation frequencies within the project footprint (spanning approximately 10,000 to 16,000 m along the cross-shore profile).</p>
 <ul>
-<li><strong>Year 50 (c):</strong> Accelerated sea-level rise triggers rapid ecological drowning across mid-to-high intertidal flats. The extensive northern mat complex collapses, causing the cross-shore algal coverage fraction to decline to <span class="math inline">\(&lt; 0.25\)</span> beyond <span class="math inline">\(x = 10,000\text{ m}\)</span>. Mangroves temporarily display an opportunistic inland pulse between <span class="math inline">\(x = 5,000\text{ m}\)</span> and <span class="math inline">\(9,000\text{ m}\)</span> (fractions reaching <span class="math inline">\(\sim 0.40\)</span>) as higher water levels temporarily convert formerly hyper-saline salt flats into habitable intertidal zones.</li>
-<li><strong>Year 100 (d):</strong> Extreme sea-level rise drives near-complete collapse of persistent algal mats across the Urala domain. Channel network enlargement increases maximum bed shear stress (<span class="math inline">\(\tau_{\text{max}} &gt; 0.7\text{ N m}^{-2}\)</span>) and causes permanent inundation, virtually eliminating the environmental window required for algal mat stability (coverage fractions <span class="math inline">\(&lt; 0.05\)</span>). Although the mangrove distribution curve spans continuously from <span class="math inline">\(x = 2,000\text{ m}\)</span> to <span class="math inline">\(x = 15,000\text{ m}\)</span>, the alongshore coverage fraction stays under <span class="math inline">\(0.15\)</span> throughout. This demonstrates that mangroves do not form an expansive contiguous wetland, but rather survive as highly fragmented, low-density linear fringes fringing deep tidal creeks across an otherwise drowned landscape.</li>
+<li><p><strong>SSP119</strong> Without bund walls, SSP119 maintains a robust and widespread band of algal mats across the higher supratidal flats. However, with the bund walls in place, algal mat coverage within the impoundment zone experiences a substantial reduction, losing an estimated 30% to 50% of its prospective high elevation habitat area as direct tidal connectivity is restricted.</p></li>
+<li><p><strong>SSP370</strong> The combined pressure of moderate SLR and hydrodynamic blockage leads to severe fragmentation. Algal mat coverage is largely restricted to narrow exterior fringes outside the bund walls, accelerating habitat loss compared to the unconstrained baseline.</p></li>
+<li><p><strong>SSP585</strong> Under extreme SLR, both the non development and development simulations show severe declines, resulting in a near complete collapse of persistent algal mats by Year 100. Consequently, SSP585 exhibits the most similar trajectory between with and without bund wall conditions, as extreme sea level rise and inundation overwhelm both natural and modified hydrodynamic niches.</p></li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
+</section>
+<section id="influence-of-bund-walls-on-mangrove-distributions" class="level3" data-number="12.3.2">
+<h3 data-number="12.3.2" class="anchored" data-anchor-id="influence-of-bund-walls-on-mangrove-distributions"><span class="header-section-number">12.3.2</span> Influence of Bund Walls on Mangrove Distributions</h3>
+<p>Mangrove distributions exhibit distinct shifts due to the modified hydrodynamic regime imposed by the bund walls. Because mangroves rely heavily on tidal channel networks and intertidal inundation (typically occupying the lower to mid intertidal zone between 2,000 and 9,000 m), the physical obstruction of flow paths by the bund walls restricts their inland expansion potential. While unconstrained scenarios show temporary landward migration of mangroves under rising sea levels, the bund walls impede lateral tidal propagation, forcing mangroves to concentrate more densely along unblocked seaward channels and creek margins. This results in a more constrained and compartmentalised mangrove distribution with lower overall cross-shore dispersion compared to the unconstrained SLR projections.</p>
+<p>For comparative purposes, <a href="#fig-urala-rf-nodev-vs-dev" class="quarto-xref">Figure&nbsp;<span>12.26</span></a> and <a href="#fig-urala-threshold-nodev-vs-dev" class="quarto-xref">Figure&nbsp;<span>12.27</span></a> illustrate the direct scenario-wise cross shore profile comparisons between unconstrained (without development, solid lines) and bund wall constrained (with development, dashed lines) model runs across Present, Year 50, and Year 100 timeframes.</p>
+</section>
+<section id="figure-inclusions" class="level3" data-number="12.3.3">
+<h3 data-number="12.3.3" class="anchored"><span class="header-section-number">12.3.3</span> Figure Inclusions</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-11-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-1" role="tab" aria-controls="tabset-11-1" aria-selected="true" href="">Random Forest Approach</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-11-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-2" role="tab" aria-controls="tabset-11-2" aria-selected="false" href="">Threshold Based Approach</a></li></ul>
+<div class="tab-content">
+<div id="tabset-11-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-11-1-tab">
+<div id="fig-urala-rf-nodev-vs-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-rf-nodev-vs-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Urala_RF_NoDev_vs_Dev_RedBlackGreen.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-rf-nodev-vs-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.26: Cross shore comparison of predicted algal mat coverage fractions between unconstrained (without development, solid lines) and bund wall constrained (with development, dashed lines) model runs using the <strong>Random Forest approach</strong> across <strong>SSP119</strong> (a), <strong>SSP370</strong> (b), and <strong>SSP585</strong> (c) scenarios.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-11-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-11-2-tab">
+<div id="fig-urala-threshold-nodev-vs-dev" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-threshold-nodev-vs-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Urala_Threshold_NoDev_vs_Dev_RedBlackGreen.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-threshold-nodev-vs-dev-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.27: Cross shore comparison of predicted algal mat coverage fractions between unconstrained (without development, solid lines) and bund wall constrained (with development, dashed lines) model runs using the <strong>threshold based approach</strong> across <strong>SSP119</strong> (a), <strong>SSP370</strong> (b), and <strong>SSP585</strong> (c) scenarios.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>The comparative profiles reveal that the magnitude of deviation caused by the developmental bund walls varies distinctly across SLR scenarios as well as different modelling approaches:</p>
+<ul>
+<li><p><strong>SSP119:</strong> The most prominent divergence occurs across the central plateau (7,000 to 11,000 m). Without development, unconstrained hydrodynamic conditions allow robust algal mat coverage fractions to reach 0.50 to 0.65. With development, the restricted tidal exchange within the impoundment zone suppresses coverage fractions, creating a noticeable gap between solid and dashed curves during Year 50 and Year 100.</p></li>
+<li><p><strong>SSP370:</strong> Moderate SLR combined with structural blockage induces pronounced vertical and spatial compression. The threshold based approach exhibits sharper drop offs in suitability boundaries, whereas the RF model displays more gradual tapering, yet both models highlight a marked reduction in peak coverage within the mid profile region.</p></li>
+<li><p><strong>SSP585:</strong> Under extreme SLR, the difference between development and non development profiles narrows significantly. Because extreme sea level rise inundates and overwhelms the low lying coastal margins regardless of local bund structures, both modelling approaches project near identical, severely depressed coverage trajectories by Year 100.</p></li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Management Implications &amp; Strategic Recommendations
+<span class="screen-reader-only">Note</span>Summary: Trajectories of Algal Mats in Urala Under SLR and Development Scenarios
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The findings of this numerical modelling study provide process-based insights for coastal managers, regional planners, and environmental impact assessors operating along the Urala coastline. Earlier site assessments (e.g., <span class="citation" data-cites="SeashoreEngineering2021">Seashore Engineering (<a href="../References.html#ref-SeashoreEngineering2021" role="doc-biblioref">2021</a>)</span>) relied primarily on empirical morphometric relationships to infer habitat responses under generic sea-level rise allowances (<span class="math inline">\(0.4\text{ m}\)</span> by 2070 and <span class="math inline">\(0.9\text{ m}\)</span> by 2110). While those studies identified tidal creek network expansion as a key driver of habitat reorganization and long-term habitat loss, our process-based Delft3D-FM simulations reveal specific hydrodynamic thresholds and spatial nuances across different climate pathways.</p>
-<section id="habitat-migration-dynamics-and-supratidal-buffer-corridors" class="level3" data-number="12.2.4">
-<h3 data-number="12.2.4" class="anchored" data-anchor-id="habitat-migration-dynamics-and-supratidal-buffer-corridors"><span class="header-section-number">12.2.4</span> Habitat Migration Dynamics and Supratidal Buffer Corridors</h3>
-<p>Our results demonstrate that intertidal habitat response is highly scenario-dependent. Under lower emission pathways (SSP119), both mangrove and algal mat habitats demonstrate notable resilience, retaining spatial continuity through Year 100. Under moderate-to-high emission pathways (SSP370 and SSP585), both ecosystems attempt to migrate landward (<span class="math inline">\(x &gt; 10,000\text{ m}\)</span>), though algal mats experience significant landward compression compared to expanding channel-fringe mangroves.</p>
-<p><strong>Management Consideration:</strong> To accommodate natural landward migration and reduce the risk of coastal squeeze, coastal management frameworks could identify and designate supratidal buffer zones behind current high-elevation salt flats. Planning future coastal infrastructure (such as solar salt evaporation ponds, access roads, pipelines, bund walls, or pastoral fencing) with these migration pathways in mind (<span class="math inline">\(x = 10,000\text{ m}\)</span> to <span class="math inline">\(18,000\text{ m}\)</span>) would help preserve remaining intertidal accommodation space. Furthermore, proposed developments across the intertidal platform can directly obstruct or alter these migration trajectories, as detailed in <a href="Mangrove.html" class="quarto-xref"><span>Chapter 11</span></a>.</p>
-</section>
-<section id="differentiating-spatial-extent-from-ecosystem-quality-and-density" class="level3" data-number="12.2.5">
-<h3 data-number="12.2.5" class="anchored" data-anchor-id="differentiating-spatial-extent-from-ecosystem-quality-and-density"><span class="header-section-number">12.2.5</span> Differentiating Spatial Extent from Ecosystem Quality and Density</h3>
-<p>Broad spatial mapping and remote sensing can obscure localized changes in habitat quality when evaluating coastal wetland response. Under SSP370 and SSP585 at Year 100, mangrove presence appears across a broad cross-shore zone (<span class="math inline">\(2,000\text{ m}\)</span> to <span class="math inline">\(15,000\text{ m}\)</span>), which might initially resemble habitat expansion. However, cross-shore profile analysis indicates that alongshore coverage fractions remain low (<span class="math inline">\(\le 0.15\)</span>).</p>
-<p><strong>Management Consideration:</strong> Environmental monitoring programs could incorporate metrics for canopy closure, structural continuity, and biomass density alongside spatial boundaries. Low-density, linear fringe mangroves along dissected creeks offer different ecosystem function profiles—such as altered wave attenuation, shoreline stabilization, and blue carbon capacity—compared to dense, contiguous forests. Monitoring metrics that reflect habitat fragmentation provide a clearer picture of ecological state.</p>
-</section>
-<section id="recognition-and-conservation-of-cyanobacterial-algal-mats" class="level3" data-number="12.2.6">
-<h3 data-number="12.2.6" class="anchored" data-anchor-id="recognition-and-conservation-of-cyanobacterial-algal-mats"><span class="header-section-number">12.2.6</span> Recognition and Conservation of Cyanobacterial Algal Mats</h3>
-<p>In arid and semi-arid tropical environments like the Pilbara coast, cyanobacterial algal mats serve as primary producers and nitrogen fixers supporting intertidal food webs. Because they occupy high supratidal flats often categorized as salt flats, they are sometimes deprioritised in environmental evaluations relative to mangrove forests. Our results indicate that algal mats possess distinct hydrodynamic tolerance windows, experiencing structural fragmentation as maximum bed shear stress (<span class="math inline">\(\tau_{\text{max}} &gt; 0.7\text{ N m}^{-2}\)</span>) and inundation depths (<span class="math inline">\(d_{98} &gt; 0.55\text{ m}\)</span>) exceed physical suitability thresholds.</p>
-<p><strong>Management Consideration:</strong> Environmental assessments could explicitly evaluate persistent algal mat zones as sensitive intertidal habitats. Where coastal engineering works (such as channel dredging, culvert installations, or tidal barriers) are planned, evaluating their potential effects on shallow tidal inundation frequencies across supratidal flats would help mitigate premature disruption to these primary-producing communities.</p>
-</section>
-<section id="scenario-based-adaptive-management-thresholds" class="level3" data-number="12.2.7">
-<h3 data-number="12.2.7" class="anchored" data-anchor-id="scenario-based-adaptive-management-thresholds"><span class="header-section-number">12.2.7</span> Scenario-Based Adaptive Management Thresholds</h3>
-<p>Comparative analysis across climate pathways demonstrates that habitat survival and zonation rely heavily on the rate of sea-level rise. Under SSP119, intertidal zonation remains largely stable through Year 100, whereas higher pathways (SSP370/SSP585) lead to progressive habitat reorganization between Year 50 and Year 100 as tidal creek networks expand.</p>
-<p><strong>Management Consideration:</strong> Regional management frameworks could consider Dynamic Adaptive Policy Pathways (DAPP), linking planning thresholds to observed local sea-level rise rates and channel network expansion rather than fixed calendar years. Where monitoring indicates sea-level rise approaching intermediate thresholds (<span class="math inline">\(\sim 0.4\text{ m}\)</span>), proactive options—such as localized sediment management or living shoreline strategies—could be evaluated to assist high-value intertidal zones before extensive channel enlargement occurs.</p>
+<p>Synthesising multi-decadal predictions from our data driven frameworks (Random Forest vs.&nbsp;Threshold Based Optimisation) under the Salt Project development scenario reveals critical insights into how structural bund walls and modified hydrodynamics alter cyanobacterial mat communities across emission pathways:</p>
+<hr>
+<section id="scenario-profiles-ecosystem-trajectories" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="scenario-profiles-ecosystem-trajectories"><span class="header-section-number">12.4</span> Scenario Profiles &amp; Ecosystem Trajectories</h2>
+<ul>
+<li><strong>SSP119 (Low SLR – 0.5 m): Impoundment Suppression &amp; Restricted Supratidal Extent</strong>
+<ul>
+<li><em>Ecosystem Regime:</em> Constrained and compartmentalised.</li>
+<li><em>Trajectory:</em> Unlike the unconstrained baseline where algal mats expand freely across higher supratidal flats, the presence of developmental bund walls restricts direct tidal connectivity. Algal mat coverage within the impoundment zone experiences a substantial reduction, losing an estimated 30% to 50% of its prospective high elevation habitat area as internal wetting is impeded.</li>
+</ul></li>
+<li><strong>SSP370 (Intermediate SLR – 0.9 m): Structural Fragmentation &amp; Marginal Restriction</strong>
+<ul>
+<li><em>Ecosystem Regime:</em> High structural stress and severe spatial fragmentation.</li>
+<li><em>Trajectory:</em> The combined pressures of moderate sea level rise and hydrodynamic blockage accelerate habitat loss. Continuous mat sheets are heavily broken up, with survival restricted largely to narrow exterior fringes outside the bund walls as inundation patterns are fundamentally altered.</li>
+</ul></li>
+<li><strong>SSP585 (High SLR – 1.25 m): Severe Drowning &amp; Convergence with Baseline</strong>
+<ul>
+<li><em>Ecosystem Regime:</em> Catastrophic habitat collapse.</li>
+<li><em>Trajectory:</em> Extreme sea level rise and rapid inundation overwhelm both natural and modified hydrodynamic niches. By Year 100, both development and non development simulations show near total collapse and severe contraction of persistent algal mats, resulting in highly similar trajectories between constrained and unconstrained runs.</li>
+</ul></li>
+</ul>
+<hr>
+<blockquote class="blockquote">
+<p><strong>Insight:</strong> Developmental bund walls fundamentally reshape local hydrodynamics, imposing severe constraints on algal mat persistence within the project footprint by restricting tidal exchange. While low to moderate scenarios (SSP119 and SSP370) exhibit pronounced divergence from unconstrained baselines due to structural blockage, extreme sea level rise (SSP585) overrides these engineering constraints as widespread drowning overwhelms the entire coastal system.</p>
+</blockquote>
 </section>
 </div>
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-SeashoreEngineering2021" class="csl-entry" role="listitem">
-Seashore Engineering. (2021). <em>Ashburton salt response to sea level rise seashore engineering prepared for k+s salt</em>. <a href="https://www.epa.wa.gov.au/sites/default/files/PER_documentation2/G.%20Response%20to%20Sea%20Level%20Rise.pdf?">https://www.epa.wa.gov.au/sites/default/files/PER_documentation2/G.%20Response%20to%20Sea%20Level%20Rise.pdf?</a>
-</div>
-</div>
 </section>
 </section>
 

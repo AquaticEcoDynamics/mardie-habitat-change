@@ -1,0 +1,31 @@
+#### Sediment Characteristics and Particle-Size Distributions
+
+Sediment samples from Urala represent two contrasting substrate types: relatively sandy environments associated with channels and more exposed coastal surfaces, and finer-grained sediments characteristic of sheltered mudflats (@fig-psd-urala and @fig-psd-urala-mud). These differences provide context for interpreting the site's sedimentary environment and potential variation in sediment mobility across the intertidal landscape.
+
+::: {#fig-psd-urala}
+
+![](images/PSD_urala.png){fig-align="center" width="90%"}
+
+Particle-size distribution (PSD) representative of the general sandy substrate at Urala, showing a narrow, predominantly unimodal distribution dominated by medium-to-fine sand fractions ($100$–$500,\mu\text{m}$; $\Phi \approx 1.0$–$2.5$).
+
+:::
+
+::: {#fig-psd-urala-mud}
+
+![](images/PSD_urala_mud_flat.png){fig-align="center" width="90%"}
+
+Particle-size distribution (PSD) representative of Urala mudflat sediments, showing a broad, polymodal distribution extending from fine silts and clays ($<10,\mu\text{m}$) through fine sand ($\sim100,\mu\text{m}$) to coarse biogenic fragments ($800$–$1000,\mu\text{m}$).
+
+:::
+
+The sandy substrate exhibits a relatively narrow, well-defined grain-size distribution, with much of the material concentrated in the fine-to-medium sand range ($150$–$300,\mu\text{m}$). This distribution is consistent with sediment sorting in environments where tidal currents and wave action can transport finer particles away from exposed surfaces and channels. In contrast, the mudflat samples exhibit a broader distribution, with a principal peak near the fine-sand and coarse-silt boundary ($\sim80$–$100,\mu\text{m}$), a fine-grained component extending into silts and clays ($<10,\mu\text{m}$), and secondary coarse fractions around $800$–$1000,\mu\text{m}$ that may include shell fragments and other biogenic material.
+
+These contrasting sediment distributions are consistent with spatial differences in depositional conditions, from relatively energetic sandy environments to more sheltered settings where fine particles can settle. They provide useful environmental context for interpreting the potential response of the coastal landscape to changes in hydrodynamic forcing. However, the sediment measurements are used here to characterise the study site; they should not be interpreted as direct validation of sediment transport or morphological change unless those processes are explicitly represented and evaluated in the model.
+
+#### Geomorphology and Environmental Drivers
+
+Urala's geomorphology is defined by extensive barrier spits, dynamic creek mouths, interconnected tidal channels, and broad landward salt flats. The North Creek and South Creek systems provide important pathways for tidal exchange across the landscape, while their geometry and connectivity influence how water reaches adjacent intertidal surfaces. These features are particularly relevant when assessing the potential hydrodynamic consequences of infrastructure that intersects or constrains existing flow pathways.
+
+Hydrodynamic conditions are influenced by the regional tidal regime, with semi-diurnal tides driving regular inundation and currents within the principal creek channels. Tidal currents (predominantly) anextreme events with wave action contribute to sediment redistribution, while the relative sheltering of adjacent mudflats and mangrove margins favours the retention of finer material. Tropical cyclones and other intense weather events can temporarily increase wave energy and freshwater discharge, potentially altering creek mouths, barrier spits, and sediment distribution. The importance of these episodic processes varies spatially and through time.
+
+The region's hyper-arid climate and high evaporative demand further distinguish Urala from more humid coastal environments. Rainfall is highly variable, and major rainfall events may produce short-lived freshwater and sediment inputs against a background of prolonged dry conditions. These climatic and hydrodynamic drivers provide the environmental context for interpreting potential habitat responses, as outlined in [@sec-controls].

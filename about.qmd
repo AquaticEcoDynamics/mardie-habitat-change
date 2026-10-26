@@ -56,7 +56,7 @@ We acknowledge the Traditional Custodians of the land, and their connections to 
 The Western Australian Marine Science Institution advises that the information contained in this publication comprises general statements based on scientific research. The reader is advised and needs to be aware that such information may be incomplete or unable to be used in any specific situation. This information should therefore not solely be relied on when making commercial or other decisions. WAMSI and its partner organisations take no responsibility for the outcome of decisions based on information contained in this, or related, publications.
 
 ## Contributing Authors
-Project B of the Mardie Marine and Intertidal Research Offset Program has been led by Prof. Matthew Hipsey<sup>1,2</sup> and Prof. Ryan Lowe<sup>3</sup>, with extensive contributions to the research from the following project team:
+Project B of the Mardie Marine and Intertidal Research Offset Program was delivered by a collaborative research team, with project leadership provided by Prof. Matthew Hipsey<sup>1,2</sup> and Prof. Ryan Lowe<sup>3</sup>. The contributing research team included:
 
 * Daniel Raj David<sup>3</sup>
 * Xiaoya Luo<sup>3</sup>
@@ -68,7 +68,7 @@ Project B of the Mardie Marine and Intertidal Research Offset Program has been l
 * Kerry Bardot<sup>1,2</sup>
 
 <small>
-<sup>1</sup> Aquatic Ecodynamics, UWA  
+<sup>1</sup> Aquatic Ecodynamics, The University of Western Australia, Crawley WA 6009, Australia  
 <sup>2</sup> Centre for Water and Spatial Sciences, The University of Western Australia, Crawley WA 6009, Australia  
 <sup>3</sup> School of Earth and Oceans, The University of Western Australia, Crawley WA 6009, Australia  
 <sup>4</sup> Deltares, Delft, The Netherlands  
@@ -90,4 +90,4 @@ The key development and review milestones for this documentation are summarised 
 
 | Milestone | Date |
 |:---|:---|
-| Draft documentation | 20/10/2026 |
+| Draft documentation | 30/10/2026 |

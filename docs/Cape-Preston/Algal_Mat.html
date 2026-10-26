@@ -23,27 +23,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -93,35 +73,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -340,20 +291,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#sec-algal-projections" id="toc-sec-algal-projections" class="nav-link active" data-scroll-target="#sec-algal-projections"><span class="header-section-number">15.1</span> Projected Impact of Sea-Level Rise on Algal Mat Redistribution</a></li>
-  <li><a href="#comparative-dynamics-across-scenarios" id="toc-comparative-dynamics-across-scenarios" class="nav-link" data-scroll-target="#comparative-dynamics-across-scenarios"><span class="header-section-number">15.2</span> Comparative Dynamics Across Scenarios</a>
-  <ul class="collapse">
-  <li><a href="#ssp119-projection" id="toc-ssp119-projection" class="nav-link" data-scroll-target="#ssp119-projection"><span class="header-section-number">15.2.1</span> SSP119 Projection</a></li>
-  <li><a href="#ssp370-projection" id="toc-ssp370-projection" class="nav-link" data-scroll-target="#ssp370-projection"><span class="header-section-number">15.2.2</span> SSP370 Projection</a></li>
-  <li><a href="#ssp585-projection" id="toc-ssp585-projection" class="nav-link" data-scroll-target="#ssp585-projection"><span class="header-section-number">15.2.3</span> SSP585 Projection</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -378,140 +317,8 @@ window.Quarto = {
 
 
 <p>Following the mangrove response to sea level rise predictions as described in <a href="../Urala/Mangrove.html" class="quarto-xref"><span>Chapter 11</span></a>, we carried out additional only hydrodynamic simulations with various discrete time steps representing the 50 and 100-Year for different sea level rise scenarios. In these simulations, the bed level changes and mangrove distributions were fixed to the predicted values at the corresponding time steps. The hydrodynamic outputs were then used to predict the potential distribution of persistent algal mats under future sea level rise scenarios.</p>
-<section id="sec-algal-projections" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="sec-algal-projections"><span class="header-section-number">15.1</span> Projected Impact of Sea-Level Rise on Algal Mat Redistribution</h2>
-<p>To evaluate the long-term response of algal mats under climate change, numerical simulations were carried out across three IPCC Shared Socioeconomic Pathways: <strong>SSP119</strong> (low emissions / low SLR), <strong>SSP370</strong> (medium-to-high emissions / moderate SLR), and <strong>SSP585</strong> (high emissions / extreme SLR).</p>
-<div id="fig-urala-algal-ssp119" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-urala-algal-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_mang_algal_pred_ssp119.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;15.1: Modelled spatial distribution of persistent algal mats (black shading) across the Urala study site for the present baseline scenario at Year 0 (a), and future projections under SSP119 at Year 50 (b) and Year 100 (c).
-</figcaption>
-</figure>
-</div>
-<div id="fig-urala-algal-ssp370" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-urala-algal-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_mang_algal_pred_ssp370.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;15.2: Modelled spatial distribution of persistent algal mats (black shading) across the Urala study site for the present baseline scenario at Year 0 (a), and future projections under SSP370 at Year 50 (b) and Year 100 (c).
-</figcaption>
-</figure>
-</div>
-<div id="fig-urala-algal-ssp585" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-urala-algal-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_mang_algal_pred_ssp585.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;15.3: Modelled spatial distribution of persistent algal mats (black shading) across the Urala study site for the present baseline scenario at Year 0 (a), and future projections under SSP585 at Year 50 (b) and Year 100 (c).
-</figcaption>
-</figure>
-</div>
-<p>Furthermore, to illustrate the distributional changes of algal mats as well as the mangroves across the three SLR scenarios, we present a comparative analysis of the predicted spatial extent at Year 0, Year 50, and Year 100 for each scenario. The following sections provide a detailed description of the predicted trends and ecological implications associated with each SLR pathway.</p>
-<div id="fig-urala-algal-ssp119" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-urala-algal-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_dist_mang_algal_pred_ssp119.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;15.4: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP119. (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (chartreuse). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
-</figcaption>
-</figure>
-</div>
-<div id="fig-urala-algal-ssp370" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-urala-algal-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_dist_mang_algal_pred_ssp370.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;15.5: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP370. (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (chartreuse). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
-</figcaption>
-</figure>
-</div>
-<div id="fig-urala-algal-ssp585" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-urala-algal-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/Urala_combined_dist_mang_algal_pred_ssp585.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-algal-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;15.6: Spatial distribution and cross-shore profile analysis of mangroves and algal mats across the Urala study site under scenario SSP585. (a) Spatial map showing predicted distribution of combined persistent algal mats (red) and mangroves (purple) overlaid on bed elevation at Year 100, with a representative seaward-to-landward transect line (chartreuse). (b–d) Along-shore averaged cross-shore profiles for Present Scenario (Year 0), Year 50, and Year 100, respectively. Solid black lines depict mean bed elevation (<span class="math inline">\(\pm 1\)</span> standard deviation shaded in tan), while secondary right axes display the spatial coverage fraction of mangrove density (green) and algal mat density (red) along the cross-shore continuum.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="comparative-dynamics-across-scenarios" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="comparative-dynamics-across-scenarios"><span class="header-section-number">15.2</span> Comparative Dynamics Across Scenarios</h2>
-<p>At Year 0 (present condition), spatial mapping reveals an extensive, contiguous algal mat complex occupying high-elevation salt flats landward of the coastal mangrove fringe (panel a across all spatial figures). Under baseline hydrodynamic conditions, these expansive intertidal flats maintain low hydrodynamic shear stress (<span class="math inline">\(\tau_{\text{max}} \le 0.7\text{ N m}^{-2}\)</span>), suitable inundation frequencies, and shallow water depths during high tides (<span class="math inline">\(d_{98} \le 0.55\text{ m}\)</span>), allowing stable algal mats to flourish.</p>
-<p>The cross-shore transect profile at Year 0 (b) highlights distinct zonation between the two coastal ecosystems along the elevation gradient: * <strong>Mangrove Fringe (<span class="math inline">\(3,000\text{ m} \le x \le 8,000\text{ m}\)</span>):</strong> Mangroves achieve their highest alongshore coverage fraction (<span class="math inline">\(\sim 0.40–0.50\)</span>) on intertidal mudflats where mean bed elevation ranges between <span class="math inline">\(-1.0\text{ m}\)</span> and <span class="math inline">\(0.5\text{ m}\)</span>. * <strong>Algal Mat Zone (<span class="math inline">\(6,000\text{ m} \le x \le 11,000\text{ m}\)</span>):</strong> Algal mats dominate higher supratidal flats (<span class="math inline">\(0.5\text{ m} \le z \le 1.8\text{ m}\)</span>), reaching peak alongshore coverage fractions exceeding <span class="math inline">\(0.60–0.70\)</span>.</p>
-<hr>
-<section id="ssp119-projection" class="level3" data-number="15.2.1">
-<h3 data-number="15.2.1" class="anchored" data-anchor-id="ssp119-projection"><span class="header-section-number">15.2.1</span> SSP119 Projection</h3>
-<ul>
-<li><strong>Year 50 (c):</strong> Under mild sea-level rise, the algal mat footprint experiences minor fragmentation along its lower seaward margin (<span class="math inline">\(x \sim 6,000–8,000\text{ m}\)</span>). However, the cross-shore profile shows that high coverage fractions (<span class="math inline">\(\sim 0.40–0.60\)</span>) persist across the broad central supratidal flat (<span class="math inline">\(10,000\text{ m} \le x \le 14,000\text{ m}\)</span>), while the mangrove fringe maintains stable coverage fractions (<span class="math inline">\(\sim 0.20–0.30\)</span>) around <span class="math inline">\(x = 4,000–8,000\text{ m}\)</span>.</li>
-<li><strong>Year 100 (d):</strong> Increased inundation drives localised seaward retreat along outer boundaries. Despite this, a substantial portion of the algal mat profile remains viable across higher-elevation flats (<span class="math inline">\(10,000\text{ m} \le x \le 16,000\text{ m}\)</span>) where coverage fractions remain around <span class="math inline">\(0.20–0.40\)</span>. Mangrove distribution exhibits minimal cross-shore compression, holding steady low-density presence along channel edges.</li>
-</ul>
-<hr>
-</section>
-<section id="ssp370-projection" class="level3" data-number="15.2.2">
-<h3 data-number="15.2.2" class="anchored" data-anchor-id="ssp370-projection"><span class="header-section-number">15.2.2</span> SSP370 Projection</h3>
-<ul>
-<li><strong>Year 50 (c):</strong> Moderate sea-level rise triggers drowning across low-lying algal mat habitat. The contiguous Year 0 mat fragments into isolated clusters near expanding tidal channels where inundation frequencies exceed tolerance limits (<span class="math inline">\(&gt; 0.95\)</span>). In the transect profile, the peak algal coverage fraction drops sharply from <span class="math inline">\(&gt; 0.60\)</span> down to <span class="math inline">\(\sim 0.30\)</span>, shifting landward toward <span class="math inline">\(x = 10,000–14,000\text{ m}\)</span>. Simultaneously, mangroves expand slightly inland along creek banks, raising mangrove coverage fractions up to <span class="math inline">\(\sim 0.35\)</span> around <span class="math inline">\(x = 6,000–8,000\text{ m}\)</span>.</li>
-<li><strong>Year 100 (d):</strong> Significant loss of persistent algal mat coverage occurs across the central domain. As deeper tidal networks expand inland, water depth thresholds (<span class="math inline">\(d_{98} &gt; 0.55\text{ m}\)</span>) are exceeded, restricting viable mat habitat to narrow landward bands (<span class="math inline">\(x &gt; 12,000\text{ m}\)</span>) with low coverage fractions (<span class="math inline">\(&lt; 0.15\)</span>). While the mangrove distribution curve appears broadly distributed across the domain (<span class="math inline">\(2,000\text{ m} \le x \le 12,000\text{ m}\)</span>), its alongshore coverage fraction remains low (<span class="math inline">\(\le 0.15–0.20\)</span>). This indicates that rather than forming a dense forest, mangroves are restricted to narrow, highly dispersed bands along dissected channel networks.</li>
-</ul>
-<hr>
-</section>
-<section id="ssp585-projection" class="level3" data-number="15.2.3">
-<h3 data-number="15.2.3" class="anchored" data-anchor-id="ssp585-projection"><span class="header-section-number">15.2.3</span> SSP585 Projection</h3>
-<ul>
-<li><strong>Year 50 (c):</strong> Accelerated sea-level rise triggers rapid ecological drowning across mid-to-high intertidal flats. The extensive northern mat complex collapses, causing the cross-shore algal coverage fraction to decline to <span class="math inline">\(&lt; 0.25\)</span> beyond <span class="math inline">\(x = 10,000\text{ m}\)</span>. Mangroves temporarily display an opportunistic inland pulse between <span class="math inline">\(x = 5,000\text{ m}\)</span> and <span class="math inline">\(9,000\text{ m}\)</span> (fractions reaching <span class="math inline">\(\sim 0.40\)</span>) as higher water levels temporarily convert formerly hyper-saline salt flats into habitable intertidal zones.</li>
-<li><strong>Year 100 (d):</strong> Extreme sea-level rise drives near-complete collapse of persistent algal mats across the Urala domain. Channel network enlargement increases maximum bed shear stress (<span class="math inline">\(\tau_{\text{max}} &gt; 0.7\text{ N m}^{-2}\)</span>) and causes permanent inundation, virtually eliminating the environmental window required for algal mat stability (coverage fractions <span class="math inline">\(&lt; 0.05\)</span>). Although the mangrove distribution curve spans continuously from <span class="math inline">\(x = 2,000\text{ m}\)</span> to <span class="math inline">\(x = 15,000\text{ m}\)</span>, the alongshore coverage fraction stays under <span class="math inline">\(0.15\)</span> throughout. This demonstrates that mangroves do not form an expansive contiguous wetland, but rather survive as highly fragmented, low-density linear fringes fringing deep tidal creeks across an otherwise drowned landscape.</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Management Implications &amp; Strategic Recommendations
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The findings of this numerical modelling study provide process-based insights for coastal managers, regional planners, and environmental impact assessors operating along the Urala coastline. Earlier site assessments (e.g., <span class="citation" data-cites="SeashoreEngineering2021">Seashore Engineering (<a href="../References.html#ref-SeashoreEngineering2021" role="doc-biblioref">2021</a>)</span>) relied primarily on empirical morphometric relationships to infer habitat responses under generic sea-level rise allowances (<span class="math inline">\(0.4\text{ m}\)</span> by 2070 and <span class="math inline">\(0.9\text{ m}\)</span> by 2110). While those studies identified tidal creek network expansion as a key driver of habitat reorganization and long-term habitat loss, our process-based Delft3D-FM simulations reveal specific hydrodynamic thresholds and spatial nuances across different climate pathways.</p>
-<section id="habitat-migration-dynamics-and-supratidal-buffer-corridors" class="level3" data-number="15.2.4">
-<h3 data-number="15.2.4" class="anchored" data-anchor-id="habitat-migration-dynamics-and-supratidal-buffer-corridors"><span class="header-section-number">15.2.4</span> Habitat Migration Dynamics and Supratidal Buffer Corridors</h3>
-<p>Our results demonstrate that intertidal habitat response is highly scenario-dependent. Under lower emission pathways (SSP119), both mangrove and algal mat habitats demonstrate notable resilience, retaining spatial continuity through Year 100. Under moderate-to-high emission pathways (SSP370 and SSP585), both ecosystems attempt to migrate landward (<span class="math inline">\(x &gt; 10,000\text{ m}\)</span>), though algal mats experience significant landward compression compared to expanding channel-fringe mangroves.</p>
-<p><strong>Management Consideration:</strong> To accommodate natural landward migration and reduce the risk of coastal squeeze, coastal management frameworks could identify and designate supratidal buffer zones behind current high-elevation salt flats. Planning future coastal infrastructure (such as solar salt evaporation ponds, access roads, pipelines, bund walls, or pastoral fencing) with these migration pathways in mind (<span class="math inline">\(x = 10,000\text{ m}\)</span> to <span class="math inline">\(18,000\text{ m}\)</span>) would help preserve remaining intertidal accommodation space. Furthermore, proposed developments across the intertidal platform can directly obstruct or alter these migration trajectories, as detailed in <a href="../Urala/Mangrove.html" class="quarto-xref"><span>Chapter 11</span></a>.</p>
-</section>
-<section id="differentiating-spatial-extent-from-ecosystem-quality-and-density" class="level3" data-number="15.2.5">
-<h3 data-number="15.2.5" class="anchored" data-anchor-id="differentiating-spatial-extent-from-ecosystem-quality-and-density"><span class="header-section-number">15.2.5</span> Differentiating Spatial Extent from Ecosystem Quality and Density</h3>
-<p>Broad spatial mapping and remote sensing can obscure localized changes in habitat quality when evaluating coastal wetland response. Under SSP370 and SSP585 at Year 100, mangrove presence appears across a broad cross-shore zone (<span class="math inline">\(2,000\text{ m}\)</span> to <span class="math inline">\(15,000\text{ m}\)</span>), which might initially resemble habitat expansion. However, cross-shore profile analysis indicates that alongshore coverage fractions remain low (<span class="math inline">\(\le 0.15\)</span>).</p>
-<p><strong>Management Consideration:</strong> Environmental monitoring programs could incorporate metrics for canopy closure, structural continuity, and biomass density alongside spatial boundaries. Low-density, linear fringe mangroves along dissected creeks offer different ecosystem function profiles—such as altered wave attenuation, shoreline stabilization, and blue carbon capacity—compared to dense, contiguous forests. Monitoring metrics that reflect habitat fragmentation provide a clearer picture of ecological state.</p>
-</section>
-<section id="recognition-and-conservation-of-cyanobacterial-algal-mats" class="level3" data-number="15.2.6">
-<h3 data-number="15.2.6" class="anchored" data-anchor-id="recognition-and-conservation-of-cyanobacterial-algal-mats"><span class="header-section-number">15.2.6</span> Recognition and Conservation of Cyanobacterial Algal Mats</h3>
-<p>In arid and semi-arid tropical environments like the Pilbara coast, cyanobacterial algal mats serve as primary producers and nitrogen fixers supporting intertidal food webs. Because they occupy high supratidal flats often categorized as salt flats, they are sometimes deprioritised in environmental evaluations relative to mangrove forests. Our results indicate that algal mats possess distinct hydrodynamic tolerance windows, experiencing structural fragmentation as maximum bed shear stress (<span class="math inline">\(\tau_{\text{max}} &gt; 0.7\text{ N m}^{-2}\)</span>) and inundation depths (<span class="math inline">\(d_{98} &gt; 0.55\text{ m}\)</span>) exceed physical suitability thresholds.</p>
-<p><strong>Management Consideration:</strong> Environmental assessments could explicitly evaluate persistent algal mat zones as sensitive intertidal habitats. Where coastal engineering works (such as channel dredging, culvert installations, or tidal barriers) are planned, evaluating their potential effects on shallow tidal inundation frequencies across supratidal flats would help mitigate premature disruption to these primary-producing communities.</p>
-</section>
-<section id="scenario-based-adaptive-management-thresholds" class="level3" data-number="15.2.7">
-<h3 data-number="15.2.7" class="anchored" data-anchor-id="scenario-based-adaptive-management-thresholds"><span class="header-section-number">15.2.7</span> Scenario-Based Adaptive Management Thresholds</h3>
-<p>Comparative analysis across climate pathways demonstrates that habitat survival and zonation rely heavily on the rate of sea-level rise. Under SSP119, intertidal zonation remains largely stable through Year 100, whereas higher pathways (SSP370/SSP585) lead to progressive habitat reorganization between Year 50 and Year 100 as tidal creek networks expand.</p>
-<p><strong>Management Consideration:</strong> Regional management frameworks could consider Dynamic Adaptive Policy Pathways (DAPP), linking planning thresholds to observed local sea-level rise rates and channel network expansion rather than fixed calendar years. Where monitoring indicates sea-level rise approaching intermediate thresholds (<span class="math inline">\(\sim 0.4\text{ m}\)</span>), proactive options—such as localized sediment management or living shoreline strategies—could be evaluated to assist high-value intertidal zones before extensive channel enlargement occurs.</p>
-</section>
-</div>
-</div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-SeashoreEngineering2021" class="csl-entry" role="listitem">
-Seashore Engineering. (2021). <em>Ashburton salt response to sea level rise seashore engineering prepared for k+s salt</em>. <a href="https://www.epa.wa.gov.au/sites/default/files/PER_documentation2/G.%20Response%20to%20Sea%20Level%20Rise.pdf?">https://www.epa.wa.gov.au/sites/default/files/PER_documentation2/G.%20Response%20to%20Sea%20Level%20Rise.pdf?</a>
-</div>
-</div>
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

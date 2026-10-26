@@ -243,7 +243,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Giralia/Algal_Mat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Algal mats Response to Sea Level Rise</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Cyanobacterial mat Response to Sea Level Rise</span></span></a>
   </div>
 </li>
       </ul>
@@ -272,7 +272,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Urala/Algal_Mat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Algal mat response to future sea level rise</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Cyanobacterial mat Response to Sea Level Rise</span></span></a>
   </div>
 </li>
       </ul>
@@ -289,19 +289,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Cape-Preston/Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Study Site: Cape Preston</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Cape-Preston/Mangrove.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Cape-Preston/Algal_Mat.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Algal mat response to future sea level rise</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Cyanobacterial mat Response to Sea Level Rise</span></span></a>
   </div>
 </li>
       </ul>
@@ -359,7 +359,7 @@ window.Quarto = {
   <li><a href="#derivation-of-representative-tidal-forcing" id="toc-derivation-of-representative-tidal-forcing" class="nav-link" data-scroll-target="#derivation-of-representative-tidal-forcing"><span class="header-section-number">3.3.3</span> Derivation of representative tidal forcing</a></li>
   <li><a href="#salinity-representation-and-model-limitations" id="toc-salinity-representation-and-model-limitations" class="nav-link" data-scroll-target="#salinity-representation-and-model-limitations"><span class="header-section-number">3.3.4</span> Salinity representation and model limitations</a></li>
   </ul></li>
-  <li><a href="#sea-level-rise-slr-scenarios" id="toc-sea-level-rise-slr-scenarios" class="nav-link" data-scroll-target="#sea-level-rise-slr-scenarios"><span class="header-section-number">3.4</span> Sea-Level Rise (SLR) Scenarios</a>
+  <li><a href="#sec-SLR" id="toc-sec-SLR" class="nav-link" data-scroll-target="#sec-SLR"><span class="header-section-number">3.4</span> Sea-Level Rise (SLR) Scenarios</a>
   <ul class="collapse">
   <li><a href="#rationale-and-objectives-of-the-three-tiered-approach" id="toc-rationale-and-objectives-of-the-three-tiered-approach" class="nav-link" data-scroll-target="#rationale-and-objectives-of-the-three-tiered-approach"><span class="header-section-number">3.4.1</span> Rationale and Objectives of the Three-Tiered Approach</a></li>
   </ul></li>
@@ -617,12 +617,12 @@ Table&nbsp;3.2: Dominant astronomical tidal constituents selected for the repres
 <p>Salinity is an important environmental control on mangrove establishment, growth and survival, particularly in the hyper-arid West Pilbara, where evaporation, limited freshwater input and restricted tidal exchange can produce hypersaline conditions. Field observations indicate that salinity is approximately 35–55 ppt near creek mouths, increases towards the landward intertidal zone and can exceed 140 ppt across salt-flat environments. These spatial gradients suggest that salinity may constrain mangrove colonisation even where inundation and elevation conditions become physically suitable.</p>
 <p>During initial sensitivity testing, we encountered two difficulties when attempting to represent salinity in the modelling framework. First, stable simulations (short term runs) did not reproduce the high salinity concentrations observed in the landward intertidal and salt-flat environments, with modelled values generally remaining below approximately 55 ppt. Second, longer simulations exhibited numerical instability associated with wetting and drying transitions. In some runs, salinity increased sharply in cells undergoing wetting and drying, eventually reaching the model’s upper limit of 500 ppt. These extreme values (instability) subsequently spread across the computational domain, causing the simulation to crash.</p>
 <p>These behaviours may be associated with the numerical treatment of salt during wetting and drying, including the handling of accumulated salt as cells become dry. However, the underlying cause was not investigated further, and the observed instability cannot be attributed conclusively to a particular numerical mechanism.</p>
-<p>Consequently, salinity was excluded from the predictive framework. However, it is possible to indirectly represent the influence of salinity through other variables, such as the timing and duration of inundation events, the inundation fittness curve of the mangrove growth (see also <span class="quarto-unresolved-ref">?sec-urala-mangrove</span> where we attempt to include the influence). It is noteworthy to mention that several existing studies have also omitted salinity in their approach e.g., <span class="citation" data-cites="Xie2022">Xie et al. (<a href="References.html#ref-Xie2022" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="VanMaanen2015">Van Maanen et al. (<a href="References.html#ref-VanMaanen2015" role="doc-biblioref">2015</a>)</span>; <span class="citation" data-cites="Willemsen2022">Willemsen et al. (<a href="References.html#ref-Willemsen2022" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="Dunlop2025">Dunlop et al. (<a href="References.html#ref-Dunlop2025" role="doc-biblioref">2025</a>)</span>. The omission reflects a modelling constraint rather than an assumption that salinity is ecologically unimportant.</p>
+<p>Consequently, salinity was excluded from the predictive framework. However, it is possible to indirectly represent the influence of salinity through other variables, such as the timing and duration of inundation events, the inundation fittness curve of the mangrove growth (see also <a href="Urala/Mangrove.html" class="quarto-xref"><span>Chapter 11</span></a> where we attempt to include the influence). It is noteworthy to mention that several existing studies have also omitted salinity in their approach e.g., <span class="citation" data-cites="Xie2022">Xie et al. (<a href="References.html#ref-Xie2022" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="VanMaanen2015">Van Maanen et al. (<a href="References.html#ref-VanMaanen2015" role="doc-biblioref">2015</a>)</span>; <span class="citation" data-cites="Willemsen2022">Willemsen et al. (<a href="References.html#ref-Willemsen2022" role="doc-biblioref">2022</a>)</span>; <span class="citation" data-cites="Dunlop2025">Dunlop et al. (<a href="References.html#ref-Dunlop2025" role="doc-biblioref">2025</a>)</span>. The omission reflects a modelling constraint rather than an assumption that salinity is ecologically unimportant.</p>
 <p>This simplification has important implications for interpreting the predictions. Even with the indirect representation of salinity, the framework can identify locations where the modelled physical conditions are consistent with mangrove establishment, but it cannot independently determine whether salinity would permit successful establishment or sustained growth. Consequently, some locations predicted to be suitable may remain unsuitable under actual hypersaline conditions, particularly in the upper intertidal zone and on salt flats. The resulting predictions should therefore be interpreted as potential habitat distributions under the represented physical and ecological processes, rather than definitive forecasts of realised mangrove distribution.</p>
 </section>
 </section>
-<section id="sea-level-rise-slr-scenarios" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="sea-level-rise-slr-scenarios"><span class="header-section-number">3.4</span> Sea-Level Rise (SLR) Scenarios</h2>
+<section id="sec-SLR" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-SLR"><span class="header-section-number">3.4</span> Sea-Level Rise (SLR) Scenarios</h2>
 <p>To evaluate the future response of intertidal ecosystems to accelerating environmental change, we examine three Shared Socioeconomic Pathway (SSP) scenarios from the Intergovernmental Panel on Climate Change <span class="citation" data-cites="Calvin2023 ONeill2016 FoxKemper2021 Garner2021">(<a href="References.html#ref-Calvin2023" role="doc-biblioref">Calvin et al., 2023</a>; <a href="References.html#ref-FoxKemper2021" role="doc-biblioref">Fox-Kemper et al., 2021</a>; <a href="References.html#ref-Garner2021" role="doc-biblioref">Garner et al., 2021</a>; <a href="References.html#ref-ONeill2016" role="doc-biblioref">O’Neill et al., 2016</a>)</span>: <strong>SSP119</strong>, <strong>SSP370</strong>, and <strong>SSP585</strong>.</p>
 <section id="rationale-and-objectives-of-the-three-tiered-approach" class="level3" data-number="3.4.1">
 <h3 data-number="3.4.1" class="anchored" data-anchor-id="rationale-and-objectives-of-the-three-tiered-approach"><span class="header-section-number">3.4.1</span> Rationale and Objectives of the Three-Tiered Approach</h3>

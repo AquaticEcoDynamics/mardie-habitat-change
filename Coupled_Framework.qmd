@@ -150,7 +150,7 @@ Consequently, salinity was excluded from the predictive framework. However, it i
 
 This simplification has important implications for interpreting the predictions. Even with the indirect representation of salinity, the framework can identify locations where the modelled physical conditions are consistent with mangrove establishment, but it cannot independently determine whether salinity would permit successful establishment or sustained growth. Consequently, some locations predicted to be suitable may remain unsuitable under actual hypersaline conditions, particularly in the upper intertidal zone and on salt flats. The resulting predictions should therefore be interpreted as potential habitat distributions under the represented physical and ecological processes, rather than definitive forecasts of realised mangrove distribution.
 
-## Sea-Level Rise (SLR) Scenarios
+## Sea-Level Rise (SLR) Scenarios {#sec-SLR}
 
 To evaluate the future response of intertidal ecosystems to accelerating environmental change, we examine three Shared Socioeconomic Pathway (SSP) scenarios from the Intergovernmental Panel on Climate Change [@Calvin2023; @ONeill2016; @FoxKemper2021; @Garner2021]: **SSP119**, **SSP370**, and **SSP585**. 
 
