@@ -61,16 +61,17 @@ book:
          - Cape-Preston/Mangrove.qmd
          - Cape-Preston/Algal_Mat.qmd
 
-    # - Cape-Preston.qmd
+
+    - Synthesis.qmd
+
+
     - part: "Appendices"
       chapters:
         - Appendices/Appendix_A.qmd
         - Appendix_B.qmd
   #      - Appendix_C.qmd
 
-    # - part: "Synthesis / Assessment"
-    #   chapters:
-    #     - Synthesis.qmd
+ 
 
     - References.qmd
 

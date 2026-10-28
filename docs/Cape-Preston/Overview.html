@@ -306,6 +306,12 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Synthesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Synthesis and Integration</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
@@ -318,13 +324,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Appendices/Appendix_A.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Appendix_B.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
   </div>
 </li>
       </ul>
@@ -352,6 +358,7 @@ window.Quarto = {
   <li><a href="#historical-mangrove-observations-20002023" id="toc-historical-mangrove-observations-20002023" class="nav-link" data-scroll-target="#historical-mangrove-observations-20002023"><span class="header-section-number">13.3.1</span> Historical Mangrove Observations (2000–2023)</a></li>
   </ul></li>
   <li><a href="#sec-cape-preston-algal-val" id="toc-sec-cape-preston-algal-val" class="nav-link" data-scroll-target="#sec-cape-preston-algal-val"><span class="header-section-number">13.4</span> Cyanobacterial Mat Calibration and Validation</a></li>
+  <li><a href="#summary-and-framework-transferability" id="toc-summary-and-framework-transferability" class="nav-link" data-scroll-target="#summary-and-framework-transferability"><span class="header-section-number">13.5</span> Summary and Framework Transferability</a></li>
   </ul>
 </nav>
     </div>
@@ -478,6 +485,11 @@ Figure&nbsp;13.6: Spatial validation and error distribution for the threshold-ba
 </div>
 </div>
 <p>A comparison of the two modelling approaches reveals distinct performance trade-offs when applied to the Cape Preston intertidal domain. The machine-learning (Random Forest) approach achieves a substantially higher recall (0.9059) than the threshold-based optimisation approach (0.5316), indicating a greater ability to capture true habitat extents and reduce underprediction across complex intertidal zones. Both approaches exhibit moderate false-positive rates, potentially due to differences in the methodology for prediction. Nevertheless, the Random Forest approach achieves higher precision (0.4591) than the threshold-based approach (0.4186), resulting in a higher F1 score (0.6094 compared with 0.4683). Overall, despite the limitations imposed by the lack of formal hydrodynamic calibration data and the complexity of local microtopography, the Random Forest approach provides a slightly effective balance between habitat detection and prediction accuracy for mapping baseline habitat distributions at Cape Preston.</p>
+</section>
+<section id="summary-and-framework-transferability" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="summary-and-framework-transferability"><span class="header-section-number">13.5</span> Summary and Framework Transferability</h2>
+<p>Although formal hydrodynamic calibration was constrained by the absence of independent in-situ water level loggers, the successful calibration and validation of both the mangrove and cyanobacterial mat models demonstrate the <strong>practical transferability</strong> of the modelling framework. By relying on satellite-derived habitat maps from Project A <span class="citation" data-cites="Hickey2025">(<a href="../References.html#ref-Hickey2025" role="doc-biblioref">Hickey et al., 2025</a>)</span> to directly calibrate ecological responses, the framework successfully adapted to Cape Preston’s distinct geomorphology, narrower intertidal zone, and differing tidal regime without requiring a fully tuned hydrodynamic baseline.</p>
+<p>As highlighted in the <a href="../Introduction.html" class="quarto-xref"><span>Chapter 1</span></a>, Cape Preston was not intended to provide an independently hydrodynamically validated prediction, but rather to serve as an exploratory test bed. The reasonable agreement achieved for present-day baseline conditions particularly through the Random Forest classifier (<span class="math inline">\(F_1 = 0.6094\)</span>) proves that data-driven habitat mapping components can robustly translate across diverse arid coastlines. This successfully illustrates the broader transferability of the tools developed through this research, providing an adaptable framework that can be reliably applied to other coastal environments where in-situ hydrodynamic data are limited. <a href="Mangrove.html" class="quarto-xref"><span>Chapter 14</span></a> and <a href="Algal_Mat.html" class="quarto-xref"><span>Chapter 15</span></a> shows the mangrove and algal mat’s response to the future SLR.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">

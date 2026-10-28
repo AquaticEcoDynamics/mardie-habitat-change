@@ -11,7 +11,7 @@ Similar to Giralia, we carried out the hydrodynamic runs for discrete time inter
 
 ![Spatiotemporal projections of cyanobacterial mats under low (SSP119), moderate (SSP370), and high (SSP585) sea level rise scenarios at Cape Preston using the Random Forest machine learning classifier.](./images/cape_preston_algalmat_rf_projections.png){#fig-cp-algal-rf width="100%"}
 
-### threshold-based Optimisation Approach
+### Threshold-based Optimisation Approach
 
 ![Spatiotemporal projections of cyanobacterial mats under low (SSP119), moderate (SSP370), and high (SSP585) sea level rise scenarios at Cape Preston using the threshold-based optimisation model.](./images/cape_preston_algalmat_thresholdbased_projections.png){#fig-cp-algal-threshold width="100%"}
 
@@ -32,13 +32,13 @@ These projections reflect differences in the mathematical formulations and assum
 ::: {.panel-tabset}
 
 #### SSP119
-![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP119 (Year 50 and 100), and spatial map (Machine Learning / RF approach).](./images/CapePreston_SSP119_bed_mangrove_algalmat_rf.png){#fig-cp-ssp119-ml width=100%}
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP119 (Year 50 and 100), and spatial map in panel (a) is for Year-100 projection (Machine Learning / RF approach).](./images/CapePreston_SSP119_bed_mangrove_algalmat_rf.png){#fig-cp-ssp119-ml width=100%}
 
 #### SSP370
-![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP370 (Year 50 and 100), and spatial map (Machine Learning / RF approach).](./images/CapePreston_SSP370_bed_mangrove_algalmat_rf.png){#fig-cp-ssp370-ml width=100%}
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP370 (Year 50 and 100), and spatial map in panel (a) is for Year-100 projection (Machine Learning / RF approach).](./images/CapePreston_SSP370_bed_mangrove_algalmat_rf.png){#fig-cp-ssp370-ml width=100%}
 
 #### SSP585
-![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP585 (Year 50 and 100), and spatial map (Machine Learning / RF approach).](./images/CapePreston_SSP585_bed_mangrove_algalmat_rf.png){#fig-cp-ssp585-ml width=100%}
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP585 (Year 50 and 100), and spatial map in panel (a) is for Year-100 projection (Machine Learning / RF approach).](./images/CapePreston_SSP585_bed_mangrove_algalmat_rf.png){#fig-cp-ssp585-ml width=100%}
 
 :::
 
@@ -47,13 +47,13 @@ These projections reflect differences in the mathematical formulations and assum
 ::: {.panel-tabset}
 
 #### SSP119
-![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP119 (Year 50 and 100), and spatial map (Threshold-based approach).](./images/CapePreston_SSP119_bed_mangrove_algalmat_threshold.png){#fig-cp-ssp119-thresh width=100%}
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP119 (Year 50 and 100), and spatial map in panel (a) is for Year-100 projection (Threshold-based approach).](./images/CapePreston_SSP119_bed_mangrove_algalmat_threshold.png){#fig-cp-ssp119-thresh width=100%}
 
 #### SSP370
-![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP370 (Year 50 and 100), and spatial map (Threshold-based approach).](./images/CapePreston_SSP370_bed_mangrove_algalmat_threshold.png){#fig-cp-ssp370-thresh width=100%}
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP370 (Year 50 and 100), and spatial map in panel (a) is for Year-100 projection (Threshold-based approach).](./images/CapePreston_SSP370_bed_mangrove_algalmat_threshold.png){#fig-cp-ssp370-thresh width=100%}
 
 #### SSP585
-![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP585 (Year 50 and 100), and spatial map (Threshold-based approach).](./images/CapePreston_SSP585_bed_mangrove_algalmat_threshold.png){#fig-cp-ssp585-thresh width=100%}
+![Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP585 (Year 50 and 100), and spatial map in panel (a) is for Year-100 projection (Threshold-based approach).](./images/CapePreston_SSP585_bed_mangrove_algalmat_threshold.png){#fig-cp-ssp585-thresh width=100%}
 
 :::
 
