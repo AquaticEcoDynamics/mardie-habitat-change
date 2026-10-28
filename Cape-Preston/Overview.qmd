@@ -1,24 +1,81 @@
----
-#title: "Overview"
----
+# Calibration and Validation {#sec-cape-preston-calibration}
 
 ## Overview
 
-Cape Preston is located approximately 55 km west-southwest of Karratha in the Pilbara region of Western Australia (@fig-cape-preston). A beach coastline stretches east from Cape Preston through to an intertidal sandbar connecting Great Sandy Island. Behind this sand bar, the shoreline consists of tidal creeks, mangrove habitat, and extensive algal mats. Tropical cyclones, along with their associated extreme high-water levels, heavy wave action, and substantial freshwater discharge, serve as key drivers of coastal geomorphic change across the region [@Stevens2025].
+Cape Preston provides a demonstration of applying the framework to a slightly contrasting coastal setting, with different tidal conditions, shoreline morphology, and intertidal extent from Giralia and Urala. As a secondary focus of Projects A and C, it features a less comprehensive observational basis for model application. This allows the study to examine both the potential transferability of the framework and the practical consequences of applying it where supporting data are more limited. 
 
-![Map of the study region showing (a) regional context along the Western Australian coastline and (b) detailed aerial overview of Cape Preston.](images/cape_preston_utm50s_map.png){#fig-cape-preston width=100%}
+Greater uncertainty in bathymetry (offshore and creek), and available in situ observations affects model inputs and limits independent evaluation. Consequently, model outputs should be interpreted as exploratory, scenario based assessments of potential habitat change. Unlike Giralia and Urala, a dedicated hydrodynamic calibration was not undertaken due to the lack of sufficient validation data; however, the availability of satellite derived habitat maps from Project C provides a valuable opportunity to calibrate and evaluate the habitat prediction components directly. The application also helps identify the additional observations needed to strengthen predictions at this site.
 
-## Hydrodynamic and Geomorphic Setting
+This chapter presents the application and evaluation of the framework at Cape Preston across the following key areas:
 
-Water levels along the Pilbara coast are dominated by semidiurnal lunisolar tides, with the eastern Pilbara classified as macro-tidal and the western Pilbara as meso-tidal. Cape Preston exhibits a macro-tidal regime with a Highest Astronomical Tide (HAT) of 2.25 m MSL and a mean spring tidal range exceeding 3 m, reaching a maximum astronomical range of approximately 4.5 m (@tbl-water-levels). By contrast, sites further south and west along the western Pilbara coast, such as Onslow, exhibit a meso-tidal regime with a significantly smaller tidal amplification (HAT of 1.29 m MSL; @tbl-water-levels). The regional tidal dynamics are strongly influenced by local bathymetry; the presence of Barrow Island and the shallow waters to its south attenuate and distort the westward propagation of semidiurnal and diurnal tidal energy, generating complex non-linear tidal flows.
+1. **Hydrodynamic Context and Limitations:** Review of the numerical setup, acknowledging the constraints imposed by the absence of independent hydrodynamic validation data.
+2. **Satellite Derived Habitat Baseline:** Utilising Landsat-derived observations from Project A (@Hickey2025) to establish baseline spatial distributions for calibrating and validating the mangrove and algal mat coverage models.
 
-The geomorphic extent of the intertidal zone at Cape Preston is notably distinct from other study sites in the region. Unlike Giralia and Urala, Cape Preston features a considerably narrower intertidal zone. The intertidal flats at Cape Preston extend roughly 2.5 km on average from the high-water line. In comparison, Giralia features expansive intertidal flats stretching approximately 8 km, while Urala contains extensive flats ranging between 7 km and 10 km depending on the location relative to its northern and southern domains.
+## Hydrodynamic model development {#sec-capepreston-hydro-dev}
 
+As highlighted in @sec-capepreston-hydromodel, the developed model is used to simulate the present hydrodynamic conditions across the domain. @fig-capepreston-hydro shows an example animation of the Cape Preston hydrodynamic model, capturing spatial water depth distributions alongside temporal water level fluctuations at key representative locations (Nearshore, Mouth, Mud flat, Mangrove, and Upper Mat). The simulated period represents a spring to neap cycle using MSKO constituents. 
 
-## Prediction approach
+While formal water level calibration and internal validation were constrained by the **absence of independent hydrodynamic validation data** (such as high-resolution in-situ water level loggers distributed across the intertidal flats and mangrove creeks), the model is driven by realistic boundary forcings. This ensures that the simulated hydrodynamics remain physically consistent and representative of the region's broader tidal regime. Consequently, despite these observational constraints, this hydrodynamic baseline provides a reliable physical foundation that was subsequently utilised to calibrate the mangrove and algal dynamics models.
 
-Following the methodology established for Giralia Bay (@sec-giralia-approach), an integrated numerical model was developed for the Cape Preston region. However, unlike Giralia and Urala, we did not carry out the same level of detailed calibration for the hydrodynamic model. The hydrodynamic model was initialised using the Giralia and Urala calibtrated settings and subsequently, the mangrove vegetation module was coupled. This is due to the limited availability of field data for Cape Preston, which constrained our ability to perform a comprehensive calibration. However, as the mangrove and algal mat mapping was carried out using the same methodology as Giralia and Urala, we were able to initialise the model with present-day mangrove boundaries derived from satellite imagery.
+::: {#fig-capepreston-hydro}
+<div style="overflow: hidden; max-height: 1050px; display: flex; justify-content: center;">
+  <img src="animations/waterdepth_6panel_animation_fps10.gif" style="margin: -10% 0px 0px 0px; width: 100%; object-fit: cover;" alt="Cape Preston hydrodynamic model animation">
+</div>
 
-Once present-day mangrove boundaries were initialised, cyanobacterial (algal) mat distributions were calibrated using an offline (decoupled) predictive approach based on hydrodynamic and mangrove spatial outputs. The calibrated, coupled modelling framework was then applied to simulate future sea-level rise scenarios for both mangrove ecosystems and algal mats. 
+Animation of the Cape Preston hydrodynamic model for a representative period using MSKO tidal constituents. **(a)** Water depth variations across the Cape Preston domain. **(b–f)** Simulated water depth time series at representative locations (Nearshore, Mouth, Mud flat, Mangrove, and Upper Mat) with the red dashed line indicating the corresponding animation timestep.
+:::
 
-Detailed calibration and validation procedures for the mangrove and algal mat modules, are provided in [@sec-hydro-calibration] and [@sec-urala-calibration], respectively.
+## Mangrove Model Validation {#sec-cape-preston-mangrove-val}
+
+### Historical Mangrove Observations (2000–2023)
+Similar to the approach followed in other regional study areas (Giralia and Urala), we first examined the baseline mangrove dynamics at the Cape Preston site. We utilised monthly mangrove maps derived from Landsat imagery by @Hickey2025 (part of Project A of this Mardie Marine and Intertidal Research Offset Program) to analyse temporal variability in mangrove distribution. Although the dataset provides continuous monthly observations over the satellite record, mangrove extents from 2000 and 2023 are compared in @fig-cape-preston-obs to illustrate long-term distribution shifts alongside corresponding water level variability recorded at the Onslow tide gauge over the same period. 
+
+The historical observation data demonstrates that mangrove extents in the Cape Preston region have remained remarkably stable over the past two decades, exhibiting minimal net change despite localised inter-annual fluctuations.
+
+::: {#fig-cape-preston-obs}
+![](images/cape_preston_mangrove_change.png){fig-align="center" width="95%"}
+
+Water level observations and historical mangrove extent changes in the Cape Preston region. **(a)** Water level recorded at the Onslow tide gauge ([WA Data Catalogue](https://catalogue.data.wa.gov.au/dataset/tide-stations)) displaying monthly range and monthly mean. **(b)** Comparison of Landsat-derived mangrove extents between 2000 and 2023 [@Hickey2025], highlighting areas of no change, loss, and gain.
+:::
+
+We achieved a reasonable prediction evaluation using the hydrodynamic model setup for Cape Preston. Unlike the Urala site where we applied a proxy salt balance function to mimic the hyper-saline salinity regime the Cape Preston site features a distinctly different inundation pattern. Due to these differences in hydrodynamic and topographical characteristics, the proxy salinity mass balance function did not perform or work as expected. Consequently, to minimise uncertainties stemming from a calibration function with lower confidence, we decided to drop the proxy salinity functions entirely for the Cape Preston simulations.
+
+The performance of the resulting spatial mangrove prediction and calibration is summarised in @fig-cape-preston-val, yielding a quantitative evaluation score of **Precision: 0.65, Recall: 0.52, and an F1 Score: 0.58**.
+
+::: {#fig-cape-preston-val}
+![](images/Cape_Preston_Mangrove_calval.png){fig-align="center" width="100%"}
+
+Mangrove model validation and performance evaluation across the Cape Preston study area. **(a)** Spatial confusion map highlighting true positives (green), false negatives (yellow), and false positives (red) alongside quantitative performance metrics ($F_1$ score = 0.58, precision = 0.65, recall = 0.52).
+:::
+
+## Cyanobacterial Mat Calibration and Validation  {#sec-cape-preston-algal-val}
+
+To evaluate cyanobacterial (algal) mat dynamics, similar to @#sec-giralia-algal-val and @sec-urala-algalmat, a dual data-driven approaches - the **Random Forest (RF) machine-learning classifier** (with full model details and algorithmic implementation described in @sec-algal-mat-model) and the **Threshold-Based Optimisation approach** were implemented to calibrate and validate the persistent habitat zone as described in @sec-approach. 
+
+The persistent algal mat zone in the Cape Preston site is shown in @fig-algal-persitent. The persitent map is then utlised for the calibration and validation purposes.
+
+::: {#fig-algal-persitent-cp}
+![](images/cyanobacterial_mat_persistent_2019.png){fig-align="center" width="100%"}
+
+Persistent algal mat zone based on 2019 satellite derived probability maps [@Hickey2025].
+:::
+
+::: {.panel-tabset}
+
+### Machine-Learning Approach (Random Forest)
+
+![Spatial validation and error distribution for the Random Forest machine-learning model across the Cape Preston domain, yielding a Precision of 0.4591, a high Recall of 0.9059, and an F1 Score of 0.6094.](./images/cyanobacterial_mat_validation_ml.png){#fig-capepreston-ml width=100%}
+
+### Threshold-Based Optimisation Approach
+
+![Spatial validation and error distribution for the threshold-based optimisation model across the Cape Preston domain, yielding a Precision of 0.4186, a Recall of 0.5316, and an F1 Score of 0.4683.](./images/cyanobacterial_mat_validation_threshold_based_optimised.png){#fig-capepreston-threshold width=100%}
+
+:::
+
+A comparison of the two modelling approaches reveals distinct performance trade-offs when applied to the Cape Preston intertidal domain. The machine-learning (Random Forest) approach achieves a substantially higher recall (0.9059) than the threshold-based optimisation approach (0.5316), indicating a greater ability to capture true habitat extents and reduce underprediction across complex intertidal zones. Both approaches exhibit moderate false-positive rates, potentially due to differences in the methodology for prediction. Nevertheless, the Random Forest approach achieves higher precision (0.4591) than the threshold-based approach (0.4186), resulting in a higher F1 score (0.6094 compared with 0.4683). Overall, despite the limitations imposed by the lack of formal hydrodynamic calibration data and the complexity of local microtopography, the Random Forest approach provides a slightly effective balance between habitat detection and prediction accuracy for mapping baseline habitat distributions at Cape Preston.
+
+## Summary and Framework Transferability
+
+Although formal hydrodynamic calibration was constrained by the absence of independent in-situ water level loggers, the successful calibration and validation of both the mangrove and cyanobacterial mat models demonstrate the **practical transferability** of the modelling framework. By relying on satellite-derived habitat maps from Project A [@Hickey2025] to directly calibrate ecological responses, the framework successfully adapted to Cape Preston’s distinct geomorphology, narrower intertidal zone, and differing tidal regime without requiring a fully tuned hydrodynamic baseline.
+
+As highlighted in the @sec-intro, Cape Preston was not intended to provide an independently hydrodynamically validated prediction, but rather to serve as an exploratory test bed. The reasonable agreement achieved for present-day baseline conditions particularly through the Random Forest classifier ($F_1 = 0.6094$) proves that data-driven habitat mapping components can robustly translate across diverse arid coastlines. This successfully illustrates the broader transferability of the tools developed through this research, providing an adaptable framework that can be reliably applied to other coastal environments where in-situ hydrodynamic data are limited. @sec-capepreston-mangrove and @sec-cp-algalmat shows the mangrove and algal mat's response to the future SLR.

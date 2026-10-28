@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>14&nbsp; Mangrove Response to SLR – Future of Intertidal Habitats in the Pilbara</title>
+<title>14&nbsp; Mangrove Response to Sea Level Rise – Future of Intertidal Habitats in the Pilbara</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,27 +23,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -93,35 +73,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -135,7 +86,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html">Cape Preston</a></li><li class="breadcrumb-item"><a href="../Cape-Preston/Mangrove.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html">Cape Preston</a></li><li class="breadcrumb-item"><a href="../Cape-Preston/Mangrove.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -289,13 +240,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Cape-Preston/Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Cape-Preston/Mangrove.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -345,17 +296,22 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#historical-mangrove-observations-20002023" id="toc-historical-mangrove-observations-20002023" class="nav-link active" data-scroll-target="#historical-mangrove-observations-20002023"><span class="header-section-number">14.1</span> Historical Mangrove Observations (2000–2023)</a></li>
-  <li><a href="#model-initialisation-performance-evaluation" id="toc-model-initialisation-performance-evaluation" class="nav-link" data-scroll-target="#model-initialisation-performance-evaluation"><span class="header-section-number">14.2</span> Model Initialisation &amp; Performance Evaluation</a></li>
+  <li><a href="#sea-level-rise-response" id="toc-sea-level-rise-response" class="nav-link active" data-scroll-target="#sea-level-rise-response"><span class="header-section-number">14.1</span> Sea Level Rise Response</a></li>
+  <li><a href="#ecosystem-biomass-dynamics-and-initial-footprint-analysis" id="toc-ecosystem-biomass-dynamics-and-initial-footprint-analysis" class="nav-link" data-scroll-target="#ecosystem-biomass-dynamics-and-initial-footprint-analysis"><span class="header-section-number">14.2</span> Ecosystem Biomass Dynamics and Initial Footprint Analysis</a></li>
+  <li><a href="#morphological-dynamics-and-sediment-redistribution" id="toc-morphological-dynamics-and-sediment-redistribution" class="nav-link" data-scroll-target="#morphological-dynamics-and-sediment-redistribution"><span class="header-section-number">14.3</span> Morphological Dynamics and Sediment Redistribution</a>
+  <ul class="collapse">
+  <li><a href="#spatial-distribution-of-surface-mud-fraction-and-mangrove-extent-implications" id="toc-spatial-distribution-of-surface-mud-fraction-and-mangrove-extent-implications" class="nav-link" data-scroll-target="#spatial-distribution-of-surface-mud-fraction-and-mangrove-extent-implications"><span class="header-section-number">14.3.1</span> Spatial Distribution of Surface Mud Fraction and Mangrove Extent Implications</a></li>
+  </ul></li>
+  <li><a href="#comparative-site-sensitivity-and-hydrodynamic-controls" id="toc-comparative-site-sensitivity-and-hydrodynamic-controls" class="nav-link" data-scroll-target="#comparative-site-sensitivity-and-hydrodynamic-controls"><span class="header-section-number">14.4</span> Comparative Site Sensitivity and Hydrodynamic Controls</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html">Cape Preston</a></li><li class="breadcrumb-item"><a href="../Cape-Preston/Mangrove.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html">Cape Preston</a></li><li class="breadcrumb-item"><a href="../Cape-Preston/Mangrove.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-cp-mangrove" class="quarto-section-identifier"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span></h1>
+<h1 class="title"><span id="sec-capepreston-mangrove" class="quarto-section-identifier"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></h1>
 </div>
 
 
@@ -372,95 +328,180 @@ window.Quarto = {
 </header>
 
 
-<p>Similar to the regional methodology applied at Giralia Bay and Urala, a targeted calibration and validation workflow was implemented to characterise mangrove distribution and canopy structure for the Cape Preston domain. Airborne LiDAR elevation and canopy metrics were leveraged to establish baseline mangrove extent and canopy height profiles. However, site-specific hydrodynamic regimes, complex tidal creek geomorphology, and localised evaporation dynamics at Cape Preston presented distinct numerical challenges.</p>
-<p>Initial attempts using the regional parameterisation—which incorporated a proxy salinity mass balance optimised for the Urala domain—proved inadequate for Cape Preston, leading to artificial stress responses and biased spatial boundary predictions. Consequently, the proxy salinity mass balance formulation was removed. Model parameters were then re-calibrated specifically for the Cape Preston domain to isolate primary hydro-period drivers.</p>
-<section id="historical-mangrove-observations-20002023" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="historical-mangrove-observations-20002023"><span class="header-section-number">14.1</span> Historical Mangrove Observations (2000–2023)</h2>
-<p>To contextualise the historical spatial dynamics of mangroves across Cape Preston, monthly satellite-derived mangrove extent maps (2000–2023) from <span class="citation" data-cites="Hickey2025">Hickey et al. (<a href="../References.html#ref-Hickey2025" role="doc-biblioref">2025</a>)</span> were analysed alongside multi-decadal tidal records from the nearby Onslow tide station (<a href="#fig-cp-obs" class="quarto-xref">Figure&nbsp;<span>14.1</span></a>). The tide gauge record spans 1986 to 2024, highlighting long-term seasonal fluctuations in mean sea level and total tidal range (m AHD), with the core comparison window between 2000 and 2023 demarcated by vertical dashed reference lines (<a href="#fig-cp-obs" class="quarto-xref">Figure&nbsp;<span>14.1</span></a> a)[cite: 1].</p>
-<p>Spatial changes over the 23-year observation period reveal distinct zonal dynamics across Cape Preston (<a href="#fig-cp-obs" class="quarto-xref">Figure&nbsp;<span>14.1</span></a> b)[cite: 1]:</p>
-<ul>
-<li><strong>Core Mangrove Stability:</strong> The dense, central intertidal stands display exceptional long-term stability (green), representing resilient core communities where tidal inundation frequency remains optimal[cite: 1].</li>
-<li><strong>Fringing Loss and Retreat:</strong> Localised dieback and landward/creek-bank retreat (red) are concentrated along upper intertidal boundaries and exposed tidal channel margins[cite: 1]. These retreat patterns reflect heightened stress during pronounced regional low water-level events (e.g., ENSO-driven sea-level drawdowns) and extreme heat events <span class="citation" data-cites="Lovelock2017">(<a href="../References.html#ref-Lovelock2017" role="doc-biblioref">Lovelock et al., 2017</a>)</span>.</li>
-<li><strong>Channel Colonisation and Expansion:</strong> Dynamic gains and seaward expansion (black) occur primarily along tidal creek networks and lower intertidal mudflats, where local sediment accretion provides new suitable substrate for colonisation[cite: 1].</li>
-</ul>
-<p>Despite minor boundary fluctuations, the baseline core mangrove footprint remains robust, confirming that hydrodynamic forcing—rather than regional salinity gradients—acts as the primary physical control governing spatial distribution at Cape Preston.</p>
-<div id="fig-cp-obs" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<section id="sea-level-rise-response" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="sea-level-rise-response"><span class="header-section-number">14.1</span> Sea Level Rise Response</h2>
+<p>In this chapter, we present the response of mangroves to different SLR scenarios at Cape Preston. As described in <a href="Overview.html#sec-cape-preston-mangrove-val" class="quarto-xref"><span>Section 13.3</span></a>, the predicted mangrove extent under present-day environmental conditions was used as the initial baseline condition, and simulations were subsequently performed under a range of SLR scenarios representing low, medium, and high sea-level-rise conditions as discussed in <a href="../Coupled_Framework.html" class="quarto-xref"><span>Chapter 3</span></a>. The SLR simulations were carried out over a 100-year projection period to assess the long-term response of the mangrove ecosystem to rising sea levels. The results were analysed to investigate changes in mangrove extent and biomass under each SLR scenario and to identify trends in mangrove migration, rates of habitat loss, and potential thresholds beyond which landward migration and ecosystem persistence are no longer possible.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">SSP119 (Low SLR)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">SSP370 (Medium SLR)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">SSP585 (High SLR)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="fig-mangrove-slr-ssp119" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-cp-obs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/cape_preston_mangrove_change.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<div aria-describedby="fig-mangrove-slr-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="overflow: hidden; max-height: 500px; display: flex; justify-content: center;">
+<p><img src="animations/mangrove_bedlevel_CP_ssp119_animation_fullview.gif" style="margin: -20% 0px -20% 0px; width: 100%; object-fit: cover;" alt="Cape Preston mangrove response under SSP119" class="figure-img"></p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cp-obs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;14.1: Water level observations and historical mangrove extent in the Cape Preston region. <strong>(a)</strong> Measured water level time series recorded at the Onslow tide station (<a href="https://catalogue.data.wa.gov.au/dataset/tide-stations">WA Data Catalogue</a>), illustrating monthly mean sea level (blue line) and monthly range envelope (light blue shade) from 1986 to 2024, with the 2000–2023 analysis window indicated[cite: 1]. <strong>(b)</strong> Comparison of Landsat-derived mangrove extents between 2000 and 2023 <span class="citation" data-cites="Hickey2025">(<a href="../References.html#ref-Hickey2025" role="doc-biblioref">Hickey et al., 2025</a>)</span>, depicting stable core areas (green), localised loss (red), and new expansion/gain (black)[cite: 1].
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mangrove-slr-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.1: Temporal evolution of mangrove canopy height and bed elevation across the Cape Preston domain under the SSP119 sea-level-rise scenario over the 100-year simulation period.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="fig-mangrove-slr-ssp370" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mangrove-slr-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="overflow: hidden; max-height: 500px; display: flex; justify-content: center;">
+<p><img src="animations/mangrove_bedlevel_CP_ssp370_animation_fullview.gif" style="margin: -20% 0px -20% 0px; width: 100%; object-fit: cover;" alt="Cape Preston mangrove response under SSP370" class="figure-img"></p>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mangrove-slr-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.2: Temporal evolution of mangrove canopy height and bed elevation across the Cape Preston domain under the SSP370 sea-level-rise scenario over the 100-year simulation period.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div id="fig-mangrove-slr-ssp585" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mangrove-slr-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="overflow: hidden; max-height: 500px; display: flex; justify-content: center;">
+<p><img src="animations/mangrove_bedlevel_CP_ssp585_animation_fullview.gif" style="margin: -20% 0px -20% 0px; width: 100%; object-fit: cover;" alt="Cape Preston mangrove response under SSP585" class="figure-img"></p>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mangrove-slr-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.3: Temporal evolution of mangrove canopy height and bed elevation across the Cape Preston domain under the SSP585 sea-level-rise scenario over the 100-year simulation period.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Unlike the pronounced seaward edge drowning observed at Giralia and Urala, the response of mangroves at Cape Preston under SLR scenarios exhibits minimal drastic dieback along the seaward fringe. Instead, landward migration proceeds steadily and remains highly comparable across all three SLR scenarios (<strong>SSP119</strong>, <strong>SSP370</strong>, and <strong>SSP585</strong>).</p>
+<p><a href="#fig-capepreston-spatial-comparison" class="quarto-xref">Figure&nbsp;<span>14.4</span></a> illustrates this spatial evolution at Years 50 and 100 across the scenarios, highlighting the progressive, stable landward encroachment into supratidal zones without significant seaward collapse as we observed for other sites (Giralia and Urala).</p>
+<div id="fig-capepreston-spatial-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-capepreston-spatial-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="overflow: hidden; max-height: 850px; display: flex; justify-content: center;">
+<p><img src="images/cape_preston_spatial_comparison.png" style="margin: -5px 0px -5px 0px; width: 100%; object-fit: cover;" alt="Spatial comparison of mangrove response across SLR scenarios at Year 50 and Year 100" class="figure-img"></p>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-capepreston-spatial-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.4: Spatial comparison of mangrove canopy height and bed elevation across the Cape Preston domain at Year 50 and Year 100 under <strong>(a–b)</strong> SSP119, <strong>(c–d)</strong> SSP370, and <strong>(e–f)</strong> SSP585 sea-level-rise scenarios.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="model-initialisation-performance-evaluation" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="model-initialisation-performance-evaluation"><span class="header-section-number">14.2</span> Model Initialisation &amp; Performance Evaluation</h2>
-<p>The calibrated numerical model was forced with regional harmonic tidal constituents (MSKO) to simulate present-day hydrodynamics and predict equilibrium mangrove distribution across Cape Preston. Spatial agreement between the simulated model output and high-resolution ground truth observations was evaluated across the grid using a categorical spatial confusion matrix[cite: 2]:</p>
-<ul>
-<li><strong>True Positives (Green):</strong> Grid cells where both model and satellite observations confirm mangrove presence[cite: 2].</li>
-<li><strong>False Negatives (Yellow):</strong> Observed mangrove areas omitted by the model prediction[cite: 2].</li>
-<li><strong>False Positives (Red):</strong> Areas predicted as mangrove by the model where none were observed in reality[cite: 2].</li>
-</ul>
-<p>To quantitatively evaluate spatial classification accuracy across the domain, precision, recall, and the <span class="math inline">\(F_1\)</span> score were computed based on the cell counts (<a href="#fig-cp-val" class="quarto-xref">Figure&nbsp;<span>14.2</span></a>)[cite: 2]:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Statistic</th>
-<th style="text-align: left;">Definition</th>
-<th style="text-align: left;">Formula</th>
-<th style="text-align: left;">Model Performance</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><strong>Precision</strong></td>
-<td style="text-align: left;">Proportion of modelled mangrove cells corresponding to true observed mangroves</td>
-<td style="text-align: left;"><span class="math inline">\(\text{Precision} = \frac{TP}{TP + FP}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(0.650\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><strong>Recall</strong></td>
-<td style="text-align: left;">Proportion of observed mangrove cells correctly reproduced by the model</td>
-<td style="text-align: left;"><span class="math inline">\(\text{Recall} = \frac{TP}{TP + FN}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(0.520\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><strong><span class="math inline">\(F_1\)</span> Score</strong></td>
-<td style="text-align: left;">Harmonic mean of precision and recall</td>
-<td style="text-align: left;"><span class="math inline">\(F_1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(0.580\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>The statistical metrics confirm strong predictive capability and spatial fidelity across the primary intertidal zones (<span class="math inline">\(F_1 = 0.580\)</span>)[cite: 2]. The precision score of <span class="math inline">\(0.650\)</span> indicates high reliability in positive predictions, demonstrating that simulated mangrove stands closely match real-world distributions[cite: 2]. The lower recall value (<span class="math inline">\(0.520\)</span>) and associated false negatives (yellow patches) occur predominantly along sub-grid scale tidal channels and highly fragmented upper intertidal margins, where micro-topographic variations and sharp hydrodynamic gradients fall beneath the discrete numerical mesh resolution[cite: 2]. Overall, removing the salinity mass balance proxy successfully optimised model behaviour for Cape Preston’s unique hydrodynamic environment.</p>
-<div id="fig-cp-val" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<section id="ecosystem-biomass-dynamics-and-initial-footprint-analysis" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="ecosystem-biomass-dynamics-and-initial-footprint-analysis"><span class="header-section-number">14.2</span> Ecosystem Biomass Dynamics and Initial Footprint Analysis</h2>
+<p>To quantify the broader ecological impact of these changing conditions, ecosystem performance was evaluated through domain-wide total biomass and localised dynamics restricted to the initial mangrove footprint.</p>
+<div id="fig-capepreston-biomass" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-cp-val-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/cape_preston_mangrove_calval.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+<div aria-describedby="fig-capepreston-biomass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="overflow: hidden; max-height: 850px; display: flex; justify-content: center;">
+<p><img src="images/combined_biomass_panels_rowwise.png" style="margin: -5px 0px -5px 0px; width: 100%; object-fit: cover;" alt="Normalised total biomass and initial footprint biomass across SLR scenarios" class="figure-img"></p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cp-val-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;14.2: Spatial performance and validation of the calibrated mangrove model for the Cape Preston site. Spatial distribution of True Positives (green), False Negatives (yellow), and False Positives (red) mapped over high-resolution aerial imagery, alongside summary spatial classification metrics (Precision = 0.65, Recall = 0.52, <span class="math inline">\(F_1\)</span> Score = 0.58).
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-capepreston-biomass-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.5: Normalised total biomass dynamics over the 100-year simulation period for Cape Preston: <strong>(a)</strong> Total biomass across the entire domain, and <strong>(b)</strong> Biomass restricted strictly to the initial mangrove footprint under SSP119, SSP370, and SSP585 scenarios.
 </figcaption>
 </figure>
 </div>
+<p>As shown in <a href="#fig-capepreston-biomass" class="quarto-xref">Figure&nbsp;<span>14.5</span></a> (a), the <strong>normalised total biomass across the entire domain</strong> increases steadily over the first 60 to 70 years across all scenarios as new intertidal zones become available through landward migration, eventually stabilising or showing minor divergence depending on the severity of the SLR rate.</p>
+<p>Conversely, examining the <strong>initial footprint biomass</strong> (<a href="#fig-capepreston-biomass" class="quarto-xref">Figure&nbsp;<span>14.5</span></a> b) isolates the performance of the pre-existing mangrove stands. Under the low SLR scenario (<strong>SSP119</strong>), the initial footprint experiences sustained growth, peaking at roughly 1.2 times its original baseline before stabilising. However, under medium (<strong>SSP370</strong>) and high (<strong>SSP585</strong>) SLR rates, the biomass within the initial footprint experiences a noticeable decline after year 60—dropping to approximately 0.93 (SSP370) and 0.86 (SSP585) of initial levels by Year 100. This indicates that while the overall ecosystem compensates via landward expansion, established stands under higher emission pathways undergo progressive submergence stress over multi-decadal timescales.</p>
+</section>
+<section id="morphological-dynamics-and-sediment-redistribution" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="morphological-dynamics-and-sediment-redistribution"><span class="header-section-number">14.3</span> Morphological Dynamics and Sediment Redistribution</h2>
+<p>To understand the physical drivers governing the stability of the Cape Preston mangrove ecosystem under varying SLR scenarios, long-term morphological adjustments were evaluated.</p>
+<p>Examining the creek network trajectory across the simulation period (<a href="#fig-capepreston-creek-evolution" class="quarto-xref">Figure&nbsp;<span>14.6</span></a>) reveals that channel migration and bank erosion are <strong>marginal and highly constrained</strong> across all three scenarios (<strong>SSP119</strong>, <strong>SSP370</strong>, and <strong>SSP585</strong>). Unlike environments prone to severe channel widening, Cape Preston exhibits a slightly stable tidal creek morphology, with minor shifts restricted primarily to active main-stem channels.</p>
+<div id="fig-capepreston-creek-evolution" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-capepreston-creek-evolution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<center>
+<img src="images/cape_preston_creek_evolution_allscenarios.png" style="width: 100%; max-width: 900px; height: auto;" alt="Creek network evolution across SLR scenarios" class="figure-img">
+</center>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-capepreston-creek-evolution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.6: Temporal evolution of tidal creeks from Year 1 to Year 100 across <strong>(a)</strong> SSP119, <strong>(b)</strong> SSP370, and <strong>(c)</strong> SSP585 scenarios, demonstrating minimal channel planform displacement.
+</figcaption>
+</figure>
+</div>
+<section id="spatial-distribution-of-surface-mud-fraction-and-mangrove-extent-implications" class="level3" data-number="14.3.1">
+<h3 data-number="14.3.1" class="anchored" data-anchor-id="spatial-distribution-of-surface-mud-fraction-and-mangrove-extent-implications"><span class="header-section-number">14.3.1</span> Spatial Distribution of Surface Mud Fraction and Mangrove Extent Implications</h3>
+<p>The surface sediment composition specifically the distribution of the top-layer mud fraction plays a critical role in determining substrate suitability and nutrient availability for mangrove colonisation and landward migration.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">SSP119 (Low SLR)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">SSP370 (Medium SLR)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">SSP585 (High SLR)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div id="fig-mudfraction-ssp119" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mudfraction-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="overflow: hidden; max-height: 850px; display: flex; justify-content: center;">
+<p><img src="images/cape_preston_mud_fraction_projections_ssp119.png" style="margin: -5px 0px -5px 0px; width: 100%; object-fit: cover;" alt="Mud fraction projections under SSP119" class="figure-img"></p>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mudfraction-ssp119-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.7: Spatial distribution of top-layer mud fraction across the Cape Preston domain at Year 0 (Baseline), Year 50, and Year 100 under the <strong>SSP119</strong> sea-level-rise scenario.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="fig-mudfraction-ssp370" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mudfraction-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="overflow: hidden; max-height: 850px; display: flex; justify-content: center;">
+<p><img src="images/cape_preston_mud_fraction_projections_ssp370.png" style="margin: -5px 0px -5px 0px; width: 100%; object-fit: cover;" alt="Mud fraction projections under SSP370" class="figure-img"></p>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mudfraction-ssp370-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.8: Spatial distribution of top-layer mud fraction across the Cape Preston domain at Year 0 (Baseline), Year 50, and Year 100 under the <strong>SSP370</strong> sea-level-rise scenario.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div id="fig-mudfraction-ssp585" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mudfraction-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="overflow: hidden; max-height: 1000px; display: flex; justify-content: center;">
+<p><img src="images/cape_preston_mud_fraction_projections_ssp585.png" style="margin: -5px 0px -5px 0px; width: 95%; object-fit: cover;" alt="Mud fraction projections under SSP585" class="figure-img"></p>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mudfraction-ssp585-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.9: Spatial distribution of top-layer mud fraction across the Cape Preston domain at Year 0 (Baseline), Year 50, and Year 100 under the <strong>SSP585</strong> sea-level-rise scenario.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>As illustrated by the mud fraction projections across the scenarios (<a href="#fig-mudfraction-ssp119" class="quarto-xref">Figure&nbsp;<span>14.7</span></a>, <a href="#fig-mudfraction-ssp370" class="quarto-xref">Figure&nbsp;<span>14.8</span></a>, <a href="#fig-mudfraction-ssp585" class="quarto-xref">Figure&nbsp;<span>14.9</span></a>), fine sediment deposition progressively accumulates within newly inundated supratidal flats and upper intertidal transition zones over the 100-year timeframe.</p>
+<p>Crucially, this sediment trapping creates favorable muddy substrate conditions in areas newly reached by tidal wetting. This matches the observed ecological response: rather than undergoing widespread fringe collapse, the combination of stable creek configurations, adequate fine-sediment accretion, and gentle topographic gradients allows mangroves at Cape Preston to steadily colonise the rising water levels, facilitating successful landward encroachment across all emission pathways.</p>
+</section>
+</section>
+<section id="comparative-site-sensitivity-and-hydrodynamic-controls" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="comparative-site-sensitivity-and-hydrodynamic-controls"><span class="header-section-number">14.4</span> Comparative Site Sensitivity and Hydrodynamic Controls</h2>
+<p>The differences in mangrove responses across sea level rise (SLR) scenarios at Cape Preston are less pronounced than those predicted for the Giralia and Urala study sites. This contrast suggests that mangrove sensitivity to SLR is strongly influenced by the prevailing tidal regime, local topography and the relationship between water level changes and the distribution of suitable elevations for mangrove establishment and persistence.</p>
+<p>A key factor is the difference in tidal range between the study sites. Giralia and Urala experience tidal ranges of approximately 0.8 to 2.25 m, whereas Cape Preston is characterised by a substantially larger tidal range of approximately 1.5 to 4.2 m. At Cape Preston, the additional SLR increments considered in this study (0.5, 0.9 and 1.25 m) represent a smaller proportion of the overall tidal range than at the other sites. Consequently, although SLR raises mean water levels and modifies inundation frequency and duration, its relative influence on the existing tidal water level envelope may be less pronounced. This could contribute to the more similar mangrove responses predicted across the SLR scenarios at Cape Preston. However, tidal range alone does not determine mangrove sensitivity, as changes in inundation frequency, hydroperiod and exposure duration can still substantially alter the suitability of intertidal areas for mangrove establishment and persistence, even within a macrotidal system.</p>
+<p>Topographic morphology provides a further explanation for the contrasting responses. Giralia and Urala contain extensive, low gradient upper intertidal surfaces, where relatively small changes in water level can produce substantial horizontal shifts in the inundation boundary. These surfaces can therefore amplify the spatial consequences of SLR, particularly where broad areas of terrain lie close to the elevation thresholds governing mangrove establishment and persistence. In contrast, the comparatively restricted high intertidal area at Cape Preston may limit the extent to which changes in water level translate into large horizontal expansions of suitable mangrove habitat. Where the available intertidal terrain is constrained by steeper elevation gradients or the configuration of existing landforms, similar vertical changes in water level may produce smaller changes in the area available for mangrove colonisation.</p>
+<p>Together, these hydrodynamic and geomorphological characteristics provide a plausible explanation for the relatively consistent landward migration patterns predicted across the SLR scenarios at Cape Preston. The results indicate that mangrove responses depend not only on the magnitude of projected SLR, but also on the local elevation distribution, tidal inundation regime and availability of suitable land for colonisation. Nevertheless, the apparent similarity between scenarios should not be interpreted as evidence that Cape Preston is inherently less vulnerable to SLR. Mangrove responses may also depend on local elevation thresholds, sediment dynamics, establishment constraints and the potential for coastal infrastructure or other geomorphological barriers to restrict landward migration. These factors warrant consideration when interpreting the modelled projections and comparing mangrove sensitivity among sites.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Summary: Century-Scale Ecological Trajectories at Cape Preston
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Synthesising century scale eco-morphodynamic simulations reveals that mangrove responses across emission pathways at Cape Preston are remarkably uniform compared to other regional sites (Giralia and Urala). We think the local macro tidal environment features an immense tidal range spanning approximately 1.5 to 4.2 metres alongside a more restricted high intertidal area, additional sea level rise increments exert a proportionally smaller influence on overall habitat dynamics. Consequently, despite varying emission trajectories, Cape Preston demonstrates steady and highly comparable landward migration trends with minimal scenario divergence through to Year 100.</p>
+</div>
+</div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-Hickey2025" class="csl-entry" role="listitem">
-Hickey, S., Stone, A., Radford, B., &amp; Lovelock, C. E. (2025). Multidecadal mapping of arid intertidal ecosystems reveals a dynamic mosaic of habitats north-western australia. <em>Estuarine, Coastal and Shelf Science</em>, <em>323</em>, 109401. <a href="https://doi.org/10.1016/J.ECSS.2025.109401">https://doi.org/10.1016/J.ECSS.2025.109401</a>
-</div>
-<div id="ref-Lovelock2017" class="csl-entry" role="listitem">
-Lovelock, C. E., Feller, I. C., Reef, R., Hickey, S., &amp; Ball, M. C. (2017). Mangrove dieback during fluctuating sea levels. <em>Sci Rep</em>, <em>7</em>, 1680. <a href="https://doi.org/10.1038/s41598-017-01927-6">https://doi.org/10.1038/s41598-017-01927-6</a>
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
@@ -866,8 +907,8 @@ Lovelock, C. E., Feller, I. C., Reef, R., Hickey, S., &amp; Ball, M. C. (2017). 
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Cape-Preston/Overview.html" class="pagination-link" aria-label="Overview">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span>
+      <a href="../Cape-Preston/Overview.html" class="pagination-link" aria-label="Calibration and Validation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

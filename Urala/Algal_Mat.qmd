@@ -221,8 +221,6 @@ Mangrove distributions exhibit distinct shifts due to the modified hydrodynamic 
 
 For comparative purposes, @fig-urala-rf-nodev-vs-dev and @fig-urala-threshold-nodev-vs-dev illustrate the direct scenario-wise cross shore profile comparisons between unconstrained (without development, solid lines) and bund wall constrained (with development, dashed lines) model runs across Present, Year 50, and Year 100 timeframes. 
 
-### Figure Inclusions
-
 ::: {.panel-tabset}
 
 ### Random Forest Approach

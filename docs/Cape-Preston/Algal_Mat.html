@@ -240,13 +240,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Cape-Preston/Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Cape-Preston/Mangrove.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -291,8 +291,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sea-level-rise-response" id="toc-sea-level-rise-response" class="nav-link active" data-scroll-target="#sea-level-rise-response"><span class="header-section-number">15.1</span> Sea-Level Rise Response</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -316,9 +322,152 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Following the mangrove response to sea level rise predictions as described in <a href="../Urala/Mangrove.html" class="quarto-xref"><span>Chapter 11</span></a>, we carried out additional only hydrodynamic simulations with various discrete time steps representing the 50 and 100-Year for different sea level rise scenarios. In these simulations, the bed level changes and mangrove distributions were fixed to the predicted values at the corresponding time steps. The hydrodynamic outputs were then used to predict the potential distribution of persistent algal mats under future sea level rise scenarios.</p>
+<section id="sea-level-rise-response" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="sea-level-rise-response"><span class="header-section-number">15.1</span> Sea-Level Rise Response</h2>
+<p>Similar to Giralia, we carried out the hydrodynamic runs for discrete time intervals with the mangroves, bedlevels information from the mangrove projection runs and carried out the algal mat runs for static increase of water level at respective time steps. Using the hydrodynamic data, we project the algal mat response using two different data-driven approaches as described in <a href="../Coupled_Framework.html" class="quarto-xref"><span>Chapter 3</span></a>.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Random Forest (RF) Approach</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">threshold-based Optimisation Approach</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="fig-cp-algal-rf" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cp-algal-rf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/cape_preston_algalmat_rf_projections.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cp-algal-rf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.1: Spatiotemporal projections of cyanobacterial mats under low (SSP119), moderate (SSP370), and high (SSP585) sea level rise scenarios at Cape Preston using the Random Forest machine learning classifier.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="fig-cp-algal-threshold" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cp-algal-threshold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/cape_preston_algalmat_thresholdbased_projections.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cp-algal-threshold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.2: Spatiotemporal projections of cyanobacterial mats under low (SSP119), moderate (SSP370), and high (SSP585) sea level rise scenarios at Cape Preston using the threshold-based optimisation model.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>Both modelling approaches predict changes in the distribution and spatial organisation of cyanobacterial mats across the Cape Preston intertidal domain over the 100 year projection period. However, the predicted spatial patterns differ considerably between the RF and threshold-based optimisation approaches.</p>
+<p>The RF model predicts extensive and relatively continuous baseline coverage across the central intertidal flats. By Year 50 and Year 100, predicted future coverage is more spatially restricted, occurring predominantly along the southern margins and within western salt flat embayments. In contrast, the threshold-based optimisation model predicts a more dispersed distribution of future suitable areas, with patches extending towards the higher intertidal flats. These differences indicate that the two approaches represent the spatial redistribution of cyanobacterial mats differently under changing environmental conditions.</p>
+<p>The influence of the SLR scenario also varies between the modelling approaches. Under the low emissions SSP119 scenario, both approaches predict changes in cyanobacterial mat distribution, including expansion into some areas of higher elevation. Under the moderate emissions SSP370 and high emissions SSP585 scenarios, the RF model predicts comparatively restricted future distributions, with much of the projected coverage concentrated along the margins of the existing mats. Conversely, the threshold-based optimisation model predicts a more dispersed pattern of potential future coverage across the intertidal domain. The differences between scenarios are particularly evident in the distribution of isolated patches and the extent of predicted expansion beyond the existing mat boundaries.</p>
+<p>These projections reflect differences in the mathematical formulations and assumptions underlying the two approaches. The Random Forest classifier identifies statistical relationships between observed cyanobacterial mat distributions and environmental predictors, accounting for potentially complex and nonlinear interactions. In comparison, the threshold-based optimisation model determines suitable areas according to prescribed environmental thresholds, including inundation frequency and water depth limits. Consequently, its predictions are more directly influenced by the spatial distribution of hydrodynamic conditions and local topography.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Random Forest (RF) Approach</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Threshold-Based Optimisation Approach</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">SSP119</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">SSP370</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">SSP585</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div id="fig-cp-ssp119-ml" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cp-ssp119-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/CapePreston_SSP119_bed_mangrove_algalmat_rf.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cp-ssp119-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.3: Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP119 (Year 50 and 100), and spatial map (Machine Learning / RF approach).
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="fig-cp-ssp370-ml" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cp-ssp370-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/CapePreston_SSP370_bed_mangrove_algalmat_rf.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cp-ssp370-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.4: Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP370 (Year 50 and 100), and spatial map (Machine Learning / RF approach).
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div id="fig-cp-ssp585-ml" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cp-ssp585-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/CapePreston_SSP585_bed_mangrove_algalmat_rf.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cp-ssp585-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.5: Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP585 (Year 50 and 100), and spatial map (Machine Learning / RF approach).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">SSP119</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">SSP370</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">SSP585</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div id="fig-cp-ssp119-thresh" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cp-ssp119-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/CapePreston_SSP119_bed_mangrove_algalmat_threshold.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cp-ssp119-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.6: Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP119 (Year 50 and 100), and spatial map (Threshold-based approach).
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div id="fig-cp-ssp370-thresh" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cp-ssp370-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/CapePreston_SSP370_bed_mangrove_algalmat_threshold.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cp-ssp370-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.7: Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP370 (Year 50 and 100), and spatial map (Threshold-based approach).
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div id="fig-cp-ssp585-thresh" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cp-ssp585-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/CapePreston_SSP585_bed_mangrove_algalmat_threshold.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cp-ssp585-thresh-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15.8: Alongshore-averaged bed level, mangrove fraction, and algal mat fraction profiles alongside the Cape Preston domain map for the Present baseline, SSP585 (Year 50 and 100), and spatial map (Threshold-based approach).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The spatiotemporal projections reveal a marked response of cyanobacterial mats to sea-level rise across the Cape Preston intertidal domain. Under the low-emissions SSP119 scenario, algal mat coverage exhibits moderate resilience, experiencing a reduction of roughly 15% to 25% by Year 50 and up to 40% by Year 100 as wetting extends across the flats. Under moderate (SSP370) and high (SSP585) emissions scenarios, the rate of water level rise outpaces landward migration capacity, leading to severe habitat contraction with algal mat coverage reductions exceeding 65% by Year 50 and dropping by more than 85% to complete near-total submergence by Year 100.</p>
+<p>Comparing the two modelling paradigms, the Random Forest (RF) classifier captures smooth, broader spatial persistence across supratidal zones by relying on non-linear probabilistic associations among hydrodynamic drivers. In contrast, the threshold-based optimisation approach enforces strict physical envelope boundaries, predicting more sharply delineated zonation bands that explicitly highlight coastal squeeze and acute drowning thresholds under high-forcing scenarios.</p>
+<p>Regarding the mangrove communities evaluated alongside the algal dynamics, alongshore-averaged profiles show that mangrove fractions maintain a stable distribution across lower-to-middle intertidal elevations during the first 50 years, but experience compression and upward landward shifting by Year 100 as rising sea levels alter intertidal inundation frequencies and bed shear stress limits.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Summary: Century-Scale Cyanobacterial Mat Trajectories at Cape Preston
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Synthesising century-scale projections across different SLR scenarios (emission pathways) reveals that cyanobacterial mats at Cape Preston are highly sensitive to rising sea levels. While low-emissions forcing (SSP119) permits partial landward migration into wetted supratidal areas, accelerated sea-level rise under moderate (SSP370) and high (SSP585) emissions leads to progressive coastal squeeze. Because the narrower supratidal gradient at Cape Preston limits available landward accommodation space, rapid submergence quickly overwhelms the mats’ inundation tolerance, resulting in critical habitat contraction exceeding 85% by Year 100.</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -723,8 +872,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../Cape-Preston/Mangrove.html" class="pagination-link" aria-label="Mangrove Response to SLR">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span>
+      <a href="../Cape-Preston/Mangrove.html" class="pagination-link" aria-label="Mangrove Response to Sea Level Rise">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>13&nbsp; Overview – Future of Intertidal Habitats in the Pilbara</title>
+<title>13&nbsp; Calibration and Validation – Future of Intertidal Habitats in the Pilbara</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -93,6 +93,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -106,7 +135,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html">Cape Preston</a></li><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html">Cape Preston</a></li><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -260,13 +289,13 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Cape-Preston/Overview.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Cape-Preston/Mangrove.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -316,17 +345,22 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#hydrodynamic-and-geomorphic-setting" id="toc-hydrodynamic-and-geomorphic-setting" class="nav-link active" data-scroll-target="#hydrodynamic-and-geomorphic-setting"><span class="header-section-number">13.1</span> Hydrodynamic and Geomorphic Setting</a></li>
-  <li><a href="#prediction-approach" id="toc-prediction-approach" class="nav-link" data-scroll-target="#prediction-approach"><span class="header-section-number">13.2</span> Prediction approach</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">13.1</span> Overview</a></li>
+  <li><a href="#sec-capepreston-hydro-dev" id="toc-sec-capepreston-hydro-dev" class="nav-link" data-scroll-target="#sec-capepreston-hydro-dev"><span class="header-section-number">13.2</span> Hydrodynamic model development</a></li>
+  <li><a href="#sec-cape-preston-mangrove-val" id="toc-sec-cape-preston-mangrove-val" class="nav-link" data-scroll-target="#sec-cape-preston-mangrove-val"><span class="header-section-number">13.3</span> Mangrove Model Validation</a>
+  <ul class="collapse">
+  <li><a href="#historical-mangrove-observations-20002023" id="toc-historical-mangrove-observations-20002023" class="nav-link" data-scroll-target="#historical-mangrove-observations-20002023"><span class="header-section-number">13.3.1</span> Historical Mangrove Observations (2000–2023)</a></li>
+  </ul></li>
+  <li><a href="#sec-cape-preston-algal-val" id="toc-sec-cape-preston-algal-val" class="nav-link" data-scroll-target="#sec-cape-preston-algal-val"><span class="header-section-number">13.4</span> Cyanobacterial Mat Calibration and Validation</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html">Cape Preston</a></li><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html">Cape Preston</a></li><li class="breadcrumb-item"><a href="../Cape-Preston/Overview.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></h1>
+<h1 class="title"><span id="sec-cape-preston-calibration" class="quarto-section-identifier"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></h1>
 </div>
 
 
@@ -343,32 +377,112 @@ div.csl-indent {
 </header>
 
 
-<p>Cape Preston is located approximately 55 km west-southwest of Karratha in the Pilbara region of Western Australia (<a href="#fig-cape-preston" class="quarto-xref">Figure&nbsp;<span>13.1</span></a>). A beach coastline stretches east from Cape Preston through to an intertidal sandbar connecting Great Sandy Island. Behind this sand bar, the shoreline consists of tidal creeks, mangrove habitat, and extensive algal mats. Tropical cyclones, along with their associated extreme high-water levels, heavy wave action, and substantial freshwater discharge, serve as key drivers of coastal geomorphic change across the region <span class="citation" data-cites="Stevens2025">(<a href="../References.html#ref-Stevens2025" role="doc-biblioref">Stevens et al., 2025</a>)</span>.</p>
-<div id="fig-cape-preston" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="overview" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">13.1</span> Overview</h2>
+<p>Cape Preston provides a demonstration of applying the framework to a slightly contrasting coastal setting, with different tidal conditions, shoreline morphology, and intertidal extent from Giralia and Urala. As a secondary focus of Projects A and C, it features a less comprehensive observational basis for model application. This allows the study to examine both the potential transferability of the framework and the practical consequences of applying it where supporting data are more limited.</p>
+<p>Greater uncertainty in bathymetry (offshore and creek), and available in situ observations affects model inputs and limits independent evaluation. Consequently, model outputs should be interpreted as exploratory, scenario based assessments of potential habitat change. Unlike Giralia and Urala, a dedicated hydrodynamic calibration was not undertaken due to the lack of sufficient validation data; however, the availability of satellite derived habitat maps from Project C provides a valuable opportunity to calibrate and evaluate the habitat prediction components directly. The application also helps identify the additional observations needed to strengthen predictions at this site.</p>
+<p>This chapter presents the application and evaluation of the framework at Cape Preston across the following key areas:</p>
+<ol type="1">
+<li><strong>Hydrodynamic Context and Limitations:</strong> Review of the numerical setup, acknowledging the constraints imposed by the absence of independent hydrodynamic validation data.</li>
+<li><strong>Satellite Derived Habitat Baseline:</strong> Utilising Landsat-derived observations from Project A (<span class="citation" data-cites="Hickey2025">Hickey et al. (<a href="../References.html#ref-Hickey2025" role="doc-biblioref">2025</a>)</span>) to establish baseline spatial distributions for calibrating and validating the mangrove and algal mat coverage models.</li>
+</ol>
+</section>
+<section id="sec-capepreston-hydro-dev" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="sec-capepreston-hydro-dev"><span class="header-section-number">13.2</span> Hydrodynamic model development</h2>
+<p>As highlighted in <a href="../Hydrodynamic-Model.html#sec-capepreston-hydromodel" class="quarto-xref"><span>Section 6.2.3</span></a>, the developed model is used to simulate the present hydrodynamic conditions across the domain. <a href="#fig-capepreston-hydro" class="quarto-xref">Figure&nbsp;<span>13.1</span></a> shows an example animation of the Cape Preston hydrodynamic model, capturing spatial water depth distributions alongside temporal water level fluctuations at key representative locations (Nearshore, Mouth, Mud flat, Mangrove, and Upper Mat). The simulated period represents a spring to neap cycle using MSKO constituents.</p>
+<p>While formal water level calibration and internal validation were constrained by the <strong>absence of independent hydrodynamic validation data</strong> (such as high-resolution in-situ water level loggers distributed across the intertidal flats and mangrove creeks), the model is driven by realistic boundary forcings. This ensures that the simulated hydrodynamics remain physically consistent and representative of the region’s broader tidal regime. Consequently, despite these observational constraints, this hydrodynamic baseline provides a reliable physical foundation that was subsequently utilised to calibrate the mangrove and algal dynamics models.</p>
+<div id="fig-capepreston-hydro" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-cape-preston-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/cape_preston_utm50s_map.png" class="img-fluid figure-img" style="width:100.0%">
+<div aria-describedby="fig-capepreston-hydro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="overflow: hidden; max-height: 1050px; display: flex; justify-content: center;">
+<p><img src="animations/waterdepth_6panel_animation_fps10.gif" style="margin: -10% 0px 0px 0px; width: 100%; object-fit: cover;" alt="Cape Preston hydrodynamic model animation" class="figure-img"></p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cape-preston-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;13.1: Map of the study region showing (a) regional context along the Western Australian coastline and (b) detailed aerial overview of Cape Preston.
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-capepreston-hydro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.1: Animation of the Cape Preston hydrodynamic model for a representative period using MSKO tidal constituents. <strong>(a)</strong> Water depth variations across the Cape Preston domain. <strong>(b–f)</strong> Simulated water depth time series at representative locations (Nearshore, Mouth, Mud flat, Mangrove, and Upper Mat) with the red dashed line indicating the corresponding animation timestep.
 </figcaption>
 </figure>
 </div>
-<section id="hydrodynamic-and-geomorphic-setting" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="hydrodynamic-and-geomorphic-setting"><span class="header-section-number">13.1</span> Hydrodynamic and Geomorphic Setting</h2>
-<p>Water levels along the Pilbara coast are dominated by semidiurnal lunisolar tides, with the eastern Pilbara classified as macro-tidal and the western Pilbara as meso-tidal. Cape Preston exhibits a macro-tidal regime with a Highest Astronomical Tide (HAT) of 2.25 m MSL and a mean spring tidal range exceeding 3 m, reaching a maximum astronomical range of approximately 4.5 m (<a href="../Controls on Coastal Ecosystems in Pilbara.html#tbl-water-levels" class="quarto-xref">Table&nbsp;<span>2.1</span></a>). By contrast, sites further south and west along the western Pilbara coast, such as Onslow, exhibit a meso-tidal regime with a significantly smaller tidal amplification (HAT of 1.29 m MSL; <a href="../Controls on Coastal Ecosystems in Pilbara.html#tbl-water-levels" class="quarto-xref">Table&nbsp;<span>2.1</span></a>). The regional tidal dynamics are strongly influenced by local bathymetry; the presence of Barrow Island and the shallow waters to its south attenuate and distort the westward propagation of semidiurnal and diurnal tidal energy, generating complex non-linear tidal flows.</p>
-<p>The geomorphic extent of the intertidal zone at Cape Preston is notably distinct from other study sites in the region. Unlike Giralia and Urala, Cape Preston features a considerably narrower intertidal zone. The intertidal flats at Cape Preston extend roughly 2.5 km on average from the high-water line. In comparison, Giralia features expansive intertidal flats stretching approximately 8 km, while Urala contains extensive flats ranging between 7 km and 10 km depending on the location relative to its northern and southern domains.</p>
 </section>
-<section id="prediction-approach" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="prediction-approach"><span class="header-section-number">13.2</span> Prediction approach</h2>
-<p>Following the methodology established for Giralia Bay (<span class="quarto-unresolved-ref">?sec-giralia-approach</span>), an integrated numerical model was developed for the Cape Preston region. However, unlike Giralia and Urala, we did not carry out the same level of detailed calibration for the hydrodynamic model. The hydrodynamic model was initialised using the Giralia and Urala calibtrated settings and subsequently, the mangrove vegetation module was coupled. This is due to the limited availability of field data for Cape Preston, which constrained our ability to perform a comprehensive calibration. However, as the mangrove and algal mat mapping was carried out using the same methodology as Giralia and Urala, we were able to initialise the model with present-day mangrove boundaries derived from satellite imagery.</p>
-<p>Once present-day mangrove boundaries were initialised, cyanobacterial (algal) mat distributions were calibrated using an offline (decoupled) predictive approach based on hydrodynamic and mangrove spatial outputs. The calibrated, coupled modelling framework was then applied to simulate future sea-level rise scenarios for both mangrove ecosystems and algal mats.</p>
-<p>Detailed calibration and validation procedures for the mangrove and algal mat modules, are provided in <span class="quarto-unresolved-ref">?sec-hydro-calibration</span> and <span class="quarto-unresolved-ref">?sec-urala-calibration</span>, respectively.</p>
+<section id="sec-cape-preston-mangrove-val" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="sec-cape-preston-mangrove-val"><span class="header-section-number">13.3</span> Mangrove Model Validation</h2>
+<section id="historical-mangrove-observations-20002023" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="historical-mangrove-observations-20002023"><span class="header-section-number">13.3.1</span> Historical Mangrove Observations (2000–2023)</h3>
+<p>Similar to the approach followed in other regional study areas (Giralia and Urala), we first examined the baseline mangrove dynamics at the Cape Preston site. We utilised monthly mangrove maps derived from Landsat imagery by <span class="citation" data-cites="Hickey2025">Hickey et al. (<a href="../References.html#ref-Hickey2025" role="doc-biblioref">2025</a>)</span> (part of Project A of this Mardie Marine and Intertidal Research Offset Program) to analyse temporal variability in mangrove distribution. Although the dataset provides continuous monthly observations over the satellite record, mangrove extents from 2000 and 2023 are compared in <a href="#fig-cape-preston-obs" class="quarto-xref">Figure&nbsp;<span>13.2</span></a> to illustrate long-term distribution shifts alongside corresponding water level variability recorded at the Onslow tide gauge over the same period.</p>
+<p>The historical observation data demonstrates that mangrove extents in the Cape Preston region have remained remarkably stable over the past two decades, exhibiting minimal net change despite localised inter-annual fluctuations.</p>
+<div id="fig-cape-preston-obs" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cape-preston-obs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/cape_preston_mangrove_change.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cape-preston-obs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.2: Water level observations and historical mangrove extent changes in the Cape Preston region. <strong>(a)</strong> Water level recorded at the Onslow tide gauge (<a href="https://catalogue.data.wa.gov.au/dataset/tide-stations">WA Data Catalogue</a>) displaying monthly range and monthly mean. <strong>(b)</strong> Comparison of Landsat-derived mangrove extents between 2000 and 2023 <span class="citation" data-cites="Hickey2025">(<a href="../References.html#ref-Hickey2025" role="doc-biblioref">Hickey et al., 2025</a>)</span>, highlighting areas of no change, loss, and gain.
+</figcaption>
+</figure>
+</div>
+<p>We achieved a reasonable prediction evaluation using the hydrodynamic model setup for Cape Preston. Unlike the Urala site where we applied a proxy salt balance function to mimic the hyper-saline salinity regime the Cape Preston site features a distinctly different inundation pattern. Due to these differences in hydrodynamic and topographical characteristics, the proxy salinity mass balance function did not perform or work as expected. Consequently, to minimise uncertainties stemming from a calibration function with lower confidence, we decided to drop the proxy salinity functions entirely for the Cape Preston simulations.</p>
+<p>The performance of the resulting spatial mangrove prediction and calibration is summarised in <a href="#fig-cape-preston-val" class="quarto-xref">Figure&nbsp;<span>13.3</span></a>, yielding a quantitative evaluation score of <strong>Precision: 0.65, Recall: 0.52, and an F1 Score: 0.58</strong>.</p>
+<div id="fig-cape-preston-val" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cape-preston-val-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Cape_Preston_Mangrove_calval.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cape-preston-val-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.3: Mangrove model validation and performance evaluation across the Cape Preston study area. <strong>(a)</strong> Spatial confusion map highlighting true positives (green), false negatives (yellow), and false positives (red) alongside quantitative performance metrics (<span class="math inline">\(F_1\)</span> score = 0.58, precision = 0.65, recall = 0.52).
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-cape-preston-algal-val" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="sec-cape-preston-algal-val"><span class="header-section-number">13.4</span> Cyanobacterial Mat Calibration and Validation</h2>
+<p>To evaluate cyanobacterial (algal) mat dynamics, similar to @#sec-giralia-algal-val and <a href="../Urala/Algal_Mat.html" class="quarto-xref"><span>Chapter 12</span></a>, a dual data-driven approaches - the <strong>Random Forest (RF) machine-learning classifier</strong> (with full model details and algorithmic implementation described in <a href="../Model-Overview.html#sec-algal-mat-model" class="quarto-xref"><span>Section 4.5</span></a>) and the <strong>Threshold-Based Optimisation approach</strong> were implemented to calibrate and validate the persistent habitat zone as described in <a href="../Coupled_Framework.html" class="quarto-xref"><span>Chapter 3</span></a>.</p>
+<p>The persistent algal mat zone in the Cape Preston site is shown in <a href="../Giralia/Calibration-Validation.html#fig-algal-persitent" class="quarto-xref">Figure&nbsp;<span>7.4</span></a>. The persitent map is then utlised for the calibration and validation purposes.</p>
+<div id="fig-algal-persitent-cp" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-algal-persitent-cp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/cyanobacterial_mat_persistent_2019.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-algal-persitent-cp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.4: Persistent algal mat zone based on 2019 satellite derived probability maps <span class="citation" data-cites="Hickey2025">(<a href="../References.html#ref-Hickey2025" role="doc-biblioref">Hickey et al., 2025</a>)</span>.
+</figcaption>
+</figure>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Machine-Learning Approach (Random Forest)</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Threshold-Based Optimisation Approach</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="fig-capepreston-ml" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-capepreston-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/cyanobacterial_mat_validation_ml.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-capepreston-ml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.5: Spatial validation and error distribution for the Random Forest machine-learning model across the Cape Preston domain, yielding a Precision of 0.4591, a high Recall of 0.9059, and an F1 Score of 0.6094.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="fig-capepreston-threshold" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-capepreston-threshold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/cyanobacterial_mat_validation_threshold_based_optimised.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-capepreston-threshold-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13.6: Spatial validation and error distribution for the threshold-based optimisation model across the Cape Preston domain, yielding a Precision of 0.4186, a Recall of 0.5316, and an F1 Score of 0.4683.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>A comparison of the two modelling approaches reveals distinct performance trade-offs when applied to the Cape Preston intertidal domain. The machine-learning (Random Forest) approach achieves a substantially higher recall (0.9059) than the threshold-based optimisation approach (0.5316), indicating a greater ability to capture true habitat extents and reduce underprediction across complex intertidal zones. Both approaches exhibit moderate false-positive rates, potentially due to differences in the methodology for prediction. Nevertheless, the Random Forest approach achieves higher precision (0.4591) than the threshold-based approach (0.4186), resulting in a higher F1 score (0.6094 compared with 0.4683). Overall, despite the limitations imposed by the lack of formal hydrodynamic calibration data and the complexity of local microtopography, the Random Forest approach provides a slightly effective balance between habitat detection and prediction accuracy for mapping baseline habitat distributions at Cape Preston.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-Stevens2025" class="csl-entry" role="listitem">
-Stevens, R., Abbott, J., &amp; Bouvais, P. (2025). <em>Intertidal benthic communities and habitat report: Eramurra solar salt project</em>. <a href="https://www.leic.com.au/documents/31/appendix-32-intertidal-bch-environmental-review-document">https://www.leic.com.au/documents/31/appendix-32-intertidal-bch-environmental-review-document</a>
+<div id="ref-Hickey2025" class="csl-entry" role="listitem">
+Hickey, S., Stone, A., Radford, B., &amp; Lovelock, C. E. (2025). Multidecadal mapping of arid intertidal ecosystems reveals a dynamic mosaic of habitats north-western australia. <em>Estuarine, Coastal and Shelf Science</em>, <em>323</em>, 109401. <a href="https://doi.org/10.1016/J.ECSS.2025.109401">https://doi.org/10.1016/J.ECSS.2025.109401</a>
 </div>
 </div>
 </section>
@@ -781,8 +895,8 @@ Stevens, R., Abbott, J., &amp; Bouvais, P. (2025). <em>Intertidal benthic commun
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../Cape-Preston/Mangrove.html" class="pagination-link" aria-label="Mangrove Response to SLR">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../Cape-Preston/Mangrove.html" class="pagination-link" aria-label="Mangrove Response to Sea Level Rise">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

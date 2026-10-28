@@ -52,7 +52,7 @@ The finer resolution is required to represent the local creek network, intertida
 
 ---
 
-### Cape Preston Domain Model
+### Cape Preston Domain Model {#sec-capepreston-hydromodel}
 
 #### Mesh and Setup
 The Cape Preston domain covers approximately 34 km in width and 58 km in length. As at Giralia and Urala, the grid consists of triangular elements with variable resolution. Finer elements are used around the nearshore environment, creek networks and intertidal regions where local topography influences tidal connectivity.
