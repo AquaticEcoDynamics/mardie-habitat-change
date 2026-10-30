@@ -15,7 +15,6 @@ import sys
 import urllib.parse
 
 TEXT_EXT = {".html", ".htm", ".css", ".js", ".json", ".xml", ".txt", ".ico"}
-SWA_LIMIT_MB = 500
 
 src, dest = sys.argv[1], sys.argv[2]
 
@@ -47,10 +46,4 @@ for dirpath, _, files in os.walk(src):
             print(f"skipping unreferenced {rel} ({size / 1048576:.1f} MB)")
             dropped_bytes += size
 
-kept_mb = kept_bytes / 1048576
-print(f"kept {kept_mb:.1f} MB, skipped {dropped_bytes / 1048576:.1f} MB")
-if kept_mb > SWA_LIMIT_MB:
-    print(f"::error::Site is {kept_mb:.0f} MB, over the {SWA_LIMIT_MB} MB Static Web Apps limit")
-    sys.exit(1)
-if kept_mb > SWA_LIMIT_MB * 0.9:
-    print(f"::warning::Site is {kept_mb:.0f} MB, close to the {SWA_LIMIT_MB} MB Static Web Apps limit")
+print(f"kept {kept_bytes / 1048576:.1f} MB, skipped {dropped_bytes / 1048576:.1f} MB")

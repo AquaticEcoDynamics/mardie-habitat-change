@@ -46,6 +46,15 @@ jobs:
         if: ${{ !cancelled() && steps.render.outcome == 'success' }}
         run: python3 .github/scripts/prune_unreferenced.py docs _swa
 
+      # Figures are exported far larger than they display, so shrink them in
+      # the SWA copy to fit the 500 MB limit. Pages keeps the originals.
+      - name: Shrink images for Static Web Apps
+        if: ${{ !cancelled() && steps.render.outcome == 'success' }}
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q --no-install-recommends gifsicle python3-pil
+          /usr/bin/python3 .github/scripts/shrink_media.py _swa
+
       - name: Deploy to Azure Static Web Apps (SEAF)
         if: ${{ !cancelled() && steps.render.outcome == 'success' }}
         uses: Azure/static-web-apps-deploy@v1
