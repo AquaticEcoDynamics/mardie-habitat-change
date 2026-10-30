@@ -295,7 +295,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Cape-Preston/Mangrove.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -306,6 +306,12 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Synthesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Synthesis and Integration</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
@@ -318,13 +324,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Appendices/Appendix_A.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Appendix_B.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
   </div>
 </li>
       </ul>
@@ -556,7 +562,7 @@ Figure&nbsp;6.8: Bathymetry and topography of the Exmouth Gulf Model Domain show
 <p>To accurately drive regional and local hydrodynamics, several physical boundary conditions and forcing parameters were incorporated.</p>
 <section id="water-level-and-tidal-forcing" class="level4" data-number="6.3.2.1">
 <h4 data-number="6.3.2.1" class="anchored" data-anchor-id="water-level-and-tidal-forcing"><span class="header-section-number">6.3.2.1</span> Water level and tidal forcing</h4>
-<p>Water level forcing was treated differently for historical model calibration and future predictions. During the historical modelling period, measured water levels were used to force the model and to evaluate its performance against observations. The measured water level records were compared with simulated water levels at multiple locations within the Giralia and Urala domains. This approach allowed the model to be assessed against the observed tidal signal and its temporal variability across each domain, rather than relying solely on agreement at a single boundary location. The measurement locations and associated field data are described in Appendix A, while the calibration and validation procedures and results are presented in <span class="quarto-unresolved-ref">?sec-giralia-model</span> and <span class="quarto-unresolved-ref">?sec-urala-model</span>, respectively.</p>
+<p>Water level forcing was treated differently for historical model calibration and future predictions. During the historical modelling period, measured water levels were used to force the model and to evaluate its performance against observations. The measured water level records were compared with simulated water levels at multiple locations within the Giralia and Urala domains. This approach allowed the model to be assessed against the observed tidal signal and its temporal variability across each domain, rather than relying solely on agreement at a single boundary location. The measurement locations and associated field data are described in <a href="Appendices/Appendix_A.html" class="quarto-xref"><span>Chapter 16</span></a>, while the calibration and validation procedures and results are presented for each sites separately from <a href="Giralia/Calibration-Validation.html" class="quarto-xref"><span>Chapter 7</span></a> to <a href="Cape-Preston/Algal_Mat.html" class="quarto-xref"><span>Chapter 15</span></a> respectively.</p>
 <p>Measured water levels were particularly important for establishing confidence in the model’s representation of local hydrodynamics. Unlike astronomical tide predictions alone, observed water levels can incorporate the combined effects of astronomical tides and non tidal variations present during the measurement period, including those associated with atmospheric pressure and wind. Using measured water levels during calibration therefore provided a basis for assessing whether the model could reproduce observed water level variations under the conditions represented by the field record.</p>
 <p>Alternative water level products were also considered during the assessment of boundary forcing. These included the TPXO global ocean tide model and sea surface height (SSH) data from the Hybrid Coordinate Ocean Model (HYCOM). TPXO provides harmonic tidal constituents derived through inverse modelling and assimilation of observational data (<span class="citation" data-cites="EgbertErofeeva2002">Egbert &amp; Erofeeva (<a href="References.html#ref-EgbertErofeeva2002" role="doc-biblioref">2002</a>)</span>). It is therefore useful for estimating the astronomical tidal signal where local observations are unavailable. However, its predicted astronomical tides do not, by themselves, reproduce the full non tidal water level variability recorded during individual weather events.</p>
 <p>HYCOM provides modelled sea surface elevation as part of a broader ocean modelling system (<span class="citation" data-cites="Chassignet2009"><span class="nocase">Chassignet et al.</span> (<a href="References.html#ref-Chassignet2009" role="doc-biblioref">2009</a>)</span>). The SSH variable was considered as an alternative representation of time varying offshore water levels. Depending on the product and configuration, HYCOM SSH can represent ocean variability beyond the astronomical tide, but its spatial resolution, coastal representation and temporal characteristics may limit its ability to reproduce water levels within shallow, complex intertidal environments. TPXO and HYCOM SSH were therefore evaluated as alternative sources of water level information, rather than assumed to provide an equivalent representation of the local observed water levels.</p>

@@ -289,13 +289,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Cape-Preston/Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Cape-Preston/Mangrove.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -306,6 +306,12 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Synthesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Synthesis and Integration</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
@@ -318,13 +324,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Appendices/Appendix_A.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Appendix_B.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
   </div>
 </li>
       </ul>
@@ -400,7 +406,7 @@ window.Quarto = {
 
 <section id="general" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="general"><span class="header-section-number">5.1</span> General</h2>
-<p>As the coupled flow, sediment transport, and vegetation modules involve numerous empirical parameters, direct calibration within a complex, site-specific domain introduces significant ambiguity. It is often difficult to distinguish whether variations in model performance stem from underlying physical settings or from confounding domain characteristics such as irregular bathymetry.</p>
+<p>As the coupled flow, sediment transport, and vegetation modules involve numerous empirical coefficients, direct calibration within a complex, site-specific domain introduces significant ambiguity. It is often difficult to distinguish whether variations in model performance stem from underlying physical settings or from confounding domain characteristics such as irregular bathymetry.</p>
 <p>To address this and support rigorous developmental purposes, exploratory models provide an effective framework for isolating and understanding these physical processes without site-specific noise. In this chapter, we use an <strong>idealised model configuration</strong> to systematically evaluate and optimise sediment transport formulations, boundary conditions, and vegetation settings through a three-stage approach.</p>
 <p>First, we examine the effects of key environmental forcings on tidal-flat morphology using a simplified, constant-slope idealised domain to identify the hydrodynamic drivers most relevant for regional-scale representation. Next, we advance to a Giralia-based idealised model using site-derived boundary conditions to investigate the influence of sediment dynamics, with particular emphasis on sand–mud interactions, critical shear stress for mud erosion, and mud supply. Finally, following the framework described in <a href="Coupled_Framework.html" class="quarto-xref"><span>Chapter 3</span></a> and <a href="Model-Overview.html" class="quarto-xref"><span>Chapter 4</span></a>, we integrate an idealised ecomorphodynamic model based on Giralia conditions to assess how variations in mangrove biological properties influence long-term tidal-creek morphological evolution and also mangrove model properties</p>
 </section>
@@ -422,7 +428,7 @@ Figure&nbsp;5.1: Conceptual diagram summaring the response of tidal flat shap an
 <section id="model-settings" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="model-settings"><span class="header-section-number">5.2.1</span> Model settings</h3>
 <p>The exploratory model was run by Delft3D Flexible Mesh, using the D-Flow and D-Morphology module to simulate hydrodynamics and sediment transport. The model was run in a two-dimensional (depth-averaged) domain <span class="math inline">\(2\times 20\ \mathrm{km}\)</span> with an offshore open boundary, using a rectangular grid size of <span class="math inline">\(50 \times 50\ \mathrm{m}\)</span> <a href="#fig-idealised-model-domain" class="quarto-xref">Figure&nbsp;<span>5.2</span></a>. The offshore open boundary was driven by tidal constituents, e.g.&nbsp;M2 and M4, and the lateral and offshore boundaries were closed to ensure model stability. The model bathymetry was featured by alongshore uniform slope of 0.07%. An further mild slope of 0.035% on the high intertidal flat was applied to the model for initial bed profile sensitivity test. The initial bed level at the open boundary was set to-7m relative to mean sea level (MSL) to ensure that cross-shore tidal movement would not be obstructed by the landward boundary. Random perturbations of <span class="math inline">\(5\ \mathrm{cm}\)</span> were superimposed on the bathymetry to initiate simulations.</p>
-<p>Both sand and mud were considered in the idealised model. Sand transport followed the formulation of <span class="citation" data-cites="vanrijn1993">(<a href="References.html#ref-vanrijn1993" role="doc-biblioref">Rijn, 1993</a>)</span>, with the median grain size of 0.25mm. Mud transport was computed using the Partheniades’ equation <span class="citation" data-cites="sanford1993 JC2007">(<a href="References.html#ref-sanford1993" role="doc-biblioref">Sanford &amp; Halka, 1993</a>; <a href="References.html#ref-JC2007" role="doc-biblioref">Winterwerp J.C., 2007</a>)</span>, with settling velocity of 0.25 mm/s and critical erosion shear stress of 0.1Pa. Bed friction was represented by a uniform Manning’s friction coefficient of 0.023 <span class="math inline">\(s\ m^{-1/3}\)</span> . A constant mud supply was imposed at the open boundary. To accelerate morphological response to hydrodynamics, a morphological accelerator Morfac of 50 was used in this model.</p>
+<p>Both sand and mud were considered in the idealised model. Sand transport followed the formulation of <span class="citation" data-cites="vanrijn1993">(<a href="References.html#ref-vanrijn1993" role="doc-biblioref">Rijn, 1993</a>)</span>, with the median grain size of 0.25 mm. Mud transport was computed using the Partheniades’ equation <span class="citation" data-cites="sanford1993 JC2007">(<a href="References.html#ref-sanford1993" role="doc-biblioref">Sanford &amp; Halka, 1993</a>; <a href="References.html#ref-JC2007" role="doc-biblioref">Winterwerp J.C., 2007</a>)</span>, with settling velocity of 0.25 mm/s and critical erosion shear stress of 0.1 Pa. Bed friction was represented by a uniform Manning’s friction coefficient of 0.023 <span class="math inline">\(\text{s}\,\text{m}^{-1/3}\)</span> (default value). A constant mud supply was imposed at the open boundary. To accelerate morphological response to hydrodynamics, a morphological accelerator <span class="math inline">\(f_{\mathrm{mor}}\)</span> of 50 was used in this model.</p>
 <div id="fig-idealised-model-domain" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-idealised-model-domain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -600,7 +606,7 @@ Figure&nbsp;5.5: Mud fraction after 200-year simulation for idealised scenarios.
 <section id="implications-for-regional-hydromorphodynamic-modelling" class="level3" data-number="5.2.4">
 <h3 data-number="5.2.4" class="anchored" data-anchor-id="implications-for-regional-hydromorphodynamic-modelling"><span class="header-section-number">5.2.4</span> Implications for regional hydromorphodynamic modelling</h3>
 <p>Our sensitivity tests using the schematised idealised model demonstrate that external environmental drivers play a dominant role in controlling morphological evolution and sediment redistribution. The results show that tidal range, tidal asymmetry, and the initial bed profile strongly influence morphological development and mud distribution, whereas the effects of initial substrate sediment composition and mud supply at the open boundary are comparatively limited. Therefore, when applying the morphodynamic model to tide-dominated real-world systems, accurate representation of local tidal conditions and bathymetry should be prioritised. Sediment composition and boundary mud supply can be considered secondary factors in model parameterisation.</p>
-<p>From <a href="Controls on Coastal Ecosystems in Pilbara.html" class="quarto-xref"><span>Chapter 2</span></a>, we know that the Pilbara Coast is a well-sheltered micro- to meso-tidal system, featured with ebb-dominated tides (stronger ebbing tide than flooding tide), and low sediment supply from the open boundary as well as relatively mild bathymetric slopes. These features are similar to settings in Run 7. For regional-scale morphodynamic models in Grialia, Urala and Cape Preston, we incorporated multiple tidal constituents, including M2, S2, O1, and K1, to represent an ebb-dominated tidal asymmetry and to reproduce spring–neap variability, thereby providing a more realistic representation of natural tidal conditions. Here, tidal asymmetry was induced by interaction between M2, O1 and K1 interaction <span class="citation" data-cites="song2011">(<a href="References.html#ref-song2011" role="doc-biblioref">Song et al., 2011</a>)</span>. For further details on the selection and justification of morphodynamic model parameters, readers are referred to <span class="quarto-unresolved-ref">?sec-appendix-c</span>.</p>
+<p>From <a href="Controls on Coastal Ecosystems in Pilbara.html" class="quarto-xref"><span>Chapter 2</span></a>, we know that the Pilbara Coast is a well-sheltered micro- to meso-tidal system, featured with ebb-dominated tides (stronger ebbing tide than flooding tide), and low sediment supply from the open boundary as well as relatively mild bathymetric slopes. These features are similar to settings in Run 7. For regional-scale morphodynamic models in Grialia, Urala and Cape Preston, we incorporated multiple tidal constituents, including M2, S2, O1, and K1, to represent an ebb-dominated tidal asymmetry and to reproduce spring–neap variability, thereby providing a more realistic representation of natural tidal conditions. Here, tidal asymmetry was induced by interaction between M2, O1 and K1 interaction <span class="citation" data-cites="song2011">(<a href="References.html#ref-song2011" role="doc-biblioref">Song et al., 2011</a>)</span>.</p>
 <p>Biological processes, such as bioturbation and bioadhesion, can further modify these profile shapes by either enhancing or reducing their convexity or concavity. As discussed previously, the Pilbara Coast is a well-sheltered, tide-dominated environment. Extensive mangrove forests occur along the fringing coast and tidal channels, where they act as natural buffers by reducing flow energy and stabilising channel banks. Therefore, biological processes, particularly the effects of mangrove vegetation, need to be properly represented in morphodynamic modelling of the Pilbara Coast.</p>
 </section>
 </section>
@@ -608,11 +614,11 @@ Figure&nbsp;5.5: Mud fraction after 200-year simulation for idealised scenarios.
 <h2 data-number="5.3" class="anchored" data-anchor-id="giralia-based-idealised-hydromorphological-model"><span class="header-section-number">5.3</span> Giralia-based Idealised hydromorphological model</h2>
 <section id="introduction" class="level3" data-number="5.3.1">
 <h3 data-number="5.3.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">5.3.1</span> Introduction</h3>
-<p>The exploratory idealised model presented in the previous section provided insights into the roles of tidal range, tidal asymmetry, and initial bathymetry in shaping tidal-flat morphology. Building on these findings, we developed a more realistic idealised model based on measured bathymetry and tidal conditions from Giralia Bay. Because the spatial distribution of sediment properties is not well constrained, we conducted sensitivity analyses on key sediment parameters, including the critical shear stress for mud erosion and sand–mud interactions. The initial development of this modelling framework was led by our collaborators at Deltares.</p>
+<p>The exploratory idealised model presented in the previous section provided insights into the roles of tidal range, tidal asymmetry, and initial bathymetry in shaping tidal-flat morphology. Building on these findings, we developed a more realistic idealised model based on measured bathymetry and tidal conditions from Giralia Bay. Because the spatial distribution of sediment properties is not well constrained, we conducted sensitivity analyses on key sediment parameters, including the critical shear stress for mud erosion and sand–mud interactions.</p>
 </section>
 <section id="model-settings-1" class="level3" data-number="5.3.2">
 <h3 data-number="5.3.2" class="anchored" data-anchor-id="model-settings-1"><span class="header-section-number">5.3.2</span> Model settings</h3>
-<p>To capture the extent of one of the main tidal creeks in the Giralia area, a rectangular computational grid is constructed with a length of 15 km (longshore) and a width of 1.5 km (cross-shore). The grid has a resolution of dx=dy=15 meter, which ensures the main channel is represented by at least one cell (at the landward end) and more than 15 cells at the seaward end. The initial bathymetry is assumed alongshore uniform with a convex profile shape that is associated with muddy coastlines. The following function is used to describe the cross-shore bathymetry:</p>
+<p>To capture the extent of one of the main tidal creeks in the Giralia area, a rectangular computational grid is constructed with a length of 15 km (longshore) and a width of 1.5 km (cross-shore). The grid has a resolution of dx = dy = 15 meter, which ensures the main channel is represented by at least one cell (at the landward end) and more than 15 cells at the seaward end. The initial bathymetry is assumed alongshore uniform with a convex profile shape that is associated with muddy coastlines. The following function is used to describe the cross-shore bathymetry:</p>
 <p><span id="eq-idealised-bathymetry"><span class="math display">\[z(y)=a*e^{b-c*y}+d \tag{5.1}\]</span></span></p>
 <p>here <span class="math inline">\(z(y)\)</span> is the bed level at a certain distance y, and <span class="math inline">\(a=-0.730, b=0.0351, c=-1.65e^{-4}, d=3.50\)</span> derived from Giralia Bay Bathymetry. In this model,the vertical datum of the bathymetry data is 1.45 meter above Mean Sea Level.</p>
 <div id="fig-idealised-bathymetry" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -677,20 +683,20 @@ Table&nbsp;5.2: Tidal constituents used for the idealised model, obtained from T
 </section>
 <section id="scenarios-design-1" class="level3" data-number="5.3.3">
 <h3 data-number="5.3.3" class="anchored" data-anchor-id="scenarios-design-1"><span class="header-section-number">5.3.3</span> Scenarios design</h3>
-<p>The model is run for three hydrodynamic years and a morphological acceleration factor (MorFac) of 50, resulting in 150 years of morphological development. With the aim of first attaining morphological equilibrium, no sea-level rise is imposed. We investigate the model sensitivity to erosion by first evaluating the effect of sand-mud erosion interaction (using <span class="math inline">\(\tau_e=0.5 N/m^2\)</span>). Thereafter, the critical bed shear stress for erosion of mud is varied between <span class="math inline">\(0.125N/m^2\)</span> (easily eroded) and <span class="math inline">\(2.0N/m^2\)</span>(consolidated mud).</p>
+<p>The model is run for three hydrodynamic years and a morphological acceleration factor (<span class="math inline">\(f_{\mathrm{mor}}\)</span>) of 50, resulting in 150 years of morphological development. With the aim of first attaining morphological equilibrium, no sea-level rise is imposed. We investigate the model sensitivity to erosion by first evaluating the effect of sand-mud erosion interaction (using <span class="math inline">\(\tau_e = 0.5 \,\text{N/m}^2\)</span>). Thereafter, the critical bed shear stress for erosion of mud is varied between <span class="math inline">\(0.125\,\text{N/m}^2\)</span> (easily eroded) and <span class="math inline">\(2.0\,\text{N/m}^2\)</span>(consolidated mud).</p>
 </section>
 <section id="results-1" class="level3" data-number="5.3.4">
 <h3 data-number="5.3.4" class="anchored" data-anchor-id="results-1"><span class="header-section-number">5.3.4</span> Results</h3>
-<section id="effect-of-sand-mud-erosion-interaction-tau_e0.5-nm2" class="level4" data-number="5.3.4.1">
-<h4 data-number="5.3.4.1" class="anchored" data-anchor-id="effect-of-sand-mud-erosion-interaction-tau_e0.5-nm2"><span class="header-section-number">5.3.4.1</span> Effect of sand-mud erosion interaction (<span class="math inline">\(\tau_e=0.5 N/m^2\)</span>)</h4>
-<p>The morphological development without sand-mud erosion interaction is gradual in the simulated 150 morphological years. The width-averaged elevation shows erosion between +2 m (y ~ 4000 m) and 0 m (y ~ 10000m) and accretion between 0 m (y~10000) and – 2.5 m (y~13000). One main channel has formed in the simulated period. Mud erodes only for <span class="math inline">\(\tau &gt; \tau_e=0.5 N/m^2\)</span>, conditions that do not occur often (see later, ). Therefore,mud fraction increases in the erosion zone as mud in the bed is immobile and sand is eroded, whereas mud fraction decreases in the deposition zone as sand is deposited and mud immobile, see <a href="#fig-mud_frac_no_interaction" class="quarto-xref">Figure&nbsp;<span>5.9</span></a>. This leads to a stabilization of the eroding zone as the higher mud-content increases the critical bed shear stress for erosion of sand. When channels start forming, higher flow velocities occur in the deeper parts and will exceed the erosion threshold for mud (occasionally). This does not occur on the shallower parts adjacent to the channels and mud accumulates there.</p>
+<section id="effect-of-sand-mud-erosion-interaction-tau_e0.5-textnm2" class="level4" data-number="5.3.4.1">
+<h4 data-number="5.3.4.1" class="anchored" data-anchor-id="effect-of-sand-mud-erosion-interaction-tau_e0.5-textnm2"><span class="header-section-number">5.3.4.1</span> Effect of sand-mud erosion interaction (<span class="math inline">\(\tau_e=0.5 \,\text{N/m}^2\)</span>)</h4>
+<p>The morphological development without sand-mud erosion interaction is gradual in the simulated 150 morphological years. The width-averaged elevation shows erosion between +2 m (y ~ 4000 m) and 0 m (y ~ 10000 m) and accretion between 0 m (y~10000) and – 2.5 m (y~13000). One main channel has formed in the simulated period. Mud erodes only for <span class="math inline">\(\tau &gt; \tau_e = 0.5 \,\text{N/m}^2\)</span>, conditions that do not occur often (see later, ). Therefore,mud fraction increases in the erosion zone as mud in the bed is immobile and sand is eroded, whereas mud fraction decreases in the deposition zone as sand is deposited and mud immobile, see <a href="#fig-mud_frac_no_interaction" class="quarto-xref">Figure&nbsp;<span>5.9</span></a>. This leads to a stabilization of the eroding zone as the higher mud-content increases the critical bed shear stress for erosion of sand. When channels start forming, higher flow velocities occur in the deeper parts and will exceed the erosion threshold for mud (occasionally). This does not occur on the shallower parts adjacent to the channels and mud accumulates there.</p>
 <div id="fig-idealised-profiles-no-interaction" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-idealised-profiles-no-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/paste-6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="655">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-idealised-profiles-no-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.7: Width-averaged elevation vs seaward distance for t_mor=0,10,20…..150 years without erosion interaction.
+Figure&nbsp;5.7: Width-averaged elevation vs seaward distance for t_mor = 0, 10, 20 ….. 150 years without erosion interaction.
 </figcaption>
 </figure>
 </div>
@@ -700,7 +706,7 @@ Figure&nbsp;5.7: Width-averaged elevation vs seaward distance for t_mor=0,10,20�
 <img src="images/paste-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-idealised-bed-level-no-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.8: Bed level for 0,50,100,150 years without erosion interaction
+Figure&nbsp;5.8: Bed level for 0, 50, 100, 150 years without erosion interaction
 </figcaption>
 </figure>
 </div>
@@ -710,18 +716,18 @@ Figure&nbsp;5.8: Bed level for 0,50,100,150 years without erosion interaction
 <img src="images/paste-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mud_frac_no_interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.9: The fraction mud in the active toplayer for 0,50,100,150 years without erosion interaction
+Figure&nbsp;5.9: The fraction mud in the active toplayer for 0, 50, 100, 150 years without erosion interaction
 </figcaption>
 </figure>
 </div>
-<p>Significant increase in morphological development occurs when accounting for sand-mud erosion interaction. The erosion and deposition zones, while on similar location, are larger and show greater change compared to the simulation without interaction, see <a href="#fig-profiles-with-sm-interaction" class="quarto-xref">Figure&nbsp;<span>5.10</span></a>. Large tidal channels have formed after 50 morphological years which develop until (and after) 150 morphological years, and are flanked by shallower shoals, see <a href="#fig-morpho-sm-interaction" class="quarto-xref">Figure&nbsp;<span>5.11</span></a>. Significant bodies of sand are deposited towards the seaward end of the domain that raise the local bed level. The mud-content reflects the channel-shoal dynamics, with muddy zones (red in <a href="#fig-mudfrac-sm-interaction" class="quarto-xref">Figure&nbsp;<span>5.12</span></a>) near the landward end and on the channel banks, where flow velocities are small. Furthermore, another muddy zone is at the offshore boundary where mud enters the domain and flow velocities are small. The mixture approach allows for erosion of both sand and mud, even when the critical erosion of (pure) mud <span class="math inline">\(\tau_e=0.5 N/m^2\)</span>&nbsp;is not exceed. The result is a more dynamic channel-shoal system.</p>
+<p>Significant increase in morphological development occurs when accounting for sand-mud erosion interaction. The erosion and deposition zones, while on similar location, are larger and show greater change compared to the simulation without interaction, see <a href="#fig-profiles-with-sm-interaction" class="quarto-xref">Figure&nbsp;<span>5.10</span></a>. Large tidal channels have formed after 50 morphological years which develop until (and after) 150 morphological years, and are flanked by shallower shoals, see <a href="#fig-morpho-sm-interaction" class="quarto-xref">Figure&nbsp;<span>5.11</span></a>. Significant bodies of sand are deposited towards the seaward end of the domain that raise the local bed level. The mud-content reflects the channel-shoal dynamics, with muddy zones (red in <a href="#fig-mudfrac-sm-interaction" class="quarto-xref">Figure&nbsp;<span>5.12</span></a>) near the landward end and on the channel banks, where flow velocities are small. Furthermore, another muddy zone is at the offshore boundary where mud enters the domain and flow velocities are small. The mixture approach allows for erosion of both sand and mud, even when the critical erosion of (pure) mud <span class="math inline">\(\tau_e=0.5 \,\text{N/m}^2\)</span>&nbsp;is not exceed. The result is a more dynamic channel-shoal system.</p>
 <div id="fig-profiles-with-sm-interaction" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-profiles-with-sm-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/paste-7.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="654">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-profiles-with-sm-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.10: Width-averaged elevation vs seaward distance for 0,10,20…..150 years with erosion interaction.
+Figure&nbsp;5.10: Width-averaged elevation vs seaward distance for 0, 10, 20 ….. 150 years with erosion interaction.
 </figcaption>
 </figure>
 </div>
@@ -731,7 +737,7 @@ Figure&nbsp;5.10: Width-averaged elevation vs seaward distance for 0,10,20…..1
 <img src="images/paste-9.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-morpho-sm-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.11: The bed level for 0,50,100,150 years with erosion interaction.
+Figure&nbsp;5.11: The bed level for 0, 50, 100, 150 years with erosion interaction.
 </figcaption>
 </figure>
 </div>
@@ -741,21 +747,21 @@ Figure&nbsp;5.11: The bed level for 0,50,100,150 years with erosion interaction.
 <img src="images/paste-10.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mudfrac-sm-interaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.12: The mud fraction in the active toplayer for0,50,100,150 years with erosion interaction
+Figure&nbsp;5.12: The mud fraction in the active toplayer for 0, 50, 100, 150 years with erosion interaction
 </figcaption>
 </figure>
 </div>
 </section>
 <section id="sensitivity-test-on-critical-bed-shear-stress-for-mud-erosion" class="level4" data-number="5.3.4.2">
 <h4 data-number="5.3.4.2" class="anchored" data-anchor-id="sensitivity-test-on-critical-bed-shear-stress-for-mud-erosion"><span class="header-section-number">5.3.4.2</span> Sensitivity test on critical bed shear stress for mud erosion</h4>
-<p><span class="citation" data-cites="colinaalonso2023">Colina Alonso et al. (<a href="References.html#ref-colinaalonso2023" role="doc-biblioref">2023</a>)</span> show the sensitivity of channel-shoal patterns to the critical erosion of mud when applying sand-mud erosion interaction. Due to the absence of waves and generally more milder conditions (lower bed-shear stresses), less profound differences in channel-shoal patterns are found when varying the critical erosion of mud. Channel size and patterns are comparable for <span class="math inline">\(\tau_e=0.125,0.25,0.5,0.75,1,1.5,2 N/m^2\)</span>as transport is mainly non-cohesive. More easily erodible mud <span class="math inline">\(\tau _e =0.125,0.25 N/m^2\)</span>results in channels that reach less far landward, see <a href="#fig-morpho-different-mud-critical-erosion" class="quarto-xref">Figure&nbsp;<span>5.13</span></a>. The most erodible mud&nbsp;<span class="math inline">\(\tau _e =0.125 N/m^2\)</span>stands out as the landward-end is more distinctly muddy at greater distance from the sea, and muddy shoals are of smaller size, see <a href="#fig-mudfrac-different-critical-erosion" class="quarto-xref">Figure&nbsp;<span>5.14</span></a>. Without further investigation the other cases seem to yield similar results, which can be attributed to the bed shear stresses in this domain not exceeding the respective erosion thresholds.</p>
+<p>In <span class="citation" data-cites="colinaalonso2023">Colina Alonso et al. (<a href="References.html#ref-colinaalonso2023" role="doc-biblioref">2023</a>)</span>, the sensitivity of channel-shoal patterns to the critical erosion of mud when applying sand-mud erosion interaction is shown. Due to the absence of waves and generally milder conditions (lower bed-shear stresses), less profound differences in channel-shoal patterns are found when varying the critical erosion of mud. Channel size and patterns are comparable for <span class="math inline">\(\tau_e = 0.125, 0.25, 0.5, 0.75, 1, 1.5, 2\,\text{N/m}^2\)</span> as transport is mainly non-cohesive. More easily erodible mud (<span class="math inline">\(\tau_e = 0.125, 0.25\,\text{N/m}^2\)</span>) results in channels that reach less far landward (see <a href="#fig-morpho-different-mud-critical-erosion" class="quarto-xref">Figure&nbsp;<span>5.13</span></a>). The most erodible mud (<span class="math inline">\(\tau_e = 0.125\,\text{N/m}^2\)</span>) stands out as the landward end is more distinctly muddy at a greater distance from the sea, and muddy shoals are of smaller size (see <a href="#fig-mudfrac-different-critical-erosion" class="quarto-xref">Figure&nbsp;<span>5.14</span></a>). Without further investigation, the other cases seem to yield similar results, which can be attributed to the bed shear stresses in this domain not exceeding the respective erosion thresholds.</p>
 <div id="fig-morpho-different-mud-critical-erosion" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-morpho-different-mud-critical-erosion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/paste-11.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="952">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-morpho-different-mud-critical-erosion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.13: The bed level after 150 morphological years for <span class="math inline">\(\tau _e=0.125,0.25,0.5,0.75,1,1.5,2 N/m^2\)</span>
+Figure&nbsp;5.13: The bed level after 150 morphological years for <span class="math inline">\(\tau_e = 0.125, 0.25, 0.5, 0.75, 1, 1.5, 2\,\text{N/m}^2\)</span>
 </figcaption>
 </figure>
 </div>
@@ -765,7 +771,7 @@ Figure&nbsp;5.13: The bed level after 150 morphological years for <span class="m
 <img src="images/paste-12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="952">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mudfrac-different-critical-erosion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.14: The mud fraction in the active top layer after 150 morphological years for<span class="math inline">\(\tau _e=0.125,0.25,0.5,0.75,1,1.5,2 N/m^2\)</span>
+Figure&nbsp;5.14: The mud fraction in the active top layer after 150 morphological years for <span class="math inline">\(\tau_e = 0.125, 0.25, 0.5, 0.75, 1, 1.5, 2\,\text{N/m}^2\)</span>
 </figcaption>
 </figure>
 </div>
@@ -780,12 +786,12 @@ Figure&nbsp;5.14: The mud fraction in the active top layer after 150 morphologic
 <h2 data-number="5.4" class="anchored" data-anchor-id="giralia-based-ecomorphological-model"><span class="header-section-number">5.4</span> Giralia-based ecomorphological model</h2>
 <section id="introduction-1" class="level3" data-number="5.4.1">
 <h3 data-number="5.4.1" class="anchored" data-anchor-id="introduction-1"><span class="header-section-number">5.4.1</span> Introduction</h3>
-<p>Compared with those in tropical humid climates, mangroves in arid regions exhibit greater tolerance to climatic extremes (low precipitation and high temperature) but have shorter tree stature and lower diversity. Different from tall and dense mangrove forests in tropical humid climates, mangroves in arid climates like the Pilbara coast are usually sparse and lower, with small stem size, slow growth rate, and low reproduction rate <span class="citation" data-cites="Adame2021 Santini2013">(<a href="References.html#ref-Adame2021" role="doc-biblioref">Adame et al., 2021</a>; <a href="References.html#ref-Santini2013" role="doc-biblioref">Santini et al., 2013</a>)</span>. Operating near their physiological limits and lacking riverine sediment supply, arid mangrove forest were thought to be more sensitive to global warming and sea-level rise. Therefore, in this exploratory model, we systematically analyzed different mangrove tree properties (stem diameter, growth rate and density) on morphological evolution using the frame work proposed in <a href="Coupled_Framework.html" class="quarto-xref"><span>Chapter 3</span></a>.</p>
+<p>Compared with those in tropical humid climates, mangroves in arid regions exhibit greater tolerance to climatic extremes (low precipitation and high temperature) but have shorter tree stature and lower diversity. Different from tall and dense mangrove forests in tropical humid climates, mangroves in arid climates like the Pilbara coast are usually sparse and lower, with small stem size, slow growth rate, and low reproduction rate <span class="citation" data-cites="Adame2021 Santini2013">(<a href="References.html#ref-Adame2021" role="doc-biblioref">Adame et al., 2021</a>; <a href="References.html#ref-Santini2013" role="doc-biblioref">Santini et al., 2013</a>)</span>. Operating near their physiological limits and lacking riverine sediment supply, arid mangrove forest were thought to be more sensitive to global warming and sea-level rise. Therefore, in this exploratory model, we systematically analysed different mangrove tree properties (stem diameter, growth rate and density) on morphological evolution using the frame work proposed in <a href="Coupled_Framework.html" class="quarto-xref"><span>Chapter 3</span></a>.</p>
 </section>
 <section id="model-settings-2" class="level3" data-number="5.4.2">
 <h3 data-number="5.4.2" class="anchored" data-anchor-id="model-settings-2"><span class="header-section-number">5.4.2</span> Model settings</h3>
-<p>The Idealised model domain was configured to represent a gently sloping tide-dominated mangrove system, applicable to Giralia Bay, Western Australia. The model was run in a two-dimensional domain with an offshore open boundary, using a gradually fining rectangular grid size, from 200*20m to 20*20m. An alongshore uniform convex profile <span class="math inline">\(z=2.2-8.5e^{-0.165(y-8.19)}\)</span> ,derived from the mean bed profile in Giralia Bay, was used as the initial profile with a funnel-shaped channel in the middle <a href="#fig-ideal-channel-domain" class="quarto-xref">Figure&nbsp;<span>5.15</span></a>. The funnel-shaped channel followed the bathymetric characteristics measured in Giralia Bay – channel width (mouth width <span class="math inline">\(B_0=0.6 km\)</span>) decreased exponentially towards landward and disappeared when it became smaller than the grid width (20 m). Channle thalweg elevation increased linearly from subtidal and remained constant on the platform. The open boundary conditions were based on primary constituents (M2, S2, O1, K1) extracted from TPXO10.</p>
-<p>Both sand (90% in volume) and mud (10% in volume) were considered in the sediment substrate, and their transport was resolved by the formulation of <span class="citation" data-cites="vanrijn1993">(<a href="References.html#ref-vanrijn1993" role="doc-biblioref">Rijn, 1993</a>)</span> and the equations of Partheniades and Krone <span class="citation" data-cites="partheniades1965">(<a href="References.html#ref-partheniades1965" role="doc-biblioref">Partheniades, 1965</a>)</span>, respectively. Following previous studies on dynamic mangrove modelling <span class="citation" data-cites="Xie2022">(<a href="References.html#ref-Xie2022" role="doc-biblioref">Xie et al., 2022</a>)</span>, the critical shear stress for mud erosion was set to <span class="math inline">\(0.2 N/m^2\)</span>.</p>
+<p>The Idealised model domain was configured to represent a gently sloping tide-dominated mangrove system, applicable to Giralia Bay, Western Australia. The model was run in a two-dimensional domain with an offshore open boundary, using a gradually fining rectangular grid size, from 200*20 m to 20*20m. An alongshore uniform convex profile <span class="math inline">\(z=2.2-8.5e^{-0.165(y-8.19)}\)</span> ,derived from the mean bed profile in Giralia Bay, was used as the initial profile with a funnel-shaped channel in the middle <a href="#fig-ideal-channel-domain" class="quarto-xref">Figure&nbsp;<span>5.15</span></a>. The funnel-shaped channel followed the bathymetric characteristics measured in Giralia Bay – channel width (mouth width <span class="math inline">\(B_0=0.6 \mathrm{km}\)</span>) decreased exponentially towards landward and disappeared when it became smaller than the grid width (20 m). Channle thalweg elevation increased linearly from subtidal and remained constant on the platform. The open boundary conditions were based on primary constituents (M2, S2, O1, K1) extracted from TPXO10.</p>
+<p>Both sand (90% in volume) and mud (10% in volume) were considered in the sediment substrate, and their transport was resolved by the formulation of <span class="citation" data-cites="vanrijn1993">(<a href="References.html#ref-vanrijn1993" role="doc-biblioref">Rijn, 1993</a>)</span> and the equations of Partheniades and Krone <span class="citation" data-cites="partheniades1965">(<a href="References.html#ref-partheniades1965" role="doc-biblioref">Partheniades, 1965</a>)</span>, respectively. Following previous studies on dynamic mangrove modelling <span class="citation" data-cites="Xie2022">(<a href="References.html#ref-Xie2022" role="doc-biblioref">Xie et al., 2022</a>)</span>, the critical shear stress for mud erosion was set to <span class="math inline">\(0.2\,\text{N/m}^2\)</span>.</p>
 <div id="fig-ideal-channel-domain" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ideal-channel-domain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -800,8 +806,13 @@ Figure&nbsp;5.15: (a) Real domain of tidal flats with a channel in Giralia Bay, 
 <section id="scenarios-design-2" class="level3" data-number="5.4.3">
 <h3 data-number="5.4.3" class="anchored" data-anchor-id="scenarios-design-2"><span class="header-section-number">5.4.3</span> Scenarios design</h3>
 <p>Scenarios started from bare tidal flats without any mangrove forest (Run 0). Different mangrove biological properties were listed in the following table. Parameters in Run 1 were adopted from <span class="citation" data-cites="Xie2022">(<a href="References.html#ref-Xie2022" role="doc-biblioref">Xie et al., 2022</a>)</span>, which represent relatively large, fast-growing, and dense mangrove forest. In Run 2, the maximum growth rate of stem diameter was decreased to 0.3 cm per year to understand the impact of growth rate. Later, the maximum tree stem diameter decreased to 10 cm in Run 3, with unchanged growth parameters (G, b<sub>2</sub>, and b<sub>3</sub>) and Run 4, with unchanged maximum rate. For Run 1 to Run 4, the inundation fitness curve was designed that mangrove growth quality reaches an optimal at inundation frequency P=0.25 and decrease on both sides.</p>
+<div id="tbl-mangrove-model-param-space" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mangrove-model-param-space-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.3: Mangrove model parameters for different scenarios.
+</figcaption>
+<div aria-describedby="tbl-mangrove-model-param-space-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
-<caption>Mangrove model parameters for different scenarios</caption>
 <colgroup>
 <col style="width: 11%">
 <col style="width: 11%">
@@ -873,6 +884,9 @@ Figure&nbsp;5.15: (a) Real domain of tidal flats with a channel in Giralia Bay, 
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 </section>
 <section id="results-2" class="level3" data-number="5.4.4">
 <h3 data-number="5.4.4" class="anchored" data-anchor-id="results-2"><span class="header-section-number">5.4.4</span> Results</h3>
@@ -880,22 +894,34 @@ Figure&nbsp;5.15: (a) Real domain of tidal flats with a channel in Giralia Bay, 
 <p>Comparisons between simulations with different tree growth rates (Run 1 vs.&nbsp;Run 2 and Run 3 vs.&nbsp;Run 4) show that the faster-growing cases (Runs 1 and 4) develop higher biomass throughout the upper intertidal zone (y &gt; 0 km). This greater biomass is associated with a higher proportion of mud-dominated cells, larger cross-sectional channel areas, and greater channel depths along the cross-shore direction.</p>
 <p>Comparisons between simulations with different stem diameters (Run 2 vs.&nbsp;Run 4) reveal a different response. Although the smaller-stem case (Run 4) exhibits lower biomass throughout the upper intertidal zone, it develops a greater proportion of muddy cells, a denser and more highly branched tidal-creek network, larger channel cross-sectional areas, and a deeper central channel.</p>
 <p>This response can be attributed to the higher stem density associated with smaller individual stem diameters and the earlier attainment of mature vegetation densities. Despite the lower biomass, the increased stem density enhances the cumulative vegetation-induced drag exerted on the flow, thereby strengthening vegetation–flow interactions and promoting more pronounced patterns of channel erosion and platform sediment accretion.</p>
-<div id="Ideal-Biomass-morpho-mud" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/Eco_equi.png" class="img-fluid figure-img" width="534"></p>
-<figcaption>(a1)-(a5) Morphology and mangrove biomass distribution after ecological equilibrium. (b1)-(b5) Morphological changes compared with unvegetation scenario. (c1)-(c5) Mud fraction on the top layer after ecological equilibrium.</figcaption>
+<div id="fig-biomass-morpho-mud" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-biomass-morpho-mud-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Eco_equi.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="534">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-biomass-morpho-mud-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.16: Morphology and mangrove biomass distribution after ecological equilibrium (a1–a5), morphological changes compared with unvegetation scenario (b1–b5), and mud fraction on the top layer after ecological equilibrium (c1–c5).
+</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Eco_equi_bathycharacter.png" width="400" height="716" class="figure-img"></p>
-<figcaption>(a) Alongshore averaged platform elevation; (b) Thalweg (deepest) line elevation of the central channel; (c) The percentage of muddy cells (mud fraction&gt;30%) at ecological equilibrium (after 120-year coupling).</figcaption>
+<div id="fig-bathy-characteristics" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bathy-characteristics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Eco_equi_bathycharacter.png" class="quarto-figure quarto-figure-center figure-img" width="400" height="716">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bathy-characteristics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.17: Alongshore averaged platform elevation (a), thalweg line elevation of the central channel (b), and percentage of muddy cells (mud fraction &gt; 30%) at ecological equilibrium after 120-year coupling (c).
+</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Eco_equi_bathycharacter2.png" class="img-fluid figure-img" width="400"></p>
-<figcaption>Alongshore averaged (a) biomass, (b) number of channels, (c) cross-sectional area (below mean sea level) and (d) central channel depth after ecological equilibrium (120-year coupling).</figcaption>
+<div id="fig-biomass-channel-metrics" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-biomass-channel-metrics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/Eco_equi_bathycharacter2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-biomass-channel-metrics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.18: Alongshore averaged biomass (a), number of channels (b), cross-sectional area below mean sea level (c), and central channel depth (d) after ecological equilibrium (120-year coupling).
+</figcaption>
 </figure>
 </div>
 </section>

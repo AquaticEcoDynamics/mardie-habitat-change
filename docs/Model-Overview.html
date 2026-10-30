@@ -289,13 +289,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Cape-Preston/Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Cape-Preston/Mangrove.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -306,6 +306,12 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Synthesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Synthesis and Integration</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
@@ -318,13 +324,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Appendices/Appendix_A.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Appendix_B.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
   </div>
 </li>
       </ul>
@@ -393,8 +399,8 @@ window.Quarto = {
 
 
 <p><br></p>
-<p>In this study, a state-of-the-art, process-based, open-source Delft3D Flexible Mesh (DFM) model was applied in a depth-averaged (2DH) configuration to simulate the coupled hydrodynamic and morphodynamic processes governing coastal, estuarine, and riverine environments (Deltares, 2021). The model resolves the spatial and temporal evolution of flow, sediment transport, and morphological change using an unstructured grid composed of triangular and quadrilateral elements.</p>
-<p>DFM employs a finite volume method to solve the shallow water equations under the hydrostatic pressure assumption and Boussinesq approximation, whereby density variations are only considered in the pressure term. The hydrodynamic core (D-Flow FM) computes water levels, velocities, and salinity, and is dynamically coupled with additional modules including wave dynamics (D-Waves) and sediment transport and morphology (D-Morphology). Interactions with vegetation are implemented similar to the Basic Model Interface (BMI) approach, allowing feedbacks between hydrodynamics, sediment processes, and ecosystem development. While the algal mats are not explicitly represented in the model, their distribution is predicted using a Random Forest (RF) classifier trained on hydrodynamic metrics derived from the DFM simulation.</p>
+<p>In this study, a state-of-the-art, process-based, open-source Delft3D Flexible Mesh (DFM) model version 2026.01 was applied in a depth-averaged (2DH) configuration to simulate the coupled hydrodynamic and morphodynamic processes governing coastal, estuarine, and riverine environments (Deltares, 2021). The model resolves the spatial and temporal evolution of flow, sediment transport, and morphological change using an unstructured grid composed of triangular and quadrilateral elements.</p>
+<p>DFM modelling suite employs a finite volume method to solve the nonlinear shallow water equations under the hydrostatic pressure assumption and Boussinesq approximation, whereby density variations are only considered in the pressure term. The hydrodynamic core (D-Flow FM) computes water levels, velocities, and the influence of salinity, temperature and density gradients and allows for dynamic coupling with additional modules including wave dynamics (D-Waves) and sediment transport and morphology (D-Morphology). Interactions with vegetation are implemented similar to the Basic Model Interface (BMI) approach, allowing feedback between hydrodynamics, sediment processes, and habitat evolution. While the algal mats are not explicitly represented in the model, their distribution is predicted using a Random Forest (RF) classifier trained on hydrodynamic metrics derived from the DFM simulation.</p>
 <section id="flow-module" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="flow-module"><span class="header-section-number">4.1</span> Flow Module</h2>
 <p>Hydrodynamic processes are simulated using the Delft3D-FM flow module, which solves the incompressible Navier–Stokes equations under shallow water assumptions (hydrostatic pressure) and the Boussinesq approximation (Deltares, 2019a).</p>
@@ -446,7 +452,7 @@ window.Quarto = {
 =
 -\rho g
 \tag{4.5}\]</span></span></p>
-<p>For this study, Delft3D-FM is applied using a depth-averaged (2DH) configuration. The governing shallow-water equations are:</p>
+<p>For this study, Delft3D-FM is applied using a depth-averaged (2DH) configuration. While the equations below represent the core hydrodynamic flow, additional external forces—such as wind stress, wave-induced forces, and vegetation-induced drag—are incorporated into the momentum balance when these respective modules are active. The governing shallow-water equations are:</p>
 <p>Continuity equation</p>
 <p><span id="eq-depth-continuity"><span class="math display">\[
 \frac{\partial h}{\partial t}
@@ -572,7 +578,7 @@ E(\sigma,\theta)
 </section>
 <section id="morphodynamic-module" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="morphodynamic-module"><span class="header-section-number">4.3</span> Morphodynamic Module</h2>
-<p>Sediment transport and morphological evolution are simulated using the Delft3D-FM morphodynamic module (D-Morphology). Suspended sediment transport is calculated using the advection–diffusion equation:</p>
+<p>Sediment transport and morphological evolution are simulated using the Delft3D-FM morphodynamic module (D-Morphology), accounting for both non-cohesive sand and cohesive sediment (mud) fractions. Suspended sediment transport is calculated using the advection–diffusion equation:</p>
 <p><span id="eq-sediment-transport"><span class="math display">\[
 \frac{\partial c}{\partial t}
 +
@@ -652,7 +658,7 @@ w_s c
 \tag{4.17}\]</span></span></p>
 <p>where <span class="math inline">\(M\)</span> is the erosion parameter, <span class="math inline">\(\tau_{b,\max}\)</span> is the maximum bed shear stress generated by currents and waves, <span class="math inline">\(\tau_{cr,e}\)</span> is the critical bed shear stress for erosion, <span class="math inline">\(\tau_{cr,d}\)</span> is the critical bed shear stress for deposition, <span class="math inline">\(w_s\)</span> is the sediment settling velocity, and <span class="math inline">\(c\)</span> is the depth-averaged suspended sediment concentration.</p>
 <p><br></p>
-<p>The coupled hydrodynamic, wave, and morphodynamic processes provide the physical framework required to simulate coastal ecosystem development, including feedbacks between vegetation establishment, flow modification, sediment dynamics, and morphological change.</p>
+<p>The coupled hydrodynamic, wave, and morphodynamic processes provide the physical framework required to simulate coastal ecosystem development, including feedback between vegetation establishment, flow modification, sediment dynamics, and morphological change.</p>
 <p>Overall, the Delft3D-FM framework enables an integrated simulation of hydrodynamics, waves, sediment transport, and vegetation feedbacks, providing a robust tool for assessing coastal ecosystem dynamics under varying environmental conditions.</p>
 </section>
 <section id="sec-vegetation-effects" class="level2" data-number="4.4">
@@ -685,7 +691,7 @@ I(P) = \max \left( a_s P^2 + b_s P + c_s,\, 0 \right)
 <p><span id="eq-height-diameter"><span class="math display">\[
 H = 137 + b_2 D - b_3 D^2
 \tag{4.21}\]</span></span></p>
-<p>with growth coefficients <span class="math inline">\(b_2 = 21.3\)</span> and <span class="math inline">\(b_3 = 0.2\)</span>. The maximum structural dimensions (<span class="math inline">\(D_{\max} = 10 \text{ cm}\)</span> and <span class="math inline">\(H_{\max} = 330 \text{ cm}\)</span>) were established based on field observations and radiocarbon-dated chronology of arid Western Australian mangroves <span class="citation" data-cites="Santini2013">(<a href="References.html#ref-Santini2013" role="doc-biblioref">Santini et al., 2013</a>)</span>, while <span class="math inline">\(H_{\max}\)</span> was further cross-referenced with regional <span class="math inline">\(98^{\text{th}}\)</span> percentile LiDAR canopy height measurements. Growth parameters (<span class="math inline">\(G, b_2, b_3\)</span>) were adjusted following <span class="citation" data-cites="Xie2022">Xie et al. (<a href="References.html#ref-Xie2022" role="doc-biblioref">2022</a>)</span> to reflect growth responses under arid environmental conditions.</p>
+<p>with growth coefficients <span class="math inline">\(b_2 = 21.3\)</span> and <span class="math inline">\(b_3 = 0.2\)</span> are optimised based on Giralia mangrove field data. The maximum structural dimensions (<span class="math inline">\(D_{\max} = 10 \text{ cm}\)</span> and <span class="math inline">\(H_{\max} = 330 \text{ cm}\)</span>) were established based on field observations and radiocarbon-dated chronology of arid Western Australian mangroves <span class="citation" data-cites="Santini2013">(<a href="References.html#ref-Santini2013" role="doc-biblioref">Santini et al., 2013</a>)</span>, while <span class="math inline">\(H_{\max}\)</span> was further cross-referenced with regional <span class="math inline">\(98^{\text{th}}\)</span> percentile LiDAR canopy height measurements. Growth parameters (<span class="math inline">\(G, b_2, b_3\)</span>) were adjusted following <span class="citation" data-cites="Xie2022">Xie et al. (<a href="References.html#ref-Xie2022" role="doc-biblioref">2022</a>)</span> to reflect growth responses under arid environmental conditions.</p>
 <p>Growth is optimised within intermediate inundation frequencies where <span class="math inline">\(I(P)\)</span> peaks. As trees approach maximum structural limits (<span class="math inline">\(D \to D_{\max}\)</span>), the growth rate asymptotically approaches zero, representing the reduced growth increment characteristic of mature individuals.</p>
 </section>
 <section id="biomass-and-spatial-footprint" class="level3" data-number="4.4.4">
