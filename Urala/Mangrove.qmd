@@ -18,7 +18,7 @@ Spatial and temporal evolution of mangrove canopy height ($h$, right colorbar) o
 
 The simulations reveal a strong coupling between sea level rise, intertidal wetland encroachment, and tidal creek network extension across the Urala coastal plain:
 
-1. **Low-SLR Scenario (SSP119):** Under SSP119, the rate of sea level rise remains low enough that tidal prism increases are modest. As a result, the main tidal creeks in SSP119 show minimal expansion or deep headward incision. The existing network geometry accommodates the minor increase in tidal volume without inducing substantial bed erosion or channel widening. Mangroves along the creek banks and within the main basin maintain dynamic equilibrium, experiencing subtle landward growth while keeping pace with water level changes without major dieback.
+1. **Low-SLR Scenario (SSP119):** Under SSP119, increases in the tidal prism remain modest because the rate of sea-level rise is relatively low. As a result, the main tidal creeks in SSP119 show minimal expansion or deep headward incision. The existing network geometry accommodates the minor increase in tidal volume without inducing substantial bed erosion or channel widening. Mangroves along the creek banks and within the main basin maintain dynamic equilibrium, experiencing subtle landward growth while keeping pace with water level changes without major dieback.
 
 2. **Moderate to High-SLR Scenarios (SSP370 & SSP585):** As sea level rise accelerates in SSP370 and SSP585, larger volumes of water flood the expansive, low-lying supratidal flats behind the main coastal barrier during each tidal cycle. This dramatic increase in the tidal prism drives higher flow velocities within the main drainage arteries, initiating severe scour and progressive channel expansion. 
    
@@ -38,7 +38,7 @@ Spatially, baseline mangrove distribution is heavily governed by tidal inundatio
 
 * **SSP119 (Low Emission):** At Year 50 (@fig-Urala_mangrove_evolution a), mangroves remain well-established throughout the central and southern intertidal flats with tall canopy structures ($h > 2\text{ m}$). By Year 100 (@fig-Urala_mangrove_evolution d), mangrove coverage undergoes localised thinning and slight dieback along the middle channels, while lower-canopy mangroves ($h \approx 1\text{–}1.5\text{ m}$) establish along the landward boundaries. Creek structures in SSP119 undergo minor expansion, preserving the overall channel geometry.
 * **SSP370 (Intermediate Emission):** By Year 50 (@fig-Urala_mangrove_evolution b), slight fragmentation and colonization are visible along the expanding creek channels. By Year 100 (@fig-Urala_mangrove_evolution e), tidal creeks evolve dramatically, deepening and incision-carving wide, branching channel networks deep into the landward supratidal flats. Mangroves dynamically track this channel incision, establishing dense, tall stands ($h > 2\text{ m}$) along the newly formed creek banks and migrating significantly inland into newly inundated tidal zones.
-* **SSP585 (High Emission):** At Year 50 (@fig-Urala_mangrove_evolution c), channel enlargement and mangrove establishment mirror the intermediate scenario. By Year 100 (@fig-Urala_mangrove_evolution f), extreme SLR leads to severe tidal creek incision, mouth widening, and extensive channel network propagation far landward. Mangroves aggressively colonise these newly formed, deeply incised creek margins and landward margins; however, rapid sea-level rise causes significant drowning and dieback of lower intertidal mangroves, limiting total net spatial coverage compared to SSP370 due to coastal squeeze.
+* **SSP585 (High Emission):** At Year 50 (@fig-Urala_mangrove_evolution c), channel enlargement and mangrove establishment mirror the intermediate scenario. By Year 100 (@fig-Urala_mangrove_evolution f), extreme SLR leads to severe tidal creek incision, mouth widening, and extensive channel network propagation far landward. Mangroves colonise these newly formed, deeply incised creek margins and landward margins; however, rapid sea-level rise causes significant drowning and dieback of lower intertidal mangroves, limiting total net spatial coverage compared to SSP370.
 
 ::: {.callout-note}
 ## Key Findings: Tidal Creek Incision and Mangrove Relocation
@@ -75,13 +75,13 @@ Spatiotemporal evolution of the tidal creek network over 100 years under (a) SSP
 
 To evaluate the integrated hydro-morphodynamic and ecological trajectories of the Urala domain under SLR, the normalised time series of total mangrove surface area and tidal creek planform footprint relative to initial conditions were tracked (@fig-Urala_temporal_evolution).
 
-During the initial 40–50 years of simulation, both mangrove extent and channel planform footprint exhibit relative stability, maintaining normalised values near baseline ($1.0$). Early rate-of-rise metrics remain within threshold tolerances for local bed shear stress, allowing localised bed accretion and canopy retention to buffer hydrodynamic shifts without broad structural reorganisation across SSP119, SSP370, and SSP585.
+During the initial 10-15 years of simulation, both mangrove extent and channel planform footprint exhibit relative stability, maintaining normalised values near baseline ($1.0$). Early rate-of-rise metrics remain within threshold tolerances for local bed shear stress, allowing localised bed accretion and canopy retention to buffer hydrodynamic shifts without broad structural reorganisation across SSP119, SSP370, and SSP585.
 
 Beyond Year 50, non-linear hydro-morphodynamic bifurcation occurs across scenarios, driving coupled channel expansion (@fig-Urala_temporal_evolution b) and ecological redistribution (@fig-Urala_temporal_evolution a):
 
-* **Convergence of High-Emission Morphological Expansion (SSP370 vs. SSP585):** Both SSP370 and SSP585 exhibit rapid, quasi-parallel acceleration in creek planform area past Year 50. Increasing tidal prism volume amplifies ebb-jet velocities which could be triggering widespread headward headcut erosion and lateral secondary branching. While SSP585 drives slightly greater initial incision depth, total planform network footprint expansion converges between SSP370 and SSP585 by Year 100, contrasting sharply with the stable, baseline-constrained trajectory of SSP119.
+* **Creek Expansion under the Higher-Emissions SLR Scenarios (SSP370 and SSP585):** Both SSP370 and SSP585 exhibit rapid, quasi-parallel acceleration in creek planform area past Year 50. Increasing tidal prism volume amplifies ebb-jet velocities which could be triggering widespread headward headcut erosion and lateral secondary branching. While SSP585 drives slightly greater initial incision depth, total planform network footprint expansion converges between SSP370 and SSP585 by Year 100, contrasting sharply with the stable, baseline-constrained trajectory of SSP119.
 * **Eco-Morphodynamic Lag and Opportunistic Relocation:** Normalised mangrove area highlights a strong eco-geomorphic coupling with channel network evolution. Under SSP370 and SSP585, early landward extension of incised creeks provides newly inundated, sheltered drainage corridors that facilitate a temporal surge in canopy colonisation between Years 50 and 80.
-* **Coastal Squeeze and Asymmetric Non-Linear Decline:** Under extreme SLR (SSP585), rapid lower-intertidal bed drowning combined with steep inland elevation gradients eventually causes seaward fringe collapse after Year 80. Although channel networks remain fully expanded, net mangrove area under SSP585 suffers an asymmetric decline possibly due to coastal squeeze, whereas SSP370 retains a higher overall mangrove footprint by maintaining a balance between channel-mediated migration and lower-edge survival.
+- **Seaward Mangrove Loss and Landward Migration:** Under SSP585, increasing sea levels initially promote landward mangrove expansion as newly inundated areas become suitable for colonisation. This expansion is predicted to continue for approximately 50–60 years, resulting in an increase in total mangrove extent. However, this trend subsequently reverses as environmental conditions across parts of the model domain extend beyond the prescribed ranges for mangrove establishment and growth. Once these conditions exceed the modelled tolerance thresholds, the mortality rules are activated, resulting in vegetation loss and a decline in total mangrove area. Consequently, mangrove extent decreases after its initial peak, with greater losses under SSP585 than SSP370 by Year 100. This trajectory reflects the balance between initial landward establishment and subsequent mortality under increasingly unsuitable environmental conditions.
 
 ::: {#fig-Urala_temporal_evolution}
 ![](images/urala_temporal_evolution.png){fig-align="center" width="95%"}
@@ -109,14 +109,17 @@ Temporal evolution of normalised total mangrove biomass relative to initial cond
 
 ### SLR Implications on the Initial Mangrove Footprint
 
-To isolate the vulnerability of established forests from opportunistic landward colonisation, the temporal decay of the initial mangrove footprint area and its corresponding biomass dynamics were tracked exclusively within the original baseline boundaries (@fig-Urala_initial_footprint). All metrics in this analysis were normalised relative to initial timestep values ($t = 0$).
+To isolate the vulnerability of established forests from opportunistic landward colonisation, the temporal decay of the initial mangrove footprint area and its corresponding biomass dynamics were tracked exclusively within the original baseline boundaries (@fig-Urala_initial_footprint). Mangrove footprint area was quantified in hectares, while biomass was normalised relative to its initial value at timestep $t = 0$.
 
 #### Footprint Area Decay Dynamics
-As shown in @fig-Urala_initial_footprint a, the initial mangrove footprint area ($\approx 2200\text{ ha}$) experiences progressive, step-wise losses across all scenarios as sea levels rise:
 
-* **Lag Phase (Years 0–30):** All scenarios preserve $>90\%$ of their initial area ($\approx 2000\text{ ha}$), with minor step losses occurring due to localised seaward edge trimming.
-* **Accelerated Loss (Years 30–70):** Under **SSP370** and **SSP585**, excessive inundation causes severe lower-intertidal drowning, accelerating habitat loss. By Year 70, initial footprint coverage drops below $1350\text{ ha}$ under SSP370 and plunges to $<500\text{ ha}$ under SSP585.
-* **Terminal Collapse (Years 70–100):** By Year 100, the initial footprint area under **SSP585** is nearly eliminated ($<100\text{ ha}$, retaining $<5\%$ of original area). **SSP370** retains approximately $200\text{ ha}$ ($<10\%$), whereas **SSP119** retains over $1250\text{ ha}$ ($\approx 58\%$).
+As shown in @fig-Urala_initial_footprint a, the initial mangrove footprint area ($\approx 2200\text{ ha}$) experiences progressive, stepwise losses across all scenarios as sea levels rise:
+
+- **Lag Phase (Years 0–30):** All scenarios retain approximately $1950$–$2000\text{ ha}$ of their initial footprint, equivalent to around $89$–$91\%$ of the baseline area. During this period, losses are relatively limited and occur primarily through localised reductions in the existing mangrove footprint.
+
+- **Accelerated Loss (Years 30–70):** Under **SSP370** and **SSP585**, mangrove footprint losses become increasingly pronounced, consistent with greater exposure to inundation and the associated modelled mortality. By Year 70, the initial footprint has declined to approximately $1350\text{ ha}$ under SSP370 and $900\text{ ha}$ under SSP585. The SSP585 trajectory subsequently declines sharply, falling below $500\text{ ha}$ at approximately Year 72–73.
+
+- **Continued Decline and Scenario Divergence (Years 70–100):** Losses continue under SSP370 and SSP585, with both scenarios approaching near-complete depletion of the initial footprint by Year 100. Under SSP585, less than $100\text{ ha}$ remains, representing less than $5\%$ of the original area. SSP370 retains approximately $200\text{ ha}$ (around $9\%$), whereas SSP119 retains more than $1250\text{ ha}$ (approximately $58\%$). The SSP119 trajectory therefore indicates a substantially slower decline in the original mangrove footprint compared with the higher sea-level rise scenarios.
 
 #### Normalised Biomass Dynamics within Initial Boundaries
 Normalised biomass within the initial footprint (@fig-Urala_initial_footprint b) closely tracks the spatial decay of forest coverage, revealing clear stress mechanisms:
@@ -125,7 +128,7 @@ Normalised biomass within the initial footprint (@fig-Urala_initial_footprint b)
 * **Divergent Collapse Rates:** Past Year 50, normalised biomass in **SSP585** decays rapidly, dropping below $0.1$ ($10\%$ of initial biomass) by Year 80. **SSP370** exhibits a similar steep decline, reaching $\approx 0.08$ by Year 100. In contrast, **SSP119** maintains over $45\%$ of its initial biomass at Year 100.
 
 #### Drivers of Initial Footprint Loss
-The primary driver of this decay is **coastal squeeze and hydraulic drowning**. As sea levels rise, the lower-intertidal seaward margin experiences permanent inundation exceeding species hydroperiod tolerances. Because this analysis explicitly excludes landward expansion areas, it demonstrates that historical mangrove stands cannot survive in situ under moderate-to-high SLR rates. Survival of the overall mangrove ecosystem relies entirely on uninhibited landward migration along newly incised creek systems.
+Losses within the initial mangrove footprint occur as increasing inundation exceeds the modelled tolerance of established stands, particularly along the lower intertidal margin. This analysis tracks only the original footprint and excludes establishment in new landward areas. It therefore shows the vulnerability of existing stands, rather than demonstrating that landward migration is physically blocked. Persistence of mangroves across the wider domain depends strongly on successful establishment in newly suitable areas along the evolving creek network.
 
 ::: {#fig-Urala_initial_footprint}
 ![](images/mangrove_area_biomass_timeseries.png){fig-align="center" width="95%"}
@@ -165,24 +168,24 @@ Comparative spatiotemporal evolution of bed level ($z$) and mangrove canopy heig
 
 ### Influence of Development Envelope
 
-To assess the eco-morphodynamic impact of coastal infrastructure under SLR, simulations were executed incorporating the proposed development footprint under intermediate (SSP370) and high-emission (SSP585) scenarios. Within the Delft3D Flexible Mesh numerical model, the development boundary is parameterised as a rigid, impermeable thin dam wall structure. 
+To assess how a physical barrier could affect mangrove migration under sea-level rise, simulations incorporated a hypothetical development footprint based on the original salt-pond proposal. Runs were conducted under the intermediate (SSP370) and high (SSP585) SLR scenarios. In Delft3D Flexible Mesh, the boundary was represented as a rigid, impermeable thin dam wall. This is an illustrative development scenario rather than a representation of an approved development.
 
-This numerical representation completely blocks mass and momentum transport across the boundary, preventing hydrodynamic flow, tidal inundation, and sediment flux from entering the landward interior of the development zone. Consequently, tidal flow and headward creek expansion are restricted, forcing hydrodynamics to dissipate within the remaining unconstrained intertidal footprint. @fig-Urala_Study_site_development_boundary shows the location of the study site in Western Australia (@fig-Urala_Study_site_development_boundary a), with the proposed development boundary envelope marked in @fig-Urala_Study_site_development_boundary b. 
+The impermeable boundary prevents water and sediment from crossing into the development footprint, restricting tidal inundation and the landward extension of creeks within that area. It therefore provides an explicit physical constraint on potential mangrove migration under sea-level rise. @fig-Urala_Study_site_development_boundary shows the study site in Western Australia (@fig-Urala_Study_site_development_boundary a) and the boundary used for the hypothetical barrier scenario (@fig-Urala_Study_site_development_boundary b).
 
 ::: {#fig-Urala_Study_site_development_boundary}
 ![](images/Urala_Study_site_development_boundary.png){fig-align="center" width="95%"}
 
-Proposed Project location in Western Australia (panel a), with a zoomed-in view of the Urala Creek focus site in panel b, showing the project boundary envelope marked in red.
+Location of the Urala study site in Western Australia (panel a), with a closer view of the hypothetical development footprint in panel b. The boundary, shown in red, is based on the original salt-pond proposal and is used here to investigate the effects of a barrier to landward migration.
 :::
 
 To systematically evaluate the eco-geomorphic alterations induced by this physical barrier, the comparative analysis focuses on evaluating baseline (unconstrained) conditions against the development scenario under the high-emission forcing (SSP585), representing the most critical stress test for system resilience and spatial adaptation.
 
-For illustrative purposes, we present the spatio-temporal evolution of mangrove height and bed morphodynamics under the SSP585 scenario with the proposed development boundary (@fig-Urala_dev_only). Numerical results indicate that as sea-level rise accelerates, mangroves actively attempt to migrate landward into newly inundated intertidal zones. However, the rigid and impermeable bund walls intercept this natural landward retreat pathway. Mangrove stands initially colonise and cluster along the immediate seaward edges of the bund walls. As sea levels continue to rise throughout the 100-year projection, the physical barrier prevents any further landward migration, forcing the vegetation into prolonged inundation stress, acute coastal squeeze, and eventual canopy dieback.
+For illustrative purposes, we present the spatio-temporal evolution of mangrove height and bed morphodynamics under the SSP585 scenario with the hypothetical development boundary (@fig-Urala_dev_only). Numerical results indicate that as sea-level rise accelerates, mangroves actively attempt to migrate landward into newly inundated intertidal zones. However, the rigid and impermeable bund walls intercept this natural landward retreat pathway. Mangrove stands initially colonise and cluster along the immediate seaward edges of the bund walls. As sea levels continue to rise throughout the 100-year projection, the physical barrier prevents any further landward migration, forcing the vegetation into prolonged inundation stress, acute coastal squeeze, and eventual canopy dieback.
 
 ::: {#fig-Urala_dev_only}
 ![Development Scenario (With Bund Wall)](animations/mangrove_bedlevel_animation_fullview_DEV585.gif){#fig-dev-fullview style= width: 100%; display: block; margin: 0 auto;"}
 
-Spatiotemporal evolution of mangrove canopy height ($h$) overlaid on bed level ($z$) under the SSP585 scenario in the presence of the proposed development footprint bounded by rigid bund walls.
+Evolution of mangrove canopy height ($h$) overlaid on bed elevation ($z$) under SSP585, with a hypothetical development footprint based on the original salt-pond proposal. The footprint is bounded by rigid, impermeable bund walls in the model.
 :::
 
 To further isolate these eco-geomorphic alterations and evaluate the localised impact of the bund walls on mangrove height and channel profile evolution, we systematically compare the zoomed-in transect animations for the SSP585 scenario with and without the development footprint (@fig-Urala_development_transect_comparison).
@@ -217,46 +220,41 @@ To evaluate the influence of coastal development infrastructure, the normalised 
 
 During the initial nine decades (Years 0–90), both baseline and development scenarios exhibit comparable growth patterns, expanding mangrove area up to 3.0–3.3 times the baseline footprint (@fig-Urala_temporal_evolution_devvsnodev a). Minor variance between years 50 and 75 reflects localised, transient hydro-period adjustments upstream of the bund walls. 
 
-However, a critical threshold is reached around **Year 92–94**, where the development bund walls impose a severe physical barrier to landward retreat:
-* **Baseline Scenarios (SSP370 & SSP585):** Endure late-stage sea-level stress but sustain a relative expansion factor between **2.0× and 2.35×** by Year 100.
-* **Development Scenarios (DEV_SSP370 & DEV_SSP585):** Experience catastrophic canopy retreat and coastal squeeze, dropping sharply to **1.6×** (DEV_SSP370) and **1.2×** (DEV_SSP585) by Year 100. 
+Around Years 92-94, the development and no-development trajectories diverge sharply (@fig-Urala_temporal_evolution_devvsnodev a):
+
+- Baseline scenarios (SSP370 and SSP585): Mangrove area remains approximately 2.0-2.35 times its initial value by Year 100.
+- Hypothetical development scenarios (DEV_SSP370 and DEV_SSP585): The bund-wall barrier restricts landward migration and mangrove area falls to approximately 1.6 and 1.2 times its initial value, respectively, by Year 100.
 
 This divergence represents a **32% to 41% net reduction** in late-century mangrove habitat availability caused directly by the physical bund wall footprint.
 
 ### Tidal Creek Evolution
-Unlike mangrove area loss, which manifests rapidly near the end of the century, tidal creek footprint expansion shows an earlier and sustained restriction due to development infrastructure (@fig-Urala_temporal_evolution_devvsnodev b):
-* **Early Alignment (Years 0–35):** All scenarios follow nearly identical expansion curves, increasing channel network footprints by approximately 0.2% to 0.3%.
-* **Divergence Point (~Year 35):** Development curves begin steadily decoupling from baseline trajectories as bund walls restrict lateral channel migration and tidal headward incision.
-* **Late-Century Contrast (Year 100):** Baseline creek networks expand to **1.019×** (SSP370) and **1.0205×** (SSP585) relative to Year 1. In contrast, bund-constrained networks are restricted to **1.014×** and **1.015×**, respectively. 
+The creek-footprint trajectories diverge earlier than the sharp late-century reduction in mangrove area (@fig-Urala_temporal_evolution_devvsnodev b):
+
+- Early alignment (Years 0-35): All scenarios follow similar trajectories, with creek footprints increasing by approximately 0.2-0.3%.
+- Divergence (from about Year 35): The hypothetical development scenarios begin to diverge from the baseline trajectories as bund walls restrict landward creek extension and branching.
+- Year 100 comparison: Baseline creek footprints reach approximately 1.019 times the initial value under SSP370 and 1.0205 under SSP585. With the hypothetical bund walls, the corresponding values are approximately 1.014 and 1.015.
 
 The presence of bund walls inhibits natural channel branching, confining hydrodynamics within established pathways and preventing the formation of secondary tidal drainage networks.
 
 ::: {.callout-note icon=false}
 ## Summary: Ecological Trajectories and Infrastructure Impacts at Urala
 
-Synthesising multi-decadal predictions from our coupled eco-morphodynamic model reveals how Urala's mangrove and tidal creek systems respond to sea-level rise across emission pathways, and how coastal development fundamentally alters these natural adaptation pathways:
+The simulations show how sea-level rise could change mangrove distribution and tidal creeks at Urala, and how a hypothetical development barrier could restrict the habitats available for landward migration.
 
 
-## Scenario Profiles & Natural Ecosystem Responses
+## Mangrove and Tidal Creek Responses to Sea-Level Rise
 
-- **SSP119 (Low SLR – 0.5 m): Eco-Morphodynamic Stability**
-  * *Ecosystem Regime:* Stable and resilient.
-  * *Trajectory:* Minimal seaward edge drowning. Tidal prism increases are small, resulting in minor creek expansion and steady, in-situ canopy retention. Intertidal zonation remains largely balanced throughout the 100-year window.
+- **SSP119 (Low SLR, 0.5 m):** Smaller changes in tidal creeks. The volume of water entering and leaving the intertidal area with each tide changes relatively little, so creek expansion is limited. Some mangroves are lost from the original footprint while others establish in new landward areas. By Year 100, total mangrove area remains above its initial value, while total biomass is close to its initial value.
 
-- **SSP370 (Intermediate SLR – 0.9 m): Headward Incision & Inland Colonisation**
-  * *Ecosystem Regime:* Dynamic creek-mediated relocation.
-  * *Trajectory:* Accelerated SLR increases tidal prism volumes, driving deep headward creek incision ($>5\text{ km}$ inland). These newly incised channels serve as vital corridors, facilitating rapid landward mangrove colonisation and a temporary surge in total biomass.
+- **SSP370 (Intermediate SLR, 0.9 m):** Landward expansion along tidal creeks. As more water enters and leaves the intertidal area with each tide, creeks extend inland and create areas suitable for mangrove establishment. Mangrove area and biomass initially increase, but some gains are subsequently lost as inundation increases.
 
-- **SSP585 (High SLR – 1.25 m): Severe Seaward Drowning & Coastal Squeeze**
-  * *Ecosystem Regime:* Extreme spatial restructuring and initial footprint collapse.
-  * *Trajectory:* While channel networks fully expand, extreme inundation outpaces bed accretion at the lower-intertidal boundary. The original baseline footprint suffers terminal collapse ($<5\%$ remaining by Year 100), forcing survival to rely entirely on landward migration along newly formed creek banks.
+- **SSP585 (high SLR, 1.25 m)** Extensive losses from the original mangrove footprint. Mangroves establish along newly formed inland creeks, while prolonged inundation causes major losses from existing stands. By Year 100, less than 5% of the original footprint remains. Establishment in new landward areas allows mangroves to persist across the wider domain.
 
+## Effects of the Hypothetical Development Barrier
 
-## Impact of Coastal Development (Bund Walls)
+- **Restricted landward migration:** The hypothetical bund walls block water and sediment exchange across the development boundary, limiting creek extension and access to areas where mangroves could otherwise establish as sea level rises.
+- **Less mangrove habitat by Year 100:** Under SSP370 and SSP585, total mangrove area is approximately 2.0-2.35 times its initial value without the barrier, compared with approximately 1.2-1.6 times its initial value with the hypothetical bund walls.
+- **Difference between scenarios:** The hypothetical development produces approximately 32-41% less mangrove area by Year 100 than the corresponding scenario without development. Creek expansion and branching are also reduced.
 
-- **Impassable Barrier to Migration:** Natural mangrove survival under moderate-to-high SLR depends entirely on uninhibited landward migration. The proposed rigid bund walls intercept this natural retreat pathway, trapping vegetation against the infrastructure.
-- **Quantified Habitat Loss:** While unconstrained baseline scenarios (SSP370/SSP585) sustain a relative spatial expansion factor of **2.0× to 2.35×** by Year 100, development-constrained scenarios (DEV_SSP370/DEV_SSP585) experience dramatic canopy retreat, dropping to **1.2× to 1.6×**.
-- **Net Reduction:** This restriction results in a severe **32% to 41% net reduction** in late-century mangrove habitat availability, alongside a permanent suppression of secondary tidal creek branching.
-
-> **Insight:** Under natural conditions, Urala mangroves survive moderate-to-high SLR by migrating inland via newly incised creek networks. However, the introduction of impermeable bund walls blocks this landward escape route, triggering acute coastal squeeze and severe long-term habitat loss.
+> **Management implication:** Access to suitable landward areas helps mangroves persist as sea level rises in these simulations. The hypothetical bund-wall experiment shows how a barrier can restrict that adaptation and reduce future habitat. These results highlight the need to consider migration pathways when assessing coastal development.
 :::

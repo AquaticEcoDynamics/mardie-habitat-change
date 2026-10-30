@@ -3,17 +3,15 @@
 ---
 # Calibration and Validation {#sec-urala-calibration}
 
-This chapter presents the comprehensive calibration and validation of the high-resolution Urala domain model across three critical physical and ecological components:
+This chapter presents a comprehensive calibration and validation of the high-resolution Urala domain model. The approach largely follows that adopted for Giralia in @sec-giralia-calibration, with Urala-specific adjustments described below. Three physical and ecological components are evaluated:
 
 1. **Hydrodynamic Calibration and Validation:** Evaluating simulated water levels and inundation dynamics against continuous field gauge observations.
-2. **Mangrove Model Validation:** Comparing modelled mangrove spatial extents and canopy parameters (stem diameter and height) against long-term historical satellite observations (2000–2023).
+2. **Mangrove Model Validation:** Comparing modelled mangrove extent with historical satellite-derived distributions (2000-2023), with predicted canopy attributes described separately.
 3. **Cyanobacterial (Algal) Mat Validation:** Using a data-driven approach to calibrate and validate the persistent zone as outlined in @sec-approach and @sec-model-overview.
-
-Similar to the procedures followed for the Giralia domain (@sec-giralia-hydro-cal), we applied the same calibration and validation approaches.
 
 ## Hydrodynamic Calibration and Validation {#sec-urala-hydro-calibration}
 
-As highlighted in @sec-intro, we focus our effort on the development aspect of the constraints. Nevertheless, hydrodynamics serve as the primary physical driver shaping intertidal habitats in Urala, much like other study sites. Achieving accurate hydrodynamic predictions is crucial for assessing baseline conditions, potential future environmental changes, and developmental constraints. 
+As highlighted in @sec-intro, we focus our effort on the salt project development aspect of the constraints. Nevertheless, hydrodynamics serve as the primary physical driver shaping intertidal habitats in Urala, much like other study sites. Achieving accurate hydrodynamic predictions is crucial for assessing baseline conditions, potential future environmental changes, and developmental constraints. 
 
 Hydrodynamic calibration was conducted by comparing simulated water surface elevations against field-measured water level time series across key monitoring locations (readers are referred to @sec-appendixA for more details about monitoring) representing diverse habitat zones, including:
 
@@ -23,7 +21,7 @@ Hydrodynamic calibration was conducted by comparing simulated water surface elev
 - **Mid Mat (Lower Algal Mat)**
 - **Upper Mat (Upper Algal Mat)**
 
-Calibration was achieved by iteratively tuning **bottom roughness parameters** (spatially variable Manning's $n$ coefficients tailored to specific habitat bed types, see also @tbl-roughness) and evaluating **lateral boundary conditions** (testing Neumann lateral boundaries vs. prescribed water level boundaries vs. closed wall boundaries) following the approach of @sec-giralia-hydro-cal. Other key parameters adjusted during this process include turbulence/eddy viscosity, wind drag coefficients, bathymetric/bed smoothing, and wetting/drying depth thresholds.
+Calibration involved adjusting bottom roughness using spatially variable Manning’s n coefficients assigned to the habitat bed types (@tbl-roughness). Other parameters and numerical settings examined included turbulence/eddy viscosity, wind drag coefficients, bathymetry/bed smoothing and wetting/drying depth thresholds.
 
 The animation below illustrates the dynamic water depth variations, tidal propagation, and wetting/drying cycles across the specified monitoring locations within the Urala domain during the calibration period.
 
@@ -39,11 +37,11 @@ The model achieved a strong overall agreement between measured and simulated wat
 
 * **Mouth & Lower Creek:** The model exhibited excellent agreement with field measurements, achieving an RMSE of $\approx 0.068\text{ m}$, a bias of $-0.07\text{ m}$, a slope of $0.99$, a scatter index of $\approx 0.17$, and a correlation coefficient ($R$) of $\approx 0.98$.
 * **Lower & Upper Algal Mats / Mud Flats:** Surface water levels showed moderate accuracy in amplitude; however, the model demonstrated robust performance when analyzing the amplitude and frequency of inundation capturing approximately **70% of observed inundation events**.
-* **Spatial Inundation:** Comparisons between simulated inundation extent and satellite-derived water coverage during representative high and low tides showed a strong spatial match (@sec-appendixA), reinforcing confidence in the model's ability to accurately simulate hydrodynamic processes and provide a reliable foundation for predicting future Habitat changes under differnt SLR scenarios (@sec-sec-approach).
+* **Spatial Inundation:** Comparisons between simulated inundation extent and satellite-derived water coverage during representative high and low tides showed a strong spatial match (@sec-appendixA), reinforcing confidence in the model's ability to accurately simulate hydrodynamic processes and provide a reliable foundation for predicting future Habitat changes under differnt SLR scenarios (@sec-approach).
 
 ## Mangrove Model Validation {#sec-urala-mangrove-val}
 
-To establish a baseline for present environmental conditions and evaluate future mangrove redistribution, we assessed the performance of the mangrove dynamic model across the Urala region. Following the approach used for the Giralia calibration and validation, our primary focus is on long-term changes; thus, we considered only the dominant tidal constituents (MSKO) for predicting both present-day conditions and future sea-level rise (SLR) scenarios.
+To establish a baseline for present environmental conditions and evaluate future mangrove redistribution, we assessed the performance of the mangrove dynamic model across the Urala region. Following the approach used for the Giralia calibration and validation, our primary focus is on long-term changes; thus, we considered only the dominant tidal constituents (M2, S2, K1 and O1; see @sec-modelling-approach) for predicting both present-day conditions and future sea-level rise (SLR) scenarios.
 
 ### Historical Mangrove Observations (2000–2023)
 
@@ -66,7 +64,7 @@ Water level observations and historical mangrove extent in the Urala region. **(
 
 As a first attempt, we evaluated model transferability by applying the calibrated mangrove model coefficients directly from Giralia to Urala. However, this preliminary setup resulted in a **spatial overprediction** of mangrove extent, with the model predicting mangrove establishment across vast stretches of the high intertidal and supratidal salt flats where no mangroves exist.
 
-This overprediction highlighted a key limitation: the initial model framework did not resolve substrate-level abiotic stressors specifically, **groundwater and surface salinity dynamics**. In hyper-arid systems like Urala, extreme evaporation across shallow, infrequently inundated salt flats (sabkhas) generates hypersaline conditions ($> 60–80\text{ PSU}$) that severely constrain mangrove seedling establishment and survival. Without an explicit salinity stress mechanism, the hydro-morphological suitability criteria alone proved insufficient to constrain mangrove boundaries.
+This overprediction highlighted a key limitation: the initial model framework did not resolve substrate-level abiotic stressors specifically, **groundwater and surface salinity dynamics**. In hyper-arid systems like Urala, extreme evaporation across shallow salt flats that are infrequently inundated generates hypersaline conditions ($> 60–80\text{ PSU}$) that severely constrain mangrove seedling establishment and survival. Without an explicit salinity stress mechanism, the hydro-morphological suitability criteria alone proved insufficient to constrain mangrove boundaries.
 
 ---
 
@@ -132,7 +130,7 @@ where $S_{\text{thres}}$ is the salinity threshold above which stress begins to 
 
 ### Model Initialisation & Performance Evaluation
 
-@fig-urala-val shows the modelled mangrove distribution across the Urala region under present environmental conditions. Because the objective was to reproduce the representative baseline mangrove extent, the model simulations were forced with dominant tidal constituents (MSKO) for the prediction of present-day conditions. 
+@fig-urala-val shows the modelled mangrove distribution across the Urala region under present environmental conditions. Because the objective was to reproduce the representative baseline mangrove extent, the model simulations were forced with dominant tidal constituents (M2, S2, K1 and O1; see @sec-modelling-approach) for the prediction of present-day conditions. 
 
 The spatial agreement between the modelled and observed mangrove extents was evaluated by categorising grid cells:
 * **True Positives (Green):** Correctly predicted mangrove areas.
@@ -147,7 +145,7 @@ To quantitatively evaluate spatial performance within the core analysis domain, 
 | **Recall** | Proportion of observed mangrove cells correctly reproduced by the model | $\text{Recall} = \frac{TP}{TP + FN}$ | $0.534$ |
 | **$F_1$ Score** | Harmonic mean of precision and recall | $F_1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$ | $0.598$ |
 
-The resulting statistics demonstrate good performance across the primary mangrove zones ($F_1 = 0.598$). High precision ($0.680$) indicates that where the model predicts mangroves, observed stands are consistently present. The lower recall ($0.534$) is primarily attributed to unmodeled, narrow fringing mangrove strips along smaller tidal channels (visible as black false negative areas in @fig-urala-val a), where extreme localised hydrodynamic gradients or micro-topographic variations are near the limit of model resolution.
+The model achieved precision of 0.680, recall of 0.534 and an F1 score of 0.598. Precision indicates that 68.0% of predicted mangrove cells corresponded to observed mangroves, while recall indicates that 53.4% of observed mangrove cells were reproduced. Missed areas include narrow fringing strips along smaller tidal channels; the extent to which these discrepancies reflect model resolution, elevation data or other process representations requires further evaluation.
 
 ---
 
@@ -158,7 +156,7 @@ In addition to spatial extent, the model captures key structural attributes of t
 * **Stem Diameter ($d$):** Predicted spatial distributions (@fig-urala-val b) range between $0.03\text{ m}$ and $0.07\text{ m}$. Larger diameters ($>0.05\text{ m}$) are concentrated within the well-established, sheltered tidal creek network, indicating that mature mangroves are forming in the true observed locations relatively well.
 * **Stem Height ($h$):** Corresponding spatial distributions (@fig-urala-val c) show heights ranging predominantly between $1.8\text{ m}$ and $2.6\text{ m}$, displaying a clear structural gradient: taller, mature trees occupy the sheltered, frequently inundated main creek channels, while smaller, shorter trees ($<2.0\text{ m}$) form along the landward transitions and peripheral fringes.
 
-This spatial coherence between mature stem dimensions and true positive observed zones confirms that the model accurately captures both the spatial extent and internal structural dynamics of the present-day Urala mangrove ecosystem.
+The predicted stem diameter and height distributions provide a model-based description of canopy structure. Their spatial correspondence with observed mangrove occurrence does not constitute quantitative validation of these attributes or of internal vegetation dynamics. Independent structural observations would be needed to evaluate those predictions.
 
 ::: {#fig-urala-val}
 ![](images/Urala_mangrove_validation.png){fig-align="center" width="100%"}
@@ -205,12 +203,13 @@ The spatial validation results comparing both approaches across the Urala domain
 
 ## Chapter Summary {#sec-urala-summary}
 
-The comprehensive calibration and validation of the Urala domain model demonstrate robust performance across all physical and ecological components, establishing a highly reliable foundation for long-term predictive assessments:
+The calibration and validation provide a basis for evaluating present-day conditions at Urala, with performance differing among the hydrodynamic and habitat components.
 
-- **Hydrodynamic Reliability:** The model successfully captures complex intertidal hydrodynamics, achieving strong statistical agreement at tidal monitoring stations (e.g., $R \approx 0.98$ and low RMSE at the North Mouth) and capturing roughly 70% of inundation events across the upper and lower intertidal flats. This high degree of physical fidelity ensures accurate baseline representation of tidal propagation and wetting-drying cycles.
-- **Mangrove Resilience & Salinity Control:** While initial model transfers experienced spatial overprediction, the integration of the novel **proxy salinity mass-balance module** successfully resolved hyper-arid stress constraints (sabkha hypersalinity limits). The resulting model achieved good overall agreement ($F_1 = 0.598$, high precision of $0.680$), accurately capturing both the spatial extent and internal structural dynamics (stem diameter and height gradients) of the Urala mangrove ecosystem.
-- **Cyanobacterial Mat Multi-Approach Performance:** By combining both rigorous differential evolution threshold optimisation and a Random Forest machine-learning framework, the algal mat persistence models mapped the complex environmental niches governed by bed shear stress ($\tau_{\text{max}}$), inundation frequency, and water depth ($d_{98}$). 
+- **Hydrodynamics:** Agreement was strongest at the creek mouth and lower creek, with correlation of approximately 0.98. Water-level amplitudes were less accurately reproduced on the intertidal flats and mat habitats, where the model captured approximately 70% of observed inundation events. These differences remain relevant when interpreting habitat predictions.
+- **Mangroves:** Transferring the Giralia mangrove parameterisation to Urala initially resulted in an overprediction of mangrove extent. To address this, a proxy salinity mass-balance module was introduced to represent the additional constraint imposed by hypersalinity on mangrove establishment across infrequently inundated salt flats. This modification improved the spatial representation of mangrove extent, achieving a precision of $0.680$, recall of $0.534$ and an F1 score of $0.598$. These results indicate a better balance between the identification of existing mangrove areas and the limitation of overpredicted extent. However, independent validation of predicted vegetation structural attributes, including stem diameter and height, is not reported here.
+- 
+- **Cyanobacterial Mat Multi-Approach Performance:** Threshold optimisation and Random Forest classification were evaluated as separate approaches for predicting persistent mat distributions from modelled bed shear stress, inundation frequency and water depth. 
 
-**Unique Systemic Insights:** Unlike more humid or micro-tidal tropical settings, the Urala system highlights the critical control exerted by extreme hypersalinity and micro-topographic thresholds in sharply demarcating intertidal habitat boundaries. The strong quantitative metrics achieved across both traditional threshold optimisation and data-driven machine learning instill high confidence in the model's predictive skill. 
+**Implications for model application:** The Urala results show why transfer between sites requires evaluation against local observations and consideration of site-specific habitat controls. The introduction of the salinity proxy addresses a limitation of using hydro-morphological suitability alone. Present-day agreement supports using the framework to explore future responses, while the projections remain conditional on the elevation data, boundary forcing, salinity representation and ecological parameterisation. Agreement in present-day habitat extent does not independently validate future habitat migration or vegetation structural dynamics.
 
 Building upon this validated framework, the long-term responses and future trajectories of these intertidal ecosystems under various climate-driven sea-level rise (SLR) scenarios are presented in @sec-urala-mangrove and @sec-urala-algalmat.

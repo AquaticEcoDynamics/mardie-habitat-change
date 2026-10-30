@@ -289,13 +289,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Cape-Preston/Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Cape-Preston/Mangrove.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -306,6 +306,12 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Synthesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Synthesis and Integration</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
@@ -318,13 +324,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Appendices/Appendix_A.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Appendix_B.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
   </div>
 </li>
       </ul>
@@ -395,9 +401,9 @@ window.Quarto = {
 </section>
 <section id="sec-giralia-hydro-cal" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="sec-giralia-hydro-cal"><span class="header-section-number">7.2</span> Hydrodynamic Calibration and Validation</h2>
-<p>Hydrodynamics serve as the fundamental physical driver governing tidal inundation, bed shear stress, and from water levels along with residence time and temperature, a proxy salinity gradients across the intertidal landscape can also be established. Achieving high predictive accuracy for water surface elevations and inundation timing is therefore essential prior to simulating ecological dynamics.</p>
-<p>The Giralia hydrodynamic model was calibrated and validated using continuous field monitoring observations collected between <strong>November 2023 and February 2025</strong>. The monitoring network captured a wide range of hydrodynamic conditions, including ambient spring–neap tidal cycles, seasonal water level fluctuations, and episodic atmospheric disturbances. For detailed descriptions of sensor specifications, station coordinates, quality control, and data processing workflows, readers are referred to <a href="../Appendices/Appendix_A.html" class="quarto-xref"><span>Chapter 16</span></a>.</p>
-<p>Model calibration was performed iteratively by tuning key friction, numerical, and boundary parameters:</p>
+<p>Hydrodynamics govern tidal inundation, water movement and bed shear stress across the intertidal landscape. Inundation characteristics can also provide indirect information about salinity-related habitat constraints, although salinity itself is not explicitly simulated in the predictive framework (<a href="../Coupled_Framework.html#sec-salinity-representation" class="quarto-xref"><span>Section 3.3.4</span></a>). Accurate simulation of water levels and inundation timing is therefore essential for evaluating habitat dynamics.</p>
+<p>The Giralia hydrodynamic model was calibrated and validated using field observations collected between <strong>November 2023 and February 2025</strong>. The monitoring network captured a wide range of hydrodynamic conditions, including spring–neap tidal cycles, seasonal water level fluctuations, and episodic atmospheric disturbances. For detailed descriptions of sensor specifications, station coordinates, quality control, and data processing workflows, readers are referred to <a href="../Appendices/Appendix_A.html" class="quarto-xref"><span>Chapter 16</span></a>.</p>
+<p>Model calibration involved iterative adjustment of physical parameters related to bottom roughness and vegetation drag, together with numerical settings and boundary conditions:</p>
 <ul>
 <li><strong>Bottom Roughness:</strong> Transitioned from a uniform bed roughness to spatially variable Manning’s roughness coefficients (<span class="math inline">\(n\)</span>) assigned across benthic habitat classes (see also <a href="../Hydrodynamic-Model.html" class="quarto-xref"><span>Chapter 6</span></a> for more details) to account for momentum dissipation across channels, mudflats, and vegetated zones.</li>
 <li><strong>Vegetation Drag:</strong> Inundation resistance within mangrove stands was explicitly parameterised using the Baptist canopy formulation <span class="citation" data-cites="Baptist2007">(<a href="../References.html#ref-Baptist2007" role="doc-biblioref">Baptist et al., 2007</a>)</span>, incorporating field-measured tree heights and stem densities.</li>
@@ -415,8 +421,8 @@ window.Quarto = {
 <li><strong>Regression Slope and Bias:</strong> Regression slopes exceeded <strong><span class="math inline">\(0.90\)</span></strong> at nearly all stations (with a slope of <strong><span class="math inline">\(0.74\)</span></strong> retained at the upper intertidal boundary due to extreme shallow wetting–drying dynamics). Absolute water level bias remained minimal across the domain (<strong><span class="math inline">\(&lt; 0.007 \text{ m}\)</span></strong>).</li>
 <li><strong>Error Metrics:</strong> Root Mean Square Error (<strong>RMSE</strong>) values remained below <strong><span class="math inline">\(0.20 \text{ m}\)</span></strong> across all monitoring locations under both spring and neap regimes.</li>
 </ul>
-<p>These metrics confirm that the model accurately captures the spatial attenuation, peak water levels, and drying thresholds across the intertidal gradient.</p>
-<p>The spatial and temporal progression of the simulated water surface across Giralia Bay is illustrated in <a href="#fig-giralia-anim" class="quarto-xref">Figure&nbsp;<span>7.1</span></a>. The model accurately reproduces the asymmetric tidal wave propagation, characterised by prolonged ebb drainage within the intertidal creek network and rapid wetting during flood spring tides. We have also tested the model for various conditions e.g., ambinent and storm like conditions which all predicted with similar statistical metrics as above providing condifdence in the approach.</p>
+<p>These metrics indicate that the model reproduces spatial variability in water levels, peak water levels and drying thresholds across the intertidal gradient.</p>
+<p>The spatial and temporal progression of the simulated water surface across Giralia Bay is illustrated in <a href="#fig-giralia-anim" class="quarto-xref">Figure&nbsp;<span>7.1</span></a>. The model accurately reproduces the asymmetric tidal wave propagation, characterised by prolonged ebb drainage within the intertidal creek network and rapid wetting during flood spring tides. We have also tested the model for various conditions e.g., typical conditions and storm conditions which all predicted with similar statistical metrics as above providing condifdence in the approach.</p>
 <div id="fig-giralia-anim" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-giralia-anim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -437,7 +443,7 @@ Figure&nbsp;7.1: Dynamic hydrodynamic simulation and water level time series com
 <section id="historical-mangrove-observations-20002023" class="level3" data-number="7.3.1">
 <h3 data-number="7.3.1" class="anchored" data-anchor-id="historical-mangrove-observations-20002023"><span class="header-section-number">7.3.1</span> Historical Mangrove Observations (2000–2023)</h3>
 <p>To establish a baseline for assessing future changes in mangrove ecosystems in the Giralia region, it is crucial to understand observed mangrove dynamics under present environmental conditions and to evaluate the model’s ability to reproduce the current mangrove extent.</p>
-<p>We utilised monthly mangrove maps derived from Landsat imagery by <span class="citation" data-cites="Hickey2025">Hickey et al. (<a href="../References.html#ref-Hickey2025" role="doc-biblioref">2025</a>)</span> (part of Project A of this Mardie Marine and Intertidal Research Offset Program) to examine temporal variability in mangrove distribution. Although the Landsat-derived dataset provides monthly observations over the available satellite record, the mangrove extents in 2000 and 2023 are compared in <a href="#fig-giralia-obs" class="quarto-xref">Figure&nbsp;<span>7.2</span></a> to illustrate any longer-term shifts in the mangrove distribution alongside corresponding water level variability recorded at the Exmouth tide station over the same period.</p>
+<p>We utilised monthly mangrove maps derived from Landsat imagery by <span class="citation" data-cites="Hickey2025">Hickey et al. (<a href="../References.html#ref-Hickey2025" role="doc-biblioref">2025</a>)</span> (part of Project A of the WAMSI Mardie Marine and Intertidal Research Offset Program) to examine temporal variability in mangrove distribution. Although the Landsat-derived dataset provides monthly observations over the available satellite record, the mangrove extents in 2000 and 2023 are compared in <a href="#fig-giralia-obs" class="quarto-xref">Figure&nbsp;<span>7.2</span></a> to illustrate any longer-term shifts in the mangrove distribution alongside corresponding water level variability recorded at the Exmouth tide station over the same period.</p>
 <p>Overall, the Landsat observations indicate that mangrove extent in the Giralia region has remained relatively stable over the past two decades, with only minor changes in spatial distribution. Seasonal variations in water level did not result in substantial changes in mapped mangrove extent. However, a closer examination reveals that prolonged interannual environmental variations can produce more pronounced localised changes. For instance, mangrove dieback is evident in parts of the upper intertidal region during extended El Niño–Southern Oscillation (ENSO) periods <span class="citation" data-cites="Lovelock2017">(<a href="../References.html#ref-Lovelock2017" role="doc-biblioref">Lovelock et al., 2017</a>)</span>, suggesting that prolonged periods of lower inundation relative to typical hydrodynamic conditions can adversely influence mangrove survival.</p>
 <p>Despite these episodic changes, the overall mangrove extent has remained broadly consistent over the approximately 20-year observation period. This relative stability provides a suitable present-day baseline against which future changes under altered environmental conditions can be assessed.</p>
 <div id="fig-giralia-obs" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
@@ -454,7 +460,7 @@ Figure&nbsp;7.2: Water level observations and historical mangrove extent in the 
 </section>
 <section id="model-initialisation-performance-evaluation" class="level3" data-number="7.3.2">
 <h3 data-number="7.3.2" class="anchored" data-anchor-id="model-initialisation-performance-evaluation"><span class="header-section-number">7.3.2</span> Model Initialisation &amp; Performance Evaluation</h3>
-<p><a href="#fig-giralia-val" class="quarto-xref">Figure&nbsp;<span>7.3</span></a> shows the modelled mangrove distribution under present environmental conditions. Because the objective was to reproduce the stable mangrove extent representative of the current environmental regime, model simulations were forced using the MSKO tidal constituents (optimised via harmonic analysis, see also <a href="../Coupled_Framework.html" class="quarto-xref"><span>Chapter 3</span></a> for more details on how we arrive at this and <a href="../Coupled_Framework.html#tbl-tidal-constituents" class="quarto-xref">Table&nbsp;<span>3.2</span></a> for the amplitudes and phases).</p>
+<p><a href="#fig-giralia-val" class="quarto-xref">Figure&nbsp;<span>7.3</span></a> shows the mangrove distribution simulated under representative present-day tidal conditions. These simulations used water-level forcing reconstructed from four dominant astronomical tidal constituents (M2, S2, K1 and O1), with amplitudes and phases derived by harmonic analysis of tide-gauge observations. This provides a consistent tidal baseline for evaluating present-day mangrove extent. <a href="../Coupled_Framework.html" class="quarto-xref"><span>Chapter 3</span></a> describes the derivation of this forcing, and <a href="../Coupled_Framework.html#tbl-tidal-constituents" class="quarto-xref">Table&nbsp;<span>3.2</span></a> lists the constituent parameters.</p>
 <p>The spatial agreement between modelled and observed mangrove extents was evaluated using the approach described in <a href="../Model-Overview.html" class="quarto-xref"><span>Chapter 4</span></a> by categorising grid cells:</p>
 <ul>
 <li><strong>True Positives (Green):</strong> Correctly predicted mangrove areas.</li>
@@ -507,13 +513,13 @@ Table&nbsp;7.1: Performance metrics for the Giralia mangrove model, indicating m
 </div>
 </figure>
 </div>
-<p>The resulting statistics indicate moderate agreement between modelled and observed mangrove distributions, demonstrating that the model accurately captures the spatial characteristics of present-day mangrove extent while retaining subtle spatial boundary differences.</p>
+<p>The spatial comparison shows moderate agreement between modelled and observed mangrove distributions. The model reproduces broad features of the present-day extent, but also misses some observed mangrove areas and predicts mangroves in some areas where they were not observed.</p>
 <p>In addition to spatial extent, the model predicts key structural attributes of the mangrove canopy:</p>
 <ul>
 <li><strong>Stem Diameter (<span class="math inline">\(d\)</span>):</strong> Predicted spatial distributions (<a href="#fig-giralia-val" class="quarto-xref">Figure&nbsp;<span>7.3</span></a> b) indicate relatively mature mangroves within the stable core of the mangrove distribution, characterised by larger stem diameters.</li>
 <li><strong>Stem Height (<span class="math inline">\(h\)</span>):</strong> Corresponding spatial distributions (<a href="#fig-giralia-val" class="quarto-xref">Figure&nbsp;<span>7.3</span></a> c) reflect taller individuals within core zones and smaller, shorter individuals transitioning toward the margins of the habitat.</li>
 </ul>
-<p>This spatial gradient aligns with expected ecological development progressing from established, dense mangrove stands to less stable transition zones and confirms that the model captures both spatial extent and internal structural dynamics of the present-day mangrove ecosystem.</p>
+<p>The predicted gradients in stem diameter and height are qualitatively consistent with the expected transition from established mangrove stands to marginal habitat. However, these canopy attributes have not been quantitatively validated against independent observations, so their ecological plausibility does not establish the accuracy of the predicted canopy structure.</p>
 <div id="fig-giralia-val" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-giralia-val-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -575,7 +581,7 @@ Figure&nbsp;7.6: Spatial validation and error distribution for the threshold-bas
 </section>
 <section id="sec-giralia-cal-summary" class="level2" data-number="7.5">
 <h2 data-number="7.5" class="anchored" data-anchor-id="sec-giralia-cal-summary"><span class="header-section-number">7.5</span> Summary of Giralia Model Reliability</h2>
-<p>The combined hydrodynamic, mangrove, and cyanobacterial mat calibration results demonstrate that the Giralia domain model reproduces the present-day physical and biological dynamics of the hyper-arid intertidal ecosystem with a reasonable accuracy. With verified hydrodynamic forcing, low water level errors (<span class="math inline">\(RMSE &lt; 0.20 \text{ m}\)</span>), and validated spatial extents for key habitats, this calibrated model provides confidence in the approach for predicting intertidal habitat migration and response under future Sea Level Rise (SLR). <a href="Mangrove.html" class="quarto-xref"><span>Chapter 8</span></a> and <a href="Algal_Mat.html" class="quarto-xref"><span>Chapter 9</span></a> shows the mangrove and algal mat responses to the future sea level rise.</p>
+<p>Reliable hydrodynamic predictions also depend on accurate representation of bathymetry and topography. Creek geometry and intertidal elevations influence tidal propagation, drainage, flow pathways and the timing and duration of inundation. Errors in these inputs can therefore affect both simulated water levels and the habitat conditions inferred from them. Uncertainty in the elevation data and their representation on the model grid should be considered when interpreting the calibration results and subsequent habitat projections.The combined hydrodynamic, mangrove, and cyanobacterial mat calibration results demonstrate that the Giralia domain model reproduces the present-day physical and biological dynamics of the hyper-arid intertidal ecosystem with a reasonable accuracy. With verified hydrodynamic forcing, low water level errors (<span class="math inline">\(RMSE &lt; 0.20 \text{ m}\)</span>), and validated spatial extents for key habitats, this calibrated model provides confidence in the approach for predicting intertidal habitat migration and response under future Sea Level Rise (SLR). <a href="Mangrove.html" class="quarto-xref"><span>Chapter 8</span></a> and <a href="Algal_Mat.html" class="quarto-xref"><span>Chapter 9</span></a> shows the mangrove and algal mat responses to the future sea level rise.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">

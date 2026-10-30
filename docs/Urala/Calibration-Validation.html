@@ -289,13 +289,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Cape-Preston/Overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Overview</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Calibration and Validation</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Cape-Preston/Mangrove.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to SLR</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Mangrove Response to Sea Level Rise</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -306,6 +306,12 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Synthesis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Synthesis and Integration</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
@@ -318,13 +324,13 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Appendices/Appendix_A.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix A: Field Campaign, Data and Processing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Appendix_B.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Appendix B: Technical Report</span></span></a>
   </div>
 </li>
       </ul>
@@ -383,16 +389,15 @@ window.Quarto = {
 </header>
 
 
-<p>This chapter presents the comprehensive calibration and validation of the high-resolution Urala domain model across three critical physical and ecological components:</p>
+<p>This chapter presents a comprehensive calibration and validation of the high-resolution Urala domain model. The approach largely follows that adopted for Giralia in <a href="../Giralia/Calibration-Validation.html" class="quarto-xref"><span>Chapter 7</span></a>, with Urala-specific adjustments described below. Three physical and ecological components are evaluated:</p>
 <ol type="1">
 <li><strong>Hydrodynamic Calibration and Validation:</strong> Evaluating simulated water levels and inundation dynamics against continuous field gauge observations.</li>
-<li><strong>Mangrove Model Validation:</strong> Comparing modelled mangrove spatial extents and canopy parameters (stem diameter and height) against long-term historical satellite observations (2000–2023).</li>
+<li><strong>Mangrove Model Validation:</strong> Comparing modelled mangrove extent with historical satellite-derived distributions (2000-2023), with predicted canopy attributes described separately.</li>
 <li><strong>Cyanobacterial (Algal) Mat Validation:</strong> Using a data-driven approach to calibrate and validate the persistent zone as outlined in <a href="../Coupled_Framework.html" class="quarto-xref"><span>Chapter 3</span></a> and <a href="../Model-Overview.html" class="quarto-xref"><span>Chapter 4</span></a>.</li>
 </ol>
-<p>Similar to the procedures followed for the Giralia domain (<a href="../Giralia/Calibration-Validation.html#sec-giralia-hydro-cal" class="quarto-xref"><span>Section 7.2</span></a>), we applied the same calibration and validation approaches.</p>
 <section id="sec-urala-hydro-calibration" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="sec-urala-hydro-calibration"><span class="header-section-number">10.1</span> Hydrodynamic Calibration and Validation</h2>
-<p>As highlighted in <a href="../Introduction.html" class="quarto-xref"><span>Chapter 1</span></a>, we focus our effort on the development aspect of the constraints. Nevertheless, hydrodynamics serve as the primary physical driver shaping intertidal habitats in Urala, much like other study sites. Achieving accurate hydrodynamic predictions is crucial for assessing baseline conditions, potential future environmental changes, and developmental constraints.</p>
+<p>As highlighted in <a href="../Introduction.html" class="quarto-xref"><span>Chapter 1</span></a>, we focus our effort on the salt project development aspect of the constraints. Nevertheless, hydrodynamics serve as the primary physical driver shaping intertidal habitats in Urala, much like other study sites. Achieving accurate hydrodynamic predictions is crucial for assessing baseline conditions, potential future environmental changes, and developmental constraints.</p>
 <p>Hydrodynamic calibration was conducted by comparing simulated water surface elevations against field-measured water level time series across key monitoring locations (readers are referred to <a href="../Appendices/Appendix_A.html" class="quarto-xref"><span>Chapter 16</span></a> for more details about monitoring) representing diverse habitat zones, including:</p>
 <ul>
 <li><strong>Urala Creek North Mouth</strong></li>
@@ -401,7 +406,7 @@ window.Quarto = {
 <li><strong>Mid Mat (Lower Algal Mat)</strong></li>
 <li><strong>Upper Mat (Upper Algal Mat)</strong></li>
 </ul>
-<p>Calibration was achieved by iteratively tuning <strong>bottom roughness parameters</strong> (spatially variable Manning’s <span class="math inline">\(n\)</span> coefficients tailored to specific habitat bed types, see also <a href="../Hydrodynamic-Model.html#tbl-roughness" class="quarto-xref">Table&nbsp;<span>6.1</span></a>) and evaluating <strong>lateral boundary conditions</strong> (testing Neumann lateral boundaries vs.&nbsp;prescribed water level boundaries vs.&nbsp;closed wall boundaries) following the approach of <a href="../Giralia/Calibration-Validation.html#sec-giralia-hydro-cal" class="quarto-xref"><span>Section 7.2</span></a>. Other key parameters adjusted during this process include turbulence/eddy viscosity, wind drag coefficients, bathymetric/bed smoothing, and wetting/drying depth thresholds.</p>
+<p>Calibration involved adjusting bottom roughness using spatially variable Manning’s n coefficients assigned to the habitat bed types (<a href="../Hydrodynamic-Model.html#tbl-roughness" class="quarto-xref">Table&nbsp;<span>6.1</span></a>). Other parameters and numerical settings examined included turbulence/eddy viscosity, wind drag coefficients, bathymetry/bed smoothing and wetting/drying depth thresholds.</p>
 <p>The animation below illustrates the dynamic water depth variations, tidal propagation, and wetting/drying cycles across the specified monitoring locations within the Urala domain during the calibration period.</p>
 <div id="fig-urala-anim" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -419,12 +424,12 @@ Figure&nbsp;10.1: Dynamic hydrodynamic simulation of water depth across Urala in
 <ul>
 <li><strong>Mouth &amp; Lower Creek:</strong> The model exhibited excellent agreement with field measurements, achieving an RMSE of <span class="math inline">\(\approx 0.068\text{ m}\)</span>, a bias of <span class="math inline">\(-0.07\text{ m}\)</span>, a slope of <span class="math inline">\(0.99\)</span>, a scatter index of <span class="math inline">\(\approx 0.17\)</span>, and a correlation coefficient (<span class="math inline">\(R\)</span>) of <span class="math inline">\(\approx 0.98\)</span>.</li>
 <li><strong>Lower &amp; Upper Algal Mats / Mud Flats:</strong> Surface water levels showed moderate accuracy in amplitude; however, the model demonstrated robust performance when analyzing the amplitude and frequency of inundation capturing approximately <strong>70% of observed inundation events</strong>.</li>
-<li><strong>Spatial Inundation:</strong> Comparisons between simulated inundation extent and satellite-derived water coverage during representative high and low tides showed a strong spatial match (<a href="../Appendices/Appendix_A.html" class="quarto-xref"><span>Chapter 16</span></a>), reinforcing confidence in the model’s ability to accurately simulate hydrodynamic processes and provide a reliable foundation for predicting future Habitat changes under differnt SLR scenarios (<span class="quarto-unresolved-ref">?sec-sec-approach</span>).</li>
+<li><strong>Spatial Inundation:</strong> Comparisons between simulated inundation extent and satellite-derived water coverage during representative high and low tides showed a strong spatial match (<a href="../Appendices/Appendix_A.html" class="quarto-xref"><span>Chapter 16</span></a>), reinforcing confidence in the model’s ability to accurately simulate hydrodynamic processes and provide a reliable foundation for predicting future Habitat changes under differnt SLR scenarios (<a href="../Coupled_Framework.html" class="quarto-xref"><span>Chapter 3</span></a>).</li>
 </ul>
 </section>
 <section id="sec-urala-mangrove-val" class="level2" data-number="10.2">
 <h2 data-number="10.2" class="anchored" data-anchor-id="sec-urala-mangrove-val"><span class="header-section-number">10.2</span> Mangrove Model Validation</h2>
-<p>To establish a baseline for present environmental conditions and evaluate future mangrove redistribution, we assessed the performance of the mangrove dynamic model across the Urala region. Following the approach used for the Giralia calibration and validation, our primary focus is on long-term changes; thus, we considered only the dominant tidal constituents (MSKO) for predicting both present-day conditions and future sea-level rise (SLR) scenarios.</p>
+<p>To establish a baseline for present environmental conditions and evaluate future mangrove redistribution, we assessed the performance of the mangrove dynamic model across the Urala region. Following the approach used for the Giralia calibration and validation, our primary focus is on long-term changes; thus, we considered only the dominant tidal constituents (M2, S2, K1 and O1; see <span class="citation" data-cites="sec">(<a href="../References.html#ref-sec" role="doc-biblioref"><strong>sec?</strong></a>)</span>) for predicting both present-day conditions and future sea-level rise (SLR) scenarios.</p>
 <section id="historical-mangrove-observations-20002023" class="level3" data-number="10.2.1">
 <h3 data-number="10.2.1" class="anchored" data-anchor-id="historical-mangrove-observations-20002023"><span class="header-section-number">10.2.1</span> Historical Mangrove Observations (2000–2023)</h3>
 <p>To examine the temporal variability in mangrove distribution across the Urala domain, monthly mangrove maps derived from Landsat imagery by <span class="citation" data-cites="Hickey2025">Hickey et al. (<a href="../References.html#ref-Hickey2025" role="doc-biblioref">2025</a>)</span> were analysed. The mangrove extents between 2000 and 2023 are compared in <a href="#fig-urala-obs" class="quarto-xref">Figure&nbsp;<span>10.2</span></a> to illustrate multi-decadal dynamics alongside long-term water-level variability recorded at the Onslow tide station—the closest operational tide gauge to the Urala domain.</p>
