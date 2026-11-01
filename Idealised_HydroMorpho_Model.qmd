@@ -207,4 +207,4 @@ Our sensitivity tests demonstrate that external environmental drivers—specific
 2. **Vegetation Representation:** Adopting arid-adapted mangrove parameterisations (such as Run 4 settings, featuring relatively small stem diameters and slow growth rates) to accurately simulate mangrove properties, sediment retention and creek incision.
 3. **Parameter Prioritisation:** Prioritising accurate representation of local tidal conditions and bathymetry over secondary factors like initial substrate sediment composition or open-boundary mud supply.
 
-We show the site-specific model development and calibrations in @sec-hydro-overview.
+We show the model application to study sites in @sec-model-application.

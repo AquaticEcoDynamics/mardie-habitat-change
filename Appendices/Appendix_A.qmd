@@ -1,161 +1,266 @@
 
 # Appendix A: Field Campaign, Data and Processing {#sec-appendixA}
 
-This document outlines the monitoring program and water level correction methodology applied across the study sites.
+## Introduction and Context
 
-## Monitoring Locations
+This appendix describes the field monitoring campaign, data acquisition programmes and processing procedures undertaken to support the numerical modelling framework developed under Project B of the WAMSI Mardie Offset Marine and Intertidal Research Program. Project B aims to improve understanding of intertidal ecosystem dynamics along the West Pilbara coast, with a particular focus on mangroves and cyanobacterial mats and their responses to environmental change and coastal development.
 
-Loggers were deployed at multiple intertidal sites across **Giralia** (@fig-sample-locations) and **Urala** (@fig-sample-locations1). Monitoring spanned across a cross-shore gradient, capturing distinct hydrodynamic zones including lower channel/mouth locations, mid-creek reaches, upper tidal zones, and algal mat edges.(@fig-sample-locations-detail and @fig-sample-locations-detail1) shows the detailed spatial configuration of logger deployments across the lower, mid, and upper reaches of both estuaries.
+Although the primary objective of Project B is numerical modelling, reliable field observations are essential for defining model boundary conditions, calibrating hydrodynamic parameters and evaluating model performance. The field data presented here were collected through a field campaign undertaken both independently as well as in collaboration with Projects A and C. The campaign combined hydrodynamic sensor deployments, topographic LiDAR surveys and high resolution bathymetric surveys of tidal creeks across the principal study areas.
 
-![Sample locations at Giralia. Red markers indicate sites with integrated groundwater monitoring.](media/image1.png){#fig-sample-locations}
+## Field Campaign Strategy and Evolution
 
-![Sample locations at Urala. Red markers indicate sites with integrated groundwater monitoring.](media/image2.png){#fig-sample-locations1}
+The field campaign followed a phased implementation plan designed to address the logistical challenges associated with working in remote coastal environments of the Pilbara. An initial reconnaissance survey was conducted in June and July 2023 to assess site accessibility, identify potential instrument deployment locations and establish logistical requirements. This was followed by three operational phases.
 
-![Detailed sampling locations showing Lower, Mid, and Upper reaches at Giralia.](media/image3.png){#fig-sample-locations-detail}
+During Phase 1, initial water level and environmental loggers were installed across the candidate study sites. The first maintenance period provided an opportunity to assess data quality, instrument accessibility and the hydrodynamic value of each monitoring location. Following this assessment, the monitoring programme was streamlined, with subsequent deployments and maintenance activities prioritising the Giralia and Urala systems. The main activities and operational milestones are summarised in @tbl-field-phases.
 
-![Detailed sampling locations showing Lower, Mid, and Upper reaches at Urala.](media/image4.png){#fig-sample-locations-detail1}
+| Campaign phase | Timeline | Operational scope and activities |
+|:---|:---|:---|
+| Exploratory reconnaissance | June to July 2023 | Initial site visits to assess accessibility, identify potential deployment locations and plan field logistics. |
+| Phase 1 deployments | November 2023 to April 2024 | Initial logger installations across candidate sites, followed by maintenance and evaluation of the monitoring network. |
+| Phase 2 monitoring | April to October or November 2024 | Continued data collection and instrument servicing, with monitoring activities focused on Giralia and Urala. |
+| Phase 3 retrieval | October or November 2024 to February 2025 | Final monitoring period, culminating in the retrieval of all remaining loggers on 9 February 2025. |
 
-## Sampling Program
+: Chronological overview of the field campaign phases and principal operational milestones. {#tbl-field-phases}
 
-Logger deployment commenced on **31 October 2023** and concluded on **9 February 2025**. A maintenance and data recovery check was conducted in **April 2024**, during which select loggers were retrieved, redeployed, or added to the array. 
+## Monitoring Network and Data Collection
 
-The complete spatial configuration and record durations are summarized in @tbl-sample-locations and @tbl-datapoint-counts.
+To characterise the hydrodynamic gradients influencing mangrove and cyanobacterial mat distribution, instruments were deployed along cross shore transects extending from lower estuarine channels and mid creek reaches to upper tidal areas and the margins of cyanobacterial mats. Water level loggers recorded pressure and temperature, while selected instruments also recorded electrical conductivity for the estimation of salinity. Dedicated barometric pressure stations were installed at Giralia and Urala to measure atmospheric pressure fluctuations required for correcting the water pressure records.
 
-::: {#tbl-sample-locations}
-![Sample locations and baseline elevations.](media/image5.png)
+The spatial distribution of monitoring locations at Giralia and Urala is shown in @fig-sample-giralia and @fig-sample-urala, respectively. The wider monitoring network, including baseline elevations and the distribution of groundwater monitoring locations, is presented in @fig-monitoring-network. The number of recorded observations for each site and monitored variable is summarised in @fig-datapoint-counts.
 
-Sample locations and baseline elevations.
+![Monitoring locations across the Giralia study area. Red markers indicate sites with integrated groundwater monitoring.](media/image1.png){#fig-sample-giralia}
+
+![Monitoring locations across the Urala study area. Red markers indicate sites with integrated groundwater monitoring.](media/image2.png){#fig-sample-urala}
+
+![Monitoring locations and baseline elevations across the study areas.](media/image5.png){#fig-monitoring-network}
+
+![Number of recorded observations for each site ID and monitored variable.](media/image6.png){#fig-datapoint-counts}
+
+## Topographic and Bathymetric Surveys
+
+Accurate elevation data are fundamental to the representation of intertidal topography and tidal conveyance in hydrodynamic and morphodynamic models. Regional elevation datasets generally lack the vertical resolution required to represent shallow intertidal channels and subtle topographic variations. A multi scale elevation data acquisition programme was therefore undertaken to improve the representation of the study areas.
+
+High resolution aerial LiDAR surveys were acquired across the principal study sites to characterise the elevation of supratidal platforms, mangrove areas and surrounding intertidal surfaces. The LiDAR products provide detailed information on the elevation and topographic structure of the coastal landscape and form an important spatial dataset for the development of the hydrodynamic model domains.
+
+The LiDAR derived elevation models for Giralia, Urala and Cape Preston are presented in @fig-lidar-giralia - @fig-lidar-cape-preston.
+
+::: {.panel-tabset}
+
+### Giralia
+![LiDAR derived elevation model of the Giralia study area.](../Giralia/images/giralia_lidar_map.png){#fig-lidar-giralia}
+
+### Urala
+![LiDAR derived elevation model of the Urala study area.](../Urala/images/urala_lidar_utm_map.png){#fig-lidar-urala}
+
+### Cape Preston
+![LiDAR derived elevation model of the Cape Preston study area.](../Cape-Preston/images/cape_preston_lidar_utm50s_map.png){#fig-lidar-cape-preston}
+
 :::
 
-::: {#tbl-datapoint-counts}
-![Number of recorded datapoints for each Site ID and monitored variable.](media/image6.png)
+The initial hydrodynamic model setup also identified limitations in the representation of channel depths and cross sectional geometry within the available regional elevation datasets. Dedicated bathymetric surveys were consequently undertaken within the tidal creeks at Giralia using vessel mounted multibeam sonar systems.
 
-Number of recorded datapoints for each Site ID and monitored variable.
+![Dedicated creek bathymetry survey tracks and coverage across the Giralia and Urala estuaries. Colours represent surveyed bed elevation relative to the local vertical datum, ranging from approximately $-0.51$ m to $-1.50$ m.](media/Creek_bathy_survey.png){#fig-creek-bathymetry}
+
+### Vegetation Structure and Canopy Height Extraction
+
+Vegetation structure and canopy height were derived from airborne LiDAR point cloud data using automated Python processing workflows. The point clouds were classified into ground and non-ground returns, allowing vegetation heights to be estimated relative to the underlying ground surface. Height above ground (HAG) was calculated by referencing each vegetation point to the surrounding ground elevation. Points with heights below $0.05\,\text{m}$ were excluded to minimise the influence of background noise and low lying returns from bare sediment and salt flats.
+
+The remaining vegetation points were classified into three structural categories based on their height above ground: low vegetation ($0.2 \leq HAG < 1.0\,\text{m}$), medium vegetation ($1.0 \leq HAG < 3.0\,\text{m}$) and high vegetation ($HAG \geq 3.0\,\text{m}$). This classification provided a consistent representation of vegetation structure across Giralia, Urala and Cape Preston. The classified point cloud data were subsequently used to generate spatial representations of canopy height and vegetation distribution at a spatial resolution of $1\,\text{m}$.
+
+In addition to canopy height, vegetation point density was derived from the LiDAR data to characterise the spatial distribution and relative density of vegetation across the study areas. These structural metrics provide complementary information on canopy height and density, supporting the characterisation of mangrove structure and the development of spatial vegetation parameters for the hydrodynamic and ecological modelling framework.
+
+::: {.panel-tabset}
+
+### Giralia
+![Canopy height model (CHM) of the Giralia study area.](../Giralia/images/giralia_vegetation_chm_map.png){#fig-chm-giralia}
+
+### Urala
+![Canopy height model (CHM) of the Urala study area.](../Urala/images/urala_vegetation_chm_map.png){#fig-chm-urala}
+
+### Cape Preston
+![Canopy height model (CHM) of the Cape Preston study area.](../Cape-Preston/images/cape_preston_vegetation_chm_map.png){#fig-chm-cape-preston}
+
 :::
 
----
+## Sediment Characteristics and Particle Size Distributions
 
-## Water Level Correction Methodology
+Sediment samples collected from the Urala and Giralia mudflats represent contrasting substrate types, ranging from relatively sandy material associated with channels and exposed coastal surfaces to finer grained sediments characteristic of sheltered mudflats. These differences provide context for interpreting the sedimentary environments and potential spatial variations in sediment mobility across the intertidal landscape.
 
-To convert raw pressure recorded by submerged loggers into accurate water surface elevations, a three-stage correction pipeline was applied:
+![Particle size distribution of the representative sandy substrate at Urala. The distribution is relatively narrow and predominantly unimodal, with most particles within the medium to fine sand fractions ($100$ to $500\,\mu\text{m}$; $\Phi \approx 1.0$ to $2.5$).](../images/PSD_urala.png){#fig-psd-urala}
 
-1. **Barometric Correction**
-2. **Density Correction**
-3. **Datum Correction**
+![Particle size distribution of Urala mudflat sediments. The distribution is broad and polymodal, extending from fine silts and clays ($<10\,\mu\text{m}$) through fine sand ($\sim100\,\mu\text{m}$) to coarse biogenic fragments ($800$ to $1000\,\mu\text{m}$).](../images/PSD_urala_mud_flat.png){#fig-psd-urala-mud}
+
+![Particle size distribution of representative mudflat sediments at Giralia.](../images/PSD_giralia.png){#fig-psd-giralia}
+
+The sandy substrate exhibits a relatively narrow grain size distribution, with much of the material concentrated in the fine to medium sand range ($150$ to $300\,\mu\text{m}$). This distribution is consistent with sediment sorting in environments where tidal currents and wave action can transport finer particles away from exposed surfaces and channels. In contrast, the mudflat samples exhibit a broader distribution, with a principal peak near the fine sand and coarse silt boundary ($\sim80$ to $100\,\mu\text{m}$), a fine grained component extending into silts and clays ($<10\,\mu\text{m}$), and secondary coarse fractions around $800$ to $1000\,\mu\text{m}$ that may include shell fragments and other biogenic material.
+
+These contrasting sediment distributions are consistent with spatial differences in depositional conditions, from relatively energetic sandy environments to more sheltered settings where fine particles can settle. They provide useful environmental context for interpreting potential responses of the coastal landscape to changes in hydrodynamic forcing. However, the sediment measurements are used here to characterise the study sites and should not be interpreted as direct validation of sediment transport or morphological change unless those processes are explicitly represented and evaluated in the model.
+
+## Geomorphology and Environmental Drivers
+
+Urala's geomorphology is characterised by extensive barrier spits, dynamic creek mouths, interconnected tidal channels and broad landward salt flats. The North Creek and South Creek systems provide important pathways for tidal exchange across the landscape, while their geometry and connectivity influence how water reaches adjacent intertidal surfaces. These features are particularly relevant when assessing the potential hydrodynamic consequences of infrastructure that intersects or constrains existing flow pathways.
+
+Hydrodynamic conditions are influenced by the regional tidal regime, with semidiurnal tides driving regular inundation and currents within the principal creek channels. Tidal currents and extreme events involving wave action contribute to sediment redistribution, while the relative sheltering of adjacent mudflats and mangrove margins favours the retention of finer material. Tropical cyclones and other intense weather events can temporarily increase wave energy and freshwater discharge, potentially altering creek mouths, barrier spits and sediment distribution. The importance of these episodic processes varies spatially and through time.
+
+The region's hyperarid climate and high evaporative demand further distinguish Urala from more humid coastal environments. Rainfall is highly variable, and major rainfall events may produce short lived freshwater and sediment inputs against a background of prolonged dry conditions. These climatic and hydrodynamic drivers provide the environmental context for interpreting potential habitat responses.
+
+## Water Level Correction Pipeline
+
+Raw pressure measurements from the water level loggers were processed to estimate water surface elevations relative to the Australian Height Datum (mAHD). The processing procedure comprised three stages: barometric compensation, density correction and vertical datum referencing.
 
 ### Barometric Correction
 
-Because non-vented pressure loggers were used, total recorded pressure required adjustment for atmospheric pressure fluctuations. Continuous barometric pressure was measured at both Giralia and Urala (@fig-barometric-pressure). 
+The water level loggers were not vented and therefore recorded pressure associated with both the water column and atmospheric pressure. Barometric compensation was required to isolate the pressure exerted by the water column. Two dedicated barometric pressure loggers were deployed, one at Giralia and one at Urala, as shown in @fig-barometric-pressure.
 
-To fill missing data during periods when the Giralia barometric logger was offline, an empirical linear regression model was established using Urala barometric observations (@fig-baro-correlation). All barometric pressure series were interpolated to a 15-minute interval prior to subtraction.
+The Giralia barometric record did not cover the entire monitoring period. Missing periods were therefore estimated using the relationship between the Giralia and Urala barometric records, as illustrated in @fig-baro-correlation. The resulting barometric pressure series was interpolated to 15 minute intervals to match the temporal resolution used in the subsequent correction procedure.
 
 ![Recorded barometric pressure at Giralia and Urala.](media/image7.png){#fig-barometric-pressure}
 
-![Correlation between Giralia and Urala barometric pressure readings.](media/image8.png){#fig-baro-correlation}
+![Relationship between Giralia and Urala barometric pressure measurements.](media/image8.png){#fig-baro-correlation}
 
 #### Rugged Troll Loggers
 
-Rugged Troll loggers record total pressure ($P_{\text{logger\_RT}}$) with a factory-assigned constant barometric offset ($P_{\text{constant\_offset}}$). Absolute pressure ($P_{\text{absolute}}$) was calculated via:
+Rugged Troll loggers reported pressure ($P_{\text{logger,RT}}$) with a constant barometric offset ($P_{\text{constant offset}}$) assigned to each instrument. Absolute pressure was calculated using @eq-absolute-pressure:
 
-$$P_{\text{absolute}} = P_{\text{logger\_RT}} + P_{\text{constant\_offset}}$$
+$$
+P_{\text{absolute}} =
+P_{\text{logger,RT}} +
+P_{\text{constant offset}}
+$$ {#eq-absolute-pressure}
 
-Net water pressure ($P_{\text{water\_RT}}$) was subsequently isolated by subtracting interpolated barometric pressure ($P_{\text{barometric}}$):
+Water pressure was then calculated by subtracting the measured barometric pressure, as shown in @eq-water-pressure-rt:
 
-$$P_{\text{water\_RT}} = P_{\text{absolute}} - P_{\text{barometric}}$$
+$$
+P_{\text{water,RT}} =
+P_{\text{absolute}} -
+P_{\text{barometric}}
+$$ {#eq-water-pressure-rt}
 
-An example of the Rugged Troll correction sequence is shown in @fig-rugged-troll-example.
+An example of the barometric correction procedure for the Rugged Troll logger at G-MID-CHANNEL is shown in @fig-rugged-troll-example.
 
-![Example pressure correction sequence for a Rugged Troll logger (G-MID-CHANNEL).](media/image9.png){#fig-rugged-troll-example}
+![Example pressure correction sequence for a Rugged Troll logger at G-MID-CHANNEL.](media/image9.png){#fig-rugged-troll-example}
 
 #### AquaTroll Loggers
 
-AquaTroll loggers ($P_{\text{logger\_AT}}$) do not store the static offset internally. Net water pressure ($P_{\text{water\_AT}}$) was derived relative to average barometric conditions ($P_{\text{barometric\_average}}$):
+AquaTroll loggers ($P_{\text{logger,AT}}$) did not include the same constant barometric offset as the Rugged Troll instruments. Their water pressure was therefore estimated using the deviation of the measured barometric pressure from its average value, as shown in @eq-water-pressure-at:
 
-$$P_{\text{water\_AT}} = P_{\text{logger\_AT}} + (P_{\text{barometric}} - P_{\text{barometric\_average}})$$
+$$
+P_{\text{water,AT}} =
+P_{\text{logger,AT}} +
+\left(
+P_{\text{barometric}} -
+P_{\text{barometric average}}
+\right)
+$$ {#eq-water-pressure-at}
 
-*Note: This formulation assumes initial logger baseline setup occurred near mean atmospheric pressure.* An example correction is shown in @fig-aquatroll-example.
+This approach assumes that the logger pressure reading is referenced to approximately the average atmospheric pressure over the relevant period. An example of the correction procedure for the AquaTroll logger at G-MOUTH-CHANNEL-AT is shown in @fig-aquatroll-example.
 
-![Example pressure correction sequence for an AquaTroll logger (G-MOUTH-CHANNEL-AT).](media/image10.png){#fig-aquatroll-example}
-
----
+![Example pressure correction sequence for an AquaTroll logger at G-MOUTH-CHANNEL-AT.](media/image10.png){#fig-aquatroll-example}
 
 ### Density Correction
 
-Corrected water pressure ($P_{\text{corrected}}$ in bar) was converted to water depth ($H_{\text{corrected}}$ in metres) using variable water density ($\rho$ in $\text{g/cm}^3$). Density was calculated at 15-minute time steps as a function of salinity ($S$, PSU) and water temperature ($T$, °C):
+The barometrically corrected pressure measurements were converted to water depth using an estimate of water density. Density was calculated at 15 minute intervals for each monitoring location using @eq-water-density:
 
-$$\rho = 1000 + 0.75 \cdot S - 0.2 \cdot (T - 4)$$
+$$
+\rho =
+1000 + 0.75S - 0.2(T - 4)
+$$ {#eq-water-density}
 
-While temperature was continuously recorded across all sites, missing salinity records were reconstructed using a hierarchical fallback sequence:
+where $\rho$ is water density in kg/m$^3$, $S$ is salinity in practical salinity units (PSU), and $T$ is water temperature in degrees Celsius. Salinity and temperature measurements were interpolated to 15 minute intervals. Temperature was recorded at all monitoring locations throughout the field campaign, whereas salinity observations were not continuously available at every site. A hierarchical fallback procedure was therefore applied to estimate missing salinity values. The procedure prioritised the average salinity recorded at the same site ID, followed by the designated fallback site, the same site location and, finally, the average salinity across the corresponding study area.
 
-1. Mean salinity observed at the same `SiteId`.
-2. Mean salinity from a assigned fallback site (`Fallback_Salinity_SiteId`, @tbl-fallback-sites).
-3. Mean salinity across the local geomorphic location category.
-4. Mean regional salinity (Giralia vs. Urala).
+The fallback site assignments used in the density calculations are listed in @tbl-fallback-sites.
 
-| Target SiteId | Fallback Salinity SiteId |
-| :--- | :--- |
-| *Fallback mappings* | ... |
+| Study area | Site ID | Fallback salinity site ID |
+|:---|:---|:---|
+| Giralia | G-LOWER-MAT-GW17 | G-LOWER-MAT-GWm |
+| Giralia | G-MID-MAT-GW17 | G-MID-MAT-GWm |
+| Giralia | G-MID-EDGE-GW17 | G-MID-MAT-GWm |
+| Giralia | G-UPPER-MAT-GWm | G-MID-MAT-GWm |
+| Urala | U-LOWER-MAT-GW2 | G-LOWER-MAT-GWm |
+| Urala | U-MID-EDGE-GW17 | U-MID-MAT-GWm |
+| Urala | U-UPPER-EDGE-GWd | U-MID-MAT-GWm |
 
-: Fallback salinity site assignments for density calculations. {#tbl-fallback-sites}
+: Fallback salinity site assignments used in the density calculations. {#tbl-fallback-sites}
 
-![Distribution of salinity data sources resulting from the fallback hierarchy.](media/image11.png){#fig-salinity-sources}
+The distribution of salinity data sources resulting from this procedure is shown in @fig-salinity-sources. Density estimates were compared with direct density measurements at three monitoring locations. The comparison showed a strong relationship between measured and calculated density, with coefficients of determination exceeding $0.94$ (@fig-density-validation). The calculated density time series for all monitoring locations are presented in @fig-density-time-series.
 
-Calculated densities showed strong agreement ($r^2 > 0.94$) against sites equipped with direct density sensors (@fig-density-validation and @fig-density-time-series).
+![Distribution of salinity data sources resulting from the fallback procedure.](media/image11.png){#fig-salinity-sources}
 
-![Calculated vs. observed water density across validation sites ($r^2 > 0.94$).](media/image12.png){#fig-density-validation}
+![Comparison of calculated and observed water density across the validation sites.](media/image12.png){#fig-density-validation}
 
-![Calculated 15-minute water density time series across all monitoring sites.](media/image13.png){#fig-density-time-series}
+![Calculated water density at 15 minute intervals across the monitoring network.](media/image13.png){#fig-density-time-series}
 
-Corrected water depth above the logger was calculated via:
+Once water density had been estimated, corrected water depth was calculated using @eq-corrected-depth:
 
-$$H_{\text{corrected}} = \frac{P_{\text{corrected}} \cdot 10.1972}{\rho}$$
+$$
+H_{\text{corrected}} =
+\frac{P_{\text{corrected}} \times 10.1972}{\rho/1000}
+$$ {#eq-corrected-depth}
 
-Linear regression between $H_{\text{corrected}}$ and $P_{\text{corrected}}$ yielded a correlation coefficient of $0.996$ (@fig-depth-vs-pressure). Residual analysis comparing logger-reported depth versus density-corrected depth revealed a residual standard deviation of $7.3\text{ cm}$ (@fig-depth-residuals), which represents a notable magnitude in shallow intertidal systems.
+where $H_{\text{corrected}}$ is water depth in metres, $P_{\text{corrected}}$ is pressure in bar and $\rho/1000$ is the dimensionless relative water density. The comparison between corrected pressure and calculated depth showed a strong linear relationship, with a correlation coefficient of $r = 0.996$ (@fig-depth-vs-pressure).
 
-![Density-corrected depth vs. corrected pressure ($r = 0.996$).](media/image14.png){#fig-depth-vs-pressure}
+![Density corrected water depth plotted against corrected pressure. The correlation coefficient is $r = 0.996$.](media/image14.png){#fig-depth-vs-pressure}
 
-![Histogram of depth residuals (logger-reported depth vs. re-calculated density-corrected depth).](media/image17.png){#fig-depth-residuals}
+The corrected water depth is compared with the depth reported by each logger in @fig-depth-vs-logger. The residual distribution is shown in @fig-depth-residuals. The standard deviation of the residuals was $7.3\,\text{cm}$, which is substantial in the context of the relatively low relief of the intertidal landscape.
 
----
+![Corrected water depth compared with logger reported depth at each monitoring location.](media/image16.png){#fig-depth-vs-logger}
+
+![Distribution of residuals between logger reported depth and recalculated density corrected depth.](media/image17.png){#fig-depth-residuals}
 
 ### Datum Correction
 
-Because initial logger sensor elevations were un-surveyed, elevations were referenced to Australian Height Datum (mAHD) using LiDAR ground elevation baselines (@tbl-sample-locations) and regional tide gauge calibrations.
+After correcting the pressure measurements for atmospheric pressure and water density, the logger elevations were adjusted to reference the resulting water levels to the Australian Height Datum. The loggers were not individually surveyed, so LiDAR derived ground elevations were used as initial estimates of the elevation at each monitoring location.
 
-1. **Estuarine Mouth Calibration:** Submerged loggers at the Giralia and Urala river mouths were calibrated against mAHD tidal observations from the Exmouth tide gauge by matching peak spring tide elevations (@fig-exmouth-calibration and @fig-mouth-scatter).
+Exmouth tide gauge observations, provided in mAHD, were used as an external reference for the datum adjustment. The elevations of the loggers located near the Giralia and Urala channel mouths were adjusted to align the observed spring tide peaks with the corresponding Exmouth tide gauge levels. The calibration procedure is illustrated in @fig-exmouth-calibration and @fig-mouth-scatter.
 
-![River mouth logger elevation calibration matching Exmouth tidal peaks (mAHD).](media/image18.png){#fig-exmouth-calibration}
+![Adjustment of channel mouth logger elevations using Exmouth tide gauge observations.](media/image18.png){#fig-exmouth-calibration}
 
-![Scatter plot of monthly peak water levels at channel mouths vs. Exmouth tide gauge.](media/image20.png){#fig-mouth-scatter}
+![Comparison of monthly peak water levels at the channel mouths with Exmouth tide gauge observations.](media/image20.png){#fig-mouth-scatter}
 
-2. **Upstream Hydraulic Calibration:** Upstream loggers were sequentially adjusted to match monthly peak water levels along primary hydraulic conveyances (e.g., Mouth Channel $\rightarrow$ Mid Channel $\rightarrow$ Mid Creek $\rightarrow$ Upper Channel $\rightarrow$ Algal Mat). Peak correlations along connected flow paths are shown in @fig-giralia-peaks and @fig-urala-peaks.
+Following the mouth logger adjustments, elevations at the remaining monitoring locations were adjusted according to their relative hydraulic connectivity along the tidal flow paths. At Giralia, the calibration proceeded from the mouth channel to the mid channel, mid creek, upper channel and upper mat surface water locations. A similar approach was applied at Urala. Comparisons of monthly peak water levels between hydraulically connected monitoring locations are presented in @fig-giralia-peaks and @fig-urala-peaks. The resulting water level time series before and after datum adjustment are shown in @fig-giralia-datum and @fig-urala-datum.
 
-![Correlation of monthly peak water levels along connected flow paths at Giralia.](media/image21.png){#fig-giralia-peaks}
+![Relationship between monthly peak water levels along hydraulically connected flow paths at Giralia.](media/image21.png){#fig-giralia-peaks}
 
-![Correlation of monthly peak water levels along connected flow paths at Urala.](media/image22.png){#fig-urala-peaks}
+![Relationship between monthly peak water levels along hydraulically connected flow paths at Urala.](media/image22.png){#fig-urala-peaks}
 
-The impact of datum adjustments on raw water elevation series during a representative period (December 2024) is illustrated in @fig-giralia-datum and @fig-urala-datum.
+![Giralia water level time series before and after datum adjustment in December 2024.](media/image23.png){#fig-giralia-datum}
 
-![Giralia water level time series before and after datum calibration (December 2024).](media/image23.png){#fig-giralia-datum}
+![Urala water level time series before and after datum adjustment in December 2024.](media/image25.png){#fig-urala-datum}
 
-![Urala water level time series before and after datum calibration (December 2024).](media/image25.png){#fig-urala-datum}
+## Results and Hydraulic Dynamics
 
----
+The corrected water level dataset provides a basis for examining spatial and temporal variations in water levels across the Giralia and Urala estuarine systems. The monitoring records capture variations associated with regular tidal cycles as well as short duration responses to meteorological events. The response to the storm event on 11 April 2024 illustrates the spatial differences in water levels and hydraulic gradients across the intertidal platforms (@fig-giralia-storm and @fig-urala-storm).
 
-## Results & Hydraulic Dynamics
+![Water surface elevation response at Giralia during the storm event on 11 April 2024. Dashed lines indicate sensor bed elevations.](media/image27.png){#fig-giralia-storm}
 
-The calibrated water level dataset enables spatial and temporal cross-sectional analyses across both estuaries. 
+![Water surface elevation response at Urala during the storm event on 11 April 2024. Dashed lines indicate sensor bed elevations.](media/image28.png){#fig-urala-storm}
 
-Response during extreme events—such as the **11 April 2024 storm event**—highlights cross-shore head gradients and inundation extent across the intertidal platform (@fig-giralia-storm and @fig-urala-storm).
+Water elevation, temperature and salinity records across the monitoring network are presented in @fig-water-elevation-site, @fig-temperature-site and @fig-salinity-site, respectively. The spatial distribution of water elevations and temperature across the Giralia and Urala monitoring zones is further illustrated in @fig-giralia-water-elevation, @fig-urala-water-elevation, @fig-giralia-temperature and @fig-urala-temperature. The combined water level records are shown in @fig-combined-water-height.
 
-![Giralia water surface elevation response during the 11 April 2024 storm event. Dashed lines indicate sensor bed elevations.](media/image27.png){#fig-giralia-storm}
+![Water elevation recorded across the monitoring network.](media/image29.png){#fig-water-elevation-site}
 
-![Urala water surface elevation response during the 11 April 2024 storm event. Dashed lines indicate sensor bed elevations.](media/image28.png){#fig-urala-storm}
+![Temperature recorded across the monitoring network.](media/image30.png){#fig-temperature-site}
 
-### Spatial Cross-Sections and Groundwater Dynamics
+![Salinity recorded across the monitoring network.](media/image31.png){#fig-salinity-site}
 
-Cross-sectional profiles reveal distinct spatial-temporal hydroperiod trends from the primary channels to the upper algal mats (@fig-cross-sections). 
+![Water surface elevation relative to mAHD across the Giralia monitoring zones.](media/image32.png){#fig-giralia-water-elevation}
 
-![Cross-sectional surface water and groundwater elevations across Giralia and Urala.](media/image31.png){#fig-cross-sections}
+![Water surface elevation relative to mAHD across the Urala monitoring zones.](media/image33.png){#fig-urala-water-elevation}
 
-Analysis of paired surface-water and groundwater monitoring loggers enables derivation of local hydraulic gradients. These gradients govern subsurface porewater exchange, hypersaline groundwater discharge, and ecohydrological feedback loops within the intertidal mangrove-mat transition zone.
+![Temperature across the Giralia monitoring zones.](media/image34.png){#fig-giralia-temperature}
+
+![Temperature across the Urala monitoring zones.](media/image35.png){#fig-urala-temperature}
+
+![Combined water level time series across the monitoring network.](media/image36.png){#fig-combined-water-height}
+
+### Spatial Cross Sections and Groundwater Dynamics
+
+Cross sectional profiles provide an overview of spatial and temporal variations in surface water and groundwater elevations from the principal tidal channels towards the upper intertidal areas and cyanobacterial mats (@fig-cross-sections). Comparisons between paired surface water and groundwater observations also provide information on local hydraulic gradients. These gradients are relevant to understanding potential exchanges between surface water and groundwater, including the movement of saline porewater within the intertidal sediments.
+
+![Cross sectional profiles of surface water and groundwater elevations across Giralia and Urala.](media/image37.png){#fig-cross-sections}
+
+## Application to Hydrodynamic and Eco Morphodynamic Modelling
+
+The processed water level dataset provides an empirical basis for the development and assessment of the Project B hydrodynamic models. The corrected observations were used to characterise baseline hydroperiods and support the calibration and validation of the Delft3D Flexible Mesh hydrodynamic models. The spatially distributed monitoring network also provides information on water level variations and hydraulic gradients across the intertidal landscape.
+
+The paired surface water and groundwater observations provide additional information on local hydraulic conditions and potential subsurface water exchange. These observations are particularly relevant to interpreting the hydrological conditions associated with mangrove and cyanobacterial mat distributions. However, the monitoring records alone do not establish the magnitude or direction of subsurface porewater exchange or hypersaline groundwater discharge. Such processes require additional interpretation of the paired observations and, where appropriate, explicit representation in the modelling framework.

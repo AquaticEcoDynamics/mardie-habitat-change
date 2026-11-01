@@ -331,18 +331,26 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#monitoring-locations" id="toc-monitoring-locations" class="nav-link active" data-scroll-target="#monitoring-locations"><span class="header-section-number">17.1</span> Monitoring Locations</a></li>
-  <li><a href="#sampling-program" id="toc-sampling-program" class="nav-link" data-scroll-target="#sampling-program"><span class="header-section-number">17.2</span> Sampling Program</a></li>
-  <li><a href="#water-level-correction-methodology" id="toc-water-level-correction-methodology" class="nav-link" data-scroll-target="#water-level-correction-methodology"><span class="header-section-number">17.3</span> Water Level Correction Methodology</a>
+  <li><a href="#introduction-and-context" id="toc-introduction-and-context" class="nav-link active" data-scroll-target="#introduction-and-context"><span class="header-section-number">17.1</span> Introduction and Context</a></li>
+  <li><a href="#field-campaign-strategy-and-evolution" id="toc-field-campaign-strategy-and-evolution" class="nav-link" data-scroll-target="#field-campaign-strategy-and-evolution"><span class="header-section-number">17.2</span> Field Campaign Strategy and Evolution</a></li>
+  <li><a href="#monitoring-network-and-data-collection" id="toc-monitoring-network-and-data-collection" class="nav-link" data-scroll-target="#monitoring-network-and-data-collection"><span class="header-section-number">17.3</span> Monitoring Network and Data Collection</a></li>
+  <li><a href="#topographic-and-bathymetric-surveys" id="toc-topographic-and-bathymetric-surveys" class="nav-link" data-scroll-target="#topographic-and-bathymetric-surveys"><span class="header-section-number">17.4</span> Topographic and Bathymetric Surveys</a>
   <ul class="collapse">
-  <li><a href="#barometric-correction" id="toc-barometric-correction" class="nav-link" data-scroll-target="#barometric-correction"><span class="header-section-number">17.3.1</span> Barometric Correction</a></li>
-  <li><a href="#density-correction" id="toc-density-correction" class="nav-link" data-scroll-target="#density-correction"><span class="header-section-number">17.3.2</span> Density Correction</a></li>
-  <li><a href="#datum-correction" id="toc-datum-correction" class="nav-link" data-scroll-target="#datum-correction"><span class="header-section-number">17.3.3</span> Datum Correction</a></li>
+  <li><a href="#vegetation-structure-and-canopy-height-extraction" id="toc-vegetation-structure-and-canopy-height-extraction" class="nav-link" data-scroll-target="#vegetation-structure-and-canopy-height-extraction"><span class="header-section-number">17.4.1</span> Vegetation Structure and Canopy Height Extraction</a></li>
   </ul></li>
-  <li><a href="#results-hydraulic-dynamics" id="toc-results-hydraulic-dynamics" class="nav-link" data-scroll-target="#results-hydraulic-dynamics"><span class="header-section-number">17.4</span> Results &amp; Hydraulic Dynamics</a>
+  <li><a href="#sediment-characteristics-and-particle-size-distributions" id="toc-sediment-characteristics-and-particle-size-distributions" class="nav-link" data-scroll-target="#sediment-characteristics-and-particle-size-distributions"><span class="header-section-number">17.5</span> Sediment Characteristics and Particle Size Distributions</a></li>
+  <li><a href="#geomorphology-and-environmental-drivers" id="toc-geomorphology-and-environmental-drivers" class="nav-link" data-scroll-target="#geomorphology-and-environmental-drivers"><span class="header-section-number">17.6</span> Geomorphology and Environmental Drivers</a></li>
+  <li><a href="#water-level-correction-pipeline" id="toc-water-level-correction-pipeline" class="nav-link" data-scroll-target="#water-level-correction-pipeline"><span class="header-section-number">17.7</span> Water Level Correction Pipeline</a>
   <ul class="collapse">
-  <li><a href="#spatial-cross-sections-and-groundwater-dynamics" id="toc-spatial-cross-sections-and-groundwater-dynamics" class="nav-link" data-scroll-target="#spatial-cross-sections-and-groundwater-dynamics"><span class="header-section-number">17.4.1</span> Spatial Cross-Sections and Groundwater Dynamics</a></li>
+  <li><a href="#barometric-correction" id="toc-barometric-correction" class="nav-link" data-scroll-target="#barometric-correction"><span class="header-section-number">17.7.1</span> Barometric Correction</a></li>
+  <li><a href="#density-correction" id="toc-density-correction" class="nav-link" data-scroll-target="#density-correction"><span class="header-section-number">17.7.2</span> Density Correction</a></li>
+  <li><a href="#datum-correction" id="toc-datum-correction" class="nav-link" data-scroll-target="#datum-correction"><span class="header-section-number">17.7.3</span> Datum Correction</a></li>
   </ul></li>
+  <li><a href="#results-and-hydraulic-dynamics" id="toc-results-and-hydraulic-dynamics" class="nav-link" data-scroll-target="#results-and-hydraulic-dynamics"><span class="header-section-number">17.8</span> Results and Hydraulic Dynamics</a>
+  <ul class="collapse">
+  <li><a href="#spatial-cross-sections-and-groundwater-dynamics" id="toc-spatial-cross-sections-and-groundwater-dynamics" class="nav-link" data-scroll-target="#spatial-cross-sections-and-groundwater-dynamics"><span class="header-section-number">17.8.1</span> Spatial Cross Sections and Groundwater Dynamics</a></li>
+  </ul></li>
+  <li><a href="#application-to-hydrodynamic-and-eco-morphodynamic-modelling" id="toc-application-to-hydrodynamic-and-eco-morphodynamic-modelling" class="nav-link" data-scroll-target="#application-to-hydrodynamic-and-eco-morphodynamic-modelling"><span class="header-section-number">17.9</span> Application to Hydrodynamic and Eco Morphodynamic Modelling</a></li>
   </ul>
 </nav>
     </div>
@@ -368,106 +376,267 @@ window.Quarto = {
 </header>
 
 
-<p>This document outlines the monitoring program and water level correction methodology applied across the study sites.</p>
-<section id="monitoring-locations" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="monitoring-locations"><span class="header-section-number">17.1</span> Monitoring Locations</h2>
-<p>Loggers were deployed at multiple intertidal sites across <strong>Giralia</strong> (<a href="#fig-sample-locations" class="quarto-xref">Figure&nbsp;<span>17.1</span></a>) and <strong>Urala</strong> (<a href="#fig-sample-locations1" class="quarto-xref">Figure&nbsp;<span>17.2</span></a>). Monitoring spanned across a cross-shore gradient, capturing distinct hydrodynamic zones including lower channel/mouth locations, mid-creek reaches, upper tidal zones, and algal mat edges.(<a href="#fig-sample-locations-detail" class="quarto-xref">Figure&nbsp;<span>17.3</span></a> and <a href="#fig-sample-locations-detail1" class="quarto-xref">Figure&nbsp;<span>17.4</span></a>) shows the detailed spatial configuration of logger deployments across the lower, mid, and upper reaches of both estuaries.</p>
-<div id="fig-sample-locations" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="introduction-and-context" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="introduction-and-context"><span class="header-section-number">17.1</span> Introduction and Context</h2>
+<p>This appendix describes the field monitoring campaign, data acquisition programmes and processing procedures undertaken to support the numerical modelling framework developed under Project B of the WAMSI Mardie Offset Marine and Intertidal Research Program. Project B aims to improve understanding of intertidal ecosystem dynamics along the West Pilbara coast, with a particular focus on mangroves and cyanobacterial mats and their responses to environmental change and coastal development.</p>
+<p>Although the primary objective of Project B is numerical modelling, reliable field observations are essential for defining model boundary conditions, calibrating hydrodynamic parameters and evaluating model performance. The field data presented here were collected through a field campaign undertaken both independently as well as in collaboration with Projects A and C. The campaign combined hydrodynamic sensor deployments, topographic LiDAR surveys and high resolution bathymetric surveys of tidal creeks across the principal study areas.</p>
+</section>
+<section id="field-campaign-strategy-and-evolution" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="field-campaign-strategy-and-evolution"><span class="header-section-number">17.2</span> Field Campaign Strategy and Evolution</h2>
+<p>The field campaign followed a phased implementation plan designed to address the logistical challenges associated with working in remote coastal environments of the Pilbara. An initial reconnaissance survey was conducted in June and July 2023 to assess site accessibility, identify potential instrument deployment locations and establish logistical requirements. This was followed by three operational phases.</p>
+<p>During Phase 1, initial water level and environmental loggers were installed across the candidate study sites. The first maintenance period provided an opportunity to assess data quality, instrument accessibility and the hydrodynamic value of each monitoring location. Following this assessment, the monitoring programme was streamlined, with subsequent deployments and maintenance activities prioritising the Giralia and Urala systems. The main activities and operational milestones are summarised in <a href="#tbl-field-phases" class="quarto-xref">Table&nbsp;<span>17.1</span></a>.</p>
+<div id="tbl-field-phases" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-field-phases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;17.1: Chronological overview of the field campaign phases and principal operational milestones.
+</figcaption>
+<div aria-describedby="tbl-field-phases-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Campaign phase</th>
+<th style="text-align: left;">Timeline</th>
+<th style="text-align: left;">Operational scope and activities</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Exploratory reconnaissance</td>
+<td style="text-align: left;">June to July 2023</td>
+<td style="text-align: left;">Initial site visits to assess accessibility, identify potential deployment locations and plan field logistics.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Phase 1 deployments</td>
+<td style="text-align: left;">November 2023 to April 2024</td>
+<td style="text-align: left;">Initial logger installations across candidate sites, followed by maintenance and evaluation of the monitoring network.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Phase 2 monitoring</td>
+<td style="text-align: left;">April to October or November 2024</td>
+<td style="text-align: left;">Continued data collection and instrument servicing, with monitoring activities focused on Giralia and Urala.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Phase 3 retrieval</td>
+<td style="text-align: left;">October or November 2024 to February 2025</td>
+<td style="text-align: left;">Final monitoring period, culminating in the retrieval of all remaining loggers on 9 February 2025.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="monitoring-network-and-data-collection" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="monitoring-network-and-data-collection"><span class="header-section-number">17.3</span> Monitoring Network and Data Collection</h2>
+<p>To characterise the hydrodynamic gradients influencing mangrove and cyanobacterial mat distribution, instruments were deployed along cross shore transects extending from lower estuarine channels and mid creek reaches to upper tidal areas and the margins of cyanobacterial mats. Water level loggers recorded pressure and temperature, while selected instruments also recorded electrical conductivity for the estimation of salinity. Dedicated barometric pressure stations were installed at Giralia and Urala to measure atmospheric pressure fluctuations required for correcting the water pressure records.</p>
+<p>The spatial distribution of monitoring locations at Giralia and Urala is shown in <a href="#fig-sample-giralia" class="quarto-xref">Figure&nbsp;<span>17.1</span></a> and <a href="#fig-sample-urala" class="quarto-xref">Figure&nbsp;<span>17.2</span></a>, respectively. The wider monitoring network, including baseline elevations and the distribution of groundwater monitoring locations, is presented in <a href="#fig-monitoring-network" class="quarto-xref">Figure&nbsp;<span>17.3</span></a>. The number of recorded observations for each site and monitored variable is summarised in <a href="#fig-datapoint-counts" class="quarto-xref">Figure&nbsp;<span>17.4</span></a>.</p>
+<div id="fig-sample-giralia" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sample-locations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-sample-giralia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image1.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sample-locations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.1: Sample locations at Giralia. Red markers indicate sites with integrated groundwater monitoring.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sample-giralia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.1: Monitoring locations across the Giralia study area. Red markers indicate sites with integrated groundwater monitoring.
 </figcaption>
 </figure>
 </div>
-<div id="fig-sample-locations1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-sample-urala" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sample-locations1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-sample-urala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image2.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sample-locations1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.2: Sample locations at Urala. Red markers indicate sites with integrated groundwater monitoring.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sample-urala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.2: Monitoring locations across the Urala study area. Red markers indicate sites with integrated groundwater monitoring.
 </figcaption>
 </figure>
 </div>
-<div id="fig-sample-locations-detail" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-monitoring-network" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sample-locations-detail-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="media/image3.png" class="img-fluid figure-img">
+<div aria-describedby="fig-monitoring-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/image5.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sample-locations-detail-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.3: Detailed sampling locations showing Lower, Mid, and Upper reaches at Giralia.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-monitoring-network-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.3: Monitoring locations and baseline elevations across the study areas.
 </figcaption>
 </figure>
 </div>
-<div id="fig-sample-locations-detail1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-datapoint-counts" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sample-locations-detail1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="media/image4.png" class="img-fluid figure-img">
+<div aria-describedby="fig-datapoint-counts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/image6.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sample-locations-detail1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.4: Detailed sampling locations showing Lower, Mid, and Upper reaches at Urala.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-datapoint-counts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.4: Number of recorded observations for each site ID and monitored variable.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="sampling-program" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="sampling-program"><span class="header-section-number">17.2</span> Sampling Program</h2>
-<p>Logger deployment commenced on <strong>31 October 2023</strong> and concluded on <strong>9 February 2025</strong>. A maintenance and data recovery check was conducted in <strong>April 2024</strong>, during which select loggers were retrieved, redeployed, or added to the array.</p>
-<p>The complete spatial configuration and record durations are summarized in <a href="#tbl-sample-locations" class="quarto-xref">Table&nbsp;<span>17.1</span></a> and <a href="#tbl-datapoint-counts" class="quarto-xref">Table&nbsp;<span>17.2</span></a>.</p>
-<div id="tbl-sample-locations" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sample-locations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;17.1: Sample locations and baseline elevations.
+<section id="topographic-and-bathymetric-surveys" class="level2" data-number="17.4">
+<h2 data-number="17.4" class="anchored" data-anchor-id="topographic-and-bathymetric-surveys"><span class="header-section-number">17.4</span> Topographic and Bathymetric Surveys</h2>
+<p>Accurate elevation data are fundamental to the representation of intertidal topography and tidal conveyance in hydrodynamic and morphodynamic models. Regional elevation datasets generally lack the vertical resolution required to represent shallow intertidal channels and subtle topographic variations. A multi scale elevation data acquisition programme was therefore undertaken to improve the representation of the study areas.</p>
+<p>High resolution aerial LiDAR surveys were acquired across the principal study sites to characterise the elevation of supratidal platforms, mangrove areas and surrounding intertidal surfaces. The LiDAR products provide detailed information on the elevation and topographic structure of the coastal landscape and form an important spatial dataset for the development of the hydrodynamic model domains.</p>
+<p>The LiDAR derived elevation models for Giralia, Urala and Cape Preston are presented in <a href="#fig-lidar-giralia" class="quarto-xref">Figure&nbsp;<span>17.5</span></a> - <a href="#fig-lidar-cape-preston" class="quarto-xref">Figure&nbsp;<span>17.7</span></a>.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Giralia</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Urala</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Cape Preston</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="fig-lidar-giralia" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lidar-giralia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../Giralia/images/giralia_lidar_map.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lidar-giralia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.5: LiDAR derived elevation model of the Giralia study area.
 </figcaption>
-<div aria-describedby="tbl-sample-locations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="media/image5.png" class="img-fluid figure-img"></p>
-<figcaption>Sample locations and baseline elevations.</figcaption>
 </figure>
 </div>
 </div>
-</figure>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="fig-lidar-urala" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lidar-urala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../Urala/images/urala_lidar_utm_map.png" class="img-fluid figure-img">
 </div>
-<div id="tbl-datapoint-counts" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-datapoint-counts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;17.2: Number of recorded datapoints for each Site ID and monitored variable.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lidar-urala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.6: LiDAR derived elevation model of the Urala study area.
 </figcaption>
-<div aria-describedby="tbl-datapoint-counts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="media/image6.png" class="img-fluid figure-img"></p>
-<figcaption>Number of recorded datapoints for each Site ID and monitored variable.</figcaption>
 </figure>
 </div>
 </div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div id="fig-lidar-cape-preston" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lidar-cape-preston-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../Cape-Preston/images/cape_preston_lidar_utm50s_map.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lidar-cape-preston-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.7: LiDAR derived elevation model of the Cape Preston study area.
+</figcaption>
 </figure>
 </div>
-<hr>
+</div>
+</div>
+</div>
+<p>The initial hydrodynamic model setup also identified limitations in the representation of channel depths and cross sectional geometry within the available regional elevation datasets. Dedicated bathymetric surveys were consequently undertaken within the tidal creeks at Giralia using vessel mounted multibeam sonar systems.</p>
+<div id="fig-creek-bathymetry" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-creek-bathymetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/Creek_bathy_survey.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-creek-bathymetry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.8: Dedicated creek bathymetry survey tracks and coverage across the Giralia and Urala estuaries. Colours represent surveyed bed elevation relative to the local vertical datum, ranging from approximately <span class="math inline">\(-0.51\)</span> m to <span class="math inline">\(-1.50\)</span> m.
+</figcaption>
+</figure>
+</div>
+<section id="vegetation-structure-and-canopy-height-extraction" class="level3" data-number="17.4.1">
+<h3 data-number="17.4.1" class="anchored" data-anchor-id="vegetation-structure-and-canopy-height-extraction"><span class="header-section-number">17.4.1</span> Vegetation Structure and Canopy Height Extraction</h3>
+<p>Vegetation structure and canopy height were derived from airborne LiDAR point cloud data using automated Python processing workflows. The point clouds were classified into ground and non-ground returns, allowing vegetation heights to be estimated relative to the underlying ground surface. Height above ground (HAG) was calculated by referencing each vegetation point to the surrounding ground elevation. Points with heights below <span class="math inline">\(0.05\,\text{m}\)</span> were excluded to minimise the influence of background noise and low lying returns from bare sediment and salt flats.</p>
+<p>The remaining vegetation points were classified into three structural categories based on their height above ground: low vegetation (<span class="math inline">\(0.2 \leq HAG &lt; 1.0\,\text{m}\)</span>), medium vegetation (<span class="math inline">\(1.0 \leq HAG &lt; 3.0\,\text{m}\)</span>) and high vegetation (<span class="math inline">\(HAG \geq 3.0\,\text{m}\)</span>). This classification provided a consistent representation of vegetation structure across Giralia, Urala and Cape Preston. The classified point cloud data were subsequently used to generate spatial representations of canopy height and vegetation distribution at a spatial resolution of <span class="math inline">\(1\,\text{m}\)</span>.</p>
+<p>In addition to canopy height, vegetation point density was derived from the LiDAR data to characterise the spatial distribution and relative density of vegetation across the study areas. These structural metrics provide complementary information on canopy height and density, supporting the characterisation of mangrove structure and the development of spatial vegetation parameters for the hydrodynamic and ecological modelling framework.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Giralia</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Urala</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Cape Preston</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div id="fig-chm-giralia" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chm-giralia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../Giralia/images/giralia_vegetation_chm_map.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chm-giralia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.9: Canopy height model (CHM) of the Giralia study area.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="fig-chm-urala" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chm-urala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../Urala/images/urala_vegetation_chm_map.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chm-urala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.10: Canopy height model (CHM) of the Urala study area.
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div id="fig-chm-cape-preston" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chm-cape-preston-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../Cape-Preston/images/cape_preston_vegetation_chm_map.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chm-cape-preston-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.11: Canopy height model (CHM) of the Cape Preston study area.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="water-level-correction-methodology" class="level2" data-number="17.3">
-<h2 data-number="17.3" class="anchored" data-anchor-id="water-level-correction-methodology"><span class="header-section-number">17.3</span> Water Level Correction Methodology</h2>
-<p>To convert raw pressure recorded by submerged loggers into accurate water surface elevations, a three-stage correction pipeline was applied:</p>
-<ol type="1">
-<li><strong>Barometric Correction</strong></li>
-<li><strong>Density Correction</strong></li>
-<li><strong>Datum Correction</strong></li>
-</ol>
-<section id="barometric-correction" class="level3" data-number="17.3.1">
-<h3 data-number="17.3.1" class="anchored" data-anchor-id="barometric-correction"><span class="header-section-number">17.3.1</span> Barometric Correction</h3>
-<p>Because non-vented pressure loggers were used, total recorded pressure required adjustment for atmospheric pressure fluctuations. Continuous barometric pressure was measured at both Giralia and Urala (<a href="#fig-barometric-pressure" class="quarto-xref">Figure&nbsp;<span>17.5</span></a>).</p>
-<p>To fill missing data during periods when the Giralia barometric logger was offline, an empirical linear regression model was established using Urala barometric observations (<a href="#fig-baro-correlation" class="quarto-xref">Figure&nbsp;<span>17.6</span></a>). All barometric pressure series were interpolated to a 15-minute interval prior to subtraction.</p>
+</section>
+<section id="sediment-characteristics-and-particle-size-distributions" class="level2" data-number="17.5">
+<h2 data-number="17.5" class="anchored" data-anchor-id="sediment-characteristics-and-particle-size-distributions"><span class="header-section-number">17.5</span> Sediment Characteristics and Particle Size Distributions</h2>
+<p>Sediment samples collected from the Urala and Giralia mudflats represent contrasting substrate types, ranging from relatively sandy material associated with channels and exposed coastal surfaces to finer grained sediments characteristic of sheltered mudflats. These differences provide context for interpreting the sedimentary environments and potential spatial variations in sediment mobility across the intertidal landscape.</p>
+<div id="fig-psd-urala" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-psd-urala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/PSD_urala.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-psd-urala-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.12: Particle size distribution of the representative sandy substrate at Urala. The distribution is relatively narrow and predominantly unimodal, with most particles within the medium to fine sand fractions (<span class="math inline">\(100\)</span> to <span class="math inline">\(500\,\mu\text{m}\)</span>; <span class="math inline">\(\Phi \approx 1.0\)</span> to <span class="math inline">\(2.5\)</span>).
+</figcaption>
+</figure>
+</div>
+<div id="fig-psd-urala-mud" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-psd-urala-mud-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/PSD_urala_mud_flat.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-psd-urala-mud-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.13: Particle size distribution of Urala mudflat sediments. The distribution is broad and polymodal, extending from fine silts and clays (<span class="math inline">\(&lt;10\,\mu\text{m}\)</span>) through fine sand (<span class="math inline">\(\sim100\,\mu\text{m}\)</span>) to coarse biogenic fragments (<span class="math inline">\(800\)</span> to <span class="math inline">\(1000\,\mu\text{m}\)</span>).
+</figcaption>
+</figure>
+</div>
+<div id="fig-psd-giralia" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-psd-giralia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/PSD_giralia.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-psd-giralia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.14: Particle size distribution of representative mudflat sediments at Giralia.
+</figcaption>
+</figure>
+</div>
+<p>The sandy substrate exhibits a relatively narrow grain size distribution, with much of the material concentrated in the fine to medium sand range (<span class="math inline">\(150\)</span> to <span class="math inline">\(300\,\mu\text{m}\)</span>). This distribution is consistent with sediment sorting in environments where tidal currents and wave action can transport finer particles away from exposed surfaces and channels. In contrast, the mudflat samples exhibit a broader distribution, with a principal peak near the fine sand and coarse silt boundary (<span class="math inline">\(\sim80\)</span> to <span class="math inline">\(100\,\mu\text{m}\)</span>), a fine grained component extending into silts and clays (<span class="math inline">\(&lt;10\,\mu\text{m}\)</span>), and secondary coarse fractions around <span class="math inline">\(800\)</span> to <span class="math inline">\(1000\,\mu\text{m}\)</span> that may include shell fragments and other biogenic material.</p>
+<p>These contrasting sediment distributions are consistent with spatial differences in depositional conditions, from relatively energetic sandy environments to more sheltered settings where fine particles can settle. They provide useful environmental context for interpreting potential responses of the coastal landscape to changes in hydrodynamic forcing. However, the sediment measurements are used here to characterise the study sites and should not be interpreted as direct validation of sediment transport or morphological change unless those processes are explicitly represented and evaluated in the model.</p>
+</section>
+<section id="geomorphology-and-environmental-drivers" class="level2" data-number="17.6">
+<h2 data-number="17.6" class="anchored" data-anchor-id="geomorphology-and-environmental-drivers"><span class="header-section-number">17.6</span> Geomorphology and Environmental Drivers</h2>
+<p>Urala’s geomorphology is characterised by extensive barrier spits, dynamic creek mouths, interconnected tidal channels and broad landward salt flats. The North Creek and South Creek systems provide important pathways for tidal exchange across the landscape, while their geometry and connectivity influence how water reaches adjacent intertidal surfaces. These features are particularly relevant when assessing the potential hydrodynamic consequences of infrastructure that intersects or constrains existing flow pathways.</p>
+<p>Hydrodynamic conditions are influenced by the regional tidal regime, with semidiurnal tides driving regular inundation and currents within the principal creek channels. Tidal currents and extreme events involving wave action contribute to sediment redistribution, while the relative sheltering of adjacent mudflats and mangrove margins favours the retention of finer material. Tropical cyclones and other intense weather events can temporarily increase wave energy and freshwater discharge, potentially altering creek mouths, barrier spits and sediment distribution. The importance of these episodic processes varies spatially and through time.</p>
+<p>The region’s hyperarid climate and high evaporative demand further distinguish Urala from more humid coastal environments. Rainfall is highly variable, and major rainfall events may produce short lived freshwater and sediment inputs against a background of prolonged dry conditions. These climatic and hydrodynamic drivers provide the environmental context for interpreting potential habitat responses.</p>
+</section>
+<section id="water-level-correction-pipeline" class="level2" data-number="17.7">
+<h2 data-number="17.7" class="anchored" data-anchor-id="water-level-correction-pipeline"><span class="header-section-number">17.7</span> Water Level Correction Pipeline</h2>
+<p>Raw pressure measurements from the water level loggers were processed to estimate water surface elevations relative to the Australian Height Datum (mAHD). The processing procedure comprised three stages: barometric compensation, density correction and vertical datum referencing.</p>
+<section id="barometric-correction" class="level3" data-number="17.7.1">
+<h3 data-number="17.7.1" class="anchored" data-anchor-id="barometric-correction"><span class="header-section-number">17.7.1</span> Barometric Correction</h3>
+<p>The water level loggers were not vented and therefore recorded pressure associated with both the water column and atmospheric pressure. Barometric compensation was required to isolate the pressure exerted by the water column. Two dedicated barometric pressure loggers were deployed, one at Giralia and one at Urala, as shown in <a href="#fig-barometric-pressure" class="quarto-xref">Figure&nbsp;<span>17.15</span></a>.</p>
+<p>The Giralia barometric record did not cover the entire monitoring period. Missing periods were therefore estimated using the relationship between the Giralia and Urala barometric records, as illustrated in <a href="#fig-baro-correlation" class="quarto-xref">Figure&nbsp;<span>17.16</span></a>. The resulting barometric pressure series was interpolated to 15 minute intervals to match the temporal resolution used in the subsequent correction procedure.</p>
 <div id="fig-barometric-pressure" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-barometric-pressure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image7.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-barometric-pressure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.5: Recorded barometric pressure at Giralia and Urala.
+Figure&nbsp;17.15: Recorded barometric pressure at Giralia and Urala.
 </figcaption>
 </figure>
 </div>
@@ -477,98 +646,142 @@ Figure&nbsp;17.5: Recorded barometric pressure at Giralia and Urala.
 <img src="media/image8.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-baro-correlation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.6: Correlation between Giralia and Urala barometric pressure readings.
+Figure&nbsp;17.16: Relationship between Giralia and Urala barometric pressure measurements.
 </figcaption>
 </figure>
 </div>
-<section id="rugged-troll-loggers" class="level4" data-number="17.3.1.1">
-<h4 data-number="17.3.1.1" class="anchored" data-anchor-id="rugged-troll-loggers"><span class="header-section-number">17.3.1.1</span> Rugged Troll Loggers</h4>
-<p>Rugged Troll loggers record total pressure (<span class="math inline">\(P_{\text{logger\_RT}}\)</span>) with a factory-assigned constant barometric offset (<span class="math inline">\(P_{\text{constant\_offset}}\)</span>). Absolute pressure (<span class="math inline">\(P_{\text{absolute}}\)</span>) was calculated via:</p>
-<p><span class="math display">\[P_{\text{absolute}} = P_{\text{logger\_RT}} + P_{\text{constant\_offset}}\]</span></p>
-<p>Net water pressure (<span class="math inline">\(P_{\text{water\_RT}}\)</span>) was subsequently isolated by subtracting interpolated barometric pressure (<span class="math inline">\(P_{\text{barometric}}\)</span>):</p>
-<p><span class="math display">\[P_{\text{water\_RT}} = P_{\text{absolute}} - P_{\text{barometric}}\]</span></p>
-<p>An example of the Rugged Troll correction sequence is shown in <a href="#fig-rugged-troll-example" class="quarto-xref">Figure&nbsp;<span>17.7</span></a>.</p>
+<section id="rugged-troll-loggers" class="level4" data-number="17.7.1.1">
+<h4 data-number="17.7.1.1" class="anchored" data-anchor-id="rugged-troll-loggers"><span class="header-section-number">17.7.1.1</span> Rugged Troll Loggers</h4>
+<p>Rugged Troll loggers reported pressure (<span class="math inline">\(P_{\text{logger,RT}}\)</span>) with a constant barometric offset (<span class="math inline">\(P_{\text{constant offset}}\)</span>) assigned to each instrument. Absolute pressure was calculated using <a href="#eq-absolute-pressure" class="quarto-xref">Equation&nbsp;<span>17.1</span></a>:</p>
+<p><span id="eq-absolute-pressure"><span class="math display">\[
+P_{\text{absolute}} =
+P_{\text{logger,RT}} +
+P_{\text{constant offset}}
+\tag{17.1}\]</span></span></p>
+<p>Water pressure was then calculated by subtracting the measured barometric pressure, as shown in <a href="#eq-water-pressure-rt" class="quarto-xref">Equation&nbsp;<span>17.2</span></a>:</p>
+<p><span id="eq-water-pressure-rt"><span class="math display">\[
+P_{\text{water,RT}} =
+P_{\text{absolute}} -
+P_{\text{barometric}}
+\tag{17.2}\]</span></span></p>
+<p>An example of the barometric correction procedure for the Rugged Troll logger at G-MID-CHANNEL is shown in <a href="#fig-rugged-troll-example" class="quarto-xref">Figure&nbsp;<span>17.17</span></a>.</p>
 <div id="fig-rugged-troll-example" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rugged-troll-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image9.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rugged-troll-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.7: Example pressure correction sequence for a Rugged Troll logger (G-MID-CHANNEL).
+Figure&nbsp;17.17: Example pressure correction sequence for a Rugged Troll logger at G-MID-CHANNEL.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="aquatroll-loggers" class="level4" data-number="17.3.1.2">
-<h4 data-number="17.3.1.2" class="anchored" data-anchor-id="aquatroll-loggers"><span class="header-section-number">17.3.1.2</span> AquaTroll Loggers</h4>
-<p>AquaTroll loggers (<span class="math inline">\(P_{\text{logger\_AT}}\)</span>) do not store the static offset internally. Net water pressure (<span class="math inline">\(P_{\text{water\_AT}}\)</span>) was derived relative to average barometric conditions (<span class="math inline">\(P_{\text{barometric\_average}}\)</span>):</p>
-<p><span class="math display">\[P_{\text{water\_AT}} = P_{\text{logger\_AT}} + (P_{\text{barometric}} - P_{\text{barometric\_average}})\]</span></p>
-<p><em>Note: This formulation assumes initial logger baseline setup occurred near mean atmospheric pressure.</em> An example correction is shown in <a href="#fig-aquatroll-example" class="quarto-xref">Figure&nbsp;<span>17.8</span></a>.</p>
+<section id="aquatroll-loggers" class="level4" data-number="17.7.1.2">
+<h4 data-number="17.7.1.2" class="anchored" data-anchor-id="aquatroll-loggers"><span class="header-section-number">17.7.1.2</span> AquaTroll Loggers</h4>
+<p>AquaTroll loggers (<span class="math inline">\(P_{\text{logger,AT}}\)</span>) did not include the same constant barometric offset as the Rugged Troll instruments. Their water pressure was therefore estimated using the deviation of the measured barometric pressure from its average value, as shown in <a href="#eq-water-pressure-at" class="quarto-xref">Equation&nbsp;<span>17.3</span></a>:</p>
+<p><span id="eq-water-pressure-at"><span class="math display">\[
+P_{\text{water,AT}} =
+P_{\text{logger,AT}} +
+\left(
+P_{\text{barometric}} -
+P_{\text{barometric average}}
+\right)
+\tag{17.3}\]</span></span></p>
+<p>This approach assumes that the logger pressure reading is referenced to approximately the average atmospheric pressure over the relevant period. An example of the correction procedure for the AquaTroll logger at G-MOUTH-CHANNEL-AT is shown in <a href="#fig-aquatroll-example" class="quarto-xref">Figure&nbsp;<span>17.18</span></a>.</p>
 <div id="fig-aquatroll-example" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-aquatroll-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image10.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-aquatroll-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.8: Example pressure correction sequence for an AquaTroll logger (G-MOUTH-CHANNEL-AT).
+Figure&nbsp;17.18: Example pressure correction sequence for an AquaTroll logger at G-MOUTH-CHANNEL-AT.
 </figcaption>
 </figure>
 </div>
-<hr>
 </section>
 </section>
-<section id="density-correction" class="level3" data-number="17.3.2">
-<h3 data-number="17.3.2" class="anchored" data-anchor-id="density-correction"><span class="header-section-number">17.3.2</span> Density Correction</h3>
-<p>Corrected water pressure (<span class="math inline">\(P_{\text{corrected}}\)</span> in bar) was converted to water depth (<span class="math inline">\(H_{\text{corrected}}\)</span> in metres) using variable water density (<span class="math inline">\(\rho\)</span> in <span class="math inline">\(\text{g/cm}^3\)</span>). Density was calculated at 15-minute time steps as a function of salinity (<span class="math inline">\(S\)</span>, PSU) and water temperature (<span class="math inline">\(T\)</span>, °C):</p>
-<p><span class="math display">\[\rho = 1000 + 0.75 \cdot S - 0.2 \cdot (T - 4)\]</span></p>
-<p>While temperature was continuously recorded across all sites, missing salinity records were reconstructed using a hierarchical fallback sequence:</p>
-<ol type="1">
-<li>Mean salinity observed at the same <code>SiteId</code>.</li>
-<li>Mean salinity from a assigned fallback site (<code>Fallback_Salinity_SiteId</code>, <a href="#tbl-fallback-sites" class="quarto-xref">Table&nbsp;<span>17.3</span></a>).</li>
-<li>Mean salinity across the local geomorphic location category.</li>
-<li>Mean regional salinity (Giralia vs.&nbsp;Urala).</li>
-</ol>
+<section id="density-correction" class="level3" data-number="17.7.2">
+<h3 data-number="17.7.2" class="anchored" data-anchor-id="density-correction"><span class="header-section-number">17.7.2</span> Density Correction</h3>
+<p>The barometrically corrected pressure measurements were converted to water depth using an estimate of water density. Density was calculated at 15 minute intervals for each monitoring location using <a href="#eq-water-density" class="quarto-xref">Equation&nbsp;<span>17.4</span></a>:</p>
+<p><span id="eq-water-density"><span class="math display">\[
+\rho =
+1000 + 0.75S - 0.2(T - 4)
+\tag{17.4}\]</span></span></p>
+<p>where <span class="math inline">\(\rho\)</span> is water density in kg/m<span class="math inline">\(^3\)</span>, <span class="math inline">\(S\)</span> is salinity in practical salinity units (PSU), and <span class="math inline">\(T\)</span> is water temperature in degrees Celsius. Salinity and temperature measurements were interpolated to 15 minute intervals. Temperature was recorded at all monitoring locations throughout the field campaign, whereas salinity observations were not continuously available at every site. A hierarchical fallback procedure was therefore applied to estimate missing salinity values. The procedure prioritised the average salinity recorded at the same site ID, followed by the designated fallback site, the same site location and, finally, the average salinity across the corresponding study area.</p>
+<p>The fallback site assignments used in the density calculations are listed in <a href="#tbl-fallback-sites" class="quarto-xref">Table&nbsp;<span>17.2</span></a>.</p>
 <div id="tbl-fallback-sites" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-fallback-sites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;17.3: Fallback salinity site assignments for density calculations.
+Table&nbsp;17.2: Fallback salinity site assignments used in the density calculations.
 </figcaption>
 <div aria-describedby="tbl-fallback-sites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Target SiteId</th>
-<th style="text-align: left;">Fallback Salinity SiteId</th>
+<th style="text-align: left;">Study area</th>
+<th style="text-align: left;">Site ID</th>
+<th style="text-align: left;">Fallback salinity site ID</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><em>Fallback mappings</em></td>
-<td style="text-align: left;">…</td>
+<td style="text-align: left;">Giralia</td>
+<td style="text-align: left;">G-LOWER-MAT-GW17</td>
+<td style="text-align: left;">G-LOWER-MAT-GWm</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Giralia</td>
+<td style="text-align: left;">G-MID-MAT-GW17</td>
+<td style="text-align: left;">G-MID-MAT-GWm</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Giralia</td>
+<td style="text-align: left;">G-MID-EDGE-GW17</td>
+<td style="text-align: left;">G-MID-MAT-GWm</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Giralia</td>
+<td style="text-align: left;">G-UPPER-MAT-GWm</td>
+<td style="text-align: left;">G-MID-MAT-GWm</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Urala</td>
+<td style="text-align: left;">U-LOWER-MAT-GW2</td>
+<td style="text-align: left;">G-LOWER-MAT-GWm</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Urala</td>
+<td style="text-align: left;">U-MID-EDGE-GW17</td>
+<td style="text-align: left;">U-MID-MAT-GWm</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Urala</td>
+<td style="text-align: left;">U-UPPER-EDGE-GWd</td>
+<td style="text-align: left;">U-MID-MAT-GWm</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
+<p>The distribution of salinity data sources resulting from this procedure is shown in <a href="#fig-salinity-sources" class="quarto-xref">Figure&nbsp;<span>17.19</span></a>. Density estimates were compared with direct density measurements at three monitoring locations. The comparison showed a strong relationship between measured and calculated density, with coefficients of determination exceeding <span class="math inline">\(0.94\)</span> (<a href="#fig-density-validation" class="quarto-xref">Figure&nbsp;<span>17.20</span></a>). The calculated density time series for all monitoring locations are presented in <a href="#fig-density-time-series" class="quarto-xref">Figure&nbsp;<span>17.21</span></a>.</p>
 <div id="fig-salinity-sources" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-salinity-sources-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image11.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-salinity-sources-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.9: Distribution of salinity data sources resulting from the fallback hierarchy.
+Figure&nbsp;17.19: Distribution of salinity data sources resulting from the fallback procedure.
 </figcaption>
 </figure>
 </div>
-<p>Calculated densities showed strong agreement (<span class="math inline">\(r^2 &gt; 0.94\)</span>) against sites equipped with direct density sensors (<a href="#fig-density-validation" class="quarto-xref">Figure&nbsp;<span>17.10</span></a> and <a href="#fig-density-time-series" class="quarto-xref">Figure&nbsp;<span>17.11</span></a>).</p>
 <div id="fig-density-validation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-density-validation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image12.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-density-validation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.10: Calculated vs.&nbsp;observed water density across validation sites (<span class="math inline">\(r^2 &gt; 0.94\)</span>).
+Figure&nbsp;17.20: Comparison of calculated and observed water density across the validation sites.
 </figcaption>
 </figure>
 </div>
@@ -578,20 +791,34 @@ Figure&nbsp;17.10: Calculated vs.&nbsp;observed water density across validation 
 <img src="media/image13.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-density-time-series-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.11: Calculated 15-minute water density time series across all monitoring sites.
+Figure&nbsp;17.21: Calculated water density at 15 minute intervals across the monitoring network.
 </figcaption>
 </figure>
 </div>
-<p>Corrected water depth above the logger was calculated via:</p>
-<p><span class="math display">\[H_{\text{corrected}} = \frac{P_{\text{corrected}} \cdot 10.1972}{\rho}\]</span></p>
-<p>Linear regression between <span class="math inline">\(H_{\text{corrected}}\)</span> and <span class="math inline">\(P_{\text{corrected}}\)</span> yielded a correlation coefficient of <span class="math inline">\(0.996\)</span> (<a href="#fig-depth-vs-pressure" class="quarto-xref">Figure&nbsp;<span>17.12</span></a>). Residual analysis comparing logger-reported depth versus density-corrected depth revealed a residual standard deviation of <span class="math inline">\(7.3\text{ cm}\)</span> (<a href="#fig-depth-residuals" class="quarto-xref">Figure&nbsp;<span>17.13</span></a>), which represents a notable magnitude in shallow intertidal systems.</p>
+<p>Once water density had been estimated, corrected water depth was calculated using <a href="#eq-corrected-depth" class="quarto-xref">Equation&nbsp;<span>17.5</span></a>:</p>
+<p><span id="eq-corrected-depth"><span class="math display">\[
+H_{\text{corrected}} =
+\frac{P_{\text{corrected}} \times 10.1972}{\rho/1000}
+\tag{17.5}\]</span></span></p>
+<p>where <span class="math inline">\(H_{\text{corrected}}\)</span> is water depth in metres, <span class="math inline">\(P_{\text{corrected}}\)</span> is pressure in bar and <span class="math inline">\(\rho/1000\)</span> is the dimensionless relative water density. The comparison between corrected pressure and calculated depth showed a strong linear relationship, with a correlation coefficient of <span class="math inline">\(r = 0.996\)</span> (<a href="#fig-depth-vs-pressure" class="quarto-xref">Figure&nbsp;<span>17.22</span></a>).</p>
 <div id="fig-depth-vs-pressure" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-depth-vs-pressure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image14.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-depth-vs-pressure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.12: Density-corrected depth vs.&nbsp;corrected pressure (<span class="math inline">\(r = 0.996\)</span>).
+Figure&nbsp;17.22: Density corrected water depth plotted against corrected pressure. The correlation coefficient is <span class="math inline">\(r = 0.996\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>The corrected water depth is compared with the depth reported by each logger in <a href="#fig-depth-vs-logger" class="quarto-xref">Figure&nbsp;<span>17.23</span></a>. The residual distribution is shown in <a href="#fig-depth-residuals" class="quarto-xref">Figure&nbsp;<span>17.24</span></a>. The standard deviation of the residuals was <span class="math inline">\(7.3\,\text{cm}\)</span>, which is substantial in the context of the relatively low relief of the intertidal landscape.</p>
+<div id="fig-depth-vs-logger" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-depth-vs-logger-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/image16.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-depth-vs-logger-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.23: Corrected water depth compared with logger reported depth at each monitoring location.
 </figcaption>
 </figure>
 </div>
@@ -601,25 +828,22 @@ Figure&nbsp;17.12: Density-corrected depth vs.&nbsp;corrected pressure (<span cl
 <img src="media/image17.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-depth-residuals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.13: Histogram of depth residuals (logger-reported depth vs.&nbsp;re-calculated density-corrected depth).
+Figure&nbsp;17.24: Distribution of residuals between logger reported depth and recalculated density corrected depth.
 </figcaption>
 </figure>
 </div>
-<hr>
 </section>
-<section id="datum-correction" class="level3" data-number="17.3.3">
-<h3 data-number="17.3.3" class="anchored" data-anchor-id="datum-correction"><span class="header-section-number">17.3.3</span> Datum Correction</h3>
-<p>Because initial logger sensor elevations were un-surveyed, elevations were referenced to Australian Height Datum (mAHD) using LiDAR ground elevation baselines (<a href="#tbl-sample-locations" class="quarto-xref">Table&nbsp;<span>17.1</span></a>) and regional tide gauge calibrations.</p>
-<ol type="1">
-<li><strong>Estuarine Mouth Calibration:</strong> Submerged loggers at the Giralia and Urala river mouths were calibrated against mAHD tidal observations from the Exmouth tide gauge by matching peak spring tide elevations (<a href="#fig-exmouth-calibration" class="quarto-xref">Figure&nbsp;<span>17.14</span></a> and <a href="#fig-mouth-scatter" class="quarto-xref">Figure&nbsp;<span>17.15</span></a>).</li>
-</ol>
+<section id="datum-correction" class="level3" data-number="17.7.3">
+<h3 data-number="17.7.3" class="anchored" data-anchor-id="datum-correction"><span class="header-section-number">17.7.3</span> Datum Correction</h3>
+<p>After correcting the pressure measurements for atmospheric pressure and water density, the logger elevations were adjusted to reference the resulting water levels to the Australian Height Datum. The loggers were not individually surveyed, so LiDAR derived ground elevations were used as initial estimates of the elevation at each monitoring location.</p>
+<p>Exmouth tide gauge observations, provided in mAHD, were used as an external reference for the datum adjustment. The elevations of the loggers located near the Giralia and Urala channel mouths were adjusted to align the observed spring tide peaks with the corresponding Exmouth tide gauge levels. The calibration procedure is illustrated in <a href="#fig-exmouth-calibration" class="quarto-xref">Figure&nbsp;<span>17.25</span></a> and <a href="#fig-mouth-scatter" class="quarto-xref">Figure&nbsp;<span>17.26</span></a>.</p>
 <div id="fig-exmouth-calibration" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-exmouth-calibration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image18.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exmouth-calibration-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.14: River mouth logger elevation calibration matching Exmouth tidal peaks (mAHD).
+Figure&nbsp;17.25: Adjustment of channel mouth logger elevations using Exmouth tide gauge observations.
 </figcaption>
 </figure>
 </div>
@@ -629,20 +853,18 @@ Figure&nbsp;17.14: River mouth logger elevation calibration matching Exmouth tid
 <img src="media/image20.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mouth-scatter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.15: Scatter plot of monthly peak water levels at channel mouths vs.&nbsp;Exmouth tide gauge.
+Figure&nbsp;17.26: Comparison of monthly peak water levels at the channel mouths with Exmouth tide gauge observations.
 </figcaption>
 </figure>
 </div>
-<ol start="2" type="1">
-<li><strong>Upstream Hydraulic Calibration:</strong> Upstream loggers were sequentially adjusted to match monthly peak water levels along primary hydraulic conveyances (e.g., Mouth Channel <span class="math inline">\(\rightarrow\)</span> Mid Channel <span class="math inline">\(\rightarrow\)</span> Mid Creek <span class="math inline">\(\rightarrow\)</span> Upper Channel <span class="math inline">\(\rightarrow\)</span> Algal Mat). Peak correlations along connected flow paths are shown in <a href="#fig-giralia-peaks" class="quarto-xref">Figure&nbsp;<span>17.16</span></a> and <a href="#fig-urala-peaks" class="quarto-xref">Figure&nbsp;<span>17.17</span></a>.</li>
-</ol>
+<p>Following the mouth logger adjustments, elevations at the remaining monitoring locations were adjusted according to their relative hydraulic connectivity along the tidal flow paths. At Giralia, the calibration proceeded from the mouth channel to the mid channel, mid creek, upper channel and upper mat surface water locations. A similar approach was applied at Urala. Comparisons of monthly peak water levels between hydraulically connected monitoring locations are presented in <a href="#fig-giralia-peaks" class="quarto-xref">Figure&nbsp;<span>17.27</span></a> and <a href="#fig-urala-peaks" class="quarto-xref">Figure&nbsp;<span>17.28</span></a>. The resulting water level time series before and after datum adjustment are shown in <a href="#fig-giralia-datum" class="quarto-xref">Figure&nbsp;<span>17.29</span></a> and <a href="#fig-urala-datum" class="quarto-xref">Figure&nbsp;<span>17.30</span></a>.</p>
 <div id="fig-giralia-peaks" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-giralia-peaks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image21.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-giralia-peaks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.16: Correlation of monthly peak water levels along connected flow paths at Giralia.
+Figure&nbsp;17.27: Relationship between monthly peak water levels along hydraulically connected flow paths at Giralia.
 </figcaption>
 </figure>
 </div>
@@ -652,18 +874,17 @@ Figure&nbsp;17.16: Correlation of monthly peak water levels along connected flow
 <img src="media/image22.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-peaks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.17: Correlation of monthly peak water levels along connected flow paths at Urala.
+Figure&nbsp;17.28: Relationship between monthly peak water levels along hydraulically connected flow paths at Urala.
 </figcaption>
 </figure>
 </div>
-<p>The impact of datum adjustments on raw water elevation series during a representative period (December 2024) is illustrated in <a href="#fig-giralia-datum" class="quarto-xref">Figure&nbsp;<span>17.18</span></a> and <a href="#fig-urala-datum" class="quarto-xref">Figure&nbsp;<span>17.19</span></a>.</p>
 <div id="fig-giralia-datum" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-giralia-datum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image23.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-giralia-datum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.18: Giralia water level time series before and after datum calibration (December 2024).
+Figure&nbsp;17.29: Giralia water level time series before and after datum adjustment in December 2024.
 </figcaption>
 </figure>
 </div>
@@ -673,24 +894,22 @@ Figure&nbsp;17.18: Giralia water level time series before and after datum calibr
 <img src="media/image25.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-datum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.19: Urala water level time series before and after datum calibration (December 2024).
+Figure&nbsp;17.30: Urala water level time series before and after datum adjustment in December 2024.
 </figcaption>
 </figure>
 </div>
-<hr>
 </section>
 </section>
-<section id="results-hydraulic-dynamics" class="level2" data-number="17.4">
-<h2 data-number="17.4" class="anchored" data-anchor-id="results-hydraulic-dynamics"><span class="header-section-number">17.4</span> Results &amp; Hydraulic Dynamics</h2>
-<p>The calibrated water level dataset enables spatial and temporal cross-sectional analyses across both estuaries.</p>
-<p>Response during extreme events—such as the <strong>11 April 2024 storm event</strong>—highlights cross-shore head gradients and inundation extent across the intertidal platform (<a href="#fig-giralia-storm" class="quarto-xref">Figure&nbsp;<span>17.20</span></a> and <a href="#fig-urala-storm" class="quarto-xref">Figure&nbsp;<span>17.21</span></a>).</p>
+<section id="results-and-hydraulic-dynamics" class="level2" data-number="17.8">
+<h2 data-number="17.8" class="anchored" data-anchor-id="results-and-hydraulic-dynamics"><span class="header-section-number">17.8</span> Results and Hydraulic Dynamics</h2>
+<p>The corrected water level dataset provides a basis for examining spatial and temporal variations in water levels across the Giralia and Urala estuarine systems. The monitoring records capture variations associated with regular tidal cycles as well as short duration responses to meteorological events. The response to the storm event on 11 April 2024 illustrates the spatial differences in water levels and hydraulic gradients across the intertidal platforms (<a href="#fig-giralia-storm" class="quarto-xref">Figure&nbsp;<span>17.31</span></a> and <a href="#fig-urala-storm" class="quarto-xref">Figure&nbsp;<span>17.32</span></a>).</p>
 <div id="fig-giralia-storm" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-giralia-storm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="media/image27.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-giralia-storm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.20: Giralia water surface elevation response during the 11 April 2024 storm event. Dashed lines indicate sensor bed elevations.
+Figure&nbsp;17.31: Water surface elevation response at Giralia during the storm event on 11 April 2024. Dashed lines indicate sensor bed elevations.
 </figcaption>
 </figure>
 </div>
@@ -700,27 +919,112 @@ Figure&nbsp;17.20: Giralia water surface elevation response during the 11 April 
 <img src="media/image28.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-storm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.21: Urala water surface elevation response during the 11 April 2024 storm event. Dashed lines indicate sensor bed elevations.
+Figure&nbsp;17.32: Water surface elevation response at Urala during the storm event on 11 April 2024. Dashed lines indicate sensor bed elevations.
 </figcaption>
 </figure>
 </div>
-<section id="spatial-cross-sections-and-groundwater-dynamics" class="level3" data-number="17.4.1">
-<h3 data-number="17.4.1" class="anchored" data-anchor-id="spatial-cross-sections-and-groundwater-dynamics"><span class="header-section-number">17.4.1</span> Spatial Cross-Sections and Groundwater Dynamics</h3>
-<p>Cross-sectional profiles reveal distinct spatial-temporal hydroperiod trends from the primary channels to the upper algal mats (<a href="#fig-cross-sections" class="quarto-xref">Figure&nbsp;<span>17.22</span></a>).</p>
+<p>Water elevation, temperature and salinity records across the monitoring network are presented in <a href="#fig-water-elevation-site" class="quarto-xref">Figure&nbsp;<span>17.33</span></a>, <a href="#fig-temperature-site" class="quarto-xref">Figure&nbsp;<span>17.34</span></a> and <a href="#fig-salinity-site" class="quarto-xref">Figure&nbsp;<span>17.35</span></a>, respectively. The spatial distribution of water elevations and temperature across the Giralia and Urala monitoring zones is further illustrated in <a href="#fig-giralia-water-elevation" class="quarto-xref">Figure&nbsp;<span>17.36</span></a>, <a href="#fig-urala-water-elevation" class="quarto-xref">Figure&nbsp;<span>17.37</span></a>, <a href="#fig-giralia-temperature" class="quarto-xref">Figure&nbsp;<span>17.38</span></a> and <a href="#fig-urala-temperature" class="quarto-xref">Figure&nbsp;<span>17.39</span></a>. The combined water level records are shown in <a href="#fig-combined-water-height" class="quarto-xref">Figure&nbsp;<span>17.40</span></a>.</p>
+<div id="fig-water-elevation-site" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-water-elevation-site-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/image29.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-water-elevation-site-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.33: Water elevation recorded across the monitoring network.
+</figcaption>
+</figure>
+</div>
+<div id="fig-temperature-site" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-temperature-site-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/image30.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-temperature-site-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.34: Temperature recorded across the monitoring network.
+</figcaption>
+</figure>
+</div>
+<div id="fig-salinity-site" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-salinity-site-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/image31.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-salinity-site-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.35: Salinity recorded across the monitoring network.
+</figcaption>
+</figure>
+</div>
+<div id="fig-giralia-water-elevation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-giralia-water-elevation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/image32.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-giralia-water-elevation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.36: Water surface elevation relative to mAHD across the Giralia monitoring zones.
+</figcaption>
+</figure>
+</div>
+<div id="fig-urala-water-elevation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-water-elevation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/image33.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-water-elevation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.37: Water surface elevation relative to mAHD across the Urala monitoring zones.
+</figcaption>
+</figure>
+</div>
+<div id="fig-giralia-temperature" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-giralia-temperature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/image34.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-giralia-temperature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.38: Temperature across the Giralia monitoring zones.
+</figcaption>
+</figure>
+</div>
+<div id="fig-urala-temperature" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-urala-temperature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/image35.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-urala-temperature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.39: Temperature across the Urala monitoring zones.
+</figcaption>
+</figure>
+</div>
+<div id="fig-combined-water-height" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-combined-water-height-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="media/image36.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-combined-water-height-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.40: Combined water level time series across the monitoring network.
+</figcaption>
+</figure>
+</div>
+<section id="spatial-cross-sections-and-groundwater-dynamics" class="level3" data-number="17.8.1">
+<h3 data-number="17.8.1" class="anchored" data-anchor-id="spatial-cross-sections-and-groundwater-dynamics"><span class="header-section-number">17.8.1</span> Spatial Cross Sections and Groundwater Dynamics</h3>
+<p>Cross sectional profiles provide an overview of spatial and temporal variations in surface water and groundwater elevations from the principal tidal channels towards the upper intertidal areas and cyanobacterial mats (<a href="#fig-cross-sections" class="quarto-xref">Figure&nbsp;<span>17.41</span></a>). Comparisons between paired surface water and groundwater observations also provide information on local hydraulic gradients. These gradients are relevant to understanding potential exchanges between surface water and groundwater, including the movement of saline porewater within the intertidal sediments.</p>
 <div id="fig-cross-sections" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cross-sections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="media/image31.png" class="img-fluid figure-img">
+<img src="media/image37.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cross-sections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;17.22: Cross-sectional surface water and groundwater elevations across Giralia and Urala.
+Figure&nbsp;17.41: Cross sectional profiles of surface water and groundwater elevations across Giralia and Urala.
 </figcaption>
 </figure>
 </div>
-<p>Analysis of paired surface-water and groundwater monitoring loggers enables derivation of local hydraulic gradients. These gradients govern subsurface porewater exchange, hypersaline groundwater discharge, and ecohydrological feedback loops within the intertidal mangrove-mat transition zone.</p>
-
-
 </section>
+</section>
+<section id="application-to-hydrodynamic-and-eco-morphodynamic-modelling" class="level2" data-number="17.9">
+<h2 data-number="17.9" class="anchored" data-anchor-id="application-to-hydrodynamic-and-eco-morphodynamic-modelling"><span class="header-section-number">17.9</span> Application to Hydrodynamic and Eco Morphodynamic Modelling</h2>
+<p>The processed water level dataset provides an empirical basis for the development and assessment of the Project B hydrodynamic models. The corrected observations were used to characterise baseline hydroperiods and support the calibration and validation of the Delft3D Flexible Mesh hydrodynamic models. The spatially distributed monitoring network also provides information on water level variations and hydraulic gradients across the intertidal landscape.</p>
+<p>The paired surface water and groundwater observations provide additional information on local hydraulic conditions and potential subsurface water exchange. These observations are particularly relevant to interpreting the hydrological conditions associated with mangrove and cyanobacterial mat distributions. However, the monitoring records alone do not establish the magnitude or direction of subsurface porewater exchange or hypersaline groundwater discharge. Such processes require additional interpretation of the paired observations and, where appropriate, explicit representation in the modelling framework.</p>
+
+
 </section>
 
 </main> <!-- /main -->

@@ -70,6 +70,7 @@ Mangroves can persist under some sea-level-rise scenarios, but their capacity to
 **Do Algal Mats Survive Sea-Level Rise (SLR)?**
 
 Cyanobacterial mats may persist under rising sea levels by redistributing towards higher elevation areas, but they are unlikely to maintain their original spatial footprint under substantial SLR. Their persistence depends on the availability of suitable inundation and exposure conditions, the capacity to occupy newly suitable areas, and competition with expanding mangrove communities. Under higher SLR scenarios, this response can be characterised as a non monotonic trajectory of landward redistribution followed by spatial compression:
+
 1. **Landward Encroachment:** Rising sea levels alter inundation frequency and duration, shifting the zones suitable for cyanobacterial mats towards higher elevations. However, expanding mangroves may colonise parts of the existing mat distribution, further modifying the availability of suitable areas.
 2. **Spatial Compression and Fragmentation:** As suitable intertidal space becomes increasingly restricted, cyanobacterial mats may become concentrated in narrower landward fringe areas. Their overall extent and spatial continuity decline where suitable elevations are limited or where mangrove expansion and changing inundation conditions reduce the area available for persistence.
 :::
